@@ -10,6 +10,32 @@
 		68005A8B2206FFFB004F791A /* KinBackupRestoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68005A812206FFFB004F791A /* KinBackupRestoreModule.framework */; };
 		68005A902206FFFB004F791A /* KinBackupRestoreModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */; };
 		68005A922206FFFB004F791A /* KinBackupRestoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 68005A842206FFFB004F791A /* KinBackupRestoreModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68005ABE22070789004F791A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68005AB922070789004F791A /* Assets.xcassets */; };
+		68005ABF22070789004F791A /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABB22070789004F791A /* UINavigationBar+Appearance.swift */; };
+		68005AC022070789004F791A /* UIStatusBarStyle+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */; };
+		68005AC122070789004F791A /* BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABD22070789004F791A /* BackupRestore.swift */; };
+		68005ADE22070793004F791A /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC322070793004F791A /* LifeCycleProtocol.swift */; };
+		68005ADF22070793004F791A /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC422070793004F791A /* QR.swift */; };
+		68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC622070793004F791A /* BackupCompletedViewController.swift */; };
+		68005AE122070793004F791A /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC822070793004F791A /* BackupFlowController.swift */; };
+		68005AE222070793004F791A /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC922070793004F791A /* RestoreFlowController.swift */; };
+		68005AE322070793004F791A /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACA22070793004F791A /* FlowController.swift */; };
+		68005AE422070793004F791A /* BRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACB22070793004F791A /* BRViewController.swift */; };
+		68005AE522070793004F791A /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACC22070793004F791A /* QRPickerController.swift */; };
+		68005AE622070793004F791A /* PasswordEntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACD22070793004F791A /* PasswordEntryField.swift */; };
+		68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACF22070793004F791A /* PasswordEntryViewController.swift */; };
+		68005AE822070793004F791A /* PasswordEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005AD022070793004F791A /* PasswordEntryViewController.xib */; };
+		68005AE922070793004F791A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD122070793004F791A /* RoundButton.swift */; };
+		68005AEA22070793004F791A /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD322070793004F791A /* RestoreViewController.swift */; };
+		68005AEB22070793004F791A /* RestoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005AD422070793004F791A /* RestoreViewController.xib */; };
+		68005AEC22070793004F791A /* QRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005AD622070793004F791A /* QRViewController.xib */; };
+		68005AED22070793004F791A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD722070793004F791A /* QRViewController.swift */; };
+		68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD922070793004F791A /* ExplanationTemplateViewController.swift */; };
+		68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */; };
+		68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADC22070793004F791A /* BackupIntroViewController.swift */; };
+		68005AF122070793004F791A /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADD22070793004F791A /* RestoreIntroViewController.swift */; };
+		8D4BEAB6AD9DB099246074CB /* Pods_KinBackupRestoreModuleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA5579FDFAD508F6F37BB2 /* Pods_KinBackupRestoreModuleTests.framework */; };
+		BA884B6F3A47E6FE5D47841F /* Pods_KinBackupRestoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E022A76B1DD4F948915AF2C2 /* Pods_KinBackupRestoreModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +49,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EA22E481AFC7B2D47374069 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModuleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68005A812206FFFB004F791A /* KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KinBackupRestoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68005A842206FFFB004F791A /* KinBackupRestoreModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KinBackupRestoreModule.h; sourceTree = "<group>"; };
 		68005A852206FFFB004F791A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68005A8A2206FFFB004F791A /* KinBackupRestoreModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinBackupRestoreModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreModuleTests.swift; sourceTree = "<group>"; };
 		68005A912206FFFB004F791A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68005AB922070789004F791A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68005ABB22070789004F791A /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
+		68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStatusBarStyle+Appearance.swift"; sourceTree = "<group>"; };
+		68005ABD22070789004F791A /* BackupRestore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupRestore.swift; sourceTree = "<group>"; };
+		68005AC322070793004F791A /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
+		68005AC422070793004F791A /* QR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
+		68005AC622070793004F791A /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
+		68005AC822070793004F791A /* BackupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
+		68005AC922070793004F791A /* RestoreFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
+		68005ACA22070793004F791A /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		68005ACB22070793004F791A /* BRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRViewController.swift; sourceTree = "<group>"; };
+		68005ACC22070793004F791A /* QRPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
+		68005ACD22070793004F791A /* PasswordEntryField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryField.swift; sourceTree = "<group>"; };
+		68005ACF22070793004F791A /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
+		68005AD022070793004F791A /* PasswordEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordEntryViewController.xib; sourceTree = "<group>"; };
+		68005AD122070793004F791A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		68005AD322070793004F791A /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
+		68005AD422070793004F791A /* RestoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestoreViewController.xib; sourceTree = "<group>"; };
+		68005AD622070793004F791A /* QRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
+		68005AD722070793004F791A /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		68005AD922070793004F791A /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
+		68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
+		68005ADC22070793004F791A /* BackupIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
+		68005ADD22070793004F791A /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
+		6930B6AE5D9BF6E83FAE65D8 /* Pods-KinBackupRestoreModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModule.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModule/Pods-KinBackupRestoreModule.release.xcconfig"; sourceTree = "<group>"; };
+		7E55F055C3396FC67FC8D1E2 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModuleTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests.release.xcconfig"; sourceTree = "<group>"; };
+		804F09987432C25F46737269 /* Pods-KinBackupRestoreModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModule.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModule/Pods-KinBackupRestoreModule.debug.xcconfig"; sourceTree = "<group>"; };
+		B5DA5579FDFAD508F6F37BB2 /* Pods_KinBackupRestoreModuleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KinBackupRestoreModuleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E022A76B1DD4F948915AF2C2 /* Pods_KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KinBackupRestoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA884B6F3A47E6FE5D47841F /* Pods_KinBackupRestoreModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +101,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				68005A8B2206FFFB004F791A /* KinBackupRestoreModule.framework in Frameworks */,
+				8D4BEAB6AD9DB099246074CB /* Pods_KinBackupRestoreModuleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA09020C8C3976223931D4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E022A76B1DD4F948915AF2C2 /* Pods_KinBackupRestoreModule.framework */,
+				B5DA5579FDFAD508F6F37BB2 /* Pods_KinBackupRestoreModuleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		68005A772206FFFB004F791A = {
 			isa = PBXGroup;
 			children = (
 				68005A832206FFFB004F791A /* KinBackupRestoreModule */,
 				68005A8E2206FFFB004F791A /* KinBackupRestoreModuleTests */,
 				68005A822206FFFB004F791A /* Products */,
+				7B38FBE6DDB54E844ACE6732 /* Pods */,
+				3BA09020C8C3976223931D4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +140,14 @@
 		68005A832206FFFB004F791A /* KinBackupRestoreModule */ = {
 			isa = PBXGroup;
 			children = (
-				68005A842206FFFB004F791A /* KinBackupRestoreModule.h */,
+				68005AB922070789004F791A /* Assets.xcassets */,
+				68005ABD22070789004F791A /* BackupRestore.swift */,
+				68005ABA22070789004F791A /* Extensions */,
 				68005A852206FFFB004F791A /* Info.plist */,
+				68005A842206FFFB004F791A /* KinBackupRestoreModule.h */,
+				68005AC222070793004F791A /* Protocols */,
+				68005AC422070793004F791A /* QR.swift */,
+				68005AC522070793004F791A /* Views */,
 			);
 			path = KinBackupRestoreModule;
 			sourceTree = "<group>";
@@ -84,6 +159,107 @@
 				68005A912206FFFB004F791A /* Info.plist */,
 			);
 			path = KinBackupRestoreModuleTests;
+			sourceTree = "<group>";
+		};
+		68005ABA22070789004F791A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68005ABB22070789004F791A /* UINavigationBar+Appearance.swift */,
+				68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		68005AC222070793004F791A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				68005AC322070793004F791A /* LifeCycleProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		68005AC522070793004F791A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68005AC622070793004F791A /* BackupCompletedViewController.swift */,
+				68005AC722070793004F791A /* FlowController */,
+				68005ACB22070793004F791A /* BRViewController.swift */,
+				68005ACC22070793004F791A /* QRPickerController.swift */,
+				68005ACD22070793004F791A /* PasswordEntryField.swift */,
+				68005ACE22070793004F791A /* PasswordEntryViewController */,
+				68005AD122070793004F791A /* RoundButton.swift */,
+				68005AD222070793004F791A /* RestoreViewController */,
+				68005AD522070793004F791A /* QRViewController */,
+				68005AD822070793004F791A /* ExplanationTemplateViewController */,
+				68005ADB22070793004F791A /* IntroViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68005AC722070793004F791A /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				68005AC822070793004F791A /* BackupFlowController.swift */,
+				68005AC922070793004F791A /* RestoreFlowController.swift */,
+				68005ACA22070793004F791A /* FlowController.swift */,
+			);
+			path = FlowController;
+			sourceTree = "<group>";
+		};
+		68005ACE22070793004F791A /* PasswordEntryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68005ACF22070793004F791A /* PasswordEntryViewController.swift */,
+				68005AD022070793004F791A /* PasswordEntryViewController.xib */,
+			);
+			path = PasswordEntryViewController;
+			sourceTree = "<group>";
+		};
+		68005AD222070793004F791A /* RestoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68005AD322070793004F791A /* RestoreViewController.swift */,
+				68005AD422070793004F791A /* RestoreViewController.xib */,
+			);
+			path = RestoreViewController;
+			sourceTree = "<group>";
+		};
+		68005AD522070793004F791A /* QRViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68005AD622070793004F791A /* QRViewController.xib */,
+				68005AD722070793004F791A /* QRViewController.swift */,
+			);
+			path = QRViewController;
+			sourceTree = "<group>";
+		};
+		68005AD822070793004F791A /* ExplanationTemplateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68005AD922070793004F791A /* ExplanationTemplateViewController.swift */,
+				68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */,
+			);
+			path = ExplanationTemplateViewController;
+			sourceTree = "<group>";
+		};
+		68005ADB22070793004F791A /* IntroViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68005ADC22070793004F791A /* BackupIntroViewController.swift */,
+				68005ADD22070793004F791A /* RestoreIntroViewController.swift */,
+			);
+			path = IntroViewController;
+			sourceTree = "<group>";
+		};
+		7B38FBE6DDB54E844ACE6732 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				804F09987432C25F46737269 /* Pods-KinBackupRestoreModule.debug.xcconfig */,
+				6930B6AE5D9BF6E83FAE65D8 /* Pods-KinBackupRestoreModule.release.xcconfig */,
+				4EA22E481AFC7B2D47374069 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */,
+				7E55F055C3396FC67FC8D1E2 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68005A952206FFFB004F791A /* Build configuration list for PBXNativeTarget "KinBackupRestoreModule" */;
 			buildPhases = (
+				AAAE36F9C1AFCB9B98DE5448 /* [CP] Check Pods Manifest.lock */,
 				68005A7C2206FFFB004F791A /* Headers */,
 				68005A7D2206FFFB004F791A /* Sources */,
 				68005A7E2206FFFB004F791A /* Frameworks */,
@@ -122,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68005A982206FFFB004F791A /* Build configuration list for PBXNativeTarget "KinBackupRestoreModuleTests" */;
 			buildPhases = (
+				036D309D8E5438C2AABD87D2 /* [CP] Check Pods Manifest.lock */,
 				68005A862206FFFB004F791A /* Sources */,
 				68005A872206FFFB004F791A /* Frameworks */,
 				68005A882206FFFB004F791A /* Resources */,
+				7290688F39F0F80E700E0FD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +327,7 @@
 				TargetAttributes = {
 					68005A802206FFFB004F791A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					68005A892206FFFB004F791A = {
 						CreatedOnToolsVersion = 10.1;
@@ -177,6 +357,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68005AEB22070793004F791A /* RestoreViewController.xib in Resources */,
+				68005AE822070793004F791A /* PasswordEntryViewController.xib in Resources */,
+				68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */,
+				68005ABE22070789004F791A /* Assets.xcassets in Resources */,
+				68005AEC22070793004F791A /* QRViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,11 +374,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		036D309D8E5438C2AABD87D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KinBackupRestoreModuleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7290688F39F0F80E700E0FD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KinUtil/KinUtil.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinUtil.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAAE36F9C1AFCB9B98DE5448 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KinBackupRestoreModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68005A7D2206FFFB004F791A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68005ADE22070793004F791A /* LifeCycleProtocol.swift in Sources */,
+				68005AC122070789004F791A /* BackupRestore.swift in Sources */,
+				68005AE922070793004F791A /* RoundButton.swift in Sources */,
+				68005AED22070793004F791A /* QRViewController.swift in Sources */,
+				68005AE322070793004F791A /* FlowController.swift in Sources */,
+				68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */,
+				68005AEA22070793004F791A /* RestoreViewController.swift in Sources */,
+				68005AE122070793004F791A /* BackupFlowController.swift in Sources */,
+				68005AE422070793004F791A /* BRViewController.swift in Sources */,
+				68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */,
+				68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */,
+				68005ABF22070789004F791A /* UINavigationBar+Appearance.swift in Sources */,
+				68005ADF22070793004F791A /* QR.swift in Sources */,
+				68005AE622070793004F791A /* PasswordEntryField.swift in Sources */,
+				68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */,
+				68005AE522070793004F791A /* QRPickerController.swift in Sources */,
+				68005AF122070793004F791A /* RestoreIntroViewController.swift in Sources */,
+				68005AE222070793004F791A /* RestoreFlowController.swift in Sources */,
+				68005AC022070789004F791A /* UIStatusBarStyle+Appearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +613,9 @@
 		};
 		68005A962206FFFB004F791A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 804F09987432C25F46737269 /* Pods-KinBackupRestoreModule.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +632,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,7 +640,9 @@
 		};
 		68005A972206FFFB004F791A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6930B6AE5D9BF6E83FAE65D8 /* Pods-KinBackupRestoreModule.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -388,7 +666,9 @@
 		};
 		68005A992206FFFB004F791A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA22E481AFC7B2D47374069 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -405,7 +685,9 @@
 		};
 		68005A9A2206FFFB004F791A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E55F055C3396FC67FC8D1E2 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
