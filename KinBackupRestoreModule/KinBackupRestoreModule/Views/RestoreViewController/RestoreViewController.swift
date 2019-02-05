@@ -34,7 +34,7 @@ class RestoreViewController: BRViewController {
     }
     
     init() {
-        super.init(nibName: "RestoreViewController", bundle: nil)
+        super.init(nibName: "RestoreViewController", bundle: .backupRestore)
         commonInit()
     }
     

@@ -16,7 +16,8 @@
     "tag": "0.0.1",
     "submodules": true
   },
-  "source_files": "KinBackupRestoreModule/KinBackupRestoreModule/**/*.swift",
+  "source_files": "KinBackupRestoreModule/KinBackupRestoreModule/**/*.{strings,swift,xib}",
+  "resources": "KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets",
   "dependencies": {
     "KinUtil": [
 

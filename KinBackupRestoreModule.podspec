@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
   s.author       = { 'Kin Foundation' => 'kin@kik.com' }
   s.source       = { :git => 'https://github.com/kinecosystem/kin-backup-restore-module-ios.git', :tag => "#{s.version}", :submodules => true }
 
-  s.source_files = 'KinBackupRestoreModule/KinBackupRestoreModule/**/*.swift'
+  s.source_files = 'KinBackupRestoreModule/KinBackupRestoreModule/**/*.{strings,swift,xib}'
+  s.resources    = 'KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets'
 
   s.dependency 'KinUtil'
 

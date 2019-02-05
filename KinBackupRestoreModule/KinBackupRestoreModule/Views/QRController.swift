@@ -1,14 +1,14 @@
 //
-//  QR.swift
+//  QRController.swift
 //  KinEcosystem
 //
 //  Created by Corey Werner on 28/10/2018.
 //  Copyright © 2018 Kik Interactive. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class QR {
+class QRController {
     /**
      Create a QR image from a string.
      

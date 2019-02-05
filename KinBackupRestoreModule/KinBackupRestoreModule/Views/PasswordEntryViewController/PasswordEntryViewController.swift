@@ -43,12 +43,26 @@ class PasswordEntryViewController: BRViewController {
     var password: String? {
         return passwordInput1.text
     }
-    
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-        if parent == nil {
-            //            Kin.track { try BackupCreatePasswordBackButtonTapped() } !!!:
+
+    init() {
+        super.init(nibName: "PasswordEntryViewController", bundle: .backupRestore)
+        commonInit()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    private func commonInit() {
+        loadViewIfNeeded()
+    }
+
+    deinit {
+        kbObservers.forEach { obs in
+            NotificationCenter.default.removeObserver(obs)
         }
+        kbObservers.removeAll()
     }
     
     override func viewDidLoad() {
@@ -93,8 +107,12 @@ class PasswordEntryViewController: BRViewController {
         }
         passwordInput1.becomeFirstResponder()
     }
-    @objc func d() {
 
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
+        if parent == nil {
+            //            Kin.track { try BackupCreatePasswordBackButtonTapped() } !!!:
+        }
     }
     
     @IBAction func passwordEntryChanged(_ sender: UITextField) {
@@ -115,23 +133,26 @@ class PasswordEntryViewController: BRViewController {
         passwordInfo.attributedText = passwordInstructions
     }
     
-    
-    
     @IBAction func doneButtonTapped(_ sender: Any) {
         //        Kin.track { try BackupCreatePasswordNextButtonTapped() } !!!:
         guard let text = passwordInput1.text, passwordInput1.hasText && passwordInput2.hasText else {
             return // shouldn't really happen, here for documenting
         }
+
         guard passwordInput1.text == passwordInput2.text else {
             alertPasswordsDontMatch()
             return
         }
-        guard let delegate = delegate else { fatalError() }
+
+        guard let delegate = delegate else {
+            fatalError() // TODO: shouldnt crash in production
+        }
         
         guard delegate.validatePasswordConformance(text) else {
             alertPasswordsConformance()
             return
         }
+
         delegate.passwordEntryViewControllerDidComplete(self)
     }
     
@@ -154,14 +175,6 @@ class PasswordEntryViewController: BRViewController {
     func updateDoneButton() {
         doneButton.isEnabled = passwordInput1.hasText && passwordInput2.hasText && tickMarked
     }
-    
-    deinit {
-        kbObservers.forEach { obs in
-            NotificationCenter.default.removeObserver(obs)
-        }
-        kbObservers.removeAll()
-    }
-
 }
 
 // TODO: move

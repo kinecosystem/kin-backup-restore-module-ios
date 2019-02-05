@@ -27,6 +27,7 @@ public enum BREvent {
     case restore(BREventType)
 }
 
+// ???: these arent being used
 public enum BREventType {
     case nextTapped
     case passwordMismatch
@@ -53,7 +54,8 @@ public class BRManager: NSObject {
     private var navigationBarBackgroundImages: [UIBarMetrics: UIImage?]?
     private var navigationBarShadowImage: UIImage?
     private var navigationBarTintColor: UIColor?
-    
+
+    // TODO: storeProvider should be a delegate
     public init(with storeProvider: KeystoreProvider) {
         self.storeProvider = storeProvider
     }
@@ -80,12 +82,12 @@ public class BRManager: NSObject {
         }
         
         let isStackEmpty = navigationController.viewControllers.isEmpty
-        
+
         removeNavigationBarBackground(navigationController.navigationBar, shouldSave: !isStackEmpty)
-        
+
         let flowController = createFlowController(phase: phase, keystoreProvider: storeProvider, navigationController: navigationController)
         navigationController.pushViewController(flowController.entryViewController, animated: !isStackEmpty)
-        
+
         brInstance = BRInstance(presentationType: .pushed, flowController: flowController, completion: completion)
     }
     

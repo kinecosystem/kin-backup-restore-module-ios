@@ -37,7 +37,7 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
         if let image = info[.originalImage] as? UIImage {
             
             DispatchQueue.global().async {
-                let qrString = QR.decode(image: image)
+                let qrString = QRController.decode(image: image)
                 if let qr = qrString {
                     DispatchQueue.main.async {
                         self.delegate?.qrPickerControllerDidComplete(self, with: qr)
@@ -64,21 +64,6 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
         self.imagePickerController.present(alertController, animated: true)
-    }
-    
-}
-
-// TODO: move
-
-extension String {
-    func localized(_ args: CVarArg...) -> String {
-        return String(format: NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: ""), arguments: args)
-    }
-
-    func attributed(_ size: CGFloat, weight: UIFont.Weight, color: UIColor) -> NSAttributedString {
-        return NSAttributedString(string: self,
-                                  attributes: [.font : UIFont.systemFont(ofSize: size, weight: weight),
-                                               .foregroundColor : color])
     }
     
 }

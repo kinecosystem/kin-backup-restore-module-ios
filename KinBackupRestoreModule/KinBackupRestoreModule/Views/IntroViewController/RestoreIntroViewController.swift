@@ -21,7 +21,7 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //        Kin.track { try RestoreUploadQrCodePageViewed() } !!!:
-        imageView.image = UIImage(named: "whiteQrCode")
+        imageView.image = UIImage(named: "whiteQrCode", in: .backupRestore, compatibleWith: nil)
         titleLabel.text = "kinecosystem_restore_intro_title".localized()
         descriptionLabel.text = "kinecosystem_restore_intro_description".localized()
         reminderContainerView.isHidden = true

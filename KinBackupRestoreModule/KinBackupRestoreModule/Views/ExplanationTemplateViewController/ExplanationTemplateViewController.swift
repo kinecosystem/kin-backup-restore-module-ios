@@ -20,7 +20,7 @@ class ExplanationTemplateViewController: BRViewController {
     @IBOutlet weak var topSpace: NSLayoutConstraint!
     
     init() {
-        super.init(nibName: "ExplanationTemplateViewController", bundle: nil)
+        super.init(nibName: "ExplanationTemplateViewController", bundle: .backupRestore)
         commonInit()
     }
     
@@ -45,32 +45,5 @@ class ExplanationTemplateViewController: BRViewController {
             topSpace.constant = 0.0
             view.layoutIfNeeded()
         }
-    }
-}
-
-
-// TODO: move
-extension UIColor {
-    static let kinPrimaryBlue = UIColor(red: 0, green: 0, blue: 1, alpha: 1)
-
-    @nonobjc class var kinBlueGrey: UIColor {
-        return UIColor(red: 92.0 / 255.0, green: 103.0 / 255.0, blue: 134.0 / 255.0, alpha: 1.0)
-    }
-
-
-    @nonobjc class var kinBlueGreyTwo: UIColor {
-        return UIColor(red: 120.0 / 255.0, green: 132.0 / 255.0, blue: 165.0 / 255.0, alpha: 1.0)
-    }
-
-    @nonobjc class var kinWarning: UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 2.0 / 255.0, blue: 50.0 / 255.0, alpha: 1.0)
-    }
-
-    @nonobjc class var kinSuccess: UIColor {
-        return UIColor(red: 0.0 / 255.0, green: 208.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)
-    }
-
-    @nonobjc class var kinLightBlueGrey: UIColor {
-        return UIColor(red: 215.0 / 255.0, green: 220.0 / 255.0, blue: 233.0 / 255.0, alpha: 1.0)
     }
 }

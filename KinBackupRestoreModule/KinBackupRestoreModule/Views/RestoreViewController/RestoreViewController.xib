@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestoreViewController" customModule="KinEcosystem" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestoreViewController" customModule="KinBackupRestoreModule" customModuleProvider="target">
             <connections>
                 <outlet property="bottomSpace" destination="aku-78-Q3y" id="oND-6X-bqX"/>
                 <outlet property="doneButton" destination="3bW-aA-Iax" id="J6R-dL-hQd"/>
@@ -66,7 +66,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="DcM-yV-bQS"/>
                         </view>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpP-16-moM" customClass="PasswordEntryField" customModule="KinEcosystem">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpP-16-moM" customClass="PasswordEntryField" customModule="KinBackupRestoreModule" customModuleProvider="target">
                             <rect key="frame" x="37.5" y="330.5" width="300" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="300" id="0Lm-p2-fWM"/>
@@ -87,7 +87,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="9C3-tu-oKi"/>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bW-aA-Iax" customClass="RoundButton" customModule="KinEcosystem">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bW-aA-Iax" customClass="RoundButton" customModule="KinBackupRestoreModule" customModuleProvider="target">
                             <rect key="frame" x="37.5" y="388.5" width="300" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="300" id="RhR-Lj-19z"/>

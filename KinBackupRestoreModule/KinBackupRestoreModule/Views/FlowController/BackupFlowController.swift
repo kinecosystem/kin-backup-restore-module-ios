@@ -39,7 +39,7 @@ extension BackupFlowController: LifeCycleProtocol {
 extension BackupFlowController {
     @objc private func pushPasswordViewController() {
         //        Kin.track { try BackupStartButtonTapped() } !!!:
-        let viewController = PasswordEntryViewController(nibName: "PasswordEntryViewController", bundle: nil)
+        let viewController = PasswordEntryViewController()
         viewController.title = "kinecosystem_create_password".localized()
         viewController.delegate = self
         viewController.lifeCycleDelegate = self

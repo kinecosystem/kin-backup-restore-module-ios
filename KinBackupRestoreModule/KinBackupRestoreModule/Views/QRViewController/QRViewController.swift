@@ -35,7 +35,7 @@ class QRViewController: BRViewController {
     
     init(qrString: String) {
         self.qrString = qrString
-        super.init(nibName: "QRViewController", bundle: nil)
+        super.init(nibName: "QRViewController", bundle: .backupRestore)
         loadViewIfNeeded()
     }
     
@@ -58,7 +58,7 @@ class QRViewController: BRViewController {
         super.viewDidLoad()
         //        Kin.track { try BackupQrCodePageViewed() } !!!:
         descriptionLabel.attributedText = "kinecosystem_backup_qr_description".localized().attributed(12, weight: .regular, color: .kinBlueGreyTwo)
-        qrImageView.image = QR.generateImage(from: qrString, for: qrImageView.bounds.size)
+        qrImageView.image = QRController.generateImage(from: qrString, for: qrImageView.bounds.size)
         reminderImageView.tintColor = .kinWarning
         reminderTitleLabel.attributedText = "kinecosystem_backup_reminder_title".localized().attributed(14, weight: .bold, color: .kinWarning)
         reminderDescriptionLabel.attributedText = "kinecosystem_backup_reminder_description".localized().attributed(12, weight: .regular, color: .kinWarning)
@@ -142,7 +142,6 @@ extension QRViewController {
     }
     
     @objc private func emailButtonTapped() {
-        
         guard tickMarked == false else {
             delegate.QRViewControllerDidComplete()
             return
@@ -153,7 +152,7 @@ extension QRViewController {
             return
         }
         
-        guard let qrImage = QR.generateImage(from: qrString), let data = qrImage.pngData() else {
+        guard let qrImage = QRController.generateImage(from: qrString), let data = qrImage.pngData() else {
             presentEmailErrorAlert(.critical)
             return
         }

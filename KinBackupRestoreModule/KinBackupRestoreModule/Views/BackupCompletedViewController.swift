@@ -14,7 +14,7 @@ class BackupCompletedViewController: ExplanationTemplateViewController {
         super.viewDidLoad()
         //        Kin.track { try BackupCompletedPageViewed() } !!!:
         navigationItem.hidesBackButton = true
-        imageView.image = UIImage(named: "safeIcon")
+        imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
         titleLabel.attributedText = "kinecosystem_backup_completed_title".localized().attributed(28.0, weight: .light, color: .white)
         descriptionLabel.attributedText = "kinecosystem_backup_completed_description".localized().attributed(14.0, weight: .regular, color: .white)
         reminderTitleLabel.attributedText = "kinecosystem_backup_reminder_title".localized().attributed(14.0, weight: .bold, color: .white)

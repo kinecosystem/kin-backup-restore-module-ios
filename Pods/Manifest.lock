@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  KinBackupRestoreModule: e4894549077e2092c98fadbf14facd7aa5bafc92
+  KinBackupRestoreModule: 1e162939a225d4b3a7c56748a4a8045a95175fc0
   KinSDK: d44a6fd38b70e06692c5bb0824539a9b305a5186
   KinUtil: ad22d0694a9c8a526740e1d2441c32e24a98928b
   Sodium: c5510cc6f5e1b27858e5f260b5cac80d4a3f9379

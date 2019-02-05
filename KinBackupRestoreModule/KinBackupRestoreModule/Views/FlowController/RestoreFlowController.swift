@@ -57,7 +57,7 @@ extension RestoreFlowController {
         let restoreViewController = RestoreViewController()
         restoreViewController.delegate = self
         restoreViewController.lifeCycleDelegate = self
-        restoreViewController.imageView.image = QR.generateImage(from: qrString)
+        restoreViewController.imageView.image = QRController.generateImage(from: qrString)
         navigationController.pushViewController(restoreViewController, animated: true)
     }
 }
@@ -89,7 +89,7 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
             completion(.wrongPassword)
             return
         }
-        guard let qrImage = viewController.imageView.image, let keystore = QR.decode(image: qrImage) else {
+        guard let qrImage = viewController.imageView.image, let keystore = QRController.decode(image: qrImage) else {
             completion(.invalidImage)
             return
         }

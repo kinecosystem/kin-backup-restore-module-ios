@@ -15,7 +15,6 @@
 		68005AC022070789004F791A /* UIStatusBarStyle+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */; };
 		68005AC122070789004F791A /* BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABD22070789004F791A /* BackupRestore.swift */; };
 		68005ADE22070793004F791A /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC322070793004F791A /* LifeCycleProtocol.swift */; };
-		68005ADF22070793004F791A /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC422070793004F791A /* QR.swift */; };
 		68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC622070793004F791A /* BackupCompletedViewController.swift */; };
 		68005AE122070793004F791A /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC822070793004F791A /* BackupFlowController.swift */; };
 		68005AE222070793004F791A /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC922070793004F791A /* RestoreFlowController.swift */; };
@@ -34,6 +33,11 @@
 		68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */; };
 		68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADC22070793004F791A /* BackupIntroViewController.swift */; };
 		68005AF122070793004F791A /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADD22070793004F791A /* RestoreIntroViewController.swift */; };
+		68005B0C2208625F004F791A /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */; };
+		68005B12220945C2004F791A /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B11220945C2004F791A /* UIColor+Appearance.swift */; };
+		68005B1422094F3E004F791A /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B1322094F3E004F791A /* String+Localization.swift */; };
+		68005B192209538C004F791A /* QRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B182209538C004F791A /* QRController.swift */; };
+		68005B1F220979CE004F791A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68005B1E220979CE004F791A /* Localizable.strings */; };
 		8D4BEAB6AD9DB099246074CB /* Pods_KinBackupRestoreModuleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA5579FDFAD508F6F37BB2 /* Pods_KinBackupRestoreModuleTests.framework */; };
 		BA884B6F3A47E6FE5D47841F /* Pods_KinBackupRestoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E022A76B1DD4F948915AF2C2 /* Pods_KinBackupRestoreModule.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +65,6 @@
 		68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStatusBarStyle+Appearance.swift"; sourceTree = "<group>"; };
 		68005ABD22070789004F791A /* BackupRestore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupRestore.swift; sourceTree = "<group>"; };
 		68005AC322070793004F791A /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
-		68005AC422070793004F791A /* QR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
 		68005AC622070793004F791A /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
 		68005AC822070793004F791A /* BackupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
 		68005AC922070793004F791A /* RestoreFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
@@ -80,6 +83,11 @@
 		68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
 		68005ADC22070793004F791A /* BackupIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
 		68005ADD22070793004F791A /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
+		68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
+		68005B11220945C2004F791A /* UIColor+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
+		68005B1322094F3E004F791A /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		68005B182209538C004F791A /* QRController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRController.swift; sourceTree = "<group>"; };
+		68005B1E220979CE004F791A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6930B6AE5D9BF6E83FAE65D8 /* Pods-KinBackupRestoreModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModule.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModule/Pods-KinBackupRestoreModule.release.xcconfig"; sourceTree = "<group>"; };
 		7E55F055C3396FC67FC8D1E2 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModuleTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests.release.xcconfig"; sourceTree = "<group>"; };
 		804F09987432C25F46737269 /* Pods-KinBackupRestoreModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModule.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModule/Pods-KinBackupRestoreModule.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,8 +153,8 @@
 				68005ABA22070789004F791A /* Extensions */,
 				68005A852206FFFB004F791A /* Info.plist */,
 				68005A842206FFFB004F791A /* KinBackupRestoreModule.h */,
+				68005B1E220979CE004F791A /* Localizable.strings */,
 				68005AC222070793004F791A /* Protocols */,
-				68005AC422070793004F791A /* QR.swift */,
 				68005AC522070793004F791A /* Views */,
 			);
 			path = KinBackupRestoreModule;
@@ -164,8 +172,11 @@
 		68005ABA22070789004F791A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */,
+				68005B11220945C2004F791A /* UIColor+Appearance.swift */,
 				68005ABB22070789004F791A /* UINavigationBar+Appearance.swift */,
 				68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */,
+				68005B1322094F3E004F791A /* String+Localization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,13 +193,14 @@
 			isa = PBXGroup;
 			children = (
 				68005AC622070793004F791A /* BackupCompletedViewController.swift */,
-				68005AC722070793004F791A /* FlowController */,
 				68005ACB22070793004F791A /* BRViewController.swift */,
-				68005ACC22070793004F791A /* QRPickerController.swift */,
+				68005AC722070793004F791A /* FlowController */,
 				68005ACD22070793004F791A /* PasswordEntryField.swift */,
 				68005ACE22070793004F791A /* PasswordEntryViewController */,
 				68005AD122070793004F791A /* RoundButton.swift */,
 				68005AD222070793004F791A /* RestoreViewController */,
+				68005B182209538C004F791A /* QRController.swift */,
+				68005ACC22070793004F791A /* QRPickerController.swift */,
 				68005AD522070793004F791A /* QRViewController */,
 				68005AD822070793004F791A /* ExplanationTemplateViewController */,
 				68005ADB22070793004F791A /* IntroViewController */,
@@ -358,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68005AEB22070793004F791A /* RestoreViewController.xib in Resources */,
+				68005B1F220979CE004F791A /* Localizable.strings in Resources */,
 				68005AE822070793004F791A /* PasswordEntryViewController.xib in Resources */,
 				68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */,
 				68005ABE22070789004F791A /* Assets.xcassets in Resources */,
@@ -449,9 +462,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				68005ADE22070793004F791A /* LifeCycleProtocol.swift in Sources */,
+				68005B1422094F3E004F791A /* String+Localization.swift in Sources */,
 				68005AC122070789004F791A /* BackupRestore.swift in Sources */,
 				68005AE922070793004F791A /* RoundButton.swift in Sources */,
 				68005AED22070793004F791A /* QRViewController.swift in Sources */,
+				68005B12220945C2004F791A /* UIColor+Appearance.swift in Sources */,
+				68005B0C2208625F004F791A /* Bundle+BackupRestore.swift in Sources */,
+				68005B192209538C004F791A /* QRController.swift in Sources */,
 				68005AE322070793004F791A /* FlowController.swift in Sources */,
 				68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */,
 				68005AEA22070793004F791A /* RestoreViewController.swift in Sources */,
@@ -460,7 +477,6 @@
 				68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */,
 				68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */,
 				68005ABF22070789004F791A /* UINavigationBar+Appearance.swift in Sources */,
-				68005ADF22070793004F791A /* QR.swift in Sources */,
 				68005AE622070793004F791A /* PasswordEntryField.swift in Sources */,
 				68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */,
 				68005AE522070793004F791A /* QRPickerController.swift in Sources */,
