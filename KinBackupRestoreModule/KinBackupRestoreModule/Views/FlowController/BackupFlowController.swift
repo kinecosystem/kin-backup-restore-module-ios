@@ -38,7 +38,8 @@ extension BackupFlowController: LifeCycleProtocol {
 @available(iOS 9.0, *)
 extension BackupFlowController {
     @objc private func pushPasswordViewController() {
-        //        Kin.track { try BackupStartButtonTapped() } !!!:
+        KinBackupRestoreBI.shared.delegate?.kinBackupStartButtonTapped()
+
         let viewController = PasswordEntryViewController()
         viewController.title = "kinecosystem_create_password".localized()
         viewController.delegate = self
@@ -71,7 +72,7 @@ extension BackupFlowController {
 @available(iOS 9.0, *)
 extension BackupFlowController: PasswordEntryDelegate {
     func validatePasswordConformance(_ password: String) -> Bool {
-        return keystoreProvider.validatePassword(password)
+        return keystoreDelegate.validatePassword(password)
     }
     
     func passwordEntryViewControllerDidComplete(_ viewController: PasswordEntryViewController) {
@@ -80,7 +81,7 @@ extension BackupFlowController: PasswordEntryDelegate {
         }
         
         do {
-            pushQRViewController(with: try keystoreProvider.exportAccount(password))
+            pushQRViewController(with: try keystoreDelegate.exportAccount(password))
         }
         catch {
             print(error)
@@ -93,6 +94,4 @@ extension BackupFlowController: QRViewControllerDelegate {
     func QRViewControllerDidComplete() {
         pushCompletedViewController()
     }
-    
-    
 }

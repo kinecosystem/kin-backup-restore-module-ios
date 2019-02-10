@@ -12,7 +12,9 @@ import UIKit
 class BackupIntroViewController: ExplanationTemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        Kin.track { try BackupWelcomePageViewed() } !!!:
+
+        KinBackupRestoreBI.shared.delegate?.kinBackupWelcomePageViewed()
+
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
         titleLabel.text = "kinecosystem_backup_intro_title".localized()
         descriptionLabel.text = "kinecosystem_backup_intro_description".localized()
@@ -22,8 +24,9 @@ class BackupIntroViewController: ExplanationTemplateViewController {
     
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
+
         if parent == nil {
-            //            Kin.track { try BackupWelcomePageBackButtonTapped() } !!!:
+            KinBackupRestoreBI.shared.delegate?.kinBackupWelcomePageBackButtonTapped()
         }
     }
 }

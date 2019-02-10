@@ -16,11 +16,11 @@ protocol FlowControllerDelegate: NSObjectProtocol {
 class FlowController: NSObject {
     weak var delegate: FlowControllerDelegate?
     
-    let keystoreProvider: KeystoreProvider
+    let keystoreDelegate: KinBackupRestoreKeystoreDelegate
     let navigationController: UINavigationController
     
-    init(keystoreProvider: KeystoreProvider, navigationController: UINavigationController) {
-        self.keystoreProvider = keystoreProvider
+    init(keystoreDelegate: KinBackupRestoreKeystoreDelegate, navigationController: UINavigationController) {
+        self.keystoreDelegate = keystoreDelegate
         self.navigationController = navigationController
         super.init()
     }

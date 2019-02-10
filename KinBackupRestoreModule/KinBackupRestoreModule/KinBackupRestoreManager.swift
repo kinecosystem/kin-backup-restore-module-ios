@@ -1,37 +1,27 @@
 //
-//  BackupRestore.swift
+//  KinBackupRestoreManager.swift
 //  KinEcosystem
 //
-//  Created by Elazar Yifrach on 15/10/2018.
-//  Copyright © 2018 Kik Interactive. All rights reserved.
+//  Created by Corey Werner on 05/02/2019.
+//  Copyright © 2019 Kin Foundation. All rights reserved.
 //
 
 import KinUtil
 
-public protocol KeystoreProvider {
+public protocol KinBackupRestoreKeystoreDelegate: NSObjectProtocol {
     func exportAccount(_ password: String) throws -> String
     func importAccount(keystore: String, password: String, completion: @escaping (Error?) -> ())
     func validatePassword(_ password: String) -> Bool
 }
 
-public typealias BRCompletionHandler = (_ success: Bool) -> ()
-public typealias BREventsHandler = (_ event: BREvent) -> ()
+public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
+    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool)
+    func kinBackupRestoreManager(_ manager: KinBackupRestoreManager, error: Error)
+}
 
 public enum BRPhase {
     case backup
     case restore
-}
-
-public enum BREvent {
-    case backup(BREventType)
-    case restore(BREventType)
-}
-
-// ???: these arent being used
-public enum BREventType {
-    case nextTapped
-    case passwordMismatch
-    case qrMailSent
 }
 
 private enum BRPresentationType {
@@ -42,12 +32,18 @@ private enum BRPresentationType {
 private struct BRInstance {
     let presentationType: BRPresentationType
     let flowController: FlowController
-    let completion: BRCompletionHandler
 }
 
 @available(iOS 9.0, *)
-public class BRManager: NSObject {
-    private let storeProvider: KeystoreProvider
+public class KinBackupRestoreManager: NSObject {
+    public weak var delegate: KinBackupRestoreManagerDelegate?
+    public weak var keystoreDelegate: KinBackupRestoreKeystoreDelegate?
+    public weak var biDelegate: KinBackupRestoreBIDelegate? {
+        didSet {
+            KinBackupRestoreBI.shared.delegate = biDelegate
+        }
+    }
+
     private var presentor: UIViewController?
     private var brInstance: BRInstance?
     
@@ -55,11 +51,6 @@ public class BRManager: NSObject {
     private var navigationBarShadowImage: UIImage?
     private var navigationBarTintColor: UIColor?
 
-    // TODO: storeProvider should be a delegate
-    public init(with storeProvider: KeystoreProvider) {
-        self.storeProvider = storeProvider
-    }
-    
     /**
      Start a backup or recovery phase by pushing the view controllers onto a navigation controller.
      
@@ -69,26 +60,25 @@ public class BRManager: NSObject {
      - Parameter phase: Perform a backup or restore
      - Parameter navigationController: The navigation controller being pushed onto
      - Parameter events:
-     - Parameter completion:
+
+     - Returns: False if a session already exists, true otherwise.
      */
-    public func start(_ phase: BRPhase,
-                      pushedOnto navigationController: UINavigationController,
-                      events: BREventsHandler,
-                      completion: @escaping BRCompletionHandler)
-    {
+    @discardableResult
+    public func start(_ phase: BRPhase, pushedOnto navigationController: UINavigationController) -> Bool {
         guard brInstance == nil else {
-            completion(false)
-            return
+            return false
         }
         
         let isStackEmpty = navigationController.viewControllers.isEmpty
 
         removeNavigationBarBackground(navigationController.navigationBar, shouldSave: !isStackEmpty)
 
-        let flowController = createFlowController(phase: phase, keystoreProvider: storeProvider, navigationController: navigationController)
+        let flowController = createFlowController(phase: phase, navigationController: navigationController)
         navigationController.pushViewController(flowController.entryViewController, animated: !isStackEmpty)
 
-        brInstance = BRInstance(presentationType: .pushed, flowController: flowController, completion: completion)
+        brInstance = BRInstance(presentationType: .pushed, flowController: flowController)
+
+        return true
     }
     
     /**
@@ -97,39 +87,42 @@ public class BRManager: NSObject {
      - Parameter phase: Perform a backup or restore
      - Parameter viewController: The view controller being presented onto
      - Parameter events:
-     - Parameter completion:
+
+     - Returns: False if a session already exists, true otherwise.
      */
-    public func start(_ phase: BRPhase,
-                      presentedOn viewController: UIViewController,
-                      events: BREventsHandler,
-                      completion: @escaping BRCompletionHandler)
-    {
+    @discardableResult
+    public func start(_ phase: BRPhase, presentedOn viewController: UIViewController) -> Bool {
         guard brInstance == nil else {
-            completion(false)
-            return
+            return false
         }
         
         let navigationController = UINavigationController()
         removeNavigationBarBackground(navigationController.navigationBar)
         
-        let flowController = createFlowController(phase: phase, keystoreProvider: storeProvider, navigationController: navigationController)
+        let flowController = createFlowController(phase: phase, navigationController: navigationController)
         let dismissItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: flowController, action: #selector(flowController.cancelFlow))
         flowController.entryViewController.navigationItem.leftBarButtonItem = dismissItem
         navigationController.viewControllers = [flowController.entryViewController]
         viewController.present(navigationController, animated: true)
         
-        brInstance = BRInstance(presentationType: .presented, flowController: flowController, completion: completion)
+        brInstance = BRInstance(presentationType: .presented, flowController: flowController)
         presentor = viewController
+
+        return true
     }
     
-    private func createFlowController(phase: BRPhase, keystoreProvider: KeystoreProvider, navigationController: UINavigationController) -> FlowController {
+    private func createFlowController(phase: BRPhase, navigationController: UINavigationController) -> FlowController {
         let controller: FlowController
-        
+
+        guard let keystoreDelegate = keystoreDelegate else {
+            fatalError() // TODO:
+        }
+
         switch phase {
         case .backup:
-            controller = BackupFlowController(keystoreProvider: storeProvider, navigationController: navigationController)
+            controller = BackupFlowController(keystoreDelegate: keystoreDelegate, navigationController: navigationController)
         case .restore:
-            controller = RestoreFlowController(keystoreProvider: storeProvider, navigationController: navigationController)
+            controller = RestoreFlowController(keystoreDelegate: keystoreDelegate, navigationController: navigationController)
         }
         
         controller.delegate = self
@@ -140,7 +133,7 @@ public class BRManager: NSObject {
 // MARK: - Navigation
 
 @available(iOS 9.0, *)
-extension BRManager {
+extension KinBackupRestoreManager {
     private var navigationController: UINavigationController? {
         return brInstance?.flowController.navigationController
     }
@@ -173,13 +166,13 @@ extension BRManager {
 // MARK: - Flow
 
 @available(iOS 9.0, *)
-extension BRManager: FlowControllerDelegate {
+extension KinBackupRestoreManager: FlowControllerDelegate {
     func flowControllerDidComplete(_ controller: FlowController) {
         guard let brInstance = brInstance else {
             return
         }
-        
-        brInstance.completion(true)
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
         
         switch brInstance.presentationType {
         case .presented:
@@ -195,8 +188,8 @@ extension BRManager: FlowControllerDelegate {
         guard let brInstance = brInstance else {
             return
         }
-        
-        brInstance.completion(false)
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
         
         switch brInstance.presentationType {
         case .presented:
@@ -214,7 +207,7 @@ extension BRManager: FlowControllerDelegate {
 // MARK: - Navigation Bar Appearance
 
 @available(iOS 9.0, *)
-extension BRManager {
+extension KinBackupRestoreManager {
     private func removeNavigationBarBackground(_ navigationBar: UINavigationBar, shouldSave: Bool = false) {
         if shouldSave {
             let barMetrics: [UIBarMetrics] = [.default, .defaultPrompt, .compact, .compactPrompt]

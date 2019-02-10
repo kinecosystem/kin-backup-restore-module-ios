@@ -20,7 +20,9 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        Kin.track { try RestoreUploadQrCodePageViewed() } !!!:
+
+        KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodePageViewed()
+
         imageView.image = UIImage(named: "whiteQrCode", in: .backupRestore, compatibleWith: nil)
         titleLabel.text = "kinecosystem_restore_intro_title".localized()
         descriptionLabel.text = "kinecosystem_restore_intro_description".localized()
@@ -31,13 +33,15 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
     
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
+
         if parent == nil {
-            //            Kin.track { try RestoreUploadQrCodeBackButtonTapped() } !!!:
+            KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodeBackButtonTapped()
         }
     }
     
     @objc private func continueAction() {
-        //        Kin.track { try RestoreUploadQrCodeButtonTapped() } !!!:
+        KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodeButtonTapped()
+
         if canContinue {
             delegate?.restoreIntroViewControllerDidComplete(self)
         }
@@ -51,12 +55,13 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
         let message = "kinecosystem_restore_intro_alert_message".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "kinecosystem_ok".localized(), style: .default) { _ in
-            //            Kin.track { try RestoreAreYouSureOkButtonTapped() } !!!:
+            KinBackupRestoreBI.shared.delegate?.kinRestoreAreYouSureOkButtonTapped()
+
             self.canContinue = true
             self.delegate?.restoreIntroViewControllerDidComplete(self)
         }
         alertController.addAction(UIAlertAction(title: "kinecosystem_cancel".localized(), style: .cancel) { _ in
-            //            Kin.track { try RestoreAreYouSureCancelButtonTapped() } !!!:
+            KinBackupRestoreBI.shared.delegate?.kinRestoreAreYouSureCancelButtonTapped()
         })
         alertController.addAction(continueAction)
         alertController.preferredAction = continueAction

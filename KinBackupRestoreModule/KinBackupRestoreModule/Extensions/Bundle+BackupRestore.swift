@@ -9,5 +9,5 @@
 import Foundation
 
 extension Bundle {
-    static let backupRestore = Bundle(for: BRManager.self)
+    static let backupRestore = Bundle(for: KinBackupRestoreManager.self)
 }

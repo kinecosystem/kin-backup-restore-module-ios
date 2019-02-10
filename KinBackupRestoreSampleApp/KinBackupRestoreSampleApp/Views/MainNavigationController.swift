@@ -12,7 +12,7 @@ import KinBackupRestoreModule
 
 class MainNavigationController: UINavigationController {
     let network: Network = .testNet
-    var brManager: BRManager! // TODO: change init to not require self
+    var brManager = KinBackupRestoreManager()
     var brAccount: KinAccount?
 
     private let loaderView = UIActivityIndicatorView(style: .whiteLarge)
@@ -24,6 +24,10 @@ class MainNavigationController: UINavigationController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
+        brManager.delegate = self
+        brManager.keystoreDelegate = self
+        brManager.biDelegate = self
+
         let appId: AppId
 
         do {
@@ -32,8 +36,6 @@ class MainNavigationController: UINavigationController {
         catch {
             fatalError()
         }
-
-        brManager = BRManager(with: self)
 
         let kinClient = KinClient(with: .blockchain(network), network: network, appId: appId)
         let accountListViewController = AccountListViewController(with: kinClient)
@@ -65,25 +67,27 @@ extension MainNavigationController: AccountViewControllerDelegate {
     func accountViewController(_ viewController: AccountViewController, backupAccount account: KinAccount) {
         brAccount = account
 
-        brManager.start(.backup, pushedOnto: self, events: { events in
-            print("||| event")
-        }) { completion in
-            print("||| completed")
-
-            self.brAccount = nil
-        }
+        brManager.start(.backup, pushedOnto: self)
     }
 }
 
 // MARK: - Backup and Restore
 
-extension MainNavigationController: KeystoreProvider {
+extension MainNavigationController: KinBackupRestoreManagerDelegate {
+    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool) {
+        print("||| completed")
+
+        self.brAccount = nil
+    }
+
+    func kinBackupRestoreManager(_ manager: KinBackupRestoreManager, error: Error) {
+
+    }
+}
+
+extension MainNavigationController: KinBackupRestoreKeystoreDelegate {
     @objc fileprivate func restoreAction() {
-        brManager.start(.restore, presentedOn: self, events: { events in
-            print("||| event")
-        }) { completion in
-            print("||| completed")
-        }
+        brManager.start(.restore, presentedOn: self)
     }
 
     func exportAccount(_ password: String) throws -> String {
@@ -100,6 +104,84 @@ extension MainNavigationController: KeystoreProvider {
 
     func validatePassword(_ password: String) -> Bool {
         return true
+    }
+}
+
+extension MainNavigationController: KinBackupRestoreBIDelegate {
+    func kinBackupStartButtonTapped() {
+
+    }
+
+    func kinBackupCompletedPageViewed() {
+        
+    }
+
+    func kinBackupCreatePasswordPageViewed() {
+
+    }
+
+    func kinBackupCreatePasswordBackButtonTapped() {
+
+    }
+
+    func kinBackupCreatePasswordNextButtonTapped() {
+
+    }
+
+    func kinBackupQrCodeBackButtonTapped() {
+
+    }
+
+    func kinBackupQrCodePageViewed() {
+
+    }
+
+    func kinBackupQrCodeMyqrcodeButtonTapped() {
+
+    }
+
+    func kinBackupQrCodeSendButtonTapped() {
+
+    }
+
+    func kinBackupWelcomePageViewed() {
+
+    }
+
+    func kinBackupWelcomePageBackButtonTapped() {
+
+    }
+
+    func kinRestorePasswordEntryBackButtonTapped() {
+
+    }
+
+    func kinRestorePasswordEntryPageViewed() {
+
+    }
+
+    func kinRestorePasswordDoneButtonTapped() {
+
+    }
+
+    func kinRestoreUploadQrCodePageViewed() {
+
+    }
+
+    func kinRestoreUploadQrCodeBackButtonTapped() {
+
+    }
+
+    func kinRestoreUploadQrCodeButtonTapped() {
+
+    }
+
+    func kinRestoreAreYouSureOkButtonTapped() {
+
+    }
+
+    func kinRestoreAreYouSureCancelButtonTapped() {
+
     }
 }
 

@@ -50,14 +50,17 @@ class RestoreViewController: BRViewController {
     
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
+
         if parent == nil {
-            //            Kin.track { try RestorePasswordEntryBackButtonTapped() } !!!:
+            KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryBackButtonTapped()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        Kin.track { try RestorePasswordEntryPageViewed() } !!!:
+
+        KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
+
         passwordInput.attributedPlaceholder = passwordPlaceholder
         passwordInput.isSecureTextEntry = true
         instructionsLabel.attributedText = passwordInstructions
@@ -102,7 +105,9 @@ class RestoreViewController: BRViewController {
             // Button in mid transition
             return
         }
-        //        Kin.track { try RestorePasswordDoneButtonTapped() } !!!:
+
+        KinBackupRestoreBI.shared.delegate?.kinRestorePasswordDoneButtonTapped()
+
         guard let delegate = delegate else {
             return
         }

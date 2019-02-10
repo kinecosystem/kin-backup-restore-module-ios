@@ -35,27 +35,25 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
-            
             DispatchQueue.global().async {
-                let qrString = QRController.decode(image: image)
-                if let qr = qrString {
+                if let qrString = QRController.decode(image: image) {
                     DispatchQueue.main.async {
-                        self.delegate?.qrPickerControllerDidComplete(self, with: qr)
+                        self.delegate?.qrPickerControllerDidComplete(self, with: qrString)
                     }
-                } else {
+                }
+                else {
                     DispatchQueue.main.async {
                         self.presentImageError()
                     }
                 }
-                
             }
-            
-        } else {
+        }
+        else {
+            // ???: are we already on the main thread?
             DispatchQueue.main.async {
                 self.presentImageError()
             }
         }
-        
     }
     
     func presentImageError() {
@@ -65,5 +63,4 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
         alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
         self.imagePickerController.present(alertController, animated: true)
     }
-    
 }

@@ -49,14 +49,17 @@ class QRViewController: BRViewController {
     
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
+
         if parent == nil {
-            //            Kin.track { try BackupQrCodeBackButtonTapped() } !!!:
+            KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeBackButtonTapped()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        Kin.track { try BackupQrCodePageViewed() } !!!:
+
+        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodePageViewed()
+
         descriptionLabel.attributedText = "kinecosystem_backup_qr_description".localized().attributed(12, weight: .regular, color: .kinBlueGreyTwo)
         qrImageView.image = QRController.generateImage(from: qrString, for: qrImageView.bounds.size)
         reminderImageView.tintColor = .kinWarning
@@ -102,7 +105,8 @@ class QRViewController: BRViewController {
     }
     
     @IBAction func tickSelected(_ sender: Any) {
-        //        Kin.track { try BackupQrCodeMyqrcodeButtonTapped() } !!!:
+        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeMyqrcodeButtonTapped()
+
         tickMarked = !tickMarked
         tickImage.isHidden = !tickMarked
         emailButton.setTitle((tickMarked ? "kinecosystem_next" : "kinecosystem_backup_qr_email").localized(), for: .normal)
@@ -146,7 +150,9 @@ extension QRViewController {
             delegate.QRViewControllerDidComplete()
             return
         }
-        //        Kin.track { try BackupQrCodeSendButtonTapped() } !!!:
+        
+        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeSendButtonTapped()
+
         guard MFMailComposeViewController.canSendMail() else {
             presentEmailErrorAlert(.noClient)
             return

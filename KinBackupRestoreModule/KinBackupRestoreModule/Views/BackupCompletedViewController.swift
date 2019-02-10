@@ -12,7 +12,9 @@ import UIKit
 class BackupCompletedViewController: ExplanationTemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        Kin.track { try BackupCompletedPageViewed() } !!!:
+
+        KinBackupRestoreBI.shared.delegate?.kinBackupCompletedPageViewed()
+        
         navigationItem.hidesBackButton = true
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
         titleLabel.attributedText = "kinecosystem_backup_completed_title".localized().attributed(28.0, weight: .light, color: .white)
