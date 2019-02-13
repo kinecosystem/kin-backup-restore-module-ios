@@ -195,24 +195,24 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KinUtil/KinUtil.framework",
-				"${BUILT_PRODUCTS_DIR}/KinBackupRestoreModule/KinBackupRestoreModule.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KinSDK/KinSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/KinUtil/KinUtil.framework",
 				"${BUILT_PRODUCTS_DIR}/Sodium/Sodium.framework",
+				"${BUILT_PRODUCTS_DIR}/KinBackupRestoreModule/KinBackupRestoreModule.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinUtil.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinBackupRestoreModule.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinUtil.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sodium.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinBackupRestoreModule.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE6BAC8C5BC4D6A25089F950 /* [CP] Check Pods Manifest.lock */ = {

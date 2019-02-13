@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import KinSDK
 
 @available(iOS 9.0, *)
 class BackupFlowController: FlowController {
+    let kinAccount: KinAccount
+
+    init(kinAccount: KinAccount, navigationController: UINavigationController) {
+        self.kinAccount = kinAccount
+        super.init(navigationController: navigationController)
+    }
+
     private lazy var _entryViewController: UIViewController = {
         let viewController = BackupIntroViewController()
         viewController.lifeCycleDelegate = self
@@ -72,7 +80,8 @@ extension BackupFlowController {
 @available(iOS 9.0, *)
 extension BackupFlowController: PasswordEntryDelegate {
     func validatePasswordConformance(_ password: String) -> Bool {
-        return keystoreDelegate.validatePassword(password)
+        // TODO: use regex for string password
+        return true
     }
     
     func passwordEntryViewControllerDidComplete(_ viewController: PasswordEntryViewController) {
@@ -81,7 +90,7 @@ extension BackupFlowController: PasswordEntryDelegate {
         }
         
         do {
-            pushQRViewController(with: try keystoreDelegate.exportAccount(password))
+            pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
         catch {
             print(error)

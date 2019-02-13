@@ -9,7 +9,7 @@ workspace 'KinBackupRestoreModule'
 target 'KinBackupRestoreModule' do
   project 'KinBackupRestoreModule/KinBackupRestoreModule.xcodeproj'
 
-  pod 'KinUtil', '0.0.14'
+  pod 'KinSDK'
 
   # Fixes the framework tests failing to build
   target 'KinBackupRestoreModuleTests' do
@@ -21,5 +21,4 @@ target 'KinBackupRestoreSampleApp' do
   project 'KinBackupRestoreSampleApp/KinBackupRestoreSampleApp.xcodeproj'
 
   pod 'KinBackupRestoreModule', :path => './'
-  pod 'KinSDK'
 end

@@ -7,12 +7,7 @@
 //
 
 import KinUtil
-
-public protocol KinBackupRestoreKeystoreDelegate: NSObjectProtocol {
-    func exportAccount(_ password: String) throws -> String
-    func importAccount(keystore: String, password: String, completion: @escaping (Error?) -> ())
-    func validatePassword(_ password: String) -> Bool
-}
+import KinSDK
 
 public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
     func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool)
@@ -24,109 +19,157 @@ public enum BRPhase {
     case restore
 }
 
-private enum BRPresentationType {
-    case pushed
-    case presented
-}
-
-private struct BRInstance {
-    let presentationType: BRPresentationType
-    let flowController: FlowController
-}
-
 @available(iOS 9.0, *)
 public class KinBackupRestoreManager: NSObject {
     public weak var delegate: KinBackupRestoreManagerDelegate?
-    public weak var keystoreDelegate: KinBackupRestoreKeystoreDelegate?
     public weak var biDelegate: KinBackupRestoreBIDelegate? {
         didSet {
             KinBackupRestoreBI.shared.delegate = biDelegate
         }
     }
 
-    private var presentor: UIViewController?
-    private var brInstance: BRInstance?
+    private var instance: Instance?
     
     private var navigationBarBackgroundImages: [UIBarMetrics: UIImage?]?
     private var navigationBarShadowImage: UIImage?
     private var navigationBarTintColor: UIColor?
 
     /**
-     Start a backup or recovery phase by pushing the view controllers onto a navigation controller.
-     
+     Backup an account by pushing the view controllers onto a navigation controller.
+
      If the navigation controller has a `topViewController`, then the stack will be popped to that
      view controller upon completion. Otherwise it's up to the user to perform the final navigation.
-     
-     - Parameter phase: Perform a backup or restore
-     - Parameter navigationController: The navigation controller being pushed onto
-     - Parameter events:
+
+     - Parameter kinAccount: The `KinAccount` to backup.
+     - Parameter navigationController: The navigation controller being pushed onto.
 
      - Returns: False if a session already exists, true otherwise.
      */
     @discardableResult
-    public func start(_ phase: BRPhase, pushedOnto navigationController: UINavigationController) -> Bool {
-        guard brInstance == nil else {
+    public func backup(_ kinAccount: KinAccount, pushedOnto navigationController: UINavigationController) -> Bool {
+        return start(with: .account(kinAccount), presentor: .pushedOnto(navigationController))
+    }
+
+    /**
+     Backup an account by pushing the view controllers onto a navigation controller.
+
+     - Parameter kinAccount: The `KinAccount` to backup.
+     - Parameter viewController: The view controller being presented onto.
+
+     - Returns: False if a session already exists, true otherwise.
+     */
+    @discardableResult
+    public func backup(_ kinAccount: KinAccount, presentedOnto viewController: UIViewController) -> Bool {
+        return start(with: .account(kinAccount), presentor: .presentedOnto(viewController))
+    }
+
+    /**
+     Restore an account by presenting the navigation controller onto a view controller.
+
+     If the navigation controller has a `topViewController`, then the stack will be popped to that
+     view controller upon completion. Otherwise it's up to the user to perform the final navigation.
+
+     - Parameter kinClient: The `KinClient` to restore into.
+     - Parameter navigationController: The navigation controller being pushed onto.
+
+     - Returns: False if a session already exists, true otherwise.
+     */
+    @discardableResult
+    public func restore(_ kinClient: KinClient, pushedOnto navigationController: UINavigationController) -> Bool {
+        return start(with: .client(kinClient), presentor: .pushedOnto(navigationController))
+    }
+
+    /**
+     Restore an account by presenting the navigation controller onto a view controller.
+
+     - Parameter kinClient: The `KinClient` to restore into.
+     - Parameter viewController: The view controller being presented onto.
+
+     - Returns: False if a session already exists, true otherwise.
+     */
+    @discardableResult
+    public func restore(_ kinClient: KinClient, presentedOnto viewController: UIViewController) -> Bool {
+        return start(with: .client(kinClient), presentor: .presentedOnto(viewController))
+    }
+
+    private func start(with connector: Connector, presentor: Presentor) -> Bool {
+        guard instance == nil else {
             return false
         }
-        
+
+        let flowController: FlowController
+
+        switch presentor {
+        case .pushedOnto(let navigationController):
+            flowController = createFlowController(with: connector, navigationController: navigationController)
+            push(flowController, onto: navigationController)
+
+        case .presentedOnto(let viewController):
+            let navigationController = UINavigationController()
+            flowController = createFlowController(with: connector, navigationController: navigationController)
+            present(flowController, onto: viewController)
+        }
+
+        instance = Instance(connector: connector, presentor: presentor, flowController: flowController)
+
+        return true
+    }
+
+    private func push(_ flowController: FlowController, onto navigationController: UINavigationController) {
         let isStackEmpty = navigationController.viewControllers.isEmpty
 
         removeNavigationBarBackground(navigationController.navigationBar, shouldSave: !isStackEmpty)
 
-        let flowController = createFlowController(phase: phase, navigationController: navigationController)
         navigationController.pushViewController(flowController.entryViewController, animated: !isStackEmpty)
-
-        brInstance = BRInstance(presentationType: .pushed, flowController: flowController)
-
-        return true
     }
-    
-    /**
-     Start a backup or recovery phase by presenting the navigation controller onto a view controller.
-     
-     - Parameter phase: Perform a backup or restore
-     - Parameter viewController: The view controller being presented onto
-     - Parameter events:
 
-     - Returns: False if a session already exists, true otherwise.
-     */
-    @discardableResult
-    public func start(_ phase: BRPhase, presentedOn viewController: UIViewController) -> Bool {
-        guard brInstance == nil else {
-            return false
-        }
-        
-        let navigationController = UINavigationController()
-        removeNavigationBarBackground(navigationController.navigationBar)
-        
-        let flowController = createFlowController(phase: phase, navigationController: navigationController)
+    private func present(_ flowController: FlowController, onto viewController: UIViewController) {
+        removeNavigationBarBackground(flowController.navigationController.navigationBar)
+
         let dismissItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: flowController, action: #selector(flowController.cancelFlow))
         flowController.entryViewController.navigationItem.leftBarButtonItem = dismissItem
-        navigationController.viewControllers = [flowController.entryViewController]
-        viewController.present(navigationController, animated: true)
-        
-        brInstance = BRInstance(presentationType: .presented, flowController: flowController)
-        presentor = viewController
-
-        return true
+        flowController.navigationController.viewControllers = [flowController.entryViewController]
+        viewController.present(flowController.navigationController, animated: true)
     }
-    
-    private func createFlowController(phase: BRPhase, navigationController: UINavigationController) -> FlowController {
+
+    private func createFlowController(with connector: Connector, navigationController: UINavigationController) -> FlowController {
         let controller: FlowController
 
-        guard let keystoreDelegate = keystoreDelegate else {
-            fatalError() // TODO:
+        switch connector {
+        case .client(let kinClient):
+            controller = RestoreFlowController(kinClient: kinClient, navigationController: navigationController)
+        case .account(let kinAccount):
+            controller = BackupFlowController(kinAccount: kinAccount, navigationController: navigationController)
         }
 
-        switch phase {
-        case .backup:
-            controller = BackupFlowController(keystoreDelegate: keystoreDelegate, navigationController: navigationController)
-        case .restore:
-            controller = RestoreFlowController(keystoreDelegate: keystoreDelegate, navigationController: navigationController)
-        }
-        
         controller.delegate = self
         return controller
+    }
+}
+
+// MARK: - Types
+
+extension KinBackupRestoreManager {
+    fileprivate class Instance {
+        let connector: Connector
+        let presentor: Presentor
+        let flowController: FlowController
+
+        init(connector: Connector, presentor: Presentor, flowController: FlowController) {
+            self.connector = connector
+            self.presentor = presentor
+            self.flowController = flowController
+        }
+    }
+
+    fileprivate enum Connector {
+        case client(_ kinClient: KinClient)
+        case account(_ kinAccount: KinAccount)
+    }
+
+    fileprivate enum Presentor {
+        case pushedOnto(_ navigationController: UINavigationController)
+        case presentedOnto(_ viewController: UIViewController)
     }
 }
 
@@ -135,15 +178,17 @@ public class KinBackupRestoreManager: NSObject {
 @available(iOS 9.0, *)
 extension KinBackupRestoreManager {
     private var navigationController: UINavigationController? {
-        return brInstance?.flowController.navigationController
+        return instance?.flowController.navigationController
     }
     
     private func dismissFlow() {
-        presentor?.dismiss(animated: true)
+        if let presentor = instance?.presentor, case let Presentor.presentedOnto(viewController) = presentor {
+            viewController.dismiss(animated: true)
+        }
     }
     
     private func popNavigationStackIfNeeded() {
-        guard let flowController = brInstance?.flowController else {
+        guard let flowController = instance?.flowController else {
             return
         }
         
@@ -168,39 +213,39 @@ extension KinBackupRestoreManager {
 @available(iOS 9.0, *)
 extension KinBackupRestoreManager: FlowControllerDelegate {
     func flowControllerDidComplete(_ controller: FlowController) {
-        guard let brInstance = brInstance else {
+        guard let brInstance = instance else {
             return
         }
 
         delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
-        
-        switch brInstance.presentationType {
-        case .presented:
-            dismissFlow()
-        case .pushed:
+
+        switch brInstance.presentor {
+        case .pushedOnto:
             popNavigationStackIfNeeded()
+        case .presentedOnto:
+            dismissFlow()
         }
         
-        self.brInstance = nil
+        self.instance = nil
     }
     
     func flowControllerDidCancel(_ controller: FlowController) {
-        guard let brInstance = brInstance else {
+        guard let brInstance = instance else {
             return
         }
 
         delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
-        
-        switch brInstance.presentationType {
-        case .presented:
-            dismissFlow()
-        case .pushed:
+
+        switch brInstance.presentor {
+        case .pushedOnto:
             if let navigationController = navigationController {
                 restoreNavigationBarBackground(navigationController.navigationBar)
             }
+        case .presentedOnto:
+            dismissFlow()
         }
         
-        self.brInstance = nil
+        self.instance = nil
     }
 }
 

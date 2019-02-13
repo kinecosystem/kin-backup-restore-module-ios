@@ -13,6 +13,7 @@ import KinBackupRestoreModule
 class MainNavigationController: UINavigationController {
     let network: Network = .testNet
     var brManager = KinBackupRestoreManager()
+    let kinClient: KinClient
     var brAccount: KinAccount?
 
     private let loaderView = UIActivityIndicatorView(style: .whiteLarge)
@@ -22,12 +23,6 @@ class MainNavigationController: UINavigationController {
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-
-        brManager.delegate = self
-        brManager.keystoreDelegate = self
-        brManager.biDelegate = self
-
         let appId: AppId
 
         do {
@@ -37,7 +32,13 @@ class MainNavigationController: UINavigationController {
             fatalError()
         }
 
-        let kinClient = KinClient(with: .blockchain(network), network: network, appId: appId)
+        kinClient = KinClient(with: .blockchain(network), network: network, appId: appId)
+
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+
+        brManager.delegate = self
+        brManager.biDelegate = self
+
         let accountListViewController = AccountListViewController(with: kinClient)
         accountListViewController.title = "Accounts"
         accountListViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Restore", style: .plain, target: self, action: #selector(restoreAction))
@@ -48,6 +49,12 @@ class MainNavigationController: UINavigationController {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // TODO: move location
+    @objc
+    fileprivate func restoreAction() {
+        brManager.restore(kinClient, presentedOnto: self)
     }
 }
 
@@ -67,7 +74,7 @@ extension MainNavigationController: AccountViewControllerDelegate {
     func accountViewController(_ viewController: AccountViewController, backupAccount account: KinAccount) {
         brAccount = account
 
-        brManager.start(.backup, pushedOnto: self)
+        brManager.backup(account, pushedOnto: self)
     }
 }
 
@@ -82,28 +89,6 @@ extension MainNavigationController: KinBackupRestoreManagerDelegate {
 
     func kinBackupRestoreManager(_ manager: KinBackupRestoreManager, error: Error) {
 
-    }
-}
-
-extension MainNavigationController: KinBackupRestoreKeystoreDelegate {
-    @objc fileprivate func restoreAction() {
-        brManager.start(.restore, presentedOn: self)
-    }
-
-    func exportAccount(_ password: String) throws -> String {
-        guard let brAccount = brAccount else {
-            fatalError()
-        }
-
-        return try brAccount.export(passphrase: password)
-    }
-
-    func importAccount(keystore: String, password: String, completion: @escaping (Error?) -> ()) {
-        completion(nil)
-    }
-
-    func validatePassword(_ password: String) -> Bool {
-        return true
     }
 }
 

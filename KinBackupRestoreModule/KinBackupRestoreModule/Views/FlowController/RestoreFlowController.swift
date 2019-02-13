@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import KinSDK
 
 @available(iOS 9.0, *)
 class RestoreFlowController: FlowController {
+    let kinClient: KinClient
+
+    init(kinClient: KinClient, navigationController: UINavigationController) {
+        self.kinClient = kinClient
+        super.init(navigationController: navigationController)
+    }
+
     private var qrPickerController: QRPickerController?
     
     private lazy var _entryViewController: UIViewController = {
@@ -93,7 +101,9 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
             completion(.invalidImage)
             return
         }
-        
+
+        // TODO:
+        /*
         keystoreDelegate.importAccount(keystore: keystore, password: password) { error in
             if let error = error {
                 // TODO: how to pass an identifiable error
@@ -105,7 +115,7 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
             } else {
                 completion(.success)
             }
-        }
+        }*/
         
     }
     

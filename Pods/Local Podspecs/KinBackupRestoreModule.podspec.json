@@ -19,7 +19,7 @@
   "source_files": "KinBackupRestoreModule/KinBackupRestoreModule/**/*.{strings,swift,xib}",
   "resources": "KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets",
   "dependencies": {
-    "KinUtil": [
+    "KinSDK": [
 
     ]
   },

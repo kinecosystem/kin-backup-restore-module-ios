@@ -15,12 +15,10 @@ protocol FlowControllerDelegate: NSObjectProtocol {
 
 class FlowController: NSObject {
     weak var delegate: FlowControllerDelegate?
-    
-    let keystoreDelegate: KinBackupRestoreKeystoreDelegate
+
     let navigationController: UINavigationController
     
-    init(keystoreDelegate: KinBackupRestoreKeystoreDelegate, navigationController: UINavigationController) {
-        self.keystoreDelegate = keystoreDelegate
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         super.init()
     }
@@ -33,7 +31,8 @@ class FlowController: NSObject {
         navigationController.navigationBar.tintColor = viewController.preferredStatusBarStyle.color
     }
     
-    @objc func cancelFlow() {
+    @objc
+    func cancelFlow() {
         delegate?.flowControllerDidCancel(self)
     }
     
