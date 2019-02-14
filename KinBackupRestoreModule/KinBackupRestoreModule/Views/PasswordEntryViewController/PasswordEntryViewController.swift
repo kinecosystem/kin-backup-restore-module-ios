@@ -9,9 +9,9 @@
 import UIKit
 
 @available(iOS 9.0, *)
-protocol PasswordEntryDelegate: NSObjectProtocol {
-    func validatePasswordConformance(_ password: String) -> Bool
-    func passwordEntryViewControllerDidComplete(_ viewController: PasswordEntryViewController)
+protocol PasswordEntryViewControllerDelegate: NSObjectProtocol {
+    func passwordEntryViewController(_ viewController: PasswordEntryViewController, validate password: String) -> Bool
+    func passwordEntryViewControllerDidComplete(_ viewController: PasswordEntryViewController, with password: String)
 }
 
 @available(iOS 9.0, *)
@@ -28,7 +28,7 @@ class PasswordEntryViewController: BRViewController {
     @IBOutlet weak var tickImage: UIImageView!
     @IBOutlet weak var topSpace: NSLayoutConstraint!
     
-    weak var delegate: PasswordEntryDelegate?
+    weak var delegate: PasswordEntryViewControllerDelegate?
     
     private var kbObservers = [NSObjectProtocol]()
     private var tickMarked = false
@@ -39,10 +39,6 @@ class PasswordEntryViewController: BRViewController {
     private let passwordInvalidInfo = "kinecosystem_password_invalid_info".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
     private let passwordPlaceholder = "kinecosystem_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
     private let passwordConfirmPlaceholder = "kinecosystem_confirm_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
-    
-    var password: String? {
-        return passwordInput1.text
-    }
 
     init() {
         super.init(nibName: "PasswordEntryViewController", bundle: .backupRestore)
@@ -121,26 +117,32 @@ class PasswordEntryViewController: BRViewController {
     
     @IBAction func passwordEntryChanged(_ sender: UITextField) {
         updateDoneButton()
+
         if passwordInput1.hasText,
             let delegate = delegate,
-            let text = passwordInput1.text,
-            delegate.validatePasswordConformance(text) {
+            let password = passwordInput1.text,
+            delegate.passwordEntryViewController(self, validate: password)
+        {
             passwordInput1.entryState = .valid
-            if passwordInput2.text == text {
+
+            if passwordInput2.text == password {
                 passwordInput2.entryState = .valid
-            } else {
+            }
+            else {
                 passwordInput2.entryState = .idle
             }
-        } else {
+        }
+        else {
             passwordInput1.entryState = .idle
         }
+
         passwordInfo.attributedText = passwordInstructions
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {
         KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordNextButtonTapped()
 
-        guard let text = passwordInput1.text, passwordInput1.hasText && passwordInput2.hasText else {
+        guard let password = passwordInput1.text, passwordInput1.hasText && passwordInput2.hasText else {
             return // shouldn't really happen, here for documenting
         }
 
@@ -153,12 +155,12 @@ class PasswordEntryViewController: BRViewController {
             fatalError() // TODO: shouldnt crash in production
         }
         
-        guard delegate.validatePasswordConformance(text) else {
+        guard delegate.passwordEntryViewController(self, validate: password) else {
             alertPasswordsConformance()
             return
         }
 
-        delegate.passwordEntryViewControllerDidComplete(self)
+        delegate.passwordEntryViewControllerDidComplete(self, with: password)
     }
     
     @IBAction func tickSelected(_ sender: Any) {
