@@ -149,7 +149,7 @@ class PasswordEntryViewController: ViewController {
         }
 
         guard let delegate = delegate else {
-            fatalError() // TODO: shouldnt crash in production
+            return
         }
         
         guard delegate.passwordEntryViewController(self, validate: password) else {
@@ -181,5 +181,14 @@ class PasswordEntryViewController: ViewController {
     
     func updateDoneButton() {
         doneButton.isEnabled = passwordInput1.hasText && passwordInput2.hasText && tickMarked
+    }
+}
+
+extension PasswordEntryViewController {
+    func presentErrorAlert() {
+        // TODO: update copy
+        let alertController = UIAlertController(title: "That's strange", message: "An error occurred. Please try again.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        present(alertController, animated: true)
     }
 }

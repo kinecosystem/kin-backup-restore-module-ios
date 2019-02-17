@@ -55,8 +55,8 @@ extension BackupFlowController {
     @objc private func pushQRViewController(with qrString: String) {
         let viewController = QRViewController(qrString: qrString)
         viewController.title = "kinecosystem_backup_qr_title".localized()
-        viewController.lifeCycleDelegate = self
         viewController.delegate = self
+        viewController.lifeCycleDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -100,8 +100,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
         catch {
-            // TODO: what to do here
-            print(error)
+            viewController.presentErrorAlert()
         }
     }
 }
