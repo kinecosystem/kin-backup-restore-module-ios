@@ -39,7 +39,7 @@ class FlowController: NSObject {
     func cancelFlowIfNeeded(_ viewController: UIViewController) {
         if viewController == entryViewController,
             let navigationController = viewController.navigationController,
-            !(navigationController.topViewController is BRViewController)
+            !(navigationController.topViewController is ViewController)
         {
             cancelFlow()
         }

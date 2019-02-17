@@ -9,7 +9,6 @@
 import UIKit
 import KinSDK
 
-@available(iOS 9.0, *)
 class BackupFlowController: FlowController {
     let kinAccount: KinAccount
 
@@ -30,7 +29,6 @@ class BackupFlowController: FlowController {
     }
 }
 
-@available(iOS 9.0, *)
 extension BackupFlowController: LifeCycleProtocol {
     func viewController(_ viewController: UIViewController, willAppear animated: Bool) {
         syncNavigationBarColor(with: viewController)
@@ -43,7 +41,6 @@ extension BackupFlowController: LifeCycleProtocol {
 
 // MARK: - Navigation
 
-@available(iOS 9.0, *)
 extension BackupFlowController {
     @objc private func pushPasswordViewController() {
         KinBackupRestoreBI.shared.delegate?.kinBackupStartButtonTapped()
@@ -75,11 +72,11 @@ extension BackupFlowController {
     }
 }
 
-// MARK: - Password
+// MARK: - Flow
 
-@available(iOS 9.0, *)
 extension BackupFlowController: PasswordEntryViewControllerDelegate {
     func passwordEntryViewController(_ viewController: PasswordEntryViewController, validate password: String) -> Bool {
+        // TODO: verify with Android
         let digit = "(?=.*\\d)"
         let lower = "(?=.*[a-z])"
         let upper = "(?=.*[A-Z])"
@@ -103,12 +100,12 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
         catch {
+            // TODO: what to do here
             print(error)
         }
     }
 }
 
-@available(iOS 9.0, *)
 extension BackupFlowController: QRViewControllerDelegate {
     func QRViewControllerDidComplete() {
         pushCompletedViewController()

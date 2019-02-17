@@ -1,5 +1,5 @@
 //
-//  BRViewController.swift
+//  ViewController.swift
 //  KinEcosystem
 //
 //  Created by Corey Werner on 25/10/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BRViewController: UIViewController {
+class ViewController: UIViewController {
     weak var lifeCycleDelegate: LifeCycleProtocol?
     
     override func viewWillAppear(_ animated: Bool) {

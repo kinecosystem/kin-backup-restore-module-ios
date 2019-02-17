@@ -8,12 +8,10 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
 protocol RestoreIntroViewControllerDelegate: NSObjectProtocol {
     func restoreIntroViewControllerDidComplete(_ viewController: RestoreIntroViewController)
 }
 
-@available(iOS 9.0, *)
 class RestoreIntroViewController: ExplanationTemplateViewController {
     weak var delegate: RestoreIntroViewControllerDelegate?
     private var canContinue = false
@@ -39,7 +37,8 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
         }
     }
     
-    @objc private func continueAction() {
+    @objc
+    private func continueAction() {
         KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodeButtonTapped()
 
         if canContinue {
@@ -50,7 +49,8 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
         }
     }
     
-    @objc private func presentAlertController() {
+    @objc
+    private func presentAlertController() {
         let title = "kinecosystem_restore_intro_alert_title".localized()
         let message = "kinecosystem_restore_intro_alert_message".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

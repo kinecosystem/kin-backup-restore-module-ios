@@ -6,7 +6,6 @@
 //  Copyright © 2019 Kin Foundation. All rights reserved.
 //
 
-import KinUtil
 import KinSDK
 
 public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
@@ -14,12 +13,6 @@ public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
     func kinBackupRestoreManager(_ manager: KinBackupRestoreManager, error: Error)
 }
 
-public enum BRPhase {
-    case backup
-    case restore
-}
-
-@available(iOS 9.0, *)
 public class KinBackupRestoreManager: NSObject {
     public weak var delegate: KinBackupRestoreManagerDelegate?
     public weak var biDelegate: KinBackupRestoreBIDelegate? {
@@ -115,6 +108,20 @@ public class KinBackupRestoreManager: NSObject {
         return true
     }
 
+    private func createFlowController(with connector: Connector, navigationController: UINavigationController) -> FlowController {
+        let controller: FlowController
+
+        switch connector {
+        case .client(let kinClient):
+            controller = RestoreFlowController(kinClient: kinClient, navigationController: navigationController)
+        case .account(let kinAccount):
+            controller = BackupFlowController(kinAccount: kinAccount, navigationController: navigationController)
+        }
+
+        controller.delegate = self
+        return controller
+    }
+
     private func push(_ flowController: FlowController, onto navigationController: UINavigationController) {
         let isStackEmpty = navigationController.viewControllers.isEmpty
 
@@ -131,25 +138,21 @@ public class KinBackupRestoreManager: NSObject {
         flowController.navigationController.viewControllers = [flowController.entryViewController]
         viewController.present(flowController.navigationController, animated: true)
     }
-
-    private func createFlowController(with connector: Connector, navigationController: UINavigationController) -> FlowController {
-        let controller: FlowController
-
-        switch connector {
-        case .client(let kinClient):
-            controller = RestoreFlowController(kinClient: kinClient, navigationController: navigationController)
-        case .account(let kinAccount):
-            controller = BackupFlowController(kinAccount: kinAccount, navigationController: navigationController)
-        }
-
-        controller.delegate = self
-        return controller
-    }
 }
 
 // MARK: - Types
 
 extension KinBackupRestoreManager {
+    fileprivate enum Connector {
+        case client(_ kinClient: KinClient)
+        case account(_ kinAccount: KinAccount)
+    }
+
+    fileprivate enum Presentor {
+        case pushedOnto(_ navigationController: UINavigationController)
+        case presentedOnto(_ viewController: UIViewController)
+    }
+
     fileprivate class Instance {
         let connector: Connector
         let presentor: Presentor
@@ -161,21 +164,10 @@ extension KinBackupRestoreManager {
             self.flowController = flowController
         }
     }
-
-    fileprivate enum Connector {
-        case client(_ kinClient: KinClient)
-        case account(_ kinAccount: KinAccount)
-    }
-
-    fileprivate enum Presentor {
-        case pushedOnto(_ navigationController: UINavigationController)
-        case presentedOnto(_ viewController: UIViewController)
-    }
 }
 
 // MARK: - Navigation
 
-@available(iOS 9.0, *)
 extension KinBackupRestoreManager {
     private var navigationController: UINavigationController? {
         return instance?.flowController.navigationController
@@ -210,16 +202,15 @@ extension KinBackupRestoreManager {
 
 // MARK: - Flow
 
-@available(iOS 9.0, *)
 extension KinBackupRestoreManager: FlowControllerDelegate {
     func flowControllerDidComplete(_ controller: FlowController) {
-        guard let brInstance = instance else {
+        guard let instance = instance else {
             return
         }
 
         delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
 
-        switch brInstance.presentor {
+        switch instance.presentor {
         case .pushedOnto:
             popNavigationStackIfNeeded()
         case .presentedOnto:
@@ -230,13 +221,13 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
     }
     
     func flowControllerDidCancel(_ controller: FlowController) {
-        guard let brInstance = instance else {
+        guard let instance = instance else {
             return
         }
 
         delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
 
-        switch brInstance.presentor {
+        switch instance.presentor {
         case .pushedOnto:
             if let navigationController = navigationController {
                 restoreNavigationBarBackground(navigationController.navigationBar)
@@ -251,7 +242,6 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
 
 // MARK: - Navigation Bar Appearance
 
-@available(iOS 9.0, *)
 extension KinBackupRestoreManager {
     private func removeNavigationBarBackground(_ navigationBar: UINavigationBar, shouldSave: Bool = false) {
         if shouldSave {

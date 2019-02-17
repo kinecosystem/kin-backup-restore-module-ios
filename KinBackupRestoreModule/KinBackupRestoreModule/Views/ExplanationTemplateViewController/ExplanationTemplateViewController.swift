@@ -8,8 +8,7 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
-class ExplanationTemplateViewController: BRViewController {
+class ExplanationTemplateViewController: ViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

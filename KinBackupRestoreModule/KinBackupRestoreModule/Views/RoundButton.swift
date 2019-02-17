@@ -40,7 +40,7 @@ class RoundButton: UIButton {
         }
     }
     
-    private var transitionToConfirmedCompletion: (()->())?
+    fileprivate var transitionToConfirmedCompletion: (()->())?
     
     func transitionToConfirmed(completion: (()->())? = nil) {
         let shape = CAShapeLayer()
@@ -86,37 +86,5 @@ extension RoundButton: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         transitionToConfirmedCompletion?()
         transitionToConfirmedCompletion = nil
-    }
-}
-
-
-
-// TODO: move
-class Animations {
-    static func animation(with keyPath: String,
-                          duration: TimeInterval,
-                          beginTime: TimeInterval,
-                          from: Any,
-                          to: Any,
-                          curve: CAMediaTimingFunction = CAMediaTimingFunction(name: .easeOut)) -> CABasicAnimation {
-        let animation = CABasicAnimation(keyPath: keyPath)
-        animation.duration = duration
-        animation.fromValue = from
-        animation.toValue = to
-        animation.beginTime = beginTime
-        animation.timingFunction = curve
-        animation.fillMode = .forwards
-        return animation
-    }
-
-    static func animationGroup(animations: [CABasicAnimation], duration: TimeInterval) -> CAAnimationGroup {
-        let group = CAAnimationGroup()
-        group.animations = animations
-        group.duration = duration
-        group.repeatCount = 1
-        group.isRemovedOnCompletion = false
-        group.fillMode = .forwards
-        group.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        return group
     }
 }

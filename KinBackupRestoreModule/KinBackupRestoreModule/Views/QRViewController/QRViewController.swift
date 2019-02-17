@@ -13,8 +13,7 @@ protocol QRViewControllerDelegate: NSObjectProtocol {
     func QRViewControllerDidComplete()
 }
 
-@available(iOS 9.0, *)
-class QRViewController: BRViewController {
+class QRViewController: ViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var qrImageView: UIImageView!
     @IBOutlet weak var reminderImageView: UIImageView!
@@ -75,6 +74,7 @@ class QRViewController: BRViewController {
         confirmTick.layer.cornerRadius = 2.0
         tickStack.isHidden = true
         tickImage.isHidden = true
+        
         if #available(iOS 11, *) {
             topSpace.constant = 0.0
             view.layoutIfNeeded()
@@ -98,27 +98,25 @@ class QRViewController: BRViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc private func applicationDidTakeScreenshot() {
+    @objc
+    private func applicationDidTakeScreenshot() {
         if isViewLoaded && view.window != nil {
             tickStack.isHidden = false
         }
     }
     
-    @IBAction func tickSelected(_ sender: Any) {
+    @IBAction
+    func tickSelected(_ sender: Any) {
         KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeMyqrcodeButtonTapped()
 
         tickMarked = !tickMarked
         tickImage.isHidden = !tickMarked
         emailButton.setTitle((tickMarked ? "kinecosystem_next" : "kinecosystem_backup_qr_email").localized(), for: .normal)
     }
-    
-    
-    
 }
 
 // MARK: - Email
 
-@available(iOS 9.0, *)
 extension QRViewController {
     private enum EmailError: Error {
         case noClient
@@ -145,7 +143,8 @@ extension QRViewController {
         }
     }
     
-    @objc private func emailButtonTapped() {
+    @objc
+    private func emailButtonTapped() {
         guard tickMarked == false else {
             delegate.QRViewControllerDidComplete()
             return
@@ -178,7 +177,6 @@ extension QRViewController {
     }
 }
 
-@available(iOS 9.0, *)
 extension QRViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true) { [weak self] in
