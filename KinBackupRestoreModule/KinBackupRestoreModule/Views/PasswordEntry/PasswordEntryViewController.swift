@@ -14,7 +14,7 @@ protocol PasswordEntryViewControllerDelegate: NSObjectProtocol {
 }
 
 class PasswordEntryViewController: ViewController {
-    @IBOutlet weak var passwordInfo: UILabel!
+    @IBOutlet weak var passwordInfo: PasswordEntryLabel!
     @IBOutlet weak var passwordInput1: PasswordEntryField!
     @IBOutlet weak var passwordInput2: PasswordEntryField!
     @IBOutlet weak var confirmLabel: UILabel!
@@ -29,13 +29,6 @@ class PasswordEntryViewController: ViewController {
     
     private var kbObservers = [NSObjectProtocol]()
     private var tickMarked = false
-    private let passwordInstructions = "kinecosystem_password_instructions".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
-    private let confirmInfo = "kinecosystem_password_confirmation".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
-    private let passwordInvalidWarning = "kinecosystem_password_invalid_warning".localized().attributed(12.0, weight: .regular, color: UIColor.kinWarning)
-    private let passwordMismatch = "kinecosystem_password_mismatch".localized().attributed(12.0, weight: .regular, color: UIColor.kinWarning)
-    private let passwordInvalidInfo = "kinecosystem_password_invalid_info".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
-    private let passwordPlaceholder = "kinecosystem_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
-    private let passwordConfirmPlaceholder = "kinecosystem_confirm_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
 
     init() {
         super.init(nibName: "PasswordEntryViewController", bundle: .backupRestore)
@@ -66,19 +59,37 @@ class PasswordEntryViewController: ViewController {
         confirmTick.layer.borderWidth = 1.0
         confirmTick.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
         confirmTick.layer.cornerRadius = 2.0
+
         doneButton.setTitleColor(.white, for: .normal)
         doneButton.isEnabled = false
+
         tickImage.isHidden = true
-        passwordInfo.attributedText = passwordInstructions
-        confirmLabel.attributedText = confirmInfo
-        passwordInput1.attributedPlaceholder = passwordPlaceholder
-        passwordInput2.attributedPlaceholder = passwordConfirmPlaceholder
+
+        passwordInfo.font = .preferredFont(forTextStyle: .body)
+        passwordInfo.instructionsAttributedString = NSAttributedString(string: "kinecosystem_password_instructions".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInfo.mismatchAttributedString = NSAttributedString(string: "kinecosystem_password_mismatch".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
+        passwordInfo.invalidAttributedString = {
+            let attributedString1 = NSAttributedString(string: "kinecosystem_password_invalid_warning".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
+
+            let attributedString2 = NSAttributedString(string: "kinecosystem_password_invalid_info".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+
+            let attributedString = NSMutableAttributedString()
+            attributedString.append(attributedString1)
+            attributedString.append(attributedString2)
+            return attributedString
+        }()
+
+        confirmLabel.attributedText = "kinecosystem_password_confirmation".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
+
+        passwordInput1.attributedPlaceholder = "kinecosystem_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
+
+        passwordInput2.attributedPlaceholder = "kinecosystem_confirm_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
 
         kbObservers.append(NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { [weak self] note in
             if let height = (note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size.height,
                 let duration = note.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
                 DispatchQueue.main.async {
-                    self?.bottomSpace.constant = height
+//                    self?.bottomSpace.constant = height
                     UIView.animate(withDuration: duration) {
                         self?.view.layoutIfNeeded()
                     }
@@ -89,17 +100,20 @@ class PasswordEntryViewController: ViewController {
         kbObservers.append(NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { [weak self] note in
             if let duration = note.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
                 DispatchQueue.main.async {
-                    self?.bottomSpace.constant = 0.0
+//                    self?.bottomSpace.constant = 0.0
                     UIView.animate(withDuration: duration) {
                         self?.view.layoutIfNeeded()
                     }
                 }
             }
         })
+
         if #available(iOS 11, *) {
-            topSpace.constant = 0.0
+            // ???: why
+//            topSpace.constant = 0.0
             view.layoutIfNeeded()
         }
+
         passwordInput1.becomeFirstResponder()
     }
 
@@ -112,7 +126,8 @@ class PasswordEntryViewController: ViewController {
         }
     }
     
-    @IBAction func passwordEntryChanged(_ sender: UITextField) {
+    @IBAction
+    func passwordEntryChanged(_ sender: UITextField) {
         updateDoneButton()
 
         if passwordInput1.hasText,
@@ -133,10 +148,11 @@ class PasswordEntryViewController: ViewController {
             passwordInput1.entryState = .idle
         }
 
-        passwordInfo.attributedText = passwordInstructions
+        passwordInfo.state = .instructions
     }
     
-    @IBAction func doneButtonTapped(_ sender: Any) {
+    @IBAction
+    func doneButtonTapped(_ sender: Any) {
         KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordNextButtonTapped()
 
         guard let password = passwordInput1.text, passwordInput1.hasText && passwordInput2.hasText else {
@@ -160,23 +176,21 @@ class PasswordEntryViewController: ViewController {
         delegate.passwordEntryViewControllerDidComplete(self, with: password)
     }
     
-    @IBAction func tickSelected(_ sender: Any) {
+    @IBAction
+    func tickSelected(_ sender: Any) {
         tickMarked = !tickMarked
         tickImage.isHidden = !tickMarked
         updateDoneButton()
     }
     
     func alertPasswordsDontMatch() {
-        passwordInfo.attributedText = passwordMismatch
+        passwordInfo.state = .mismatch
         passwordInput2.text = ""
         passwordInput1.becomeFirstResponder()
     }
     
     func alertPasswordsConformance() {
-        let attributedString = NSMutableAttributedString()
-        attributedString.append(passwordInvalidWarning)
-        attributedString.append(passwordInvalidInfo)
-        passwordInfo.attributedText = attributedString
+        passwordInfo.state = .invalid
     }
     
     func updateDoneButton() {

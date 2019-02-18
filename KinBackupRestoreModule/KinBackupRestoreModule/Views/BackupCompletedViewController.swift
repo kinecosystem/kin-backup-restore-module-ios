@@ -15,11 +15,21 @@ class BackupCompletedViewController: ExplanationTemplateViewController {
         KinBackupRestoreBI.shared.delegate?.kinBackupCompletedPageViewed()
         
         navigationItem.hidesBackButton = true
+
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
-        titleLabel.attributedText = "kinecosystem_backup_completed_title".localized().attributed(28.0, weight: .light, color: .white)
-        descriptionLabel.attributedText = "kinecosystem_backup_completed_description".localized().attributed(14.0, weight: .regular, color: .white)
-        reminderTitleLabel.attributedText = "kinecosystem_backup_reminder_title".localized().attributed(14.0, weight: .bold, color: .white)
-        reminderDescriptionLabel.attributedText = "kinecosystem_backup_reminder_description".localized().attributed(12.0, weight: .regular, color: .white)
+
+        titleLabel.text = "kinecosystem_backup_completed_title".localized()
+        titleLabel.font = .preferredFont(forTextStyle: .title1)
+
+        descriptionLabel.text = "kinecosystem_backup_completed_description".localized()
+        descriptionLabel.font = .preferredFont(forTextStyle: .body)
+
+        reminderTitleLabel.text = "kinecosystem_backup_reminder_title".localized()
+        reminderTitleLabel.font = .preferredFont(forTextStyle: .callout, symbolicTraits: [.traitBold])
+
+        reminderDescriptionLabel.text = "kinecosystem_backup_reminder_description".localized()
+        reminderDescriptionLabel.font = .preferredFont(forTextStyle: .footnote)
+
         continueButton.isHidden = true
     }
 }
