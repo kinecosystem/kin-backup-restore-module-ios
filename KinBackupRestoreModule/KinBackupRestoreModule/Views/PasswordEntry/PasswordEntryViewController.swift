@@ -56,15 +56,6 @@ class PasswordEntryViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordPageViewed()
 
-        confirmTick.layer.borderWidth = 1.0
-        confirmTick.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
-        confirmTick.layer.cornerRadius = 2.0
-
-        doneButton.setTitleColor(.white, for: .normal)
-        doneButton.isEnabled = false
-
-        tickImage.isHidden = true
-
         passwordInfo.font = .preferredFont(forTextStyle: .body)
         passwordInfo.instructionsAttributedString = NSAttributedString(string: "kinecosystem_password_instructions".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordInfo.mismatchAttributedString = NSAttributedString(string: "kinecosystem_password_mismatch".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
@@ -79,11 +70,23 @@ class PasswordEntryViewController: ViewController {
             return attributedString
         }()
 
-        confirmLabel.attributedText = "kinecosystem_password_confirmation".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
+        passwordInput1.attributedPlaceholder = NSAttributedString(string: "kinecosystem_password".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInput1.becomeFirstResponder()
 
-        passwordInput1.attributedPlaceholder = "kinecosystem_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
+        passwordInput2.attributedPlaceholder = NSAttributedString(string: "kinecosystem_confirm_password".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
 
-        passwordInput2.attributedPlaceholder = "kinecosystem_confirm_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
+        confirmLabel.text = "kinecosystem_password_confirmation".localized()
+        confirmLabel.font = .preferredFont(forTextStyle: .footnote)
+        confirmLabel.textColor = .kinBlueGreyTwo
+
+        confirmTick.layer.borderWidth = 1
+        confirmTick.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
+        confirmTick.layer.cornerRadius = 2
+
+        tickImage.isHidden = true
+
+        doneButton.setTitleColor(.white, for: .normal)
+        doneButton.isEnabled = false
 
         kbObservers.append(NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { [weak self] note in
             if let height = (note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size.height,
@@ -113,8 +116,6 @@ class PasswordEntryViewController: ViewController {
 //            topSpace.constant = 0.0
             view.layoutIfNeeded()
         }
-
-        passwordInput1.becomeFirstResponder()
     }
 
     override func willMove(toParent parent: UIViewController?) {
