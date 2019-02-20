@@ -1,27 +1,25 @@
 //
-//  PasswordEntryField.swift
-//  KinEcosystem
+//  PasswordEntryTextField.swift
+//  KinBackupRestoreModule
 //
-//  Created by Elazar Yifrach on 24/10/2018.
+//  Created by Corey Werner on 20/02/2019.
+//  Copyright © 2019 Kin Foundation. All rights reserved.
 //
 
 import UIKit
 
-public enum PasswordEntryFieldState {
-    case idle
-    case valid
-    case invalid
-}
-
-class PasswordEntryField: UITextField {
-    public var entryState = PasswordEntryFieldState.idle {
+class PasswordEntryTextField: UITextField {
+    public var entryState: PasswordState = .default {
         didSet {
             updateFieldStateStyle()
         }
     }
 
     private let revealIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 37, height: 15))
-    
+
+
+    // MARK: Lifecycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -38,7 +36,7 @@ class PasswordEntryField: UITextField {
         revealIcon.contentMode = .topLeft
         revealIcon.setImage(UIImage(named: "greyRevealIcon", in: .backupRestore, compatibleWith: nil), for: .normal)
         revealIcon.imageEdgeInsets = UIEdgeInsets(top: 0.0, left: -15.0, bottom: 0.0, right: 0.0)
-        layer.cornerRadius = bounds.height / 2
+
         let paddingView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 22.0, height: frame.height))
         UIView.performWithoutAnimation {
             rightView = revealIcon
@@ -49,12 +47,30 @@ class PasswordEntryField: UITextField {
         leftView = paddingView
         leftViewMode = .always
         isSecureTextEntry = true
+        autocapitalizationType = .none
+        autocorrectionType = .no
         updateFieldStateStyle()
     }
+
+    // MARK: Layout
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layer.cornerRadius = bounds.height / 2
+    }
+
+    override var intrinsicContentSize: CGSize {
+        var size = super.intrinsicContentSize
+        size.height = 44
+        return size
+    }
+
+    // MARK:
     
     private func updateFieldStateStyle() {
         switch entryState {
-        case .idle:
+        case .default:
             layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
         case .valid:
             layer.borderColor = UIColor.kinPrimaryBlue.cgColor
@@ -82,5 +98,13 @@ class PasswordEntryField: UITextField {
         if isFirst {
             becomeFirstResponder()
         }
+    }
+}
+
+extension PasswordEntryTextField {
+    enum PasswordState {
+        case `default`
+        case valid
+        case invalid
     }
 }

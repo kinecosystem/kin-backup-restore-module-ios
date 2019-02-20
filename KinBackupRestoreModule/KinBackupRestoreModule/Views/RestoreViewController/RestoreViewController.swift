@@ -18,7 +18,7 @@ class RestoreViewController: ViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var instructionsLabel: UILabel!
-    @IBOutlet weak var passwordInput: PasswordEntryField!
+    @IBOutlet weak var passwordInput: PasswordEntryTextField!
     @IBOutlet weak var doneButton: RoundButton!
     @IBOutlet weak var bottomSpace: NSLayoutConstraint!
     @IBOutlet weak var topSpace: NSLayoutConstraint!
@@ -100,7 +100,7 @@ class RestoreViewController: ViewController {
     }
     
     @IBAction
-    func passwordInputChanges(_ textField: PasswordEntryField) {
+    func passwordInputChanges(_ textField: PasswordEntryTextField) {
         doneButton.isEnabled = textField.hasText
     }
     

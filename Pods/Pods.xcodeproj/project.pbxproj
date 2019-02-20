@@ -7,218 +7,212 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031F9932D195CEA98B81CFE89D3C7851 /* QRViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 90E2CEA8CED32EB83A8E844C30032AE8 /* QRViewController.xib */; };
-		04D204500973418F6048FA8F2FDB684E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7003F1A63C71CCA32528D2AD13716AE /* RoundButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		052CA819056B454025A6B73C23256F28 /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDF7D8D7441CCB2D723CE652191714 /* PasswordEntryLabel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		054EF9FA6DB0DE400C6306792EE0BC10 /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B802BF7C265A1CFD3F03477B7015BBB1 /* LifeCycleProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		062C3CA7668178C52696056F719E7111 /* crypto_kdf.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BF86855F16C91D08618FF0F751CF79 /* crypto_kdf.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		06831EA295D19ED404FC9895D9B674C4 /* crypto_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 46ADD5135642B01F2A72891DFBFB483A /* crypto_auth.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07CB20A4CFD4550F9E9BBA014EA0DACD /* StellarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C671F006AADCDAE588C786207B6C5B /* StellarUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0AE1520D0C0A54224E8A3E97F465DA74 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA531D63A968BFDACAF45DB50D2B46E /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0C75EA75EC90D728EA1111726E5C98F2 /* crypto_box_curve25519xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AE407E64BA8F4A5CE7631806FFA84247 /* crypto_box_curve25519xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0D5041DD10885BCD7811B516CB87D376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
-		0DF3EE8CC629B237BEE361A4BC4F3DD4 /* PasswordEntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A671AA9C820E4714D5D214E35B8C97 /* PasswordEntryField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		126421ECA517C23F670A63BDF8BD118B /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D4A82B880FAFA5E0233EC1217D2E5 /* Bytes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		12CA4C46BC1611CCF8D1BDCFF0902096 /* TxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B751FC1EE632290120F2867E07FD627 /* TxBuilder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		14AF263AC2589E140B1E860792381C0C /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0CD0AEF1FB635E3E17D93EF5213B2 /* QRViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		15471D9B48BBF830AD968ACABBCB32D4 /* PWHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D1B41B9DC0AD8042A8BDBC551CCE4 /* PWHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1694ADB61C9DF488DC2E6694C1190AC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99901B5D66B1EA84C57E38B456ED529F /* ViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		177A12D88FD568C69FE27907F40BCCE3 /* StellarEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B389A2741882637103891DC4AB066 /* StellarEventSource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		17FD9EB53F337B09A3E753165DB78825 /* Sodium.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9572D9F352DDC57908E08594C5CB8A /* Sodium.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		008F1FDB3D64A2A5476A7FC6A386964B /* KeyExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46039CF600963F80F96150728B318779 /* KeyExchange.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		03236DB1E8741CA8586FA3DDEB78A542 /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = F181B85EE8801FA54045D388531D135B /* crypto_sign_edwards25519sha512batch.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		034A4CCB36CC6ADCA2778B5391222916 /* StellarOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF497AD21CE29EDB447EF2D08498BF2F /* StellarOps.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05D9467F7FD3570A1F0E0E12733B90B3 /* crypto_box_curve25519xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1FC1484F52F8BBECE26976FF9E168A /* crypto_box_curve25519xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		08C2E7385C950950C35CCB90B878471C /* crypto_core_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = F8ED904291547E3C3EB571C44D753148 /* crypto_core_salsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		092D1CA6CD6E046CE68250EDED313247 /* KinAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEC552374CD16F0C04DD6D1EE722AB /* KinAccounts.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0B4494E58267B147D9A6E888F90F040E /* crypto_stream_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B55682420DA94BB7D7CE841E65C8433 /* crypto_stream_salsa2012.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0D359E0746BF73F6CDB1D68692E63A4A /* PasswordEntryViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 49BF19B8DB3E64E904957310F0E843C1 /* PasswordEntryViewController.xib */; };
+		0DE59CB931BE6063D342011E8E68AA59 /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658ABA7D2FCBAC79CBA293AE68AE69A5 /* RestoreIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0E46114FDFD49625ECB525924E1DA367 /* PWHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D1B41B9DC0AD8042A8BDBC551CCE4 /* PWHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0FAADC40EBB117E66AD3DD0024B1FD95 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC437C4471DB5FD746167FF8C5A50948 /* Auth.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		10A4D035E264DF5520143DCD94CC2732 /* Sodium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB93C39035708C1FDB462E9CC53968D /* Sodium-dummy.m */; };
+		13BD84A67632413A854145BC480918F3 /* WrappedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244DE6A38F08A60897657E0C347FE3 /* WrappedData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		13FDEB350E88D9FD77664293E39530C5 /* SecretKeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C462420AF8B018903A0417C370EB5D3 /* SecretKeyGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		17EE5C120F98742F3BA073901C35E898 /* crypto_pwhash_scryptsalsa208sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C0FC483E87FEA8E41564EC55311A92 /* crypto_pwhash_scryptsalsa208sha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		18EF38B85CC8C177073E5DE250933D41 /* QRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76291E8DCC8E607A31AC203B9C88C274 /* QRController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		19B89D9EFDA4A25164973A7DFA5DF99C /* KinTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7120844D3F27F64B40FD4B524D9A17 /* KinTypes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		19F16122266D7A148AFFB5DF512CC08A /* Pods-KinBackupRestoreModuleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF4F876D394695E769D0C53687DD745 /* Pods-KinBackupRestoreModuleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D372253FCC5A5AED23583CD1A04D691 /* Sodium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6DFB73F735C9FD7A3D43F57D2672C /* Sodium.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1D9319AA4595BEEEE2AE0D98516EE0C0 /* KinBackupRestoreModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAE9E649BD991F81F4ECADC787A56EC /* KinBackupRestoreModule-dummy.m */; };
-		1DF8B7CF396F8F78D681486E4A470C21 /* KinClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44B1AE8526F8A813B8D5DB933F28294 /* KinClient.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1ABDC214057867C30B8E943CEDB1651A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59D1776460ACDFD0AFBC83A790EFFA /* Transaction.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1E441C59A4DC56142D12EBC8D0B7A6F4 /* Pods-KinBackupRestoreModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E717AA7918D3E4C19E7F6E83AD328DD7 /* Pods-KinBackupRestoreModule-dummy.m */; };
-		1F19C884563E3F2B11551B3030E0FE49 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0711A3E6FD8122693D4A690E46130 /* Network.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		22308347E9EA680061506374A4EC2C3F /* crypto_aead_aes256gcm.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1B3BDB4532E5AB81121F806ED5C44F /* crypto_aead_aes256gcm.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		27CB119E72357CA36CB734DC03D85522 /* KinSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B90B9220D14279690ADB6F6D7663A44 /* KinSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27DBB78E3CA3BD4C5CD3EA5073E6E44B /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939FE205AA46974B5BE72A891F33C72D /* KeyStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2966389A7868850A1998AF88456F66E7 /* KinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1E2BC7B7F545A1536579BE9229DF9 /* KinError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		29C9835EC4E48D16ECE3CB0ECCB1AFB1 /* crypto_auth_hmacsha512.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A4BFE4F82D6DC1D51FE70D8EC1A0E0 /* crypto_auth_hmacsha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		29E4FB77D77BA13C85EAEAE709CB48EA /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61C90A727B1CAEDB3A0381C10637F06 /* KinSDK.framework */; };
-		2CC4749DA2495222BAB8B18738963C3B /* KinBackupRestoreBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743D30081D9CB5FBCF36236F4F1EA979 /* KinBackupRestoreBI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2DE4B716E4A8B7F546403FD54287F19D /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = 076EA1ED52BF3B0396F8FB1A7C562B02 /* crypto_sign.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		2F2A8359AD18B780825E596D7B6D5F7C /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = F181B85EE8801FA54045D388531D135B /* crypto_sign_edwards25519sha512batch.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		311A39B6C4048DE4217F405F32EDF954 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D2419124EF5CC42108C88E020DC179 /* KeychainSwift.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		325C24481A200AFA6EACC56B6E9F4AF0 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D9E5587EC92E8EF262310CDEF98A5 /* Operation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		35A7EBF91ED61058313A1D153C4E6096 /* GenericHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB89BDC7E565D3510973E732A6FBFF9 /* GenericHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3A46D0A81DA6BB05B45540A36D2FED3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE221B9AA218EA11BC4040D79168484 /* Assets.xcassets */; };
-		3AFF80973C81506A33A5BDE85A0C5B90 /* Sodium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB93C39035708C1FDB462E9CC53968D /* Sodium-dummy.m */; };
-		3BF2CC88700AD94E166AC37068554EB9 /* crypto_secretbox_xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DE8BEC75248157EF7A0F709BA5585E /* crypto_secretbox_xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4056E5E8C6B1F7787D3BA7FA9579BB37 /* KinUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6445F6F3B5409DD9C8C04B06412E58 /* KinUtil.framework */; };
-		408490EF1014FEBC635EE26C2A4A8F22 /* KeyPairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804D5F58E0678FB77EDAEBDF7DB17E9 /* KeyPairProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4163C7F4F6D355887CBD6A324C254797 /* StellarOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF497AD21CE29EDB447EF2D08498BF2F /* StellarOps.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		429EDE9EBBE5BB44E60AAB6A91241069 /* Array+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1A0F976CFBB802647BEB015015A91 /* Array+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4337006F1D4D7DB09BFCC4AE83DE2A7A /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7324BB9B4DBC771A676EDBA0FF8FC /* UINavigationBar+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4377A7D3713961958D4528F2D6C03E83 /* crypto_onetimeauth_poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 5823DECA9057E912A4BB34DD3E4C57D9 /* crypto_onetimeauth_poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		43F59A553B1F113558C84FA0DCB9954C /* crypto_hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 55402EC8DEA4780D3C633B3BB8211A8C /* crypto_hash.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4821A34E479F4065B911DCDF10ADBE82 /* crypto_generichash_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B00BCDA3E84C7560CC43E472547AC8B /* crypto_generichash_blake2b.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		48EFC8562EB8E434BCA9714953B358C3 /* PasswordEntryViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = F516DB1A68D2E9F60B014D0B4FB7746B /* PasswordEntryViewController.xib */; };
-		4ADDFCFC272FCCEF615AE71D99A83B09 /* RandomBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78F8364743D84F11AA839BE8087729 /* RandomBytes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4C0979C3E575B5F46DDEEB3C2887E89D /* crypto_secretbox.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D3AD982E44C5EA9A61878F06F299E3 /* crypto_secretbox.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4C23CA1F89723F16381E57B66FF0165C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
-		4C849FF5CBBAFF2F129D18784894C7F8 /* crypto_auth_hmacsha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 105B5BA79B2515CC9B113972183EB9A3 /* crypto_auth_hmacsha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4D1918FC36876CBB25E69F1660D83214 /* SecretStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509FDF1AD525FE8840F4EF505FDB6C /* SecretStream.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4F19AC5F8E6EEFECB20AF760F48398C0 /* crypto_core_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = D409B2779EA351A4329773D2D64FC367 /* crypto_core_salsa2012.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4F325839D66AEBE8120EF86A017F65BB /* KeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A2C52C8288E5B0BCA5917E2BD6465 /* KeyUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5298DEAAC01A07C7668E20C96F4F0B43 /* WrappedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244DE6A38F08A60897657E0C347FE3 /* WrappedData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		546D86C2968CBB763FC663F5FB0B98F5 /* crypto_aead_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBD843EF965538515C30BA86727F3AC /* crypto_aead_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		54C64AB5E9D7A016C97D3A28E309DDF4 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349903E4C17A98E3DDA32CA0D2599599 /* Stream.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		56E8836CBFBE1C38F89430D130B8EC9C /* crypto_pwhash.h in Headers */ = {isa = PBXBuildFile; fileRef = 400799685C5FB86B585AB37A97D54CBB /* crypto_pwhash.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		57ED5A937609107B1A640D0B5D285F0D /* Watches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC5596E45D6C1F88244BD9ED98DF49 /* Watches.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5842CDDB004384108203114F8CAE65C0 /* crypto_core_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 0870E1448071EB1DC539A366A8033CD9 /* crypto_core_curve25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1F7A5C9E6A7FA944593E5D9435413560 /* UIStatusBarStyle+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B493373C2B1036CB1D895C3A121F7A /* UIStatusBarStyle+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		236F1D99C6D1DC98BA822F26CAFBBC5A /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732E95D9D49F25516B719B6ACC2322F /* Sign.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		24E4819F10C164276704965FD8D936C0 /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77312CD3694A862F3593ACA72384CE /* PasswordEntryViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		275A1057450CFDD3B507B95E052CEB97 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4900C7E88D5DE3A4A63E2BE63DCA43 /* PublicKey.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2ADF6704CA2078BDEC4890115DA0AEBD /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939FE205AA46974B5BE72A891F33C72D /* KeyStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2BDA541B31FC6A434590E574CC5222A1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C412678114D5CC39A38C08D3B8789B /* Utils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2C22B058551B9A8BEC5A2133EE955D9C /* crypto_kx.h in Headers */ = {isa = PBXBuildFile; fileRef = 8116FFE360A409A9B34594F6F3493B79 /* crypto_kx.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		2D161475BDC3EE8A93DE01AE69B18277 /* KeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A2C52C8288E5B0BCA5917E2BD6465 /* KeyUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2EE6322426D8425D9E5FC771D9C2E009 /* SecretBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6382435693625570D8969C8280836 /* SecretBox.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2F9C0911FF845BC8339D27AEF47D2297 /* crypto_aead_chacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A117FB977E7AB4AF1C4B1190BE040A3 /* crypto_aead_chacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		313651E2A4B5F9C2C4FDCF61D120EFA0 /* crypto_verify_64.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F19794E8CF9B4B5AB179942F15A8B6 /* crypto_verify_64.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		31A6B8123B101C965DB40AFE7F5AC51B /* GenericHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB89BDC7E565D3510973E732A6FBFF9 /* GenericHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		31B226683449DB4DAC8A9DEB88B9B728 /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689E5E2B10220776B1CBFB51F1FC7CFA /* Bundle+BackupRestore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		31EF64455F729168ED4769126650F98B /* randombytes_sysrandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D02C17A3CE0F03BF826B974D76CD6E1 /* randombytes_sysrandom.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		32FC2AE64A4811E86CCCB1A80006B6ED /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481C23EE33B02BB76D91E179DEE657D8 /* RestoreFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		350A7773F012C8AE674C586CB0371A95 /* crypto_core_hchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = 275F36C0D2E2CA14932E43DDA494FABE /* crypto_core_hchacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		37983B8EEE9A6D7FFA0DC9DA04BBCB0E /* crypto_aead_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBD843EF965538515C30BA86727F3AC /* crypto_aead_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		38C8E71A7E3C244FA273CA0BA7C30953 /* crypto_box_curve25519xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AE407E64BA8F4A5CE7631806FFA84247 /* crypto_box_curve25519xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3A28B03D36BBC170BFAF440CFED22571 /* crypto_scalarmult_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F9F9A69754992C9B9381F6E7F9E597 /* crypto_scalarmult_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3C234D1AB531CAF339EDA440C678A3C9 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2731322323CF24E29C19CDD8C27BC2 /* core.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3F8BF282A837A4539C034EC446C8E3A2 /* crypto_secretbox_xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DE8BEC75248157EF7A0F709BA5585E /* crypto_secretbox_xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		400DC2FDDB1E1F2153DC624519FDBA77 /* runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FAE392179508F8D905B8960CE2F15AB /* runtime.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4083E064C0AAD20EEE967D13DAD7307C /* crypto_core_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB65BDB10DDFDE0B5AF0EB63DF8A3D2 /* crypto_core_salsa208.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4098DC21338B9774CCE1E16B7E220971 /* crypto_kdf_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EBA67C2C7B749013B22A1A6C479B49 /* crypto_kdf_blake2b.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		40D4922028F80156E9ED757B1DE7078D /* crypto_sign_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A948C46258D2F3B427E9B1737B29944 /* crypto_sign_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		423B5FC1B9F9128D345B9841E1221175 /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7324BB9B4DBC771A676EDBA0FF8FC /* UINavigationBar+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4582D7AD63F27BF0AC33D8961BDDA146 /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97465FB5BDB3938BE79CA098567953F /* QRPickerController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4A7241E587AA4828BAE51115CB58C3A7 /* crypto_stream_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = 9690DC31B857F1DF50C236BAFFB29023 /* crypto_stream_salsa208.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4BD64D64D72825EDB684921C21A227C3 /* crypto_onetimeauth.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE0662EE1EA24BF6F1BA931C0F284E1 /* crypto_onetimeauth.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4BFE58135D557B582BFD7D8F2A0DBEBC /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DF554D03CC1E98246C7BEBEB5C3F1 /* Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4CDCB244457F0B63968250D546DC7918 /* PasswordEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809865BC2E3649CA217C7C374BCEB116 /* PasswordEntryTextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4DAAD4D57CC2A5294D5EFFE8AC887B86 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03C22DA49F7EC6C220A15BD3FDBD93B /* FlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4EBAFD90D41B5640DB9775AC7C814A5A /* crypto_generichash_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B00BCDA3E84C7560CC43E472547AC8B /* crypto_generichash_blake2b.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4F0517C6665C24753BB4A6C8D11E749C /* crypto_secretbox.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D3AD982E44C5EA9A61878F06F299E3 /* crypto_secretbox.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		50C31F12B92E24B3E02BE791DAA1E9CE /* crypto_auth_hmacsha512.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A4BFE4F82D6DC1D51FE70D8EC1A0E0 /* crypto_auth_hmacsha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		513208F6BD8630C41631B7DE6566334B /* crypto_auth_hmacsha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 105B5BA79B2515CC9B113972183EB9A3 /* crypto_auth_hmacsha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		529F50CA29FF079AA84A94627CA0B896 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C0432393488A2FD4CF91D1D4A572B8 /* KeychainSwiftAccessOptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		56975C197C98F734E99E628FFF3B3EF3 /* crypto_generichash.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CF450A600AB4BCB02157E318A50B55 /* crypto_generichash.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		57832EB5C2128A4F3C4F695C08528130 /* ExitCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4729D2D0E9090AB44276607266B4179C /* ExitCode.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		57A631ACE796C5B0718186FB27145BEE /* crypto_shorthash_siphash24.h in Headers */ = {isa = PBXBuildFile; fileRef = 198D1A13F198F51D9460BF2537C4D974 /* crypto_shorthash_siphash24.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		58C70D452A7129BC509C59BF8B6012BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
-		5AA112F329D015E248E171430025B263 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4900C7E88D5DE3A4A63E2BE63DCA43 /* PublicKey.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5AD334B4AC1372AA7B4473404F24FBE9 /* KinBackupRestoreModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6D4F3B0724720D4F205A29EAC89199 /* KinBackupRestoreModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E428CE670A726ADC34162E239A042FC /* crypto_core_hsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F65FC11C5C3839C380654DE1DF08ED /* crypto_core_hsalsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5F41D4FC615FD7E089A3D367A2D8DED2 /* crypto_pwhash_argon2i.h in Headers */ = {isa = PBXBuildFile; fileRef = FBD49A9373B3ABD5523A994C3DDF0F1C /* crypto_pwhash_argon2i.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		644C10C1B9C4AD15BC40D92FEABB4BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
-		654DC8EC37C6CEECA0AC7295079E60D3 /* Data+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1BF23DB1B760F63D144B045612C53 /* Data+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		67B9EF39B51956A43CB1478AE02D9693 /* crypto_scalarmult.h in Headers */ = {isa = PBXBuildFile; fileRef = FA68378A37D616D5880D79644AC5BF04 /* crypto_scalarmult.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		59960788AC228A561774845BFE8393AC /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858F7CBD4205D1BA52157562129CC405 /* RestoreViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		59F375EB1B52DF4847D0B53571BCDDDF /* ShortHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9C7836FE9BEB24A2B8F0196D5220F /* ShortHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B4A6015BE6280AE0C34D8A4658F2ABE /* TxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B751FC1EE632290120F2867E07FD627 /* TxBuilder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5D3711F1685B4DD8C42B0D33B819C905 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DFCBEA0BA47362E543F2AA2E453F6E4 /* export.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5D73567741FD4DB0C964FA819908B689 /* KinClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44B1AE8526F8A813B8D5DB933F28294 /* KinClient.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		62455964BE0B9A517DE0E3B605D30262 /* sodium_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8906264CE4D2500475FCEAD13B0B797E /* sodium_lib.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		62989D5995FE63566C8EB0E4359D8429 /* StellarErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F1611617826F369A73C6327F0B7D7 /* StellarErrors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		62BD11A962F43D078739E0BE46174E87 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF038731B8359034F24B3C92B85296 /* Errors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6494A7A2A9A35B72B2EFA950C446454D /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D2419124EF5CC42108C88E020DC179 /* KeychainSwift.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		650E02F5F8939DB965CCC05B42E1583D /* KinBackupRestoreBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743D30081D9CB5FBCF36236F4F1EA979 /* KinBackupRestoreBI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		678A279D7D17EFF47556C3E29756157F /* crypto_hash_sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BCAC823752BF14FF1A8A6F190F6D47 /* crypto_hash_sha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		67F4E8670E7D0117C6CB60A97C5EDCA4 /* Pods-KinBackupRestoreModuleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AF2151C39E856D39610D2832FEF37F /* Pods-KinBackupRestoreModuleTests-dummy.m */; };
-		698613EB9EA3B3D97F17B81B1A0C9A08 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8D50C94B738AF5925E7EF437F5123 /* String+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6A53552C3C416E48802231ADC5D1E638 /* crypto_core_hchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = 275F36C0D2E2CA14932E43DDA494FABE /* crypto_core_hchacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		68F79200E71931CF7A5F97289FE104A3 /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCFD33DB087FE062550E64AEC70783 /* PasswordEntryLabel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		69F9132E6AD2097F76372BE2F9F783AD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0711A3E6FD8122693D4A690E46130 /* Network.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A1E2D2CCE70E1BB93A517F3E0DD05FC /* randombytes.h in Headers */ = {isa = PBXBuildFile; fileRef = DF16A71EA7DC2D801A6F41689A62371D /* randombytes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6B317FCCE14ED18176C4F5D939C73E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
 		6D6B4CA081C3C40A73354CF29B6ADB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
-		6E0230F5ECACE3C883FB4697543C88EB /* RestoreViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 539123AE56205143B7A3128428817CF9 /* RestoreViewController.xib */; };
-		6ED32011BD9192165592F3150E370C86 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0E00236D422B0ACFDB8318C6EFA0 /* Asset.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		707EFE0EE5F35DE7C261D779AF17EDE7 /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C50E5799504D8443A7ADF283FC5C8A1 /* BackupIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7139A1AE4B19915DC76BA2663382EE51 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3DEA7DF71EF65B29655519147A3AB9 /* Curry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		72303A0403C6CF1D21AF4CD09D310E89 /* randombytes_salsa20_random.h in Headers */ = {isa = PBXBuildFile; fileRef = 2259FCBFFE97F7D14D017BACF446DA64 /* randombytes_salsa20_random.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		72795B2AB3A42DA44C1F0DF4D9B50C4B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC437C4471DB5FD746167FF8C5A50948 /* Auth.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		738649053D56587F063B316ADD74A667 /* Data+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F5444C7BA8C936FD06D14521636FD /* Data+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		744EA3C79705D7F7A8808A7532214044 /* crypto_stream_xsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD5B0ABDA5B06CBD192F73FC6D08916 /* crypto_stream_xsalsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6E89549EEC45B308DAFF6DCBB51544A3 /* crypto_stream_xsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD5B0ABDA5B06CBD192F73FC6D08916 /* crypto_stream_xsalsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6EA5AE4C621C36C3C2055A082E762EFE /* WhitelistEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C02C8187C40A2ED917C291C78C9CE3 /* WhitelistEnvelope.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6FD8F69991C4730DF891830411258F8E /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B8E4DCECD771117F640CF163E9D7DB /* KeyDerivation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6FF2374C89A883451A4ADE42E96097E3 /* Sodium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6DFB73F735C9FD7A3D43F57D2672C /* Sodium.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		72F259401659DE21DA8A815BB327EBFA /* crypto_auth_hmacsha512256.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3EDD69C6B01C1ABCD445A32EA6A7EB /* crypto_auth_hmacsha512256.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7413D30558E90295B2605828B43BCBEA /* NonceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3106D7A86CC4538B951A266069BF44F /* NonceGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		75482781BB57493632BC5665EB8F8527 /* Pods-KinBackupRestoreModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BFE1F25CC438B8A9C5F904360F05C72 /* Pods-KinBackupRestoreModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		767DC42CDC8953F4B8BF3233186A2765 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC678B2A64F60E2FDDC7509E56A5991 /* utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		76B2E8244E1254B8732AA676EB328ADC /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43454C1B1E6343229BD0DB30363C9F /* RestoreViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		771A526AF2C3E575B46EF8C7457DCE44 /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726ACAD1E86631777AFA9E319AFCFBBA /* RestoreFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		78C0D239E2AB8A2AC3515820F89FA329 /* HorizonResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B3857A5E1B5BD1E7AED3951E870B76 /* HorizonResponses.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7B47B044B4D3BD258784DAE08858B975 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 110C958272055AF651FFBF1499551D1F /* Localizable.strings */; };
-		7BC2928E2F911A7A8C97034C7ED9F71B /* SecretBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6382435693625570D8969C8280836 /* SecretBox.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7C7D6FD1622EDA787462E05F84AB4657 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59D1776460ACDFD0AFBC83A790EFFA /* Transaction.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7CC747F27611A9B59965B938C7E332F1 /* XDRCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA928262D9505D43B94BD1A25ED7B3A /* XDRCodable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7D6072FBF7D51751B5A3945726030E1E /* KinUtil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4793BF9C97E9041C3862D6563B76D5 /* KinUtil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E1B2A68188A95FA30DDE4CE9B31828F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F4A4F44EE9C5ABAD128E264F981EB9 /* Observable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8431173B7C0BED98FAC7F8239810ED9C /* crypto_kdf_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EBA67C2C7B749013B22A1A6C479B49 /* crypto_kdf_blake2b.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		86360C1694C7990FF567EA6D4546DD17 /* randombytes_sysrandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D02C17A3CE0F03BF826B974D76CD6E1 /* randombytes_sysrandom.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		86A1C41369710E77ECEFEB98F0ABB6E9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C412678114D5CC39A38C08D3B8789B /* Utils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		879871F19AD85B2039D926FFB9226A8D /* crypto_kx.h in Headers */ = {isa = PBXBuildFile; fileRef = 8116FFE360A409A9B34594F6F3493B79 /* crypto_kx.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		87997C38E066A2A2596B64B20CEF2E7B /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E700C7D2E2728296490D0D48ED0BA5 /* FlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		88E9EC05BEA141FCE9D42BD2B268E20F /* WhitelistEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C02C8187C40A2ED917C291C78C9CE3 /* WhitelistEnvelope.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8A3B071ED100613B82FD7DCCC482110F /* KinSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7971AF55D8181A48301F06EBC06FA /* KinSDK-dummy.m */; };
-		8E0EAA4C1D6F5ED5EF102A41270100A7 /* SecretKeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C462420AF8B018903A0417C370EB5D3 /* SecretKeyGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8EDA119C8A44A8BC30358C3273894FBD /* crypto_core_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB65BDB10DDFDE0B5AF0EB63DF8A3D2 /* crypto_core_salsa208.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		90409A4C1EBD4465BA22AC8EAF02566A /* KinUtil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B32DD64880C094C5F2D650B2CDEF908B /* KinUtil-dummy.m */; };
-		90988C7665E8C6FD015A260F6E1E5E99 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732E95D9D49F25516B719B6ACC2322F /* Sign.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9245F3AA602F73CA930A6EE007CA9609 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7927C798878572455112AB411BDB26 /* Observables.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9517AF6A7B2EF6131DC3DEDA4F48FE6C /* randombytes.h in Headers */ = {isa = PBXBuildFile; fileRef = DF16A71EA7DC2D801A6F41689A62371D /* randombytes.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		996CB5E78EFFB4627611F4BA6CB12FB0 /* crypto_sign_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A948C46258D2F3B427E9B1737B29944 /* crypto_sign_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9CEBFEC7AD5CE8E62020518F3981F1C1 /* crypto_verify_32.h in Headers */ = {isa = PBXBuildFile; fileRef = 7147A3D97C3528375B3A50EE05E2A4F3 /* crypto_verify_32.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9CF4FF5BDA6CC7FBEE34B5C1B0F3AF91 /* crypto_aead_chacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A117FB977E7AB4AF1C4B1190BE040A3 /* crypto_aead_chacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9DF3BB745BBEB54CAAD85DFAC3457CE7 /* crypto_box_curve25519xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1FC1484F52F8BBECE26976FF9E168A /* crypto_box_curve25519xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9FA6E18ECE7718A0889C899FE6B7BF4F /* crypto_shorthash_siphash24.h in Headers */ = {isa = PBXBuildFile; fileRef = 198D1A13F198F51D9460BF2537C4D974 /* crypto_shorthash_siphash24.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A01173C5287B43D73D1AE78B7583CA10 /* Watchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748670FB7D212CE757594738A7EAA3B /* Watchers.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A093D313D732F45193F121285D1AE5F3 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416D38356D7134C2234FE2540A0E8D0 /* String+Localization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A6A43435EF74B18C58CF4B718031AC9A /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DFCBEA0BA47362E543F2AA2E453F6E4 /* export.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A8B995B6C462A5C7DB8DA138E9B6EBD9 /* crypto_pwhash_scryptsalsa208sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C0FC483E87FEA8E41564EC55311A92 /* crypto_pwhash_scryptsalsa208sha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A9130B68C6110ECE0555F689022DFAE7 /* KinAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF5747E77D336CBD7349023D33291E /* KinAccount.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A9333CB0DBDD1D67F57C51F552C99AE6 /* KeyExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46039CF600963F80F96150728B318779 /* KeyExchange.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AA7E9C076E199EEE30809B9DE998915E /* crypto_verify_64.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F19794E8CF9B4B5AB179942F15A8B6 /* crypto_verify_64.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AADF9C61738E683619B947B135A896C9 /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7554D43981DAC7CE5BB54B4EA31D21 /* PasswordEntryViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AB2676208E80D01202D350B82057BBC3 /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689E5E2B10220776B1CBFB51F1FC7CFA /* Bundle+BackupRestore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		ABC770E7B592D00C85F0656EC3D7C711 /* crypto_stream_chacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DA0280EF0DFF276D820EFC44FD396D /* crypto_stream_chacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AC92216441182AA1BFFE6E776215C353 /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7483FF49C13AE905409732A6BF8B6618 /* RestoreIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AFC0C3C490E156C6E2EC46564D3849BC /* QRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9722B948E5E5162B6A187318DFF2FFD0 /* QRController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B0346C73C4AB769B73EF4CDAA2C323C8 /* Sodium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8BE451FA26D446E87AB76F6660A2C05 /* Sodium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B26FC2F96A36BE1DA1285AAC39370086 /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71A5BA05947373081BA72933F29222 /* KinBackupRestoreManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B31AC05EA8CA5BC36CD073DA53EC1AEE /* StellarErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F1611617826F369A73C6327F0B7D7 /* StellarErrors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B4E765FBFA771A5050B80BD725A06196 /* crypto_scalarmult_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B04C6AB51C34F7C1ABCC66C00F83108 /* crypto_scalarmult_curve25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B61ECB83E7353E404B01DBFC6FB74BEC /* ShortHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9C7836FE9BEB24A2B8F0196D5220F /* ShortHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BB96789102CEB5B3FD169A76BEB10B54 /* Stellar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1429278CD9C85C3534F6FF182AB235 /* Stellar.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BC9B104CD35B7AA9731D634362182C47 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0948741E23F3CC003AACC8B5BFF213 /* Endpoint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BEF7B6DBCC6EB69164E60A6E817F6259 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C0432393488A2FD4CF91D1D4A572B8 /* KeychainSwiftAccessOptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C0256145B9F9FB15709E4E9D06416A21 /* crypto_onetimeauth.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE0662EE1EA24BF6F1BA931C0F284E1 /* crypto_onetimeauth.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C3C993FB33D56AD45242ECDBE8A8B028 /* crypto_pwhash_argon2id.h in Headers */ = {isa = PBXBuildFile; fileRef = BA512E9F00453665C885C6FB996D0407 /* crypto_pwhash_argon2id.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C459E36DF5D63A4E31CBD39CC708C82D /* crypto_stream_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B55682420DA94BB7D7CE841E65C8433 /* crypto_stream_salsa2012.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C4ABD004AECEE418D1C2D89235584887 /* KinTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7120844D3F27F64B40FD4B524D9A17 /* KinTypes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C5B0E24812CECF1E726AEC37A6B197C1 /* StellarResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2165C8F08A5ED6346CCE9AD33387B /* StellarResults.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C5B774E3ACCC4B53C35766F355AA605A /* crypto_verify_16.h in Headers */ = {isa = PBXBuildFile; fileRef = 29268A30076A6CF51A73B4A0642FD175 /* crypto_verify_16.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C76014F75A1A6B4E14BC72E4F3490A2C /* KinAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEC552374CD16F0C04DD6D1EE722AB /* KinAccounts.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C83DF9F7E3A25A7FEF869573CCC98531 /* crypto_hash_sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BCAC823752BF14FF1A8A6F190F6D47 /* crypto_hash_sha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C9432A3A5ECCC372C0AE1EB5BAE42230 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0D0936DD5DEC269E50EE37DBCF93B /* Ledger.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C96BF7252C5F06090E9B9388735FB7FE /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B772C0F73198ADB92EEF3BA47542441 /* QRPickerController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CBC74B493456FC2B8B1BF1E57258C75E /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBA45A4CCC63DF7753ADAA18B89419 /* ExplanationTemplateViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CD1DC1F72907A629A94719D285931E76 /* crypto_secretstream_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 8034E60B02C91A05F6292746B0AE3568 /* crypto_secretstream_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CD32B4ED6E812CE5F33EF35352AABCB0 /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E23D8E4B51573A12DE127B3311BCB2 /* UIFont+PreferredFont.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CD4744FDF10863EDEED24C59C6559CF3 /* crypto_auth_hmacsha512256.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3EDD69C6B01C1ABCD445A32EA6A7EB /* crypto_auth_hmacsha512256.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CD746A7891697BF75A1B3FE2990E1CD3 /* NonceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3106D7A86CC4538B951A266069BF44F /* NonceGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CD8E83A84E1E48E39D965DC6F8D01751 /* crypto_stream_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = 9690DC31B857F1DF50C236BAFFB29023 /* crypto_stream_salsa208.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D3096DC90A4154AFFF03B82ECFE957FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
-		D3BA63DEBFA72E4A224458E02FFB55F4 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2731322323CF24E29C19CDD8C27BC2 /* core.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D4866F3FB56F1704AFAA1D5272B50A2C /* BCKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B02B430245FD3B03E55ED2ACC918843 /* BCKeyUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D5C1A2725512BB409F0E0754F5358B1A /* runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FAE392179508F8D905B8960CE2F15AB /* runtime.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D64AE0E57B6B869E4DDA92607E37914E /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568C33B08994A91E08DF25E3A1EB046D /* TegKeychainConstants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D84C5034C4E539D42ABE9166409B44E1 /* crypto_stream_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E3815DFB4479ADC36CD5354E0D3C449 /* crypto_stream_salsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		DC25197505B050D47CCFF7267A51F1D5 /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3FB95944540C6ADF769F4777677C3 /* UIColor+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DD8583444EF11A14A43F298DA550369D /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12510A42BFA6FD3C5DD934ACD3CC396C /* Sodium.framework */; };
-		DDBD9DA9281D1E3920219871A0BF7555 /* crypto_core_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 465C51002B9D310533AD6CF090CEC885 /* crypto_core_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E15E91AB5E293090CBE6304DC3246E9D /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B8E4DCECD771117F640CF163E9D7DB /* KeyDerivation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E168871C3FFB535A8433E2725DD8923F /* crypto_shorthash.h in Headers */ = {isa = PBXBuildFile; fileRef = E97C2911FA878B9ECCC34B6E5935CDA4 /* crypto_shorthash.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E23085EA92924CABF124C8B3EBDECBAF /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87126622D40486E4549B2AF03C862C14 /* BackupCompletedViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7995F24CDC5C648250BDEA5D82F41BAC /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12510A42BFA6FD3C5DD934ACD3CC396C /* Sodium.framework */; };
+		7A5E5D9D449D15848B11E72C0F9CCE4B /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = C189A42088D3D36865FABEC6D0D1E7FD /* crypto_hash_sha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7AB902682D13694DF8EFD6951F548792 /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525484B0EA8D1DF6A1E51F2D49D2C546 /* SHA256.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7B728D741CA6EBA6BF1DC92474831549 /* Watches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC5596E45D6C1F88244BD9ED98DF49 /* Watches.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7C6081B945AAC145B15CE00C8C82522B /* KinUtil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B32DD64880C094C5F2D650B2CDEF908B /* KinUtil-dummy.m */; };
+		7E4348C59ED51178380F50C4B1AFE853 /* crypto_shorthash.h in Headers */ = {isa = PBXBuildFile; fileRef = E97C2911FA878B9ECCC34B6E5935CDA4 /* crypto_shorthash.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7E58BE379468DC02B6F8A7CF06BE9C3D /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24A4088FCF337FE4E058375AF21B85 /* BackupIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7F92F8A1A0D3C011E628CC07F0C4B70D /* crypto_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 46ADD5135642B01F2A72891DFBFB483A /* crypto_auth.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		80D5EBA762D29A1BDC1218E37D27E4CE /* QRViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1D41DF26AE93F4904E4C6F26345FF3F8 /* QRViewController.xib */; };
+		80FE6B4317447A3BB9ADAB0E63F9C136 /* SecretStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509FDF1AD525FE8840F4EF505FDB6C /* SecretStream.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		833D28F7C00EC34DB192397A3DD84FA4 /* RestoreViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = D40657C6982693B700962EE08B968226 /* RestoreViewController.xib */; };
+		835BB6EF303946D6023F572B6FABDA93 /* crypto_core_hsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F65FC11C5C3839C380654DE1DF08ED /* crypto_core_hsalsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		83C8780CADD839D17825F27C0D6836CC /* crypto_secretbox_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = C3841848800F3EDD5B897A94AC22EC74 /* crypto_secretbox_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		843018C80387B1C18FC5D80A71296048 /* crypto_scalarmult_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B04C6AB51C34F7C1ABCC66C00F83108 /* crypto_scalarmult_curve25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8470E24B774967C80D47FEC5748C3EA6 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7927C798878572455112AB411BDB26 /* Observables.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		852E7123B6CBCC8F389463F75FDCE549 /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B802BF7C265A1CFD3F03477B7015BBB1 /* LifeCycleProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		85B83F79BA00705853A2E04F6AEA7C7D /* crypto_pwhash_argon2id.h in Headers */ = {isa = PBXBuildFile; fileRef = BA512E9F00453665C885C6FB996D0407 /* crypto_pwhash_argon2id.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8752832C9929C286F60631AED883205D /* crypto_aead_aes256gcm.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1B3BDB4532E5AB81121F806ED5C44F /* crypto_aead_aes256gcm.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		87555A5B8A9F1A636BE2BA812D1F016A /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D9E5587EC92E8EF262310CDEF98A5 /* Operation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		891A74D8B8A7FC97E45062901F6DFE57 /* KinBackupRestoreModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6D4F3B0724720D4F205A29EAC89199 /* KinBackupRestoreModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89F6E79288642A96327450246DEDF85D /* Sodium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8BE451FA26D446E87AB76F6660A2C05 /* Sodium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B49E0161750933B4912CB88E41022C9 /* KinSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7971AF55D8181A48301F06EBC06FA /* KinSDK-dummy.m */; };
+		8B66BB82A2C0AF245F3A2EB53DD74C1F /* KinBackupRestoreModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAE9E649BD991F81F4ECADC787A56EC /* KinBackupRestoreModule-dummy.m */; };
+		8C07E91CA386ADD44FBA8A4080D79A76 /* crypto_stream_xchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9773F7C05C35EB2822F9D13D02600967 /* crypto_stream_xchacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		90DFA52F436E5D76CE3E084E81961944 /* KinUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6445F6F3B5409DD9C8C04B06412E58 /* KinUtil.framework */; };
+		93AE694F6D526C0518A16AA889CC9577 /* ExplanationTemplateViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = FF8369AE2758A8FE79FC829A37508306 /* ExplanationTemplateViewController.xib */; };
+		9475FE01C19D427CF42BB66A4722B5B6 /* RandomBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78F8364743D84F11AA839BE8087729 /* RandomBytes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		947C47E72D6975A81B44EB49EDD39282 /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D4A82B880FAFA5E0233EC1217D2E5 /* Bytes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9638936FC271F7C249A402C89482FCDC /* XDRCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA928262D9505D43B94BD1A25ED7B3A /* XDRCodable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		96A40E6265DC5D568CAC637C8CA73B80 /* crypto_verify_16.h in Headers */ = {isa = PBXBuildFile; fileRef = 29268A30076A6CF51A73B4A0642FD175 /* crypto_verify_16.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96D36CCA7C2A3EE373DAF655C1795697 /* BCKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B02B430245FD3B03E55ED2ACC918843 /* BCKeyUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		98F3B84B5EB88E66109558B60E15A97D /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8D50C94B738AF5925E7EF437F5123 /* String+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9990AA15473A2DD018967C53D5C62D34 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0D0936DD5DEC269E50EE37DBCF93B /* Ledger.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D057CDCAC516300F3E02550EBED549F /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9909B29E7337B862FF02D1C6881B7 /* PasswordEntryView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D766CCAFD6B92DF526988C292573824 /* StellarEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B389A2741882637103891DC4AB066 /* StellarEventSource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D7DE53F5EE5B4291BB0D74A5D33926B /* crypto_box.h in Headers */ = {isa = PBXBuildFile; fileRef = F1287F3AA284335626EF7FE6BB387629 /* crypto_box.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9E93104ABAC6F30B6698E8E309C317F0 /* crypto_core_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = D409B2779EA351A4329773D2D64FC367 /* crypto_core_salsa2012.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9F06DD46C6FE90FEB8574F174B994987 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0E00236D422B0ACFDB8318C6EFA0 /* Asset.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A0F9C58E0EB504F34FB163E0DBA21B72 /* crypto_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E95036741F113E76AEE2DE52BD37E44 /* crypto_stream.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A32F4B2DA2FD7E410FAE9D459B165B54 /* crypto_onetimeauth_poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 5823DECA9057E912A4BB34DD3E4C57D9 /* crypto_onetimeauth_poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A4350DF5C1B20F48625BB540BB7C470C /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568C33B08994A91E08DF25E3A1EB046D /* TegKeychainConstants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A57106A8AC2BD6EA58DF6425725898EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE221B9AA218EA11BC4040D79168484 /* Assets.xcassets */; };
+		A5E226B9B2B5ED47853DA5525962E64F /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71A5BA05947373081BA72933F29222 /* KinBackupRestoreManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A6497A5647E48C05A4E57C64E5FF8C98 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA531D63A968BFDACAF45DB50D2B46E /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A6F144CD446BF06AEB8E0AAF7C8614F2 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3DEA7DF71EF65B29655519147A3AB9 /* Curry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A94CE3953E8541176BAD28F0AE62E807 /* Data+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1BF23DB1B760F63D144B045612C53 /* Data+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AAA4AA7E93442C3CE7C2AD57CA1288FF /* KinAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF5747E77D336CBD7349023D33291E /* KinAccount.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AC34195B864AE31D5C5593BB08F24956 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
+		AE0201DB5E77EE20B3BF8F1A2C484D26 /* crypto_hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 55402EC8DEA4780D3C633B3BB8211A8C /* crypto_hash.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B257CCEAAEF34D84D0DB1C0B258DCC79 /* Stellar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1429278CD9C85C3534F6FF182AB235 /* Stellar.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B4870BB3DBC14CDE3F1D827F8E1FC46B /* KeyPairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804D5F58E0678FB77EDAEBDF7DB17E9 /* KeyPairProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B569D3D0A4CBED9AB9F2526EC3C17E83 /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = 076EA1ED52BF3B0396F8FB1A7C562B02 /* crypto_sign.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B6334ADF5437FE15F2FEDC825579FF44 /* KinUtil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4793BF9C97E9041C3862D6563B76D5 /* KinUtil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6E2CFD0B91C2A5C4006CDB5ACB4FCDB /* randombytes_salsa20_random.h in Headers */ = {isa = PBXBuildFile; fileRef = 2259FCBFFE97F7D14D017BACF446DA64 /* randombytes_salsa20_random.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B8BC8ECB4D5C56547AE126A89AF1C92E /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 110C958272055AF651FFBF1499551D1F /* Localizable.strings */; };
+		BDAAB9D761DFD016E0E64E640BBD10EE /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07DE3C2829F95448E30AF2A774B8EF /* Animations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BE09D39FAC037255E5A2B941C21DC22E /* Sodium.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9572D9F352DDC57908E08594C5CB8A /* Sodium.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF1B5DCC9A6D2ED22C24056A6908273A /* Aead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEA403627AFCEA2A93798A798C701D3 /* Aead.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BF67993C605FCBC92801665CF2D092FB /* Array+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1A0F976CFBB802647BEB015015A91 /* Array+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C2A1833E56459DC9662384B7EC7B0C70 /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD2CDA03CC1B7E965835FB70A81CB1 /* BackupCompletedViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C3424369A41E99A6B699F9C2022FF718 /* crypto_core_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 465C51002B9D310533AD6CF090CEC885 /* crypto_core_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C4A4BBBACB9165C324AA52DC31652CD3 /* StellarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C671F006AADCDAE588C786207B6C5B /* StellarUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C5292ADF8585350680B50FF1CB33538A /* KeyPairGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542B53C37C2D0E6940A1A5ACBB406ED /* KeyPairGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C59D4F6BCBC8699BD2227EEA5F8A571F /* crypto_scalarmult.h in Headers */ = {isa = PBXBuildFile; fileRef = FA68378A37D616D5880D79644AC5BF04 /* crypto_scalarmult.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C6BDCADBB4C8E0A32CC6E7B101A6EA12 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DE12AA329F4E4F1E54F7602770E407 /* Box.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C727D9FC0BABAF645990B15AAFF5325E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
+		C78F04B5F21584577042A896E0849371 /* crypto_stream_chacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DA0280EF0DFF276D820EFC44FD396D /* crypto_stream_chacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C7D6BB48F917B4B14BCECD8EE9C4BC7F /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61C90A727B1CAEDB3A0381C10637F06 /* KinSDK.framework */; };
+		CA5C07D7E8A013889ACB5BDD81BF975B /* KinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1E2BC7B7F545A1536579BE9229DF9 /* KinError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CD65AC5AA75363A939DE24303D76662A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F4A4F44EE9C5ABAD128E264F981EB9 /* Observable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CEFE637B53FDAED4F2DA106CA87B19A4 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416D38356D7134C2234FE2540A0E8D0 /* String+Localization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CF1FDBBDB5BF60E45D2F57625AEBB57A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
+		D232A6502389CC05B1CA10578138052D /* KinSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B90B9220D14279690ADB6F6D7663A44 /* KinSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3376EFAE2E0D9EF3967F957F1CA598A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0948741E23F3CC003AACC8B5BFF213 /* Endpoint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D3F2AE4EAA04AF5D5AC6B2584257851E /* crypto_kdf.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BF86855F16C91D08618FF0F751CF79 /* crypto_kdf.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D839F09363638C8FC93508D2DE274563 /* Watchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748670FB7D212CE757594738A7EAA3B /* Watchers.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9083C00636E4BAFEAFBD4CFF20A4E8E /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC678B2A64F60E2FDDC7509E56A5991 /* utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D98277644ED3CCEF9940DC7E407C48BD /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA630C143D1538F2E11496C2CC3A3F40 /* BackupFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DA3FA09B7730957B8E009DD544CFCE14 /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2D144D038C2D246CE50D82B205539 /* ExplanationTemplateViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DB7D76958E72DC25383E0F1A07031BC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5BC30D2934B42826E8CB9AD19EF8B /* ViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DBAB7FC1B5B66382E6AFA13CE3235880 /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3FB95944540C6ADF769F4777677C3 /* UIColor+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E1B8AFCA847ED7952A20CB781650B6F0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7894D385164267A63A0892B2329A3D /* RoundButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E290D7BB427282510B7EB8173C01370F /* Pods-KinBackupRestoreSampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 885AB77A5D52C6BA2471D80CAAC8B225 /* Pods-KinBackupRestoreSampleApp-dummy.m */; };
-		E2E30A3024403BB53AA1654BD766341A /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C9768B9CFC5132CF654A1F50F031D /* BackupFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E4C5E19F4E1489D6A2FFE5AB34CFE6C4 /* ExitCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4729D2D0E9090AB44276607266B4179C /* ExitCode.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E74C9B22EC36D82D9A27DF13FD1F2AC2 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DF554D03CC1E98246C7BEBEB5C3F1 /* Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E816ABE5AE6140A427CD5B76BA24116F /* KeyPairGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542B53C37C2D0E6940A1A5ACBB406ED /* KeyPairGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E8AA3EF4624B28DB2E7D3B2E862F61D7 /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = C189A42088D3D36865FABEC6D0D1E7FD /* crypto_hash_sha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		EB47DDDE16ED984A5C3B4240F9DD7DCA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BEE0D0F6E60420FE0CDA5F9ECBFF30 /* Utility.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EE011C43292663E4C5F4CAF79C06D0C7 /* crypto_scalarmult_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F9F9A69754992C9B9381F6E7F9E597 /* crypto_scalarmult_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		EEB987A780CADAA876A8F4E678EE4862 /* sodium_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8906264CE4D2500475FCEAD13B0B797E /* sodium_lib.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		EFEE484CAE977CD5EEE0756380E63F9C /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525484B0EA8D1DF6A1E51F2D49D2C546 /* SHA256.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F107778DB6D6BC763AC7680BBA037F46 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48E8958C42E8BEBBE1E7253BF6912E /* Animations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E58437F769E3AE97F872DFCB78920E2F /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E23D8E4B51573A12DE127B3311BCB2 /* UIFont+PreferredFont.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EDAD7B985C1CB93F5E825028E9DDB4AC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C135FFBB4007CB6884D2045297F7616 /* QRViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EDFDB125C67DC49D3625A88BC662D744 /* crypto_secretstream_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 8034E60B02C91A05F6292746B0AE3568 /* crypto_secretstream_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F1B65FC61F5D30D4C144303E6E81ADF3 /* Pods-KinBackupRestoreSampleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA54A8E759AC6DAC946A99E26B7805C /* Pods-KinBackupRestoreSampleApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2EEF9F5C18B74A9F4811B320D635ADD /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BFC85CCEA566121A7E6550B51B7BF2 /* Operations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F577D3D8D87254047C61C2059F9A64D8 /* crypto_secretbox_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = C3841848800F3EDD5B897A94AC22EC74 /* crypto_secretbox_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F6588870D06310E90C005B675205D9F6 /* crypto_box.h in Headers */ = {isa = PBXBuildFile; fileRef = F1287F3AA284335626EF7FE6BB387629 /* crypto_box.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F662ABD5462ECC44FAEB1AD6EC99FEF8 /* crypto_generichash.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CF450A600AB4BCB02157E318A50B55 /* crypto_generichash.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F6B5841365E93D75B8A5518E9C028545 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF038731B8359034F24B3C92B85296 /* Errors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F804A781491649F3073106057229234F /* UIStatusBarStyle+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B493373C2B1036CB1D895C3A121F7A /* UIStatusBarStyle+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F97342571ACDD376975C95BF263088F4 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DE12AA329F4E4F1E54F7602770E407 /* Box.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FA116CB264B56EA2AF45E24B91109CF3 /* crypto_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E95036741F113E76AEE2DE52BD37E44 /* crypto_stream.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		FA3ED62D5DEF6240560AA503A4DAA162 /* crypto_core_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = F8ED904291547E3C3EB571C44D753148 /* crypto_core_salsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		FC05A5F81CF8679C094068019E97D39B /* Aead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEA403627AFCEA2A93798A798C701D3 /* Aead.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FF70002D39E0D476FEA27AAB58297F3E /* ExplanationTemplateViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = D490B7A5CD0A186F2B65C4069CCE640E /* ExplanationTemplateViewController.xib */; };
-		FFCBA258F0E0A337ECD86E99BC90FF22 /* crypto_stream_xchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9773F7C05C35EB2822F9D13D02600967 /* crypto_stream_xchacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F1F73378BBBEDB8D5A668729EA35B6FC /* HorizonResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B3857A5E1B5BD1E7AED3951E870B76 /* HorizonResponses.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F67184B7958CF11F0CC678F364B22710 /* crypto_verify_32.h in Headers */ = {isa = PBXBuildFile; fileRef = 7147A3D97C3528375B3A50EE05E2A4F3 /* crypto_verify_32.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F6A65F8A112C31D0C7529740829D3357 /* crypto_core_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 0870E1448071EB1DC539A366A8033CD9 /* crypto_core_curve25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F77262C06AE339D5DCB10A67BD687AD1 /* StellarResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2165C8F08A5ED6346CCE9AD33387B /* StellarResults.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F7A5FD4D7A9E34B5D31294A67609E8B0 /* crypto_pwhash_argon2i.h in Headers */ = {isa = PBXBuildFile; fileRef = FBD49A9373B3ABD5523A994C3DDF0F1C /* crypto_pwhash_argon2i.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F84BCC277B9CB3FBF34B713BBAC2018A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BEE0D0F6E60420FE0CDA5F9ECBFF30 /* Utility.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FBC8D12E738D2061403751F630F9B256 /* crypto_stream_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E3815DFB4479ADC36CD5354E0D3C449 /* crypto_stream_salsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FC37810FDD76C0AA60A8BDF7D3127851 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BFC85CCEA566121A7E6550B51B7BF2 /* Operations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD2198831259C3C9E57D76CEAE8BCC54 /* Data+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F5444C7BA8C936FD06D14521636FD /* Data+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD7DDD5E33FEF76242D00117AF5C9C09 /* crypto_pwhash.h in Headers */ = {isa = PBXBuildFile; fileRef = 400799685C5FB86B585AB37A97D54CBB /* crypto_pwhash.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FE54FDAC680295559DDD01AD5C99714E /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349903E4C17A98E3DDA32CA0D2599599 /* Stream.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FFFF0DEA08C6CFF2202C617D9B1A5B62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		105AE68727032C74FB34B991AE308E60 /* PBXContainerItemProxy */ = {
+		0AA28EEC0276B5D9D145F2F61A07B37A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6484CC0F6C1E4690491096BD8D92B3B4;
-			remoteInfo = Sodium;
+			remoteGlobalIDString = F0BC4AED3BC006972C6CC33E9C4F03F8;
+			remoteInfo = KinUtil;
 		};
 		290B428C6BF9C4654534CB21B52C5ADC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5FEEEE25FBB1FA10E955A57593BF8A9A;
+			remoteGlobalIDString = AAB48EE90B7EF5D3B29CE418E4692839;
 			remoteInfo = KinSDK;
-		};
-		323C75046BD8762BA073C8BB24F8241E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 67B9CD5314439F7AC478C3CB3FD7E4A5;
-			remoteInfo = KinUtil;
 		};
 		4759669C7AF477B09E21DBA9F28306D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C48A4FD6677A6B0C08078B449F7B6D36;
+			remoteGlobalIDString = 2EB32A1DD010402139708ED89B567C75;
 			remoteInfo = KinBackupRestoreModule;
 		};
 		7069C0B79BCEFB8DFABF15ECD6F327A6 /* PBXContainerItemProxy */ = {
@@ -232,43 +226,50 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 67B9CD5314439F7AC478C3CB3FD7E4A5;
+			remoteGlobalIDString = F0BC4AED3BC006972C6CC33E9C4F03F8;
 			remoteInfo = KinUtil;
 		};
 		D74B62EE8F2732D87AA162A14C6CFF0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6484CC0F6C1E4690491096BD8D92B3B4;
+			remoteGlobalIDString = 91378E794CFDF1517354D48CBDFDB1C9;
 			remoteInfo = Sodium;
-		};
-		E39EBAFD65C0F6974694DE8967DC0B98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FEEEE25FBB1FA10E955A57593BF8A9A;
-			remoteInfo = KinSDK;
 		};
 		ED977D687011409AB92CB865B56DC9E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6484CC0F6C1E4690491096BD8D92B3B4;
+			remoteGlobalIDString = 91378E794CFDF1517354D48CBDFDB1C9;
 			remoteInfo = Sodium;
 		};
 		F04D335BDB139A4844FDB6E35894C9BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5FEEEE25FBB1FA10E955A57593BF8A9A;
+			remoteGlobalIDString = AAB48EE90B7EF5D3B29CE418E4692839;
 			remoteInfo = KinSDK;
 		};
 		F18F0C66487F1A0E1DF11D21B1D98119 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 67B9CD5314439F7AC478C3CB3FD7E4A5;
+			remoteGlobalIDString = F0BC4AED3BC006972C6CC33E9C4F03F8;
 			remoteInfo = KinUtil;
+		};
+		F2659C2CE78C0DA0EA19781B1219ECB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAB48EE90B7EF5D3B29CE418E4692839;
+			remoteInfo = KinSDK;
+		};
+		F6F25604862A0BB02B28AB2B16E4B0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91378E794CFDF1517354D48CBDFDB1C9;
+			remoteInfo = Sodium;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -285,7 +286,6 @@
 		0870E1448071EB1DC539A366A8033CD9 /* crypto_core_curve25519.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_core_curve25519.h; path = Sodium/libsodium/crypto_core_curve25519.h; sourceTree = "<group>"; };
 		09631D3338424A7C434A8078A78277FB /* KinUtil-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinUtil-prefix.pch"; sourceTree = "<group>"; };
 		0AB728DD42F9E781294FDFDE1F59A0B3 /* Pods-KinBackupRestoreModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KinBackupRestoreModule.modulemap"; sourceTree = "<group>"; };
-		0B772C0F73198ADB92EEF3BA47542441 /* QRPickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
 		0C6445F6F3B5409DD9C8C04B06412E58 /* KinUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KinUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA3FB95944540C6ADF769F4777677C3 /* UIColor+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
 		0F78F8364743D84F11AA839BE8087729 /* RandomBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomBytes.swift; path = Sodium/RandomBytes.swift; sourceTree = "<group>"; };
@@ -295,7 +295,6 @@
 		120B389A2741882637103891DC4AB066 /* StellarEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarEventSource.swift; path = KinSDK/KinSDK/source/blockchain/StellarEventSource.swift; sourceTree = "<group>"; };
 		12510A42BFA6FD3C5DD934ACD3CC396C /* Sodium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sodium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DE12AA329F4E4F1E54F7602770E407 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sodium/Box.swift; sourceTree = "<group>"; };
-		133C9768B9CFC5132CF654A1F50F031D /* BackupFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
 		14AF038731B8359034F24B3C92B85296 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = KinSDK/KinSDK/source/blockchain/Errors.swift; sourceTree = "<group>"; };
 		16BE5A8E2527DA930315AEA5BE26AC05 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KinBackupRestoreModuleTests.release.xcconfig"; sourceTree = "<group>"; };
 		17BCAC823752BF14FF1A8A6F190F6D47 /* crypto_hash_sha256.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_hash_sha256.h; path = Sodium/libsodium/crypto_hash_sha256.h; sourceTree = "<group>"; };
@@ -305,8 +304,10 @@
 		190AFF9ACC63BEDE5DA0019D43A2BC0C /* Pods-KinBackupRestoreModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KinBackupRestoreModule.debug.xcconfig"; sourceTree = "<group>"; };
 		198D1A13F198F51D9460BF2537C4D974 /* crypto_shorthash_siphash24.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_shorthash_siphash24.h; path = Sodium/libsodium/crypto_shorthash_siphash24.h; sourceTree = "<group>"; };
 		1B90B9220D14279690ADB6F6D7663A44 /* KinSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinSDK-umbrella.h"; sourceTree = "<group>"; };
-		1C50E5799504D8443A7ADF283FC5C8A1 /* BackupIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
+		1C135FFBB4007CB6884D2045297F7616 /* QRViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		1D41DF26AE93F4904E4C6F26345FF3F8 /* QRViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
 		1DCF68BEBC843A827B2DA1612BC1DFD8 /* Pods-KinBackupRestoreModuleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreModuleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1ECCFD33DB087FE062550E64AEC70783 /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
 		1FDD9879555F5939669C817AF170B856 /* Pods-KinBackupRestoreModule-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreModule-acknowledgements.plist"; sourceTree = "<group>"; };
 		2259FCBFFE97F7D14D017BACF446DA64 /* randombytes_salsa20_random.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = randombytes_salsa20_random.h; path = Sodium/libsodium/randombytes_salsa20_random.h; sourceTree = "<group>"; };
 		22C6382435693625570D8969C8280836 /* SecretBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecretBox.swift; path = Sodium/SecretBox.swift; sourceTree = "<group>"; };
@@ -322,13 +323,11 @@
 		29B8E4DCECD771117F640CF163E9D7DB /* KeyDerivation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyDerivation.swift; path = Sodium/KeyDerivation.swift; sourceTree = "<group>"; };
 		2D0948741E23F3CC003AACC8B5BFF213 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = KinSDK/KinSDK/source/blockchain/Endpoint.swift; sourceTree = "<group>"; };
 		2DE2165C8F08A5ED6346CCE9AD33387B /* StellarResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarResults.swift; path = KinSDK/KinSDK/source/blockchain/StellarResults.swift; sourceTree = "<group>"; };
-		30CDF7D8D7441CCB2D723CE652191714 /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
 		3416D38356D7134C2234FE2540A0E8D0 /* String+Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		349903E4C17A98E3DDA32CA0D2599599 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Sodium/Stream.swift; sourceTree = "<group>"; };
 		3BEA403627AFCEA2A93798A798C701D3 /* Aead.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Aead.swift; path = Sodium/Aead.swift; sourceTree = "<group>"; };
 		3C462420AF8B018903A0417C370EB5D3 /* SecretKeyGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecretKeyGenerator.swift; path = Sodium/Generators/SecretKeyGenerator.swift; sourceTree = "<group>"; };
 		3D02C17A3CE0F03BF826B974D76CD6E1 /* randombytes_sysrandom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = randombytes_sysrandom.h; path = Sodium/libsodium/randombytes_sysrandom.h; sourceTree = "<group>"; };
-		3E48E8958C42E8BEBBE1E7253BF6912E /* Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		3F1429278CD9C85C3534F6FF182AB235 /* Stellar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stellar.swift; path = KinSDK/KinSDK/source/blockchain/Stellar.swift; sourceTree = "<group>"; };
 		400799685C5FB86B585AB37A97D54CBB /* crypto_pwhash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_pwhash.h; path = Sodium/libsodium/crypto_pwhash.h; sourceTree = "<group>"; };
 		42EBA67C2C7B749013B22A1A6C479B49 /* crypto_kdf_blake2b.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_kdf_blake2b.h; path = Sodium/libsodium/crypto_kdf_blake2b.h; sourceTree = "<group>"; };
@@ -337,24 +336,22 @@
 		46ADD5135642B01F2A72891DFBFB483A /* crypto_auth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_auth.h; path = Sodium/libsodium/crypto_auth.h; sourceTree = "<group>"; };
 		47290E11518D2246EF32EBE933F5E3DC /* libsodium-ios.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libsodium-ios.a"; path = "Sodium/libsodium/libsodium-ios.a"; sourceTree = "<group>"; };
 		4729D2D0E9090AB44276607266B4179C /* ExitCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExitCode.swift; path = Sodium/ExitCode.swift; sourceTree = "<group>"; };
-		48EBA45A4CCC63DF7753ADAA18B89419 /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
+		481C23EE33B02BB76D91E179DEE657D8 /* RestoreFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
+		49BF19B8DB3E64E904957310F0E843C1 /* PasswordEntryViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PasswordEntryViewController.xib; sourceTree = "<group>"; };
 		4B751FC1EE632290120F2867E07FD627 /* TxBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TxBuilder.swift; path = KinSDK/KinSDK/source/blockchain/TxBuilder.swift; sourceTree = "<group>"; };
 		4BA928262D9505D43B94BD1A25ED7B3A /* XDRCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XDRCodable.swift; path = KinSDK/KinSDK/source/blockchain/XDRCodable/XDRCodable.swift; sourceTree = "<group>"; };
 		4C7927C798878572455112AB411BDB26 /* Observables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observables.swift; path = KinUtil/KinUtil/source/Observables.swift; sourceTree = "<group>"; };
 		4D4900C7E88D5DE3A4A63E2BE63DCA43 /* PublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublicKey.swift; path = KinSDK/KinSDK/source/blockchain/types/PublicKey.swift; sourceTree = "<group>"; };
 		4DE221B9AA218EA11BC4040D79168484 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets; sourceTree = "<group>"; };
-		4E43454C1B1E6343229BD0DB30363C9F /* RestoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
 		4E95036741F113E76AEE2DE52BD37E44 /* crypto_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream.h; path = Sodium/libsodium/crypto_stream.h; sourceTree = "<group>"; };
 		4EB93C39035708C1FDB462E9CC53968D /* Sodium-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Sodium-dummy.m"; sourceTree = "<group>"; };
 		4FAE392179508F8D905B8960CE2F15AB /* runtime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = runtime.h; path = Sodium/libsodium/runtime.h; sourceTree = "<group>"; };
 		4FE0662EE1EA24BF6F1BA931C0F284E1 /* crypto_onetimeauth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_onetimeauth.h; path = Sodium/libsodium/crypto_onetimeauth.h; sourceTree = "<group>"; };
 		50B0D0936DD5DEC269E50EE37DBCF93B /* Ledger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ledger.swift; path = KinSDK/KinSDK/source/blockchain/types/Ledger.swift; sourceTree = "<group>"; };
 		50C1A0F976CFBB802647BEB015015A91 /* Array+extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+extensions.swift"; path = "KinUtil/KinUtil/source/extensions/Array+extensions.swift"; sourceTree = "<group>"; };
-		51A671AA9C820E4714D5D214E35B8C97 /* PasswordEntryField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryField.swift; sourceTree = "<group>"; };
 		51E1E2BC7B7F545A1536579BE9229DF9 /* KinError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinError.swift; path = KinSDK/KinSDK/source/KinError.swift; sourceTree = "<group>"; };
 		51E2F70B66410DC4E0ECE246518DC9DF /* KinUtil.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KinUtil.modulemap; sourceTree = "<group>"; };
 		525484B0EA8D1DF6A1E51F2D49D2C546 /* SHA256.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA256.swift; path = "KinSDK/KinSDK/source/third-party/SHA256.swift"; sourceTree = "<group>"; };
-		539123AE56205143B7A3128428817CF9 /* RestoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = RestoreViewController.xib; sourceTree = "<group>"; };
 		53F0711A3E6FD8122693D4A690E46130 /* Network.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Network.swift; path = KinSDK/KinSDK/source/Network.swift; sourceTree = "<group>"; };
 		540F1611617826F369A73C6327F0B7D7 /* StellarErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarErrors.swift; path = KinSDK/KinSDK/source/blockchain/StellarErrors.swift; sourceTree = "<group>"; };
 		55402EC8DEA4780D3C633B3BB8211A8C /* crypto_hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_hash.h; path = Sodium/libsodium/crypto_hash.h; sourceTree = "<group>"; };
@@ -374,6 +371,7 @@
 		637F5444C7BA8C936FD06D14521636FD /* Data+extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+extensions.swift"; path = "KinUtil/KinUtil/source/extensions/Data+extensions.swift"; sourceTree = "<group>"; };
 		63BFC85CCEA566121A7E6550B51B7BF2 /* Operations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operations.swift; path = KinSDK/KinSDK/source/blockchain/types/Operations.swift; sourceTree = "<group>"; };
 		64B493373C2B1036CB1D895C3A121F7A /* UIStatusBarStyle+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIStatusBarStyle+Appearance.swift"; sourceTree = "<group>"; };
+		658ABA7D2FCBAC79CBA293AE68AE69A5 /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
 		689E5E2B10220776B1CBFB51F1FC7CFA /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
 		6B00BCDA3E84C7560CC43E472547AC8B /* crypto_generichash_blake2b.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_generichash_blake2b.h; path = Sodium/libsodium/crypto_generichash_blake2b.h; sourceTree = "<group>"; };
 		6B55682420DA94BB7D7CE841E65C8433 /* crypto_stream_salsa2012.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_salsa2012.h; path = Sodium/libsodium/crypto_stream_salsa2012.h; sourceTree = "<group>"; };
@@ -382,22 +380,23 @@
 		6F1E78A66C86C63EA9D48346CA6CD81C /* Pods-KinBackupRestoreModuleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KinBackupRestoreModuleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7147A3D97C3528375B3A50EE05E2A4F3 /* crypto_verify_32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_verify_32.h; path = Sodium/libsodium/crypto_verify_32.h; sourceTree = "<group>"; };
 		722E9F8B7493BDDE91769333BD53AF47 /* Pods-KinBackupRestoreSampleApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreSampleApp-Info.plist"; sourceTree = "<group>"; };
-		726ACAD1E86631777AFA9E319AFCFBBA /* RestoreFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
 		743D30081D9CB5FBCF36236F4F1EA979 /* KinBackupRestoreBI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinBackupRestoreBI.swift; path = KinBackupRestoreModule/KinBackupRestoreModule/KinBackupRestoreBI.swift; sourceTree = "<group>"; };
 		746D492AF43E0EBE67218B182B474B89 /* KinUtil-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KinUtil-Info.plist"; sourceTree = "<group>"; };
-		7483FF49C13AE905409732A6BF8B6618 /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
+		76291E8DCC8E607A31AC203B9C88C274 /* QRController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRController.swift; sourceTree = "<group>"; };
 		77B30E995A3044484C3E2D6FE2F38C01 /* KinUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KinUtil.framework; path = KinUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C9C7836FE9BEB24A2B8F0196D5220F /* ShortHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShortHash.swift; path = Sodium/ShortHash.swift; sourceTree = "<group>"; };
 		78E23D8E4B51573A12DE127B3311BCB2 /* UIFont+PreferredFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFont.swift"; sourceTree = "<group>"; };
+		7C24A4088FCF337FE4E058375AF21B85 /* BackupIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
 		7CBD843EF965538515C30BA86727F3AC /* crypto_aead_xchacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_aead_xchacha20poly1305.h; path = Sodium/libsodium/crypto_aead_xchacha20poly1305.h; sourceTree = "<group>"; };
 		7F3DEA7DF71EF65B29655519147A3AB9 /* Curry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Curry.swift; path = KinUtil/KinUtil/source/Curry.swift; sourceTree = "<group>"; };
 		8034E60B02C91A05F6292746B0AE3568 /* crypto_secretstream_xchacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_secretstream_xchacha20poly1305.h; path = Sodium/libsodium/crypto_secretstream_xchacha20poly1305.h; sourceTree = "<group>"; };
+		809865BC2E3649CA217C7C374BCEB116 /* PasswordEntryTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryTextField.swift; sourceTree = "<group>"; };
 		8116FFE360A409A9B34594F6F3493B79 /* crypto_kx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_kx.h; path = Sodium/libsodium/crypto_kx.h; sourceTree = "<group>"; };
 		81A0DDCE5E447E7A6B5650F4466C323E /* KinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KinSDK.framework; path = KinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83687D25E677B168133F703674877700 /* Pods-KinBackupRestoreSampleApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KinBackupRestoreSampleApp.modulemap"; sourceTree = "<group>"; };
 		841E4FEA020AF146F2BAFE1F41B72F12 /* KinBackupRestoreModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinBackupRestoreModule-prefix.pch"; sourceTree = "<group>"; };
+		858F7CBD4205D1BA52157562129CC405 /* RestoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
 		86D5BCDC70EAEFFE24D5A5B2F1620DDD /* Pods-KinBackupRestoreModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreModule-Info.plist"; sourceTree = "<group>"; };
-		87126622D40486E4549B2AF03C862C14 /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
 		873A2C52C8288E5B0BCA5917E2BD6465 /* KeyUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyUtils.swift; path = KinSDK/KinSDK/source/KeyUtils.swift; sourceTree = "<group>"; };
 		880D9E5587EC92E8EF262310CDEF98A5 /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = KinSDK/KinSDK/source/blockchain/types/Operation.swift; sourceTree = "<group>"; };
 		885AB77A5D52C6BA2471D80CAAC8B225 /* Pods-KinBackupRestoreSampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KinBackupRestoreSampleApp-dummy.m"; sourceTree = "<group>"; };
@@ -407,20 +406,18 @@
 		8B04C6AB51C34F7C1ABCC66C00F83108 /* crypto_scalarmult_curve25519.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_scalarmult_curve25519.h; path = Sodium/libsodium/crypto_scalarmult_curve25519.h; sourceTree = "<group>"; };
 		8B4793BF9C97E9041C3862D6563B76D5 /* KinUtil-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinUtil-umbrella.h"; sourceTree = "<group>"; };
 		8B711A3A1363357E8659DA68B11797AD /* Sodium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Sodium.framework; path = Sodium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C07DE3C2829F95448E30AF2A774B8EF /* Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		8C8D4A82B880FAFA5E0233EC1217D2E5 /* Bytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bytes.swift; path = Sodium/Bytes.swift; sourceTree = "<group>"; };
 		8E9572D9F352DDC57908E08594C5CB8A /* Sodium.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sodium.h; path = Sodium/Sodium.h; sourceTree = "<group>"; };
 		8F216C5B89457984C8CE02E26921FA8A /* KinBackupRestoreModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KinBackupRestoreModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		90E2CEA8CED32EB83A8E844C30032AE8 /* QRViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
+		90B9909B29E7337B862FF02D1C6881B7 /* PasswordEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
 		92A6DFB73F735C9FD7A3D43F57D2672C /* Sodium.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sodium.swift; path = Sodium/Sodium.swift; sourceTree = "<group>"; };
 		92D2419124EF5CC42108C88E020DC179 /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = "KinSDK/KinSDK/source/third-party/keychain-swift/KeychainSwift/KeychainSwift.swift"; sourceTree = "<group>"; };
 		939FE205AA46974B5BE72A891F33C72D /* KeyStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyStore.swift; path = KinSDK/KinSDK/source/KeyStore.swift; sourceTree = "<group>"; };
 		94BEE0D0F6E60420FE0CDA5F9ECBFF30 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = KinUtil/KinUtil/source/Utility.swift; sourceTree = "<group>"; };
 		9690DC31B857F1DF50C236BAFFB29023 /* crypto_stream_salsa208.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_salsa208.h; path = Sodium/libsodium/crypto_stream_salsa208.h; sourceTree = "<group>"; };
-		9722B948E5E5162B6A187318DFF2FFD0 /* QRController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRController.swift; sourceTree = "<group>"; };
 		9773F7C05C35EB2822F9D13D02600967 /* crypto_stream_xchacha20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_xchacha20.h; path = Sodium/libsodium/crypto_stream_xchacha20.h; sourceTree = "<group>"; };
 		984E0B699E3F021C4800FB34CDA038BB /* Pods-KinBackupRestoreModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KinBackupRestoreModule.release.xcconfig"; sourceTree = "<group>"; };
-		98E700C7D2E2728296490D0D48ED0BA5 /* FlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
-		99901B5D66B1EA84C57E38B456ED529F /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A117FB977E7AB4AF1C4B1190BE040A3 /* crypto_aead_chacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_aead_chacha20poly1305.h; path = Sodium/libsodium/crypto_aead_chacha20poly1305.h; sourceTree = "<group>"; };
 		9AD5B0ABDA5B06CBD192F73FC6D08916 /* crypto_stream_xsalsa20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_xsalsa20.h; path = Sodium/libsodium/crypto_stream_xsalsa20.h; sourceTree = "<group>"; };
 		9BFE1F25CC438B8A9C5F904360F05C72 /* Pods-KinBackupRestoreModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KinBackupRestoreModule-umbrella.h"; sourceTree = "<group>"; };
@@ -437,12 +434,14 @@
 		AB1FC1484F52F8BBECE26976FF9E168A /* crypto_box_curve25519xsalsa20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_box_curve25519xsalsa20poly1305.h; path = Sodium/libsodium/crypto_box_curve25519xsalsa20poly1305.h; sourceTree = "<group>"; };
 		AB59D1776460ACDFD0AFBC83A790EFFA /* Transaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = KinSDK/KinSDK/source/blockchain/types/Transaction.swift; sourceTree = "<group>"; };
 		ACB89BDC7E565D3510973E732A6FBFF9 /* GenericHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericHash.swift; path = Sodium/GenericHash.swift; sourceTree = "<group>"; };
+		AD7894D385164267A63A0892B2329A3D /* RoundButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		AE407E64BA8F4A5CE7631806FFA84247 /* crypto_box_curve25519xchacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_box_curve25519xchacha20poly1305.h; path = Sodium/libsodium/crypto_box_curve25519xchacha20poly1305.h; sourceTree = "<group>"; };
 		B32DD64880C094C5F2D650B2CDEF908B /* KinUtil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KinUtil-dummy.m"; sourceTree = "<group>"; };
 		B4EEC552374CD16F0C04DD6D1EE722AB /* KinAccounts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinAccounts.swift; path = KinSDK/KinSDK/source/KinAccounts.swift; sourceTree = "<group>"; };
-		B7003F1A63C71CCA32528D2AD13716AE /* RoundButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B802BF7C265A1CFD3F03477B7015BBB1 /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
+		B97465FB5BDB3938BE79CA098567953F /* QRPickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
 		BA512E9F00453665C885C6FB996D0407 /* crypto_pwhash_argon2id.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_pwhash_argon2id.h; path = Sodium/libsodium/crypto_pwhash_argon2id.h; sourceTree = "<group>"; };
+		BD77312CD3694A862F3593ACA72384CE /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
 		C189A42088D3D36865FABEC6D0D1E7FD /* crypto_hash_sha512.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_hash_sha512.h; path = Sodium/libsodium/crypto_hash_sha512.h; sourceTree = "<group>"; };
 		C24ADACB3E6DCB55840300BC4B78C39D /* KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KinBackupRestoreModule.framework; path = KinBackupRestoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EF7822F8002C6E703C05BFF2F75C42 /* KinUtil.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KinUtil.xcconfig; sourceTree = "<group>"; };
@@ -454,10 +453,12 @@
 		CBA1BF23DB1B760F63D144B045612C53 /* Data+extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+extensions.swift"; path = "KinSDK/KinSDK/source/blockchain/Data+extensions.swift"; sourceTree = "<group>"; };
 		CBA531D63A968BFDACAF45DB50D2B46E /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = Sodium/libsodium/version.h; sourceTree = "<group>"; };
 		CBA54A8E759AC6DAC946A99E26B7805C /* Pods-KinBackupRestoreSampleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KinBackupRestoreSampleApp-umbrella.h"; sourceTree = "<group>"; };
-		CD7554D43981DAC7CE5BB54B4EA31D21 /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
+		CCAD2CDA03CC1B7E965835FB70A81CB1 /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
 		CFAE9E649BD991F81F4ECADC787A56EC /* KinBackupRestoreModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KinBackupRestoreModule-dummy.m"; sourceTree = "<group>"; };
+		D03C22DA49F7EC6C220A15BD3FDBD93B /* FlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		D0E5BC30D2934B42826E8CB9AD19EF8B /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D40657C6982693B700962EE08B968226 /* RestoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = RestoreViewController.xib; sourceTree = "<group>"; };
 		D409B2779EA351A4329773D2D64FC367 /* crypto_core_salsa2012.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_core_salsa2012.h; path = Sodium/libsodium/crypto_core_salsa2012.h; sourceTree = "<group>"; };
-		D490B7A5CD0A186F2B65C4069CCE640E /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
 		D52D831FCD362825AAFBE5D3EB34E032 /* KinSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KinSDK.modulemap; sourceTree = "<group>"; };
 		D5CA17FF09DFC3062C37B25772597587 /* Sodium.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Sodium.modulemap; sourceTree = "<group>"; };
 		D61C90A727B1CAEDB3A0381C10637F06 /* KinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -475,6 +476,7 @@
 		E97C2911FA878B9ECCC34B6E5935CDA4 /* crypto_shorthash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_shorthash.h; path = Sodium/libsodium/crypto_shorthash.h; sourceTree = "<group>"; };
 		E9DFB723E2B204D2251F9FF2ECFA88BB /* Pods-KinBackupRestoreSampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KinBackupRestoreSampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EA2731322323CF24E29C19CDD8C27BC2 /* core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = core.h; path = Sodium/libsodium/core.h; sourceTree = "<group>"; };
+		EA630C143D1538F2E11496C2CC3A3F40 /* BackupFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
 		EC1B3BDB4532E5AB81121F806ED5C44F /* crypto_aead_aes256gcm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_aead_aes256gcm.h; path = Sodium/libsodium/crypto_aead_aes256gcm.h; sourceTree = "<group>"; };
 		EC437C4471DB5FD746167FF8C5A50948 /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Sodium/Auth.swift; sourceTree = "<group>"; };
 		EC6D4F3B0724720D4F205A29EAC89199 /* KinBackupRestoreModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinBackupRestoreModule-umbrella.h"; sourceTree = "<group>"; };
@@ -482,10 +484,9 @@
 		F1287F3AA284335626EF7FE6BB387629 /* crypto_box.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_box.h; path = Sodium/libsodium/crypto_box.h; sourceTree = "<group>"; };
 		F15D1B41B9DC0AD8042A8BDBC551CCE4 /* PWHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWHash.swift; path = Sodium/PWHash.swift; sourceTree = "<group>"; };
 		F181B85EE8801FA54045D388531D135B /* crypto_sign_edwards25519sha512batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_sign_edwards25519sha512batch.h; path = Sodium/libsodium/crypto_sign_edwards25519sha512batch.h; sourceTree = "<group>"; };
-		F3D0CD0AEF1FB635E3E17D93EF5213B2 /* QRViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		F4DA0280EF0DFF276D820EFC44FD396D /* crypto_stream_chacha20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_chacha20.h; path = Sodium/libsodium/crypto_stream_chacha20.h; sourceTree = "<group>"; };
-		F516DB1A68D2E9F60B014D0B4FB7746B /* PasswordEntryViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PasswordEntryViewController.xib; sourceTree = "<group>"; };
 		F542B53C37C2D0E6940A1A5ACBB406ED /* KeyPairGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyPairGenerator.swift; path = Sodium/Generators/KeyPairGenerator.swift; sourceTree = "<group>"; };
+		F5D2D144D038C2D246CE50D82B205539 /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
 		F8D3AD982E44C5EA9A61878F06F299E3 /* crypto_secretbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_secretbox.h; path = Sodium/libsodium/crypto_secretbox.h; sourceTree = "<group>"; };
 		F8ED904291547E3C3EB571C44D753148 /* crypto_core_salsa20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_core_salsa20.h; path = Sodium/libsodium/crypto_core_salsa20.h; sourceTree = "<group>"; };
 		F9A160C77FC9AAACC45FE5F1DAC45F05 /* KinSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinSDK-prefix.pch"; sourceTree = "<group>"; };
@@ -496,32 +497,24 @@
 		FC2B5B97DC9086E4659E1DCE47D6E736 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		FD3EDD69C6B01C1ABCD445A32EA6A7EB /* crypto_auth_hmacsha512256.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_auth_hmacsha512256.h; path = Sodium/libsodium/crypto_auth_hmacsha512256.h; sourceTree = "<group>"; };
 		FF71A5BA05947373081BA72933F29222 /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinBackupRestoreManager.swift; path = KinBackupRestoreModule/KinBackupRestoreModule/KinBackupRestoreManager.swift; sourceTree = "<group>"; };
+		FF8369AE2758A8FE79FC829A37508306 /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0094799766324AB74B0FABA76D259579 /* Frameworks */ = {
+		2CFB43C4D654142A52F05AA63926173F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3096DC90A4154AFFF03B82ECFE957FD /* Foundation.framework in Frameworks */,
-				4056E5E8C6B1F7787D3BA7FA9579BB37 /* KinUtil.framework in Frameworks */,
-				DD8583444EF11A14A43F298DA550369D /* Sodium.framework in Frameworks */,
+				FFFF0DEA08C6CFF2202C617D9B1A5B62 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E48E75A12BBE577E6CE3F935B866E17 /* Frameworks */ = {
+		348CDFF69A781BD24FAF2BCE692AC2DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C23CA1F89723F16381E57B66FF0165C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F29E444888CE134A8F1AE4A4EE11F7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0D5041DD10885BCD7811B516CB87D376 /* Foundation.framework in Frameworks */,
+				CF1FDBBDB5BF60E45D2F57625AEBB57A /* Foundation.framework in Frameworks */,
+				C7D6BB48F917B4B14BCECD8EE9C4BC7F /* KinSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +534,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ABD923E42DDF78D25A242E1E5C1FBFAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C727D9FC0BABAF645990B15AAFF5325E /* Foundation.framework in Frameworks */,
+				90DFA52F436E5D76CE3E084E81961944 /* KinUtil.framework in Frameworks */,
+				7995F24CDC5C648250BDEA5D82F41BAC /* Sodium.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2A2A1A69E11B21F6D7F2B230AFAFDEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,28 +552,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD050D5A51B59EC77CFB63AFB31D14B3 /* Frameworks */ = {
+		C879718216FE73440B40E9C7A3CF7C73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				644C10C1B9C4AD15BC40D92FEABB4BBE /* Foundation.framework in Frameworks */,
-				29E4FB77D77BA13C85EAEAE709CB48EA /* KinSDK.framework in Frameworks */,
+				AC34195B864AE31D5C5593BB08F24956 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		024C68F3AEC162E67183EA1D371B4A63 /* IntroViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1C50E5799504D8443A7ADF283FC5C8A1 /* BackupIntroViewController.swift */,
-				7483FF49C13AE905409732A6BF8B6618 /* RestoreIntroViewController.swift */,
-			);
-			name = IntroViewController;
-			path = IntroViewController;
-			sourceTree = "<group>";
-		};
 		0310299FFC3E5D382FC4BE929A999978 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +575,19 @@
 			);
 			name = Extensions;
 			path = KinBackupRestoreModule/KinBackupRestoreModule/Extensions;
+			sourceTree = "<group>";
+		};
+		03F089817B1F28CCA2CCC61304367D36 /* PasswordEntry */ = {
+			isa = PBXGroup;
+			children = (
+				1ECCFD33DB087FE062550E64AEC70783 /* PasswordEntryLabel.swift */,
+				809865BC2E3649CA217C7C374BCEB116 /* PasswordEntryTextField.swift */,
+				90B9909B29E7337B862FF02D1C6881B7 /* PasswordEntryView.swift */,
+				BD77312CD3694A862F3593ACA72384CE /* PasswordEntryViewController.swift */,
+				49BF19B8DB3E64E904957310F0E843C1 /* PasswordEntryViewController.xib */,
+			);
+			name = PasswordEntry;
+			path = PasswordEntry;
 			sourceTree = "<group>";
 		};
 		181796A730C10A0DA777321AA7A55C10 /* KinUtil */ = {
@@ -602,6 +607,16 @@
 			path = KinUtil;
 			sourceTree = "<group>";
 		};
+		232E88F3A8CDCC72A3401A0C065DA99B /* IntroViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7C24A4088FCF337FE4E058375AF21B85 /* BackupIntroViewController.swift */,
+				658ABA7D2FCBAC79CBA293AE68AE69A5 /* RestoreIntroViewController.swift */,
+			);
+			name = IntroViewController;
+			path = IntroViewController;
+			sourceTree = "<group>";
+		};
 		26E6F11AAFF1840D568813CFFD1E8069 /* KinBackupRestoreModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,21 +628,10 @@
 				3B98F64A350EA2313273FDB6CAD33BFC /* Protocols */,
 				F3836AD99E6BBB20C624FEB8B621BBA2 /* Resources */,
 				769E3A23BB9099412E4AB2201A92616E /* Support Files */,
-				5CC65BE197ABC514EAC79680BCD58B9C /* Views */,
+				41E412EAB428DDE5DEF1A31CD551AC52 /* Views */,
 			);
 			name = KinBackupRestoreModule;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		27B7892B9EBCA5A9500F8AA3432DD017 /* FlowController */ = {
-			isa = PBXGroup;
-			children = (
-				133C9768B9CFC5132CF654A1F50F031D /* BackupFlowController.swift */,
-				98E700C7D2E2728296490D0D48ED0BA5 /* FlowController.swift */,
-				726ACAD1E86631777AFA9E319AFCFBBA /* RestoreFlowController.swift */,
-			);
-			name = FlowController;
-			path = FlowController;
 			sourceTree = "<group>";
 		};
 		3710D26805B31E54B72621DCEFD4B282 /* Frameworks */ = {
@@ -672,6 +676,26 @@
 			path = "../Target Support Files/KinUtil";
 			sourceTree = "<group>";
 		};
+		41E412EAB428DDE5DEF1A31CD551AC52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C07DE3C2829F95448E30AF2A774B8EF /* Animations.swift */,
+				CCAD2CDA03CC1B7E965835FB70A81CB1 /* BackupCompletedViewController.swift */,
+				76291E8DCC8E607A31AC203B9C88C274 /* QRController.swift */,
+				B97465FB5BDB3938BE79CA098567953F /* QRPickerController.swift */,
+				AD7894D385164267A63A0892B2329A3D /* RoundButton.swift */,
+				D0E5BC30D2934B42826E8CB9AD19EF8B /* ViewController.swift */,
+				9337DEAB5F96C5D97006C9D6BEE189EF /* ExplanationTemplateViewController */,
+				564301DE49012C4DAB14E4D169138D32 /* FlowController */,
+				232E88F3A8CDCC72A3401A0C065DA99B /* IntroViewController */,
+				03F089817B1F28CCA2CCC61304367D36 /* PasswordEntry */,
+				9BA49F57A4AAD80850789681143B7BD4 /* QRViewController */,
+				67706E10E6195E76F66EA84B19DDCED7 /* RestoreViewController */,
+			);
+			name = Views;
+			path = KinBackupRestoreModule/KinBackupRestoreModule/Views;
+			sourceTree = "<group>";
+		};
 		53C059F1C3536A27B0F5D3FCB795EF5A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +703,17 @@
 				FC2B5B97DC9086E4659E1DCE47D6E736 /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		564301DE49012C4DAB14E4D169138D32 /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				EA630C143D1538F2E11496C2CC3A3F40 /* BackupFlowController.swift */,
+				D03C22DA49F7EC6C220A15BD3FDBD93B /* FlowController.swift */,
+				481C23EE33B02BB76D91E179DEE657D8 /* RestoreFlowController.swift */,
+			);
+			name = FlowController;
+			path = FlowController;
 			sourceTree = "<group>";
 		};
 		59698D077C3005F93BCDD59CDD2B1169 /* Support Files */ = {
@@ -695,36 +730,6 @@
 			path = "../Target Support Files/Sodium";
 			sourceTree = "<group>";
 		};
-		5B8D72A1BA0F10E594745E0D4CCD3617 /* QRViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F3D0CD0AEF1FB635E3E17D93EF5213B2 /* QRViewController.swift */,
-				90E2CEA8CED32EB83A8E844C30032AE8 /* QRViewController.xib */,
-			);
-			name = QRViewController;
-			path = QRViewController;
-			sourceTree = "<group>";
-		};
-		5CC65BE197ABC514EAC79680BCD58B9C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3E48E8958C42E8BEBBE1E7253BF6912E /* Animations.swift */,
-				87126622D40486E4549B2AF03C862C14 /* BackupCompletedViewController.swift */,
-				9722B948E5E5162B6A187318DFF2FFD0 /* QRController.swift */,
-				0B772C0F73198ADB92EEF3BA47542441 /* QRPickerController.swift */,
-				B7003F1A63C71CCA32528D2AD13716AE /* RoundButton.swift */,
-				99901B5D66B1EA84C57E38B456ED529F /* ViewController.swift */,
-				C0B50C0B2914BF0B6A60994FCCEBB328 /* ExplanationTemplateViewController */,
-				27B7892B9EBCA5A9500F8AA3432DD017 /* FlowController */,
-				024C68F3AEC162E67183EA1D371B4A63 /* IntroViewController */,
-				D0A00C6EBFBA8495554CA444B4253CD2 /* PasswordEntry */,
-				5B8D72A1BA0F10E594745E0D4CCD3617 /* QRViewController */,
-				7F95884E6A4667C230D5D3FC2B487E4B /* RestoreViewController */,
-			);
-			name = Views;
-			path = KinBackupRestoreModule/KinBackupRestoreModule/Views;
-			sourceTree = "<group>";
-		};
 		60B284FFAC2E6207AF83E76C25D2282B /* Pods-KinBackupRestoreModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +744,16 @@
 			);
 			name = "Pods-KinBackupRestoreModule";
 			path = "Target Support Files/Pods-KinBackupRestoreModule";
+			sourceTree = "<group>";
+		};
+		67706E10E6195E76F66EA84B19DDCED7 /* RestoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				858F7CBD4205D1BA52157562129CC405 /* RestoreViewController.swift */,
+				D40657C6982693B700962EE08B968226 /* RestoreViewController.xib */,
+			);
+			name = RestoreViewController;
+			path = RestoreViewController;
 			sourceTree = "<group>";
 		};
 		6A3FFC6C9112C0100E350B6D6A463924 /* iOS */ = {
@@ -773,16 +788,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7F95884E6A4667C230D5D3FC2B487E4B /* RestoreViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4E43454C1B1E6343229BD0DB30363C9F /* RestoreViewController.swift */,
-				539123AE56205143B7A3128428817CF9 /* RestoreViewController.xib */,
-			);
-			name = RestoreViewController;
-			path = RestoreViewController;
-			sourceTree = "<group>";
-		};
 		81DDE8EBAAC063BBB5FB862D909AD707 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,6 +796,26 @@
 				DAA8CAF128060112408F016575AAED41 /* Sodium */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9337DEAB5F96C5D97006C9D6BEE189EF /* ExplanationTemplateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F5D2D144D038C2D246CE50D82B205539 /* ExplanationTemplateViewController.swift */,
+				FF8369AE2758A8FE79FC829A37508306 /* ExplanationTemplateViewController.xib */,
+			);
+			name = ExplanationTemplateViewController;
+			path = ExplanationTemplateViewController;
+			sourceTree = "<group>";
+		};
+		9BA49F57A4AAD80850789681143B7BD4 /* QRViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C135FFBB4007CB6884D2045297F7616 /* QRViewController.swift */,
+				1D41DF26AE93F4904E4C6F26345FF3F8 /* QRViewController.xib */,
+			);
+			name = QRViewController;
+			path = QRViewController;
 			sourceTree = "<group>";
 		};
 		A19F0F64D098D2EFD3AC6FFC2966AE2A /* Pods-KinBackupRestoreModuleTests */ = {
@@ -867,16 +892,6 @@
 			path = "../Target Support Files/KinSDK";
 			sourceTree = "<group>";
 		};
-		C0B50C0B2914BF0B6A60994FCCEBB328 /* ExplanationTemplateViewController */ = {
-			isa = PBXGroup;
-			children = (
-				48EBA45A4CCC63DF7753ADAA18B89419 /* ExplanationTemplateViewController.swift */,
-				D490B7A5CD0A186F2B65C4069CCE640E /* ExplanationTemplateViewController.xib */,
-			);
-			name = ExplanationTemplateViewController;
-			path = ExplanationTemplateViewController;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -887,18 +902,6 @@
 				F0204013B97C42C692CEDDC2F4D52885 /* Products */,
 				7EB4D59D2C0BB92FA876095151738B0D /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D0A00C6EBFBA8495554CA444B4253CD2 /* PasswordEntry */ = {
-			isa = PBXGroup;
-			children = (
-				51A671AA9C820E4714D5D214E35B8C97 /* PasswordEntryField.swift */,
-				30CDF7D8D7441CCB2D723CE652191714 /* PasswordEntryLabel.swift */,
-				CD7554D43981DAC7CE5BB54B4EA31D21 /* PasswordEntryViewController.swift */,
-				F516DB1A68D2E9F60B014D0B4FB7746B /* PasswordEntryViewController.xib */,
-			);
-			name = PasswordEntry;
-			path = PasswordEntry;
 			sourceTree = "<group>";
 		};
 		D55D9CDDE2254F9F22B8131731853390 /* Development Pods */ = {
@@ -1045,19 +1048,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		12012D3EAD0C6682E99B842E6FF50879 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D6072FBF7D51751B5A3945726030E1E /* KinUtil-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1311BB6737019BAB5ACFDDE554057EF3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F1B65FC61F5D30D4C144303E6E81ADF3 /* Pods-KinBackupRestoreSampleApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189694F6AD0BA9DD15CA2F172FDCCCC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D232A6502389CC05B1CA10578138052D /* KinSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,11 +1072,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5518ABDCBA337A48D461741B022E54CF /* Headers */ = {
+		2BDA3D10D6D09667211FEF243ACC3ECB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD334B4AC1372AA7B4473404F24FBE9 /* KinBackupRestoreModule-umbrella.h in Headers */,
+				3C234D1AB531CAF339EDA440C678A3C9 /* core.h in Headers */,
+				8752832C9929C286F60631AED883205D /* crypto_aead_aes256gcm.h in Headers */,
+				2F9C0911FF845BC8339D27AEF47D2297 /* crypto_aead_chacha20poly1305.h in Headers */,
+				37983B8EEE9A6D7FFA0DC9DA04BBCB0E /* crypto_aead_xchacha20poly1305.h in Headers */,
+				7F92F8A1A0D3C011E628CC07F0C4B70D /* crypto_auth.h in Headers */,
+				513208F6BD8630C41631B7DE6566334B /* crypto_auth_hmacsha256.h in Headers */,
+				50C31F12B92E24B3E02BE791DAA1E9CE /* crypto_auth_hmacsha512.h in Headers */,
+				72F259401659DE21DA8A815BB327EBFA /* crypto_auth_hmacsha512256.h in Headers */,
+				9D7DE53F5EE5B4291BB0D74A5D33926B /* crypto_box.h in Headers */,
+				38C8E71A7E3C244FA273CA0BA7C30953 /* crypto_box_curve25519xchacha20poly1305.h in Headers */,
+				05D9467F7FD3570A1F0E0E12733B90B3 /* crypto_box_curve25519xsalsa20poly1305.h in Headers */,
+				F6A65F8A112C31D0C7529740829D3357 /* crypto_core_curve25519.h in Headers */,
+				C3424369A41E99A6B699F9C2022FF718 /* crypto_core_ed25519.h in Headers */,
+				350A7773F012C8AE674C586CB0371A95 /* crypto_core_hchacha20.h in Headers */,
+				835BB6EF303946D6023F572B6FABDA93 /* crypto_core_hsalsa20.h in Headers */,
+				08C2E7385C950950C35CCB90B878471C /* crypto_core_salsa20.h in Headers */,
+				9E93104ABAC6F30B6698E8E309C317F0 /* crypto_core_salsa2012.h in Headers */,
+				4083E064C0AAD20EEE967D13DAD7307C /* crypto_core_salsa208.h in Headers */,
+				56975C197C98F734E99E628FFF3B3EF3 /* crypto_generichash.h in Headers */,
+				4EBAFD90D41B5640DB9775AC7C814A5A /* crypto_generichash_blake2b.h in Headers */,
+				AE0201DB5E77EE20B3BF8F1A2C484D26 /* crypto_hash.h in Headers */,
+				678A279D7D17EFF47556C3E29756157F /* crypto_hash_sha256.h in Headers */,
+				7A5E5D9D449D15848B11E72C0F9CCE4B /* crypto_hash_sha512.h in Headers */,
+				D3F2AE4EAA04AF5D5AC6B2584257851E /* crypto_kdf.h in Headers */,
+				4098DC21338B9774CCE1E16B7E220971 /* crypto_kdf_blake2b.h in Headers */,
+				2C22B058551B9A8BEC5A2133EE955D9C /* crypto_kx.h in Headers */,
+				4BD64D64D72825EDB684921C21A227C3 /* crypto_onetimeauth.h in Headers */,
+				A32F4B2DA2FD7E410FAE9D459B165B54 /* crypto_onetimeauth_poly1305.h in Headers */,
+				FD7DDD5E33FEF76242D00117AF5C9C09 /* crypto_pwhash.h in Headers */,
+				F7A5FD4D7A9E34B5D31294A67609E8B0 /* crypto_pwhash_argon2i.h in Headers */,
+				85B83F79BA00705853A2E04F6AEA7C7D /* crypto_pwhash_argon2id.h in Headers */,
+				17EE5C120F98742F3BA073901C35E898 /* crypto_pwhash_scryptsalsa208sha256.h in Headers */,
+				C59D4F6BCBC8699BD2227EEA5F8A571F /* crypto_scalarmult.h in Headers */,
+				843018C80387B1C18FC5D80A71296048 /* crypto_scalarmult_curve25519.h in Headers */,
+				3A28B03D36BBC170BFAF440CFED22571 /* crypto_scalarmult_ed25519.h in Headers */,
+				4F0517C6665C24753BB4A6C8D11E749C /* crypto_secretbox.h in Headers */,
+				83C8780CADD839D17825F27C0D6836CC /* crypto_secretbox_xchacha20poly1305.h in Headers */,
+				3F8BF282A837A4539C034EC446C8E3A2 /* crypto_secretbox_xsalsa20poly1305.h in Headers */,
+				EDFDB125C67DC49D3625A88BC662D744 /* crypto_secretstream_xchacha20poly1305.h in Headers */,
+				7E4348C59ED51178380F50C4B1AFE853 /* crypto_shorthash.h in Headers */,
+				57A631ACE796C5B0718186FB27145BEE /* crypto_shorthash_siphash24.h in Headers */,
+				B569D3D0A4CBED9AB9F2526EC3C17E83 /* crypto_sign.h in Headers */,
+				40D4922028F80156E9ED757B1DE7078D /* crypto_sign_ed25519.h in Headers */,
+				03236DB1E8741CA8586FA3DDEB78A542 /* crypto_sign_edwards25519sha512batch.h in Headers */,
+				A0F9C58E0EB504F34FB163E0DBA21B72 /* crypto_stream.h in Headers */,
+				C78F04B5F21584577042A896E0849371 /* crypto_stream_chacha20.h in Headers */,
+				FBC8D12E738D2061403751F630F9B256 /* crypto_stream_salsa20.h in Headers */,
+				0B4494E58267B147D9A6E888F90F040E /* crypto_stream_salsa2012.h in Headers */,
+				4A7241E587AA4828BAE51115CB58C3A7 /* crypto_stream_salsa208.h in Headers */,
+				8C07E91CA386ADD44FBA8A4080D79A76 /* crypto_stream_xchacha20.h in Headers */,
+				6E89549EEC45B308DAFF6DCBB51544A3 /* crypto_stream_xsalsa20.h in Headers */,
+				96A40E6265DC5D568CAC637C8CA73B80 /* crypto_verify_16.h in Headers */,
+				F67184B7958CF11F0CC678F364B22710 /* crypto_verify_32.h in Headers */,
+				313651E2A4B5F9C2C4FDCF61D120EFA0 /* crypto_verify_64.h in Headers */,
+				5D3711F1685B4DD8C42B0D33B819C905 /* export.h in Headers */,
+				6A1E2D2CCE70E1BB93A517F3E0DD05FC /* randombytes.h in Headers */,
+				B6E2CFD0B91C2A5C4006CDB5ACB4FCDB /* randombytes_salsa20_random.h in Headers */,
+				31EF64455F729168ED4769126650F98B /* randombytes_sysrandom.h in Headers */,
+				400DC2FDDB1E1F2153DC624519FDBA77 /* runtime.h in Headers */,
+				89F6E79288642A96327450246DEDF85D /* Sodium-umbrella.h in Headers */,
+				BE09D39FAC037255E5A2B941C21DC22E /* Sodium.h in Headers */,
+				62455964BE0B9A517DE0E3B605D30262 /* sodium_lib.h in Headers */,
+				D9083C00636E4BAFEAFBD4CFF20A4E8E /* utils.h in Headers */,
+				A6497A5647E48C05A4E57C64E5FF8C98 /* version.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C003B6DE97649CDC5CD2027263053584 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891A74D8B8A7FC97E45062901F6DFE57 /* KinBackupRestoreModule-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,88 +1159,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3554C80AB1AB48E0ABCD450B1DFE6DE /* Headers */ = {
+		FDBD795158A0A075DE38296C1A564D01 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27CB119E72357CA36CB734DC03D85522 /* KinSDK-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F425C513BAF4F4B863C9977488867C4B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3BA63DEBFA72E4A224458E02FFB55F4 /* core.h in Headers */,
-				22308347E9EA680061506374A4EC2C3F /* crypto_aead_aes256gcm.h in Headers */,
-				9CF4FF5BDA6CC7FBEE34B5C1B0F3AF91 /* crypto_aead_chacha20poly1305.h in Headers */,
-				546D86C2968CBB763FC663F5FB0B98F5 /* crypto_aead_xchacha20poly1305.h in Headers */,
-				06831EA295D19ED404FC9895D9B674C4 /* crypto_auth.h in Headers */,
-				4C849FF5CBBAFF2F129D18784894C7F8 /* crypto_auth_hmacsha256.h in Headers */,
-				29C9835EC4E48D16ECE3CB0ECCB1AFB1 /* crypto_auth_hmacsha512.h in Headers */,
-				CD4744FDF10863EDEED24C59C6559CF3 /* crypto_auth_hmacsha512256.h in Headers */,
-				F6588870D06310E90C005B675205D9F6 /* crypto_box.h in Headers */,
-				0C75EA75EC90D728EA1111726E5C98F2 /* crypto_box_curve25519xchacha20poly1305.h in Headers */,
-				9DF3BB745BBEB54CAAD85DFAC3457CE7 /* crypto_box_curve25519xsalsa20poly1305.h in Headers */,
-				5842CDDB004384108203114F8CAE65C0 /* crypto_core_curve25519.h in Headers */,
-				DDBD9DA9281D1E3920219871A0BF7555 /* crypto_core_ed25519.h in Headers */,
-				6A53552C3C416E48802231ADC5D1E638 /* crypto_core_hchacha20.h in Headers */,
-				5E428CE670A726ADC34162E239A042FC /* crypto_core_hsalsa20.h in Headers */,
-				FA3ED62D5DEF6240560AA503A4DAA162 /* crypto_core_salsa20.h in Headers */,
-				4F19AC5F8E6EEFECB20AF760F48398C0 /* crypto_core_salsa2012.h in Headers */,
-				8EDA119C8A44A8BC30358C3273894FBD /* crypto_core_salsa208.h in Headers */,
-				F662ABD5462ECC44FAEB1AD6EC99FEF8 /* crypto_generichash.h in Headers */,
-				4821A34E479F4065B911DCDF10ADBE82 /* crypto_generichash_blake2b.h in Headers */,
-				43F59A553B1F113558C84FA0DCB9954C /* crypto_hash.h in Headers */,
-				C83DF9F7E3A25A7FEF869573CCC98531 /* crypto_hash_sha256.h in Headers */,
-				E8AA3EF4624B28DB2E7D3B2E862F61D7 /* crypto_hash_sha512.h in Headers */,
-				062C3CA7668178C52696056F719E7111 /* crypto_kdf.h in Headers */,
-				8431173B7C0BED98FAC7F8239810ED9C /* crypto_kdf_blake2b.h in Headers */,
-				879871F19AD85B2039D926FFB9226A8D /* crypto_kx.h in Headers */,
-				C0256145B9F9FB15709E4E9D06416A21 /* crypto_onetimeauth.h in Headers */,
-				4377A7D3713961958D4528F2D6C03E83 /* crypto_onetimeauth_poly1305.h in Headers */,
-				56E8836CBFBE1C38F89430D130B8EC9C /* crypto_pwhash.h in Headers */,
-				5F41D4FC615FD7E089A3D367A2D8DED2 /* crypto_pwhash_argon2i.h in Headers */,
-				C3C993FB33D56AD45242ECDBE8A8B028 /* crypto_pwhash_argon2id.h in Headers */,
-				A8B995B6C462A5C7DB8DA138E9B6EBD9 /* crypto_pwhash_scryptsalsa208sha256.h in Headers */,
-				67B9EF39B51956A43CB1478AE02D9693 /* crypto_scalarmult.h in Headers */,
-				B4E765FBFA771A5050B80BD725A06196 /* crypto_scalarmult_curve25519.h in Headers */,
-				EE011C43292663E4C5F4CAF79C06D0C7 /* crypto_scalarmult_ed25519.h in Headers */,
-				4C0979C3E575B5F46DDEEB3C2887E89D /* crypto_secretbox.h in Headers */,
-				F577D3D8D87254047C61C2059F9A64D8 /* crypto_secretbox_xchacha20poly1305.h in Headers */,
-				3BF2CC88700AD94E166AC37068554EB9 /* crypto_secretbox_xsalsa20poly1305.h in Headers */,
-				CD1DC1F72907A629A94719D285931E76 /* crypto_secretstream_xchacha20poly1305.h in Headers */,
-				E168871C3FFB535A8433E2725DD8923F /* crypto_shorthash.h in Headers */,
-				9FA6E18ECE7718A0889C899FE6B7BF4F /* crypto_shorthash_siphash24.h in Headers */,
-				2DE4B716E4A8B7F546403FD54287F19D /* crypto_sign.h in Headers */,
-				996CB5E78EFFB4627611F4BA6CB12FB0 /* crypto_sign_ed25519.h in Headers */,
-				2F2A8359AD18B780825E596D7B6D5F7C /* crypto_sign_edwards25519sha512batch.h in Headers */,
-				FA116CB264B56EA2AF45E24B91109CF3 /* crypto_stream.h in Headers */,
-				ABC770E7B592D00C85F0656EC3D7C711 /* crypto_stream_chacha20.h in Headers */,
-				D84C5034C4E539D42ABE9166409B44E1 /* crypto_stream_salsa20.h in Headers */,
-				C459E36DF5D63A4E31CBD39CC708C82D /* crypto_stream_salsa2012.h in Headers */,
-				CD8E83A84E1E48E39D965DC6F8D01751 /* crypto_stream_salsa208.h in Headers */,
-				FFCBA258F0E0A337ECD86E99BC90FF22 /* crypto_stream_xchacha20.h in Headers */,
-				744EA3C79705D7F7A8808A7532214044 /* crypto_stream_xsalsa20.h in Headers */,
-				C5B774E3ACCC4B53C35766F355AA605A /* crypto_verify_16.h in Headers */,
-				9CEBFEC7AD5CE8E62020518F3981F1C1 /* crypto_verify_32.h in Headers */,
-				AA7E9C076E199EEE30809B9DE998915E /* crypto_verify_64.h in Headers */,
-				A6A43435EF74B18C58CF4B718031AC9A /* export.h in Headers */,
-				9517AF6A7B2EF6131DC3DEDA4F48FE6C /* randombytes.h in Headers */,
-				72303A0403C6CF1D21AF4CD09D310E89 /* randombytes_salsa20_random.h in Headers */,
-				86360C1694C7990FF567EA6D4546DD17 /* randombytes_sysrandom.h in Headers */,
-				D5C1A2725512BB409F0E0754F5358B1A /* runtime.h in Headers */,
-				B0346C73C4AB769B73EF4CDAA2C323C8 /* Sodium-umbrella.h in Headers */,
-				17FD9EB53F337B09A3E753165DB78825 /* Sodium.h in Headers */,
-				EEB987A780CADAA876A8F4E678EE4862 /* sodium_lib.h in Headers */,
-				767DC42CDC8953F4B8BF3233186A2765 /* utils.h in Headers */,
-				0AE1520D0C0A54224E8A3E97F465DA74 /* version.h in Headers */,
+				B6334ADF5437FE15F2FEDC825579FF44 /* KinUtil-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2EB32A1DD010402139708ED89B567C75 /* KinBackupRestoreModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6033A2204DFAC54B4B01ACABDFFC375 /* Build configuration list for PBXNativeTarget "KinBackupRestoreModule" */;
+			buildPhases = (
+				C003B6DE97649CDC5CD2027263053584 /* Headers */,
+				7817F5A960BED2747E4A4F0FAAB7D24D /* Sources */,
+				348CDFF69A781BD24FAF2BCE692AC2DA /* Frameworks */,
+				CFB994B30B0CF4CCC337D1FDCCE44957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC25AB0D109ADA2629A7210F584FA6BD /* PBXTargetDependency */,
+			);
+			name = KinBackupRestoreModule;
+			productName = KinBackupRestoreModule;
+			productReference = C24ADACB3E6DCB55840300BC4B78C39D /* KinBackupRestoreModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		306E182B96389F39FE0F4DC1F9825983 /* Pods-KinBackupRestoreModule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F48B0880ED11FB0E76FFE2CAFA87C07 /* Build configuration list for PBXNativeTarget "Pods-KinBackupRestoreModule" */;
@@ -1210,34 +1232,14 @@
 			productReference = 5A7198803FBF9D7C65401A869F4B03D2 /* Pods_KinBackupRestoreSampleApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5FEEEE25FBB1FA10E955A57593BF8A9A /* KinSDK */ = {
+		91378E794CFDF1517354D48CBDFDB1C9 /* Sodium */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F85437A28482DEB2DE3534C8A238E970 /* Build configuration list for PBXNativeTarget "KinSDK" */;
+			buildConfigurationList = 972BC656A1EE9D0030F22C3D43507DC0 /* Build configuration list for PBXNativeTarget "Sodium" */;
 			buildPhases = (
-				F3554C80AB1AB48E0ABCD450B1DFE6DE /* Headers */,
-				446BED722728A997494562AE931E46AE /* Sources */,
-				0094799766324AB74B0FABA76D259579 /* Frameworks */,
-				4EBCF8A8E1F728CB0A85E59505FDA9E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4D15B8D2C18EFAFB642C277283117A9D /* PBXTargetDependency */,
-				C65263EDD72B71D314B677A37D96129C /* PBXTargetDependency */,
-			);
-			name = KinSDK;
-			productName = KinSDK;
-			productReference = 81A0DDCE5E447E7A6B5650F4466C323E /* KinSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6484CC0F6C1E4690491096BD8D92B3B4 /* Sodium */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB83D597E2871B21FA8A4AF2B37A1A3E /* Build configuration list for PBXNativeTarget "Sodium" */;
-			buildPhases = (
-				F425C513BAF4F4B863C9977488867C4B /* Headers */,
-				6B0DDA621EE1FEEAE57A72ABA2DF8AA2 /* Sources */,
-				2F29E444888CE134A8F1AE4A4EE11F7A /* Frameworks */,
-				DF2885A8B6029EEB483E67E8EB91BD72 /* Resources */,
+				2BDA3D10D6D09667211FEF243ACC3ECB /* Headers */,
+				A2C891FC1EABF5444A6706D073C2BCFE /* Sources */,
+				C879718216FE73440B40E9C7A3CF7C73 /* Frameworks */,
+				D82CB87D4E6854B615EC395E0989BABC /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1248,14 +1250,34 @@
 			productReference = 8B711A3A1363357E8659DA68B11797AD /* Sodium.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		67B9CD5314439F7AC478C3CB3FD7E4A5 /* KinUtil */ = {
+		AAB48EE90B7EF5D3B29CE418E4692839 /* KinSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD01364E5F59ED1871A517C7608AD521 /* Build configuration list for PBXNativeTarget "KinUtil" */;
+			buildConfigurationList = FC8902F457BAD227D5AC2A1E99D1FE38 /* Build configuration list for PBXNativeTarget "KinSDK" */;
 			buildPhases = (
-				12012D3EAD0C6682E99B842E6FF50879 /* Headers */,
-				44E76B2C4908F15B36F02A3ABB76BD03 /* Sources */,
-				0E48E75A12BBE577E6CE3F935B866E17 /* Frameworks */,
-				408CE6CC2E53B256515B99EE33CF689F /* Resources */,
+				189694F6AD0BA9DD15CA2F172FDCCCC4 /* Headers */,
+				5D06A28404EA1E85222812138E29AC9B /* Sources */,
+				ABD923E42DDF78D25A242E1E5C1FBFAA /* Frameworks */,
+				CA25200ACDD667FB1E4EF2F1F800D185 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B87020166D11E9181DB2683DD853D3E /* PBXTargetDependency */,
+				B2432E4A9424CB4EF3923F1B1B9E2211 /* PBXTargetDependency */,
+			);
+			name = KinSDK;
+			productName = KinSDK;
+			productReference = 81A0DDCE5E447E7A6B5650F4466C323E /* KinSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F0BC4AED3BC006972C6CC33E9C4F03F8 /* KinUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B91FCB57592B269100113C094066A0F /* Build configuration list for PBXNativeTarget "KinUtil" */;
+			buildPhases = (
+				FDBD795158A0A075DE38296C1A564D01 /* Headers */,
+				3332BB8D089B4AA7B15FEB71C01364FB /* Sources */,
+				2CFB43C4D654142A52F05AA63926173F /* Frameworks */,
+				0507317CF7EEF8EE309729872B9E35B2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1264,25 +1286,6 @@
 			name = KinUtil;
 			productName = KinUtil;
 			productReference = 77B30E995A3044484C3E2D6FE2F38C01 /* KinUtil.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C48A4FD6677A6B0C08078B449F7B6D36 /* KinBackupRestoreModule */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6B6C4FB2FE006FA90710019B4E1EA997 /* Build configuration list for PBXNativeTarget "KinBackupRestoreModule" */;
-			buildPhases = (
-				5518ABDCBA337A48D461741B022E54CF /* Headers */,
-				3A6E5CF3BEA5DF3DD5B9CA421BE96D41 /* Sources */,
-				CD050D5A51B59EC77CFB63AFB31D14B3 /* Frameworks */,
-				F00BAF5453B0F685759851857F3F9F65 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				11CB6CC05B2CAEBC3BEF834A9045E808 /* PBXTargetDependency */,
-			);
-			name = KinBackupRestoreModule;
-			productName = KinBackupRestoreModule;
-			productReference = C24ADACB3E6DCB55840300BC4B78C39D /* KinBackupRestoreModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FF0A7F159D1FAC427D456AD8F761631B /* Pods-KinBackupRestoreModuleTests */ = {
@@ -1325,33 +1328,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C48A4FD6677A6B0C08078B449F7B6D36 /* KinBackupRestoreModule */,
-				5FEEEE25FBB1FA10E955A57593BF8A9A /* KinSDK */,
-				67B9CD5314439F7AC478C3CB3FD7E4A5 /* KinUtil */,
+				2EB32A1DD010402139708ED89B567C75 /* KinBackupRestoreModule */,
+				AAB48EE90B7EF5D3B29CE418E4692839 /* KinSDK */,
+				F0BC4AED3BC006972C6CC33E9C4F03F8 /* KinUtil */,
 				306E182B96389F39FE0F4DC1F9825983 /* Pods-KinBackupRestoreModule */,
 				FF0A7F159D1FAC427D456AD8F761631B /* Pods-KinBackupRestoreModuleTests */,
 				39AE1FA0B49FB0C8CD0AEF4AFDCD1749 /* Pods-KinBackupRestoreSampleApp */,
-				6484CC0F6C1E4690491096BD8D92B3B4 /* Sodium */,
+				91378E794CFDF1517354D48CBDFDB1C9 /* Sodium */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0507317CF7EEF8EE309729872B9E35B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		099A11A7860292AFE5F2D5B79641003C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		408CE6CC2E53B256515B99EE33CF689F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EBCF8A8E1F728CB0A85E59505FDA9E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1372,18 +1368,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF2885A8B6029EEB483E67E8EB91BD72 /* Resources */ = {
+		CA25200ACDD667FB1E4EF2F1F800D185 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F00BAF5453B0F685759851857F3F9F65 /* Resources */ = {
+		CFB994B30B0CF4CCC337D1FDCCE44957 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A46D0A81DA6BB05B45540A36D2FED3D /* Assets.xcassets in Resources */,
+				A57106A8AC2BD6EA58DF6425725898EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82CB87D4E6854B615EC395E0989BABC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1406,130 +1409,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A6E5CF3BEA5DF3DD5B9CA421BE96D41 /* Sources */ = {
+		3332BB8D089B4AA7B15FEB71C01364FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F107778DB6D6BC763AC7680BBA037F46 /* Animations.swift in Sources */,
-				E23085EA92924CABF124C8B3EBDECBAF /* BackupCompletedViewController.swift in Sources */,
-				E2E30A3024403BB53AA1654BD766341A /* BackupFlowController.swift in Sources */,
-				707EFE0EE5F35DE7C261D779AF17EDE7 /* BackupIntroViewController.swift in Sources */,
-				AB2676208E80D01202D350B82057BBC3 /* Bundle+BackupRestore.swift in Sources */,
-				CBC74B493456FC2B8B1BF1E57258C75E /* ExplanationTemplateViewController.swift in Sources */,
-				FF70002D39E0D476FEA27AAB58297F3E /* ExplanationTemplateViewController.xib in Sources */,
-				87997C38E066A2A2596B64B20CEF2E7B /* FlowController.swift in Sources */,
-				2CC4749DA2495222BAB8B18738963C3B /* KinBackupRestoreBI.swift in Sources */,
-				B26FC2F96A36BE1DA1285AAC39370086 /* KinBackupRestoreManager.swift in Sources */,
-				1D9319AA4595BEEEE2AE0D98516EE0C0 /* KinBackupRestoreModule-dummy.m in Sources */,
-				054EF9FA6DB0DE400C6306792EE0BC10 /* LifeCycleProtocol.swift in Sources */,
-				7B47B044B4D3BD258784DAE08858B975 /* Localizable.strings in Sources */,
-				0DF3EE8CC629B237BEE361A4BC4F3DD4 /* PasswordEntryField.swift in Sources */,
-				052CA819056B454025A6B73C23256F28 /* PasswordEntryLabel.swift in Sources */,
-				AADF9C61738E683619B947B135A896C9 /* PasswordEntryViewController.swift in Sources */,
-				48EFC8562EB8E434BCA9714953B358C3 /* PasswordEntryViewController.xib in Sources */,
-				AFC0C3C490E156C6E2EC46564D3849BC /* QRController.swift in Sources */,
-				C96BF7252C5F06090E9B9388735FB7FE /* QRPickerController.swift in Sources */,
-				14AF263AC2589E140B1E860792381C0C /* QRViewController.swift in Sources */,
-				031F9932D195CEA98B81CFE89D3C7851 /* QRViewController.xib in Sources */,
-				771A526AF2C3E575B46EF8C7457DCE44 /* RestoreFlowController.swift in Sources */,
-				AC92216441182AA1BFFE6E776215C353 /* RestoreIntroViewController.swift in Sources */,
-				76B2E8244E1254B8732AA676EB328ADC /* RestoreViewController.swift in Sources */,
-				6E0230F5ECACE3C883FB4697543C88EB /* RestoreViewController.xib in Sources */,
-				04D204500973418F6048FA8F2FDB684E /* RoundButton.swift in Sources */,
-				A093D313D732F45193F121285D1AE5F3 /* String+Localization.swift in Sources */,
-				DC25197505B050D47CCFF7267A51F1D5 /* UIColor+Appearance.swift in Sources */,
-				CD32B4ED6E812CE5F33EF35352AABCB0 /* UIFont+PreferredFont.swift in Sources */,
-				4337006F1D4D7DB09BFCC4AE83DE2A7A /* UINavigationBar+Appearance.swift in Sources */,
-				F804A781491649F3073106057229234F /* UIStatusBarStyle+Appearance.swift in Sources */,
-				1694ADB61C9DF488DC2E6694C1190AC6 /* ViewController.swift in Sources */,
+				BF67993C605FCBC92801665CF2D092FB /* Array+extensions.swift in Sources */,
+				A6F144CD446BF06AEB8E0AAF7C8614F2 /* Curry.swift in Sources */,
+				FD2198831259C3C9E57D76CEAE8BCC54 /* Data+extensions.swift in Sources */,
+				7C6081B945AAC145B15CE00C8C82522B /* KinUtil-dummy.m in Sources */,
+				CD65AC5AA75363A939DE24303D76662A /* Observable.swift in Sources */,
+				8470E24B774967C80D47FEC5748C3EA6 /* Observables.swift in Sources */,
+				4BFE58135D557B582BFD7D8F2A0DBEBC /* Promise.swift in Sources */,
+				98F3B84B5EB88E66109558B60E15A97D /* String+extensions.swift in Sources */,
+				F84BCC277B9CB3FBF34B713BBAC2018A /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		446BED722728A997494562AE931E46AE /* Sources */ = {
+		5D06A28404EA1E85222812138E29AC9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ED32011BD9192165592F3150E370C86 /* Asset.swift in Sources */,
-				D4866F3FB56F1704AFAA1D5272B50A2C /* BCKeyUtils.swift in Sources */,
-				654DC8EC37C6CEECA0AC7295079E60D3 /* Data+extensions.swift in Sources */,
-				BC9B104CD35B7AA9731D634362182C47 /* Endpoint.swift in Sources */,
-				F6B5841365E93D75B8A5518E9C028545 /* Errors.swift in Sources */,
-				78C0D239E2AB8A2AC3515820F89FA329 /* HorizonResponses.swift in Sources */,
-				311A39B6C4048DE4217F405F32EDF954 /* KeychainSwift.swift in Sources */,
-				BEF7B6DBCC6EB69164E60A6E817F6259 /* KeychainSwiftAccessOptions.swift in Sources */,
-				27DBB78E3CA3BD4C5CD3EA5073E6E44B /* KeyStore.swift in Sources */,
-				4F325839D66AEBE8120EF86A017F65BB /* KeyUtils.swift in Sources */,
-				A9130B68C6110ECE0555F689022DFAE7 /* KinAccount.swift in Sources */,
-				C76014F75A1A6B4E14BC72E4F3490A2C /* KinAccounts.swift in Sources */,
-				1DF8B7CF396F8F78D681486E4A470C21 /* KinClient.swift in Sources */,
-				2966389A7868850A1998AF88456F66E7 /* KinError.swift in Sources */,
-				8A3B071ED100613B82FD7DCCC482110F /* KinSDK-dummy.m in Sources */,
-				C4ABD004AECEE418D1C2D89235584887 /* KinTypes.swift in Sources */,
-				C9432A3A5ECCC372C0AE1EB5BAE42230 /* Ledger.swift in Sources */,
-				1F19C884563E3F2B11551B3030E0FE49 /* Network.swift in Sources */,
-				325C24481A200AFA6EACC56B6E9F4AF0 /* Operation.swift in Sources */,
-				F2EEF9F5C18B74A9F4811B320D635ADD /* Operations.swift in Sources */,
-				5AA112F329D015E248E171430025B263 /* PublicKey.swift in Sources */,
-				EFEE484CAE977CD5EEE0756380E63F9C /* SHA256.swift in Sources */,
-				BB96789102CEB5B3FD169A76BEB10B54 /* Stellar.swift in Sources */,
-				B31AC05EA8CA5BC36CD073DA53EC1AEE /* StellarErrors.swift in Sources */,
-				177A12D88FD568C69FE27907F40BCCE3 /* StellarEventSource.swift in Sources */,
-				4163C7F4F6D355887CBD6A324C254797 /* StellarOps.swift in Sources */,
-				C5B0E24812CECF1E726AEC37A6B197C1 /* StellarResults.swift in Sources */,
-				07CB20A4CFD4550F9E9BBA014EA0DACD /* StellarUtils.swift in Sources */,
-				D64AE0E57B6B869E4DDA92607E37914E /* TegKeychainConstants.swift in Sources */,
-				7C7D6FD1622EDA787462E05F84AB4657 /* Transaction.swift in Sources */,
-				12CA4C46BC1611CCF8D1BDCFF0902096 /* TxBuilder.swift in Sources */,
-				A01173C5287B43D73D1AE78B7583CA10 /* Watchers.swift in Sources */,
-				57ED5A937609107B1A640D0B5D285F0D /* Watches.swift in Sources */,
-				88E9EC05BEA141FCE9D42BD2B268E20F /* WhitelistEnvelope.swift in Sources */,
-				5298DEAAC01A07C7668E20C96F4F0B43 /* WrappedData.swift in Sources */,
-				7CC747F27611A9B59965B938C7E332F1 /* XDRCodable.swift in Sources */,
+				9F06DD46C6FE90FEB8574F174B994987 /* Asset.swift in Sources */,
+				96D36CCA7C2A3EE373DAF655C1795697 /* BCKeyUtils.swift in Sources */,
+				A94CE3953E8541176BAD28F0AE62E807 /* Data+extensions.swift in Sources */,
+				D3376EFAE2E0D9EF3967F957F1CA598A /* Endpoint.swift in Sources */,
+				62BD11A962F43D078739E0BE46174E87 /* Errors.swift in Sources */,
+				F1F73378BBBEDB8D5A668729EA35B6FC /* HorizonResponses.swift in Sources */,
+				6494A7A2A9A35B72B2EFA950C446454D /* KeychainSwift.swift in Sources */,
+				529F50CA29FF079AA84A94627CA0B896 /* KeychainSwiftAccessOptions.swift in Sources */,
+				2ADF6704CA2078BDEC4890115DA0AEBD /* KeyStore.swift in Sources */,
+				2D161475BDC3EE8A93DE01AE69B18277 /* KeyUtils.swift in Sources */,
+				AAA4AA7E93442C3CE7C2AD57CA1288FF /* KinAccount.swift in Sources */,
+				092D1CA6CD6E046CE68250EDED313247 /* KinAccounts.swift in Sources */,
+				5D73567741FD4DB0C964FA819908B689 /* KinClient.swift in Sources */,
+				CA5C07D7E8A013889ACB5BDD81BF975B /* KinError.swift in Sources */,
+				8B49E0161750933B4912CB88E41022C9 /* KinSDK-dummy.m in Sources */,
+				19B89D9EFDA4A25164973A7DFA5DF99C /* KinTypes.swift in Sources */,
+				9990AA15473A2DD018967C53D5C62D34 /* Ledger.swift in Sources */,
+				69F9132E6AD2097F76372BE2F9F783AD /* Network.swift in Sources */,
+				87555A5B8A9F1A636BE2BA812D1F016A /* Operation.swift in Sources */,
+				FC37810FDD76C0AA60A8BDF7D3127851 /* Operations.swift in Sources */,
+				275A1057450CFDD3B507B95E052CEB97 /* PublicKey.swift in Sources */,
+				7AB902682D13694DF8EFD6951F548792 /* SHA256.swift in Sources */,
+				B257CCEAAEF34D84D0DB1C0B258DCC79 /* Stellar.swift in Sources */,
+				62989D5995FE63566C8EB0E4359D8429 /* StellarErrors.swift in Sources */,
+				9D766CCAFD6B92DF526988C292573824 /* StellarEventSource.swift in Sources */,
+				034A4CCB36CC6ADCA2778B5391222916 /* StellarOps.swift in Sources */,
+				F77262C06AE339D5DCB10A67BD687AD1 /* StellarResults.swift in Sources */,
+				C4A4BBBACB9165C324AA52DC31652CD3 /* StellarUtils.swift in Sources */,
+				A4350DF5C1B20F48625BB540BB7C470C /* TegKeychainConstants.swift in Sources */,
+				1ABDC214057867C30B8E943CEDB1651A /* Transaction.swift in Sources */,
+				5B4A6015BE6280AE0C34D8A4658F2ABE /* TxBuilder.swift in Sources */,
+				D839F09363638C8FC93508D2DE274563 /* Watchers.swift in Sources */,
+				7B728D741CA6EBA6BF1DC92474831549 /* Watches.swift in Sources */,
+				6EA5AE4C621C36C3C2055A082E762EFE /* WhitelistEnvelope.swift in Sources */,
+				13BD84A67632413A854145BC480918F3 /* WrappedData.swift in Sources */,
+				9638936FC271F7C249A402C89482FCDC /* XDRCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44E76B2C4908F15B36F02A3ABB76BD03 /* Sources */ = {
+		7817F5A960BED2747E4A4F0FAAB7D24D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				429EDE9EBBE5BB44E60AAB6A91241069 /* Array+extensions.swift in Sources */,
-				7139A1AE4B19915DC76BA2663382EE51 /* Curry.swift in Sources */,
-				738649053D56587F063B316ADD74A667 /* Data+extensions.swift in Sources */,
-				90409A4C1EBD4465BA22AC8EAF02566A /* KinUtil-dummy.m in Sources */,
-				7E1B2A68188A95FA30DDE4CE9B31828F /* Observable.swift in Sources */,
-				9245F3AA602F73CA930A6EE007CA9609 /* Observables.swift in Sources */,
-				E74C9B22EC36D82D9A27DF13FD1F2AC2 /* Promise.swift in Sources */,
-				698613EB9EA3B3D97F17B81B1A0C9A08 /* String+extensions.swift in Sources */,
-				EB47DDDE16ED984A5C3B4240F9DD7DCA /* Utility.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6B0DDA621EE1FEEAE57A72ABA2DF8AA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC05A5F81CF8679C094068019E97D39B /* Aead.swift in Sources */,
-				72795B2AB3A42DA44C1F0DF4D9B50C4B /* Auth.swift in Sources */,
-				F97342571ACDD376975C95BF263088F4 /* Box.swift in Sources */,
-				126421ECA517C23F670A63BDF8BD118B /* Bytes.swift in Sources */,
-				E4C5E19F4E1489D6A2FFE5AB34CFE6C4 /* ExitCode.swift in Sources */,
-				35A7EBF91ED61058313A1D153C4E6096 /* GenericHash.swift in Sources */,
-				E15E91AB5E293090CBE6304DC3246E9D /* KeyDerivation.swift in Sources */,
-				A9333CB0DBDD1D67F57C51F552C99AE6 /* KeyExchange.swift in Sources */,
-				E816ABE5AE6140A427CD5B76BA24116F /* KeyPairGenerator.swift in Sources */,
-				408490EF1014FEBC635EE26C2A4A8F22 /* KeyPairProtocol.swift in Sources */,
-				CD746A7891697BF75A1B3FE2990E1CD3 /* NonceGenerator.swift in Sources */,
-				15471D9B48BBF830AD968ACABBCB32D4 /* PWHash.swift in Sources */,
-				4ADDFCFC272FCCEF615AE71D99A83B09 /* RandomBytes.swift in Sources */,
-				7BC2928E2F911A7A8C97034C7ED9F71B /* SecretBox.swift in Sources */,
-				8E0EAA4C1D6F5ED5EF102A41270100A7 /* SecretKeyGenerator.swift in Sources */,
-				4D1918FC36876CBB25E69F1660D83214 /* SecretStream.swift in Sources */,
-				B61ECB83E7353E404B01DBFC6FB74BEC /* ShortHash.swift in Sources */,
-				90988C7665E8C6FD015A260F6E1E5E99 /* Sign.swift in Sources */,
-				3AFF80973C81506A33A5BDE85A0C5B90 /* Sodium-dummy.m in Sources */,
-				1D372253FCC5A5AED23583CD1A04D691 /* Sodium.swift in Sources */,
-				54C64AB5E9D7A016C97D3A28E309DDF4 /* Stream.swift in Sources */,
-				86A1C41369710E77ECEFEB98F0ABB6E9 /* Utils.swift in Sources */,
+				BDAAB9D761DFD016E0E64E640BBD10EE /* Animations.swift in Sources */,
+				C2A1833E56459DC9662384B7EC7B0C70 /* BackupCompletedViewController.swift in Sources */,
+				D98277644ED3CCEF9940DC7E407C48BD /* BackupFlowController.swift in Sources */,
+				7E58BE379468DC02B6F8A7CF06BE9C3D /* BackupIntroViewController.swift in Sources */,
+				31B226683449DB4DAC8A9DEB88B9B728 /* Bundle+BackupRestore.swift in Sources */,
+				DA3FA09B7730957B8E009DD544CFCE14 /* ExplanationTemplateViewController.swift in Sources */,
+				93AE694F6D526C0518A16AA889CC9577 /* ExplanationTemplateViewController.xib in Sources */,
+				4DAAD4D57CC2A5294D5EFFE8AC887B86 /* FlowController.swift in Sources */,
+				650E02F5F8939DB965CCC05B42E1583D /* KinBackupRestoreBI.swift in Sources */,
+				A5E226B9B2B5ED47853DA5525962E64F /* KinBackupRestoreManager.swift in Sources */,
+				8B66BB82A2C0AF245F3A2EB53DD74C1F /* KinBackupRestoreModule-dummy.m in Sources */,
+				852E7123B6CBCC8F389463F75FDCE549 /* LifeCycleProtocol.swift in Sources */,
+				B8BC8ECB4D5C56547AE126A89AF1C92E /* Localizable.strings in Sources */,
+				68F79200E71931CF7A5F97289FE104A3 /* PasswordEntryLabel.swift in Sources */,
+				4CDCB244457F0B63968250D546DC7918 /* PasswordEntryTextField.swift in Sources */,
+				9D057CDCAC516300F3E02550EBED549F /* PasswordEntryView.swift in Sources */,
+				24E4819F10C164276704965FD8D936C0 /* PasswordEntryViewController.swift in Sources */,
+				0D359E0746BF73F6CDB1D68692E63A4A /* PasswordEntryViewController.xib in Sources */,
+				18EF38B85CC8C177073E5DE250933D41 /* QRController.swift in Sources */,
+				4582D7AD63F27BF0AC33D8961BDDA146 /* QRPickerController.swift in Sources */,
+				EDAD7B985C1CB93F5E825028E9DDB4AC /* QRViewController.swift in Sources */,
+				80D5EBA762D29A1BDC1218E37D27E4CE /* QRViewController.xib in Sources */,
+				32FC2AE64A4811E86CCCB1A80006B6ED /* RestoreFlowController.swift in Sources */,
+				0DE59CB931BE6063D342011E8E68AA59 /* RestoreIntroViewController.swift in Sources */,
+				59960788AC228A561774845BFE8393AC /* RestoreViewController.swift in Sources */,
+				833D28F7C00EC34DB192397A3DD84FA4 /* RestoreViewController.xib in Sources */,
+				E1B8AFCA847ED7952A20CB781650B6F0 /* RoundButton.swift in Sources */,
+				CEFE637B53FDAED4F2DA106CA87B19A4 /* String+Localization.swift in Sources */,
+				DBAB7FC1B5B66382E6AFA13CE3235880 /* UIColor+Appearance.swift in Sources */,
+				E58437F769E3AE97F872DFCB78920E2F /* UIFont+PreferredFont.swift in Sources */,
+				423B5FC1B9F9128D345B9841E1221175 /* UINavigationBar+Appearance.swift in Sources */,
+				1F7A5C9E6A7FA944593E5D9435413560 /* UIStatusBarStyle+Appearance.swift in Sources */,
+				DB7D76958E72DC25383E0F1A07031BC3 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1541,15 +1516,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2C891FC1EABF5444A6706D073C2BCFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF1B5DCC9A6D2ED22C24056A6908273A /* Aead.swift in Sources */,
+				0FAADC40EBB117E66AD3DD0024B1FD95 /* Auth.swift in Sources */,
+				C6BDCADBB4C8E0A32CC6E7B101A6EA12 /* Box.swift in Sources */,
+				947C47E72D6975A81B44EB49EDD39282 /* Bytes.swift in Sources */,
+				57832EB5C2128A4F3C4F695C08528130 /* ExitCode.swift in Sources */,
+				31A6B8123B101C965DB40AFE7F5AC51B /* GenericHash.swift in Sources */,
+				6FD8F69991C4730DF891830411258F8E /* KeyDerivation.swift in Sources */,
+				008F1FDB3D64A2A5476A7FC6A386964B /* KeyExchange.swift in Sources */,
+				C5292ADF8585350680B50FF1CB33538A /* KeyPairGenerator.swift in Sources */,
+				B4870BB3DBC14CDE3F1D827F8E1FC46B /* KeyPairProtocol.swift in Sources */,
+				7413D30558E90295B2605828B43BCBEA /* NonceGenerator.swift in Sources */,
+				0E46114FDFD49625ECB525924E1DA367 /* PWHash.swift in Sources */,
+				9475FE01C19D427CF42BB66A4722B5B6 /* RandomBytes.swift in Sources */,
+				2EE6322426D8425D9E5FC771D9C2E009 /* SecretBox.swift in Sources */,
+				13FDEB350E88D9FD77664293E39530C5 /* SecretKeyGenerator.swift in Sources */,
+				80FE6B4317447A3BB9ADAB0E63F9C136 /* SecretStream.swift in Sources */,
+				59F375EB1B52DF4847D0B53571BCDDDF /* ShortHash.swift in Sources */,
+				236F1D99C6D1DC98BA822F26CAFBBC5A /* Sign.swift in Sources */,
+				10A4D035E264DF5520143DCD94CC2732 /* Sodium-dummy.m in Sources */,
+				6FF2374C89A883451A4ADE42E96097E3 /* Sodium.swift in Sources */,
+				FE54FDAC680295559DDD01AD5C99714E /* Stream.swift in Sources */,
+				2BDA541B31FC6A434590E574CC5222A1 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		11CB6CC05B2CAEBC3BEF834A9045E808 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KinSDK;
-			target = 5FEEEE25FBB1FA10E955A57593BF8A9A /* KinSDK */;
-			targetProxy = E39EBAFD65C0F6974694DE8967DC0B98 /* PBXContainerItemProxy */;
-		};
 		12A41F01541C7C634D1BCE85B1261B9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-KinBackupRestoreModule";
@@ -1559,60 +1557,101 @@
 		24C0B882FBE401C5B91A7D999BD33591 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KinUtil;
-			target = 67B9CD5314439F7AC478C3CB3FD7E4A5 /* KinUtil */;
+			target = F0BC4AED3BC006972C6CC33E9C4F03F8 /* KinUtil */;
 			targetProxy = F18F0C66487F1A0E1DF11D21B1D98119 /* PBXContainerItemProxy */;
 		};
 		250A6DE809E20329965D484BBB9AD9C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Sodium;
-			target = 6484CC0F6C1E4690491096BD8D92B3B4 /* Sodium */;
+			target = 91378E794CFDF1517354D48CBDFDB1C9 /* Sodium */;
 			targetProxy = ED977D687011409AB92CB865B56DC9E6 /* PBXContainerItemProxy */;
+		};
+		2B87020166D11E9181DB2683DD853D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KinUtil;
+			target = F0BC4AED3BC006972C6CC33E9C4F03F8 /* KinUtil */;
+			targetProxy = 0AA28EEC0276B5D9D145F2F61A07B37A /* PBXContainerItemProxy */;
 		};
 		4AA148167AF84C531892AFA35AB831F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Sodium;
-			target = 6484CC0F6C1E4690491096BD8D92B3B4 /* Sodium */;
+			target = 91378E794CFDF1517354D48CBDFDB1C9 /* Sodium */;
 			targetProxy = D74B62EE8F2732D87AA162A14C6CFF0C /* PBXContainerItemProxy */;
-		};
-		4D15B8D2C18EFAFB642C277283117A9D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KinUtil;
-			target = 67B9CD5314439F7AC478C3CB3FD7E4A5 /* KinUtil */;
-			targetProxy = 323C75046BD8762BA073C8BB24F8241E /* PBXContainerItemProxy */;
 		};
 		538818436C1AA729878DDB9F6B45528B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KinUtil;
-			target = 67B9CD5314439F7AC478C3CB3FD7E4A5 /* KinUtil */;
+			target = F0BC4AED3BC006972C6CC33E9C4F03F8 /* KinUtil */;
 			targetProxy = 84F7726980B21C8B018F8FC98742767E /* PBXContainerItemProxy */;
 		};
 		551E533BA241340D70354F5274C63FD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KinBackupRestoreModule;
-			target = C48A4FD6677A6B0C08078B449F7B6D36 /* KinBackupRestoreModule */;
+			target = 2EB32A1DD010402139708ED89B567C75 /* KinBackupRestoreModule */;
 			targetProxy = 4759669C7AF477B09E21DBA9F28306D2 /* PBXContainerItemProxy */;
 		};
 		7A6A4536A16663F692630F0D80823C73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KinSDK;
-			target = 5FEEEE25FBB1FA10E955A57593BF8A9A /* KinSDK */;
+			target = AAB48EE90B7EF5D3B29CE418E4692839 /* KinSDK */;
 			targetProxy = F04D335BDB139A4844FDB6E35894C9BE /* PBXContainerItemProxy */;
 		};
 		7F24FCB29DB807D6B5E5E7D3840C6BB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KinSDK;
-			target = 5FEEEE25FBB1FA10E955A57593BF8A9A /* KinSDK */;
+			target = AAB48EE90B7EF5D3B29CE418E4692839 /* KinSDK */;
 			targetProxy = 290B428C6BF9C4654534CB21B52C5ADC /* PBXContainerItemProxy */;
 		};
-		C65263EDD72B71D314B677A37D96129C /* PBXTargetDependency */ = {
+		B2432E4A9424CB4EF3923F1B1B9E2211 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Sodium;
-			target = 6484CC0F6C1E4690491096BD8D92B3B4 /* Sodium */;
-			targetProxy = 105AE68727032C74FB34B991AE308E60 /* PBXContainerItemProxy */;
+			target = 91378E794CFDF1517354D48CBDFDB1C9 /* Sodium */;
+			targetProxy = F6F25604862A0BB02B28AB2B16E4B0B7 /* PBXContainerItemProxy */;
+		};
+		CC25AB0D109ADA2629A7210F584FA6BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KinSDK;
+			target = AAB48EE90B7EF5D3B29CE418E4692839 /* KinSDK */;
+			targetProxy = F2659C2CE78C0DA0EA19781B1219ECB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		060AE537FF4C4181A622FF22C39A8A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0393CF224BDF245A0E2020E0039BF107 /* Sodium.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Sodium/Sodium-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Sodium/Sodium-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Sodium/Sodium.modulemap";
+				PRODUCT_MODULE_NAME = Sodium;
+				PRODUCT_NAME = Sodium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		07488D4657FB0A78086563621D425F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1677,7 +1716,7 @@
 			};
 			name = Debug;
 		};
-		1DFB0E9CB1B84B208574634A060DE0EB /* Debug */ = {
+		1DD24007421AB78E92F5404E613C6973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2EF7822F8002C6E703C05BFF2F75C42 /* KinUtil.xcconfig */;
 			buildSettings = {
@@ -1712,79 +1751,7 @@
 			};
 			name = Debug;
 		};
-		1FF6E85090F9EC1D8C9A60F1CA79D5F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0393CF224BDF245A0E2020E0039BF107 /* Sodium.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Sodium/Sodium-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Sodium/Sodium-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Sodium/Sodium.modulemap";
-				PRODUCT_MODULE_NAME = Sodium;
-				PRODUCT_NAME = Sodium;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		393DCDE1694D2F7FD287A9A6E25E0273 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2EF7822F8002C6E703C05BFF2F75C42 /* KinUtil.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KinUtil/KinUtil-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KinUtil/KinUtil-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/KinUtil/KinUtil.modulemap";
-				PRODUCT_MODULE_NAME = KinUtil;
-				PRODUCT_NAME = KinUtil;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5D30E28744259766895313C1FC00B27E /* Release */ = {
+		3A8D2B9B5FD48F842193895C473C073D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D88D04ECD75992ABB29DFA71CA52BD73 /* KinSDK.xcconfig */;
 			buildSettings = {
@@ -1820,9 +1787,9 @@
 			};
 			name = Release;
 		};
-		62CB6E04D7B3D6B1334A75279C494059 /* Debug */ = {
+		5289B797DF45598E4277367F43050B31 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0393CF224BDF245A0E2020E0039BF107 /* Sodium.xcconfig */;
+			baseConfigurationReference = D88D04ECD75992ABB29DFA71CA52BD73 /* KinSDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1833,8 +1800,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Sodium/Sodium-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Sodium/Sodium-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/KinSDK/KinSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KinSDK/KinSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1842,9 +1809,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/Sodium/Sodium.modulemap";
-				PRODUCT_MODULE_NAME = Sodium;
-				PRODUCT_NAME = Sodium;
+				MODULEMAP_FILE = "Target Support Files/KinSDK/KinSDK.modulemap";
+				PRODUCT_MODULE_NAME = KinSDK;
+				PRODUCT_NAME = KinSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1891,6 +1858,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		87DC90689F7DADBAF50BE2A3E49DADDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0393CF224BDF245A0E2020E0039BF107 /* Sodium.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Sodium/Sodium-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Sodium/Sodium-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Sodium/Sodium.modulemap";
+				PRODUCT_MODULE_NAME = Sodium;
+				PRODUCT_NAME = Sodium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		8E55008821F63085A87B470B208950A4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1990,6 +1993,77 @@
 			};
 			name = Release;
 		};
+		ADE4F8D8E9C8E63C425D3AE398B95840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule.modulemap";
+				PRODUCT_MODULE_NAME = KinBackupRestoreModule;
+				PRODUCT_NAME = KinBackupRestoreModule;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C2A07FD9E92AD8993A75745F40E2AAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule.modulemap";
+				PRODUCT_MODULE_NAME = KinBackupRestoreModule;
+				PRODUCT_NAME = KinBackupRestoreModule;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		C65A75774B23D24147CF3614923EDEC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E153A66CCCD5F052EF70883589ABB6AE /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */;
@@ -2064,9 +2138,9 @@
 			};
 			name = Debug;
 		};
-		CEC13964AF0083CF304A70F73DCFFC0F /* Release */ = {
+		CC91F86F6E43662FD9EEB14DA58291CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */;
+			baseConfigurationReference = C2EF7822F8002C6E703C05BFF2F75C42 /* KinUtil.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2077,18 +2151,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/KinUtil/KinUtil-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KinUtil/KinUtil-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule.modulemap";
-				PRODUCT_MODULE_NAME = KinBackupRestoreModule;
-				PRODUCT_NAME = KinBackupRestoreModule;
+				MODULEMAP_FILE = "Target Support Files/KinUtil/KinUtil.modulemap";
+				PRODUCT_MODULE_NAME = KinUtil;
+				PRODUCT_NAME = KinUtil;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2137,76 +2211,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		DDC32BAEC5C3A16547F93CF51E629126 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D88D04ECD75992ABB29DFA71CA52BD73 /* KinSDK.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KinSDK/KinSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KinSDK/KinSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/KinSDK/KinSDK.modulemap";
-				PRODUCT_MODULE_NAME = KinSDK;
-				PRODUCT_NAME = KinSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F1753B79AD0B8FDA356A50F8214482DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/KinBackupRestoreModule/KinBackupRestoreModule.modulemap";
-				PRODUCT_MODULE_NAME = KinBackupRestoreModule;
-				PRODUCT_NAME = KinBackupRestoreModule;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		F7DD6863B305D39BE8B03F51C2DFDB64 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2267,11 +2271,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B6C4FB2FE006FA90710019B4E1EA997 /* Build configuration list for PBXNativeTarget "KinBackupRestoreModule" */ = {
+		4B91FCB57592B269100113C094066A0F /* Build configuration list for PBXNativeTarget "KinUtil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1753B79AD0B8FDA356A50F8214482DF /* Debug */,
-				CEC13964AF0083CF304A70F73DCFFC0F /* Release */,
+				1DD24007421AB78E92F5404E613C6973 /* Debug */,
+				CC91F86F6E43662FD9EEB14DA58291CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2294,29 +2298,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB83D597E2871B21FA8A4AF2B37A1A3E /* Build configuration list for PBXNativeTarget "Sodium" */ = {
+		972BC656A1EE9D0030F22C3D43507DC0 /* Build configuration list for PBXNativeTarget "Sodium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				62CB6E04D7B3D6B1334A75279C494059 /* Debug */,
-				1FF6E85090F9EC1D8C9A60F1CA79D5F9 /* Release */,
+				060AE537FF4C4181A622FF22C39A8A76 /* Debug */,
+				87DC90689F7DADBAF50BE2A3E49DADDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD01364E5F59ED1871A517C7608AD521 /* Build configuration list for PBXNativeTarget "KinUtil" */ = {
+		F6033A2204DFAC54B4B01ACABDFFC375 /* Build configuration list for PBXNativeTarget "KinBackupRestoreModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DFB0E9CB1B84B208574634A060DE0EB /* Debug */,
-				393DCDE1694D2F7FD287A9A6E25E0273 /* Release */,
+				C2A07FD9E92AD8993A75745F40E2AAEC /* Debug */,
+				ADE4F8D8E9C8E63C425D3AE398B95840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F85437A28482DEB2DE3534C8A238E970 /* Build configuration list for PBXNativeTarget "KinSDK" */ = {
+		FC8902F457BAD227D5AC2A1E99D1FE38 /* Build configuration list for PBXNativeTarget "KinSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDC32BAEC5C3A16547F93CF51E629126 /* Debug */,
-				5D30E28744259766895313C1FC00B27E /* Release */,
+				5289B797DF45598E4277367F43050B31 /* Debug */,
+				3A8D2B9B5FD48F842193895C473C073D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -43,6 +43,40 @@ class PasswordEntryLabel: UILabel {
             attributedText = invalidAttributedString
         }
     }
+
+    // MARK: Size
+
+    private var instructionsHeight: CGFloat = 0
+    private var mismatchHeight: CGFloat = 0
+    private var invalidHeight: CGFloat = 0
+
+    private func syncSize() {
+        func height(with attributedString: NSAttributedString?) -> CGFloat {
+            let string = attributedString?.string ?? ""
+            let size = CGSize(width: bounds.width, height: .greatestFiniteMagnitude)
+            return ceil(string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil).height)
+        }
+
+        instructionsHeight = height(with: instructionsAttributedString)
+        mismatchHeight = height(with: mismatchAttributedString)
+        invalidHeight = height(with: invalidAttributedString)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        syncSize()
+    }
+
+    override var intrinsicContentSize: CGSize {
+        var size = super.intrinsicContentSize
+
+        for height in [instructionsHeight, mismatchHeight, invalidHeight] {
+            size.height = max(size.height, height)
+        }
+
+        return size
+    }
 }
 
 // MARK: - State
