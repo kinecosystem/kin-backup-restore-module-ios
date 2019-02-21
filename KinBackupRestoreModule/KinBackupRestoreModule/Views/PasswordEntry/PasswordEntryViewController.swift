@@ -48,7 +48,7 @@ class PasswordEntryViewController: ViewController {
         super.init(nibName: nil, bundle: nil)
 //        super.init(nibName: "PasswordEntryViewController", bundle: .backupRestore)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidChangeFrameNotification(_:)), name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrameNotification(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -91,12 +91,24 @@ class PasswordEntryViewController: ViewController {
     }
 
     @objc
-    private func keyboardDidChangeFrameNotification(_ notification: Notification) {
+    private func keyboardWillChangeFrameNotification(_ notification: Notification) {
         guard let frame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
             return
         }
 
-        _view.bottomLayoutGuideHeight.constant = frame.height
+        // iPhone X keyboard has a height when it's not displayed.
+        let bottomHeight = max(0, view.bounds.height - frame.origin.y - view.layoutMargins.bottom)
+
+        _view.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: bottomHeight, right: 0)
+
+        if view.window == nil {
+            _view.bottomLayoutHeight = bottomHeight
+        }
+        else {
+            UIView.animate(withDuration: 0.25) {
+                self._view.bottomLayoutHeight = bottomHeight
+            }
+        }
     }
 
     override func willMove(toParent parent: UIViewController?) {

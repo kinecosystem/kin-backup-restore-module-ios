@@ -12,11 +12,22 @@ class PasswordEntryView: UIScrollView {
     let passwordInfo = PasswordEntryLabel()
     let passwordInput1 = PasswordEntryTextField()
     let passwordInput2 = PasswordEntryTextField()
-    let confirmStackView = UIStackView()
+    private let confirmStackView = UIStackView()
     let confirmLabel = UILabel()
-    let confirmImageView = UIImageView()
+    private let confirmImageView = UIImageView()
     let doneButton = RoundButton()
-    let bottomLayoutGuideHeight: NSLayoutConstraint
+
+    private var contentLayoutGuideBottomConstraint: NSLayoutConstraint?
+    private var bottomLayoutHeightConstraint: NSLayoutConstraint?
+    var bottomLayoutHeight: CGFloat = 0 {
+        didSet {
+            let bottomOffset = layoutMargins.left
+            let bottomHeight = bottomLayoutHeight + bottomOffset
+
+            contentLayoutGuideBottomConstraint?.constant = -bottomHeight
+            bottomLayoutHeightConstraint?.constant = bottomHeight
+        }
+    }
 
     // MARK: Lifecycle
 
@@ -25,13 +36,15 @@ class PasswordEntryView: UIScrollView {
     }
 
     override init(frame: CGRect) {
-        let bottomLayoutView = UIView()
-        bottomLayoutGuideHeight = bottomLayoutView.heightAnchor.constraint(equalToConstant: 0)
-        bottomLayoutGuideHeight.isActive = true
-
         super.init(frame: frame)
 
         backgroundColor = .white
+
+        let contentLayoutGuide = UILayoutGuide()
+        addLayoutGuide(contentLayoutGuide)
+        contentLayoutGuide.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor).isActive = true
+        contentLayoutGuideBottomConstraint = contentLayoutGuide.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor)
+        contentLayoutGuideBottomConstraint?.isActive = true
 
         let contentView = UIStackView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,16 +54,26 @@ class PasswordEntryView: UIScrollView {
         contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor).isActive = true
         contentView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
+        let contentViewHeightConstraint = contentView.heightAnchor.constraint(lessThanOrEqualTo: contentLayoutGuide.heightAnchor)
+        contentViewHeightConstraint.priority = .defaultHigh
+        contentViewHeightConstraint.isActive = true
+
+        addArrangedVerticalLayoutSubview(to: contentView)
 
         passwordInfo.font = .preferredFont(forTextStyle: .body)
         passwordInfo.numberOfLines = 0
         passwordInfo.textAlignment = .center
+        passwordInfo.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(passwordInfo)
 
+        addArrangedVerticalLayoutSubview(to: contentView)
+
         passwordInput1.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordInput1.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(passwordInput1)
 
         passwordInput2.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordInput2.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(passwordInput2)
 
         confirmStackView.alignment = .center
@@ -62,27 +85,56 @@ class PasswordEntryView: UIScrollView {
         confirmImageView.layer.borderWidth = 1
         confirmImageView.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
         confirmImageView.layer.cornerRadius = 2
+        confirmImageView.setContentCompressionResistancePriority(.required, for: .vertical)
+        confirmStackView.addArrangedSubview(confirmImageView)
         confirmImageView.widthAnchor.constraint(equalToConstant: 18).isActive = true
         confirmImageView.heightAnchor.constraint(equalToConstant: 18).isActive = true
-        confirmStackView.addArrangedSubview(confirmImageView)
 
         confirmLabel.font = .preferredFont(forTextStyle: .footnote)
         confirmLabel.textColor = .kinBlueGreyTwo
         confirmLabel.numberOfLines = 0
-
+        confirmLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         confirmStackView.addArrangedSubview(confirmLabel)
 
+        addArrangedVerticalLayoutSubview(to: contentView)
+
         doneButton.isEnabled = false
+        doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(doneButton)
 
+        addArrangedVerticalLayoutSubview(to: contentView)
+
+        let bottomLayoutView = UIView()
         bottomLayoutView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(bottomLayoutView)
-        bottomLayoutView.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: contentView.spacing).isActive = true
+        bottomLayoutView.topAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         bottomLayoutView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        bottomLayoutHeightConstraint = bottomLayoutView.heightAnchor.constraint(equalToConstant: 0)
+        bottomLayoutHeightConstraint?.isActive = true
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: Layout
+
+    private var firstVerticalLayoutView: UIView?
+
+    private func addArrangedVerticalLayoutSubview(to stackView: UIStackView) {
+        let layoutView = UIView()
+        stackView.addArrangedSubview(layoutView)
+
+        if let firstVerticalLayoutView = firstVerticalLayoutView {
+            layoutView.heightAnchor.constraint(equalTo: firstVerticalLayoutView.heightAnchor).isActive = true
+        }
+        else {
+            firstVerticalLayoutView = layoutView
+
+            let layoutViewHeightConstraint = layoutView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1)
+            layoutViewHeightConstraint.priority = .defaultLow
+            layoutViewHeightConstraint.isActive = true
+        }
     }
 
     // MARK: Interaction
