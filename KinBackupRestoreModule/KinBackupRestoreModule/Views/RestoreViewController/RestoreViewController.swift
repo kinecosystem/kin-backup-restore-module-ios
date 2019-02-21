@@ -10,7 +10,7 @@ import UIKit
 
 @available(iOS 9.0, *)
 protocol RestoreViewControllerDelegate: NSObjectProtocol {
-    func restoreViewControllerDidImport(_ viewController: RestoreViewController, completion:@escaping (RestoreViewController.ImportResult) -> ())
+    func restoreViewControllerDidImport(_ viewController: RestoreViewController) -> RestoreViewController.ImportResult
     func restoreViewControllerDidComplete(_ viewController: RestoreViewController)
 }
 
@@ -96,11 +96,11 @@ class RestoreViewController: BRViewController {
         passwordInput.becomeFirstResponder()
     }
     
-    @IBAction func passwordInputChanges(_ sender: PasswordEntryField) {
-        doneButton.isEnabled = sender.hasText
+    @IBAction func passwordInputChanges(_ textField: PasswordEntryField) {
+        doneButton.isEnabled = textField.hasText
     }
     
-    @IBAction func doneButtonTapped(_ sender: RoundButton) {
+    @IBAction func doneButtonTapped(_ button: RoundButton) {
         guard !navigationItem.hidesBackButton else {
             // Button in mid transition
             return
@@ -112,30 +112,21 @@ class RestoreViewController: BRViewController {
             return
         }
         
-        sender.isEnabled = false
+        button.isEnabled = false
         navigationItem.hidesBackButton = true
         
-        delegate.restoreViewControllerDidImport(self) { [weak self] result in
-            guard let this = self else {
-                return
+        let importResult = delegate.restoreViewControllerDidImport(self)
+
+        if importResult == .success {
+            button.transitionToConfirmed { () -> () in
+                delegate.restoreViewControllerDidComplete(self)
             }
-            DispatchQueue.main.async {
-                if result == .success {
-                    
-                    sender.transitionToConfirmed { () -> () in
-                        this.delegate?.restoreViewControllerDidComplete(this)
-                    }
-                }
-                else {
-                    sender.isEnabled = true
-                    this.navigationItem.hidesBackButton = false
-                    this.presentErrorAlertController(result: result)
-                }
-            }
-            
         }
-        
-        
+        else {
+            button.isEnabled = true
+            navigationItem.hidesBackButton = false
+            presentErrorAlertController(result: importResult)
+        }
     }
     
     deinit {

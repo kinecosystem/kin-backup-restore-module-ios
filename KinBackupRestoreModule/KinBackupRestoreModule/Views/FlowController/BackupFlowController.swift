@@ -78,17 +78,27 @@ extension BackupFlowController {
 // MARK: - Password
 
 @available(iOS 9.0, *)
-extension BackupFlowController: PasswordEntryDelegate {
-    func validatePasswordConformance(_ password: String) -> Bool {
-        // TODO: use regex for string password
-        return true
-    }
-    
-    func passwordEntryViewControllerDidComplete(_ viewController: PasswordEntryViewController) {
-        guard let password = viewController.password else {
-            return
+extension BackupFlowController: PasswordEntryViewControllerDelegate {
+    func passwordEntryViewController(_ viewController: PasswordEntryViewController, validate password: String) -> Bool {
+        let digit = "(?=.*\\d)"
+        let lower = "(?=.*[a-z])"
+        let upper = "(?=.*[A-Z])"
+        let special = "(?=.*[-+_=!@#$%^&*()\\[\\]{}.,?<>~`|])"
+        let min = 9
+        let max = 20
+        let pattern = "^\(digit)\(lower)\(upper)\(special).{\(min),\(max)}$"
+
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            let results = regex.matches(in: password, range: NSRange(password.startIndex..., in: password))
+            return !results.isEmpty
         }
-        
+        catch {
+            return false
+        }
+    }
+
+    func passwordEntryViewControllerDidComplete(_ viewController: PasswordEntryViewController, with password: String) {
         do {
             pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
