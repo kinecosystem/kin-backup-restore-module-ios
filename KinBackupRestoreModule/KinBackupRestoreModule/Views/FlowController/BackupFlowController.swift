@@ -42,7 +42,8 @@ extension BackupFlowController: LifeCycleProtocol {
 // MARK: - Navigation
 
 extension BackupFlowController {
-    @objc private func pushPasswordViewController() {
+    @objc
+    private func pushPasswordViewController() {
         KinBackupRestoreBI.shared.delegate?.kinBackupStartButtonTapped()
 
         let viewController = PasswordEntryViewController()
@@ -51,23 +52,26 @@ extension BackupFlowController {
         viewController.lifeCycleDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
-    
-    @objc private func pushQRViewController(with qrString: String) {
+
+    @objc
+    private func pushQRViewController(with qrString: String) {
         let viewController = QRViewController(qrString: qrString)
         viewController.title = "kinecosystem_backup_qr_title".localized()
-        viewController.lifeCycleDelegate = self
         viewController.delegate = self
+        viewController.lifeCycleDelegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    @objc private func pushCompletedViewController() {
+    @objc
+    private func pushCompletedViewController() {
         let viewController = BackupCompletedViewController()
         viewController.lifeCycleDelegate = self
         viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(completedFlow))
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    @objc private func completedFlow() {
+    @objc
+    private func completedFlow() {
         delegate?.flowControllerDidComplete(self)
     }
 }
@@ -100,8 +104,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
         catch {
-            // TODO: what to do here
-            print(error)
+            viewController.presentErrorAlert()
         }
     }
 }

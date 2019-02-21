@@ -59,23 +59,41 @@ class QRViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinBackupQrCodePageViewed()
 
-        descriptionLabel.attributedText = "kinecosystem_backup_qr_description".localized().attributed(12, weight: .regular, color: .kinBlueGreyTwo)
+        descriptionLabel.text = "kinecosystem_backup_qr_description".localized()
+        descriptionLabel.font = .preferredFont(forTextStyle: .body)
+        descriptionLabel.textColor = .kinBlueGreyTwo
+
         qrImageView.image = QRController.generateImage(from: qrString, for: qrImageView.bounds.size)
+
         reminderImageView.tintColor = .kinWarning
-        reminderTitleLabel.attributedText = "kinecosystem_backup_reminder_title".localized().attributed(14, weight: .bold, color: .kinWarning)
-        reminderDescriptionLabel.attributedText = "kinecosystem_backup_reminder_description".localized().attributed(12, weight: .regular, color: .kinWarning)
+        reminderImageView.tintAdjustmentMode = .normal
+
+        reminderTitleLabel.text = "kinecosystem_backup_reminder_title".localized()
+        reminderTitleLabel.font = .preferredFont(forTextStyle: .callout, symbolicTraits: [.traitBold])
+        reminderTitleLabel.textColor = .kinWarning
+
+        reminderDescriptionLabel.text = "kinecosystem_backup_reminder_description".localized()
+        reminderDescriptionLabel.font = .preferredFont(forTextStyle: .footnote)
+        reminderDescriptionLabel.textColor = .kinWarning
+
         emailButton.setTitle("kinecosystem_backup_qr_email".localized(), for: .normal)
         emailButton.setTitleColor(.white, for: .normal)
         emailButton.backgroundColor = .kinPrimaryBlue
         emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
-        copiedQRLabel.attributedText = "kinecosystem_backup_qr_confirm".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
+
+        copiedQRLabel.text = "kinecosystem_backup_qr_confirm".localized()
+        copiedQRLabel.font = .preferredFont(forTextStyle: .body)
+        copiedQRLabel.textColor = .kinBlueGreyTwo
+
         confirmTick.layer.borderWidth = 1.0
         confirmTick.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
         confirmTick.layer.cornerRadius = 2.0
+
         tickStack.isHidden = true
         tickImage.isHidden = true
         
         if #available(iOS 11, *) {
+            // ???: why
             topSpace.constant = 0.0
             view.layoutIfNeeded()
         }

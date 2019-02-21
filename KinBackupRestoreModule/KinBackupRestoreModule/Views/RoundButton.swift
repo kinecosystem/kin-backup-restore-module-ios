@@ -20,6 +20,9 @@ class RoundButton: UIButton {
     }
     
     private func commonInit() {
+        setTitleColor(.white, for: .normal)
+        setTitleColor(UIColor(white: 1, alpha: 0.5), for: .highlighted)
+        
         layer.masksToBounds = true
     }
     
