@@ -37,7 +37,7 @@ class RestoreViewController: ViewController {
     
     private func commonInit() {
         loadViewIfNeeded()
-        title = "Restore Previous Wallet".localized() // TODO: 
+        title = "restore.title".localized()
     }
 
     deinit {
@@ -60,10 +60,10 @@ class RestoreViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
 
-        passwordInput.attributedPlaceholder = NSAttributedString(string: "kinecosystem_enter_password".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInput.attributedPlaceholder = NSAttributedString(string: "restore.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordInput.isSecureTextEntry = true
 
-        instructionsLabel.text = "kinecosystem_restore_instructions".localized()
+        instructionsLabel.text = "restore.description".localized()
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
         instructionsLabel.textColor = .kinBlueGreyTwo
 
@@ -150,16 +150,15 @@ extension RestoreViewController {
 
 extension RestoreViewController.ImportResult {
     var errorDescription: String? {
-        // TODO: get correct copy
         switch self {
         case .success:
             return nil
         case .wrongPassword:
-            return "The password is not correct."
+            return "restore.error.wrong_password".localized()
         case .invalidImage:
-            return "The QR image could not be identified."
+            return "restore.error.invalid_image".localized()
         case .internalIssue:
-            return "Something went wrong. Try again."
+            return "restore.error.internal_issue".localized()
         }
     }
 }
@@ -168,10 +167,8 @@ extension RestoreViewController.ImportResult {
 
 extension RestoreViewController {
     fileprivate func presentErrorAlertController(result: ImportResult) {
-        // TODO: get correct copy
-
-        let alertController = UIAlertController(title: "Try again", message: result.errorDescription, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
+        let alertController = UIAlertController(title: "restore.alert_error.title".localized(), message: result.errorDescription, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
     }
 }

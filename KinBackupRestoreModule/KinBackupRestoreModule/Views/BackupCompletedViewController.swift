@@ -18,16 +18,16 @@ class BackupCompletedViewController: ExplanationTemplateViewController {
 
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
 
-        titleLabel.text = "kinecosystem_backup_completed_title".localized()
+        titleLabel.text = "backup_completed.title".localized()
         titleLabel.font = .preferredFont(forTextStyle: .title1)
 
-        descriptionLabel.text = "kinecosystem_backup_completed_description".localized()
+        descriptionLabel.text = "backup_completed.description".localized()
         descriptionLabel.font = .preferredFont(forTextStyle: .body)
 
-        reminderTitleLabel.text = "kinecosystem_backup_reminder_title".localized()
+        reminderTitleLabel.text = "reminder.title".localized()
         reminderTitleLabel.font = .preferredFont(forTextStyle: .callout, symbolicTraits: [.traitBold])
 
-        reminderDescriptionLabel.text = "kinecosystem_backup_reminder_description".localized()
+        reminderDescriptionLabel.text = "reminder.description".localized()
         reminderDescriptionLabel.font = .preferredFont(forTextStyle: .footnote)
 
         continueButton.isHidden = true

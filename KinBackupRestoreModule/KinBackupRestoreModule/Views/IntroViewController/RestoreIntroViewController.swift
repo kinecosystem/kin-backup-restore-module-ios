@@ -22,10 +22,10 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
         KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodePageViewed()
 
         imageView.image = UIImage(named: "whiteQrCode", in: .backupRestore, compatibleWith: nil)
-        titleLabel.text = "kinecosystem_restore_intro_title".localized()
-        descriptionLabel.text = "kinecosystem_restore_intro_description".localized()
+        titleLabel.text = "restore_intro.title".localized()
+        descriptionLabel.text = "restore_intro.description".localized()
         reminderContainerView.isHidden = true
-        continueButton.setTitle("kinecosystem_restore_intro_continue".localized(), for: .normal)
+        continueButton.setTitle("restore_intro.next".localized(), for: .normal)
         continueButton.addTarget(self, action: #selector(continueAction), for: .touchUpInside)
     }
     
@@ -51,16 +51,16 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
     
     @objc
     private func presentAlertController() {
-        let title = "kinecosystem_restore_intro_alert_title".localized()
-        let message = "kinecosystem_restore_intro_alert_message".localized()
+        let title = "restore_intro.alert.title".localized()
+        let message = "restore_intro.alert.message".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "kinecosystem_ok".localized(), style: .default) { _ in
+        let continueAction = UIAlertAction(title: "generic.ok".localized(), style: .default) { _ in
             KinBackupRestoreBI.shared.delegate?.kinRestoreAreYouSureOkButtonTapped()
 
             self.canContinue = true
             self.delegate?.restoreIntroViewControllerDidComplete(self)
         }
-        alertController.addAction(UIAlertAction(title: "kinecosystem_cancel".localized(), style: .cancel) { _ in
+        alertController.addAction(UIAlertAction(title: "generic.cancel".localized(), style: .cancel) { _ in
             KinBackupRestoreBI.shared.delegate?.kinRestoreAreYouSureCancelButtonTapped()
         })
         alertController.addAction(continueAction)

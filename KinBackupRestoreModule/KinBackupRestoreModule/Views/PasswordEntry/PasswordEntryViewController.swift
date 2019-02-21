@@ -56,6 +56,8 @@ class PasswordEntryViewController: ViewController {
         super.init(nibName: nil, bundle: nil)
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrameNotification(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+
+        title = "password_entry.title".localized()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -71,29 +73,30 @@ class PasswordEntryViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordPageViewed()
 
-        passwordInfoLabel.instructionsAttributedString = NSAttributedString(string: "kinecosystem_password_instructions".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
-        passwordInfoLabel.mismatchAttributedString = NSAttributedString(string: "kinecosystem_password_mismatch".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
+        passwordInfoLabel.instructionsAttributedString = NSAttributedString(string: "password_entry.instructions".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInfoLabel.mismatchAttributedString = NSAttributedString(string: "password_entry.mismatch".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
         passwordInfoLabel.invalidAttributedString = {
-            let attributedString1 = NSAttributedString(string: "kinecosystem_password_invalid_warning".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
+            let attributedString1 = NSAttributedString(string: "password_entry.invalid_warning".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
 
-            let attributedString2 = NSAttributedString(string: "kinecosystem_password_invalid_info".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+            let attributedString2 = NSAttributedString(string: "password_entry.invalid_info".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
 
             let attributedString = NSMutableAttributedString()
             attributedString.append(attributedString1)
+            attributedString.append(NSAttributedString(string: "\n"))
             attributedString.append(attributedString2)
             return attributedString
         }()
 
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "kinecosystem_password".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.becomeFirstResponder()
 
-        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "kinecosystem_confirm_password".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password_confirm.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordConfirmTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
 
-        confirmLabel.text = "kinecosystem_password_confirmation".localized()
+        confirmLabel.text = "password_entry.confirmation".localized()
 
-        doneButton.setTitle("kinecosystem_next".localized(), for: .normal)
+        doneButton.setTitle("generic.next".localized(), for: .normal)
         doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
     }
 
@@ -196,10 +199,11 @@ class PasswordEntryViewController: ViewController {
 }
 
 extension PasswordEntryViewController {
-    func presentErrorAlert() {
-        // TODO: update copy
-        let alertController = UIAlertController(title: "That's strange", message: "An error occurred. Please try again.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
+    func presentErrorAlertController() {
+        let title = "password_entry.alert_error.title".localized()
+        let message = "password_entry.alert_error.message".localized()
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
     }
 }

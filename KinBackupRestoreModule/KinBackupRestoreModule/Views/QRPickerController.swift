@@ -43,7 +43,7 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
                 }
                 else {
                     DispatchQueue.main.async {
-                        self.presentImageError()
+                        self.presentImageErrorAlertController()
                     }
                 }
             }
@@ -51,16 +51,16 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
         else {
             // ???: are we already on the main thread?
             DispatchQueue.main.async {
-                self.presentImageError()
+                self.presentImageErrorAlertController()
             }
         }
     }
     
-    func presentImageError() {
-        let title = "QR not recognized".localized()
-        let message = "A QR code could not be detected in the image.".localized()
+    func presentImageErrorAlertController() {
+        let title = "qr_picker.alert_error.title".localized()
+        let message = "qr_picker.alert_error.message".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
+        alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         self.imagePickerController.present(alertController, animated: true)
     }
 }

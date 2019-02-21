@@ -12,7 +12,7 @@ extension AppId {
     init(network: Network) throws {
         switch network {
         case .testNet: try self.init("test")
-        case .mainNet: try self.init("test") // TODO:
+        case .mainNet: try self.init("test")
         default:       fatalError()
         }
     }

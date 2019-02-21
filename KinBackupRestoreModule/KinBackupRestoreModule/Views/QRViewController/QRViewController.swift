@@ -36,6 +36,8 @@ class QRViewController: ViewController {
         self.qrString = qrString
         super.init(nibName: "QRViewController", bundle: .backupRestore)
         loadViewIfNeeded()
+
+        title = "qr.title".localized()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -59,7 +61,7 @@ class QRViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinBackupQrCodePageViewed()
 
-        descriptionLabel.text = "kinecosystem_backup_qr_description".localized()
+        descriptionLabel.text = "qr.description".localized()
         descriptionLabel.font = .preferredFont(forTextStyle: .body)
         descriptionLabel.textColor = .kinBlueGreyTwo
 
@@ -68,20 +70,20 @@ class QRViewController: ViewController {
         reminderImageView.tintColor = .kinWarning
         reminderImageView.tintAdjustmentMode = .normal
 
-        reminderTitleLabel.text = "kinecosystem_backup_reminder_title".localized()
+        reminderTitleLabel.text = "reminder.title".localized()
         reminderTitleLabel.font = .preferredFont(forTextStyle: .callout, symbolicTraits: [.traitBold])
         reminderTitleLabel.textColor = .kinWarning
 
-        reminderDescriptionLabel.text = "kinecosystem_backup_reminder_description".localized()
+        reminderDescriptionLabel.text = "reminder.description".localized()
         reminderDescriptionLabel.font = .preferredFont(forTextStyle: .footnote)
         reminderDescriptionLabel.textColor = .kinWarning
 
-        emailButton.setTitle("kinecosystem_backup_qr_email".localized(), for: .normal)
+        emailButton.setTitle("qr.save".localized(), for: .normal)
         emailButton.setTitleColor(.white, for: .normal)
         emailButton.backgroundColor = .kinPrimaryBlue
         emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
 
-        copiedQRLabel.text = "kinecosystem_backup_qr_confirm".localized()
+        copiedQRLabel.text = "qr.saved".localized()
         copiedQRLabel.font = .preferredFont(forTextStyle: .body)
         copiedQRLabel.textColor = .kinBlueGreyTwo
 
@@ -129,7 +131,7 @@ class QRViewController: ViewController {
 
         tickMarked = !tickMarked
         tickImage.isHidden = !tickMarked
-        emailButton.setTitle((tickMarked ? "kinecosystem_next" : "kinecosystem_backup_qr_email").localized(), for: .normal)
+        emailButton.setTitle((tickMarked ? "generic.next" : "qr.save").localized(), for: .normal)
     }
 }
 
@@ -141,22 +143,20 @@ extension QRViewController {
         case critical
         
         var title: String {
-            // TODO: get correct copy
             switch self {
             case .noClient:
-                return "No email client"
+                return "qr.alert_no_client.title".localized()
             case .critical:
-                return "Something went wrong"
+                return "qr.alert_critical.title".localized()
             }
         }
         
         var message: String {
-            // TODO: get correct copy
             switch self {
             case .noClient:
-                return "You need to set up an email client first in the settings app."
+                return "qr.alert_no_client.message".localized()
             case .critical:
-                return "Try again."
+                return "qr.alert_critical.message".localized()
             }
         }
     }
@@ -171,26 +171,26 @@ extension QRViewController {
         KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeSendButtonTapped()
 
         guard MFMailComposeViewController.canSendMail() else {
-            presentEmailErrorAlert(.noClient)
+            presentEmailErrorAlertController(.noClient)
             return
         }
         
         guard let qrImage = QRController.generateImage(from: qrString), let data = qrImage.pngData() else {
-            presentEmailErrorAlert(.critical)
+            presentEmailErrorAlertController(.critical)
             return
         }
         
         let mailViewController = MFMailComposeViewController()
         mailViewController.mailComposeDelegate = self
-        mailViewController.setSubject("Kin Backup QR Code") // TODO: get correct copy
+        mailViewController.setSubject("qr.email.subject".localized())
         mailViewController.addAttachmentData(data, mimeType: "image/png", fileName: "qr.png")
         present(mailViewController, animated: true)
         self.mailViewController = mailViewController
     }
     
-    private func presentEmailErrorAlert(_ error: EmailError) {
+    private func presentEmailErrorAlertController(_ error: EmailError) {
         let alertController = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
+        alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
     }
 }
