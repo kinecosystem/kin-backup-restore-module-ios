@@ -22,9 +22,7 @@ class RestoreViewController: ViewController {
     @IBOutlet weak var doneButton: RoundButton!
     @IBOutlet weak var bottomSpace: NSLayoutConstraint!
     @IBOutlet weak var topSpace: NSLayoutConstraint!
-    
-    private let passwordInstructions = "kinecosystem_restore_instructions".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
-    private let passwordPlaceholder = "kinecosystem_enter_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
+
     private var kbObservers = [NSObjectProtocol]()
     
     init() {
@@ -62,9 +60,13 @@ class RestoreViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
 
-        passwordInput.attributedPlaceholder = passwordPlaceholder
+        passwordInput.attributedPlaceholder = NSAttributedString(string: "kinecosystem_enter_password".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordInput.isSecureTextEntry = true
-        instructionsLabel.attributedText = passwordInstructions
+
+        instructionsLabel.text = "kinecosystem_restore_instructions".localized()
+        instructionsLabel.font = .preferredFont(forTextStyle: .body)
+        instructionsLabel.textColor = .kinBlueGreyTwo
+
         doneButton.setTitleColor(.white, for: .normal)
         doneButton.isEnabled = false
 
