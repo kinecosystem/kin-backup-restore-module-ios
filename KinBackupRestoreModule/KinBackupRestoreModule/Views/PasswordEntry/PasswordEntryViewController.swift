@@ -199,10 +199,11 @@ class PasswordEntryViewController: ViewController {
 }
 
 extension PasswordEntryViewController {
-    func presentErrorAlert() {
-        // TODO: update copy
-        let alertController = UIAlertController(title: "That's strange", message: "An error occurred. Please try again.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
+    func presentErrorAlertController() {
+        let title = "password_entry.alert_error.title".localized()
+        let message = "password_entry.alert_error.message".localized()
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
     }
 }

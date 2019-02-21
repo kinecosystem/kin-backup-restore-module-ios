@@ -150,16 +150,15 @@ extension RestoreViewController {
 
 extension RestoreViewController.ImportResult {
     var errorDescription: String? {
-        // TODO: get correct copy
         switch self {
         case .success:
             return nil
         case .wrongPassword:
-            return "The password is not correct."
+            return "restore.error.wrong_password".localized()
         case .invalidImage:
-            return "The QR image could not be identified."
+            return "restore.error.invalid_image".localized()
         case .internalIssue:
-            return "Something went wrong. Try again."
+            return "restore.error.internal_issue".localized()
         }
     }
 }
@@ -168,9 +167,7 @@ extension RestoreViewController.ImportResult {
 
 extension RestoreViewController {
     fileprivate func presentErrorAlertController(result: ImportResult) {
-        // TODO: get correct copy
-
-        let alertController = UIAlertController(title: "Try again", message: result.errorDescription, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "restore.alert_error.title".localized(), message: result.errorDescription, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
     }

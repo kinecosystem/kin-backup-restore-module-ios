@@ -102,7 +102,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
         catch {
-            viewController.presentErrorAlert()
+            viewController.presentErrorAlertController()
         }
     }
 }
