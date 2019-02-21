@@ -47,7 +47,6 @@ extension BackupFlowController {
         KinBackupRestoreBI.shared.delegate?.kinBackupStartButtonTapped()
 
         let viewController = PasswordEntryViewController()
-        viewController.title = "kinecosystem_create_password".localized()
         viewController.delegate = self
         viewController.lifeCycleDelegate = self
         navigationController.pushViewController(viewController, animated: true)
@@ -56,7 +55,6 @@ extension BackupFlowController {
     @objc
     private func pushQRViewController(with qrString: String) {
         let viewController = QRViewController(qrString: qrString)
-        viewController.title = "kinecosystem_backup_qr_title".localized()
         viewController.delegate = self
         viewController.lifeCycleDelegate = self
         navigationController.pushViewController(viewController, animated: true)

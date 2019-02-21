@@ -37,7 +37,7 @@ class RestoreViewController: ViewController {
     
     private func commonInit() {
         loadViewIfNeeded()
-        title = "Restore Previous Wallet".localized() // TODO: 
+        title = "restore.title".localized()
     }
 
     deinit {
@@ -60,10 +60,10 @@ class RestoreViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
 
-        passwordInput.attributedPlaceholder = NSAttributedString(string: "kinecosystem_enter_password".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInput.attributedPlaceholder = NSAttributedString(string: "restore.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordInput.isSecureTextEntry = true
 
-        instructionsLabel.text = "kinecosystem_restore_instructions".localized()
+        instructionsLabel.text = "restore.description".localized()
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
         instructionsLabel.textColor = .kinBlueGreyTwo
 
@@ -171,7 +171,7 @@ extension RestoreViewController {
         // TODO: get correct copy
 
         let alertController = UIAlertController(title: "Try again", message: result.errorDescription, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
+        alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
     }
 }

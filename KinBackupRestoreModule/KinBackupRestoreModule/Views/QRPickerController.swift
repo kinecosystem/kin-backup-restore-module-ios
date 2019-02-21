@@ -60,7 +60,7 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
         let title = "QR not recognized".localized()
         let message = "A QR code could not be detected in the image.".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
+        alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         self.imagePickerController.present(alertController, animated: true)
     }
 }

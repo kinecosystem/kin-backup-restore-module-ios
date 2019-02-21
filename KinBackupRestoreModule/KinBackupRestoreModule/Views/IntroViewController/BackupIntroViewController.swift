@@ -15,9 +15,9 @@ class BackupIntroViewController: ExplanationTemplateViewController {
         KinBackupRestoreBI.shared.delegate?.kinBackupWelcomePageViewed()
 
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
-        titleLabel.text = "kinecosystem_backup_intro_title".localized()
-        descriptionLabel.text = "kinecosystem_backup_intro_description".localized()
-        continueButton.setTitle("kinecosystem_backup_intro_continue".localized(), for: .normal)
+        titleLabel.text = "backup_intro.title".localized()
+        descriptionLabel.text = "backup_intro.description".localized()
+        continueButton.setTitle("backup_intro.next".localized(), for: .normal)
         reminderContainerView.isHidden = true
     }
     

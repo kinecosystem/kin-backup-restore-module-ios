@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
@@ -92,7 +95,7 @@
                             </constraints>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="kinecosystem_next"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="generic.next"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="doneButtonTapped:" destination="-1" eventType="touchUpInside" id="lhM-IT-NwS"/>
