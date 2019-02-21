@@ -9,9 +9,9 @@
 import UIKit
 
 class PasswordEntryView: UIScrollView {
-    let passwordInfo = PasswordEntryLabel()
-    let passwordInput1 = PasswordEntryTextField()
-    let passwordInput2 = PasswordEntryTextField()
+    let passwordInfoLabel = PasswordEntryLabel()
+    let passwordTextField = PasswordEntryTextField()
+    let passwordConfirmTextField = PasswordEntryTextField()
     private let confirmStackView = UIStackView()
     let confirmLabel = UILabel()
     private let confirmImageView = UIImageView()
@@ -31,11 +31,7 @@ class PasswordEntryView: UIScrollView {
 
     // MARK: Lifecycle
 
-    convenience init() {
-        self.init(frame: .zero)
-    }
-
-    override init(frame: CGRect) {
+    required override init(frame: CGRect) {
         super.init(frame: frame)
 
         backgroundColor = .white
@@ -60,21 +56,21 @@ class PasswordEntryView: UIScrollView {
 
         addArrangedVerticalLayoutSubview(to: contentView)
 
-        passwordInfo.font = .preferredFont(forTextStyle: .body)
-        passwordInfo.numberOfLines = 0
-        passwordInfo.textAlignment = .center
-        passwordInfo.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(passwordInfo)
+        passwordInfoLabel.font = .preferredFont(forTextStyle: .body)
+        passwordInfoLabel.numberOfLines = 0
+        passwordInfoLabel.textAlignment = .center
+        passwordInfoLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        contentView.addArrangedSubview(passwordInfoLabel)
 
         addArrangedVerticalLayoutSubview(to: contentView)
 
-        passwordInput1.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        passwordInput1.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(passwordInput1)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordTextField.setContentCompressionResistancePriority(.required, for: .vertical)
+        contentView.addArrangedSubview(passwordTextField)
 
-        passwordInput2.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        passwordInput2.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(passwordInput2)
+        passwordConfirmTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordConfirmTextField.setContentCompressionResistancePriority(.required, for: .vertical)
+        contentView.addArrangedSubview(passwordConfirmTextField)
 
         confirmStackView.alignment = .center
         confirmStackView.spacing = contentView.spacing
@@ -159,6 +155,6 @@ class PasswordEntryView: UIScrollView {
     }
 
     func updateDoneButton() {
-        doneButton.isEnabled = passwordInput1.hasText && passwordInput2.hasText && confirmImageView.isHighlighted
+        doneButton.isEnabled = passwordTextField.hasText && passwordConfirmTextField.hasText && confirmImageView.isHighlighted
     }
 }

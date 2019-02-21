@@ -10,26 +10,27 @@
 		008F1FDB3D64A2A5476A7FC6A386964B /* KeyExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46039CF600963F80F96150728B318779 /* KeyExchange.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		03236DB1E8741CA8586FA3DDEB78A542 /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = F181B85EE8801FA54045D388531D135B /* crypto_sign_edwards25519sha512batch.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		034A4CCB36CC6ADCA2778B5391222916 /* StellarOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF497AD21CE29EDB447EF2D08498BF2F /* StellarOps.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		03C4951029D9D08F228CDD071757B6F0 /* UIStatusBarStyle+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3187C84C37B5DDB02C0641779F050C /* UIStatusBarStyle+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		05D9467F7FD3570A1F0E0E12733B90B3 /* crypto_box_curve25519xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1FC1484F52F8BBECE26976FF9E168A /* crypto_box_curve25519xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		08C2E7385C950950C35CCB90B878471C /* crypto_core_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = F8ED904291547E3C3EB571C44D753148 /* crypto_core_salsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		092D1CA6CD6E046CE68250EDED313247 /* KinAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEC552374CD16F0C04DD6D1EE722AB /* KinAccounts.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0B4494E58267B147D9A6E888F90F040E /* crypto_stream_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B55682420DA94BB7D7CE841E65C8433 /* crypto_stream_salsa2012.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0D359E0746BF73F6CDB1D68692E63A4A /* PasswordEntryViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 49BF19B8DB3E64E904957310F0E843C1 /* PasswordEntryViewController.xib */; };
-		0DE59CB931BE6063D342011E8E68AA59 /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658ABA7D2FCBAC79CBA293AE68AE69A5 /* RestoreIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0BD7ED0D5977E81B6EEC93AEF3DF628C /* ExplanationTemplateViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8908341872E1B40AE6AECED11E75918F /* ExplanationTemplateViewController.xib */; };
 		0E46114FDFD49625ECB525924E1DA367 /* PWHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D1B41B9DC0AD8042A8BDBC551CCE4 /* PWHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0FAADC40EBB117E66AD3DD0024B1FD95 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC437C4471DB5FD746167FF8C5A50948 /* Auth.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		10A4D035E264DF5520143DCD94CC2732 /* Sodium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB93C39035708C1FDB462E9CC53968D /* Sodium-dummy.m */; };
 		13BD84A67632413A854145BC480918F3 /* WrappedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28244DE6A38F08A60897657E0C347FE3 /* WrappedData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		13FDEB350E88D9FD77664293E39530C5 /* SecretKeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C462420AF8B018903A0417C370EB5D3 /* SecretKeyGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		171BA6AEA9EF7ACB12E3198D76876A59 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1199B0B4BAEF3774ACBE53C67CEEE /* QRViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		17EE5C120F98742F3BA073901C35E898 /* crypto_pwhash_scryptsalsa208sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C0FC483E87FEA8E41564EC55311A92 /* crypto_pwhash_scryptsalsa208sha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		18EF38B85CC8C177073E5DE250933D41 /* QRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76291E8DCC8E607A31AC203B9C88C274 /* QRController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		19B89D9EFDA4A25164973A7DFA5DF99C /* KinTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7120844D3F27F64B40FD4B524D9A17 /* KinTypes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		19F16122266D7A148AFFB5DF512CC08A /* Pods-KinBackupRestoreModuleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF4F876D394695E769D0C53687DD745 /* Pods-KinBackupRestoreModuleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ABDC214057867C30B8E943CEDB1651A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59D1776460ACDFD0AFBC83A790EFFA /* Transaction.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1E42C08D310B994DA8B43D42202D34BF /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FCB5A9AC390D0C7E5E01611C3F73E /* RestoreFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1E441C59A4DC56142D12EBC8D0B7A6F4 /* Pods-KinBackupRestoreModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E717AA7918D3E4C19E7F6E83AD328DD7 /* Pods-KinBackupRestoreModule-dummy.m */; };
-		1F7A5C9E6A7FA944593E5D9435413560 /* UIStatusBarStyle+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B493373C2B1036CB1D895C3A121F7A /* UIStatusBarStyle+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		236F1D99C6D1DC98BA822F26CAFBBC5A /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732E95D9D49F25516B719B6ACC2322F /* Sign.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		24E4819F10C164276704965FD8D936C0 /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77312CD3694A862F3593ACA72384CE /* PasswordEntryViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		23DB1F4D3382CD3B4C3C6F03161A0CC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F7A86D278AE66D6F4EF2D423269A /* ViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		247F78597F4709D59BE01999091EE7BB /* QRViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = BA658725D1822BD2C008C13C7A59A874 /* QRViewController.xib */; };
 		275A1057450CFDD3B507B95E052CEB97 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4900C7E88D5DE3A4A63E2BE63DCA43 /* PublicKey.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2ADF6704CA2078BDEC4890115DA0AEBD /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939FE205AA46974B5BE72A891F33C72D /* KeyStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2BDA541B31FC6A434590E574CC5222A1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C412678114D5CC39A38C08D3B8789B /* Utils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -39,85 +40,89 @@
 		2F9C0911FF845BC8339D27AEF47D2297 /* crypto_aead_chacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A117FB977E7AB4AF1C4B1190BE040A3 /* crypto_aead_chacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		313651E2A4B5F9C2C4FDCF61D120EFA0 /* crypto_verify_64.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F19794E8CF9B4B5AB179942F15A8B6 /* crypto_verify_64.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		31A6B8123B101C965DB40AFE7F5AC51B /* GenericHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB89BDC7E565D3510973E732A6FBFF9 /* GenericHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		31B226683449DB4DAC8A9DEB88B9B728 /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689E5E2B10220776B1CBFB51F1FC7CFA /* Bundle+BackupRestore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		31EF64455F729168ED4769126650F98B /* randombytes_sysrandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D02C17A3CE0F03BF826B974D76CD6E1 /* randombytes_sysrandom.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		32FC2AE64A4811E86CCCB1A80006B6ED /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481C23EE33B02BB76D91E179DEE657D8 /* RestoreFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		350A7773F012C8AE674C586CB0371A95 /* crypto_core_hchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = 275F36C0D2E2CA14932E43DDA494FABE /* crypto_core_hchacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		35C23D304FA3E65151FCAE26CF86DDA9 /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B6AE45775E42217AA4523D974315B2 /* KinBackupRestoreManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		37983B8EEE9A6D7FFA0DC9DA04BBCB0E /* crypto_aead_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBD843EF965538515C30BA86727F3AC /* crypto_aead_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		38C8E71A7E3C244FA273CA0BA7C30953 /* crypto_box_curve25519xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AE407E64BA8F4A5CE7631806FFA84247 /* crypto_box_curve25519xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3A28B03D36BBC170BFAF440CFED22571 /* crypto_scalarmult_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F9F9A69754992C9B9381F6E7F9E597 /* crypto_scalarmult_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3AEA4B56C3391128D02DE52F80F37B40 /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE795D5BD88534CB9B7B9BF6AA6B61 /* BackupCompletedViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3C234D1AB531CAF339EDA440C678A3C9 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2731322323CF24E29C19CDD8C27BC2 /* core.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3F8BF282A837A4539C034EC446C8E3A2 /* crypto_secretbox_xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DE8BEC75248157EF7A0F709BA5585E /* crypto_secretbox_xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		400DC2FDDB1E1F2153DC624519FDBA77 /* runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FAE392179508F8D905B8960CE2F15AB /* runtime.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4083E064C0AAD20EEE967D13DAD7307C /* crypto_core_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB65BDB10DDFDE0B5AF0EB63DF8A3D2 /* crypto_core_salsa208.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4098DC21338B9774CCE1E16B7E220971 /* crypto_kdf_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EBA67C2C7B749013B22A1A6C479B49 /* crypto_kdf_blake2b.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		40D4922028F80156E9ED757B1DE7078D /* crypto_sign_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A948C46258D2F3B427E9B1737B29944 /* crypto_sign_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		423B5FC1B9F9128D345B9841E1221175 /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7324BB9B4DBC771A676EDBA0FF8FC /* UINavigationBar+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4582D7AD63F27BF0AC33D8961BDDA146 /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97465FB5BDB3938BE79CA098567953F /* QRPickerController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		43D2AF80DCCB6EAC6F1185CD9E92F2F1 /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB60130732695F89B7A2085EC50822 /* PasswordEntryView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4A7241E587AA4828BAE51115CB58C3A7 /* crypto_stream_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = 9690DC31B857F1DF50C236BAFFB29023 /* crypto_stream_salsa208.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4BD64D64D72825EDB684921C21A227C3 /* crypto_onetimeauth.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE0662EE1EA24BF6F1BA931C0F284E1 /* crypto_onetimeauth.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4BFE58135D557B582BFD7D8F2A0DBEBC /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DF554D03CC1E98246C7BEBEB5C3F1 /* Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4CDCB244457F0B63968250D546DC7918 /* PasswordEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809865BC2E3649CA217C7C374BCEB116 /* PasswordEntryTextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4DAAD4D57CC2A5294D5EFFE8AC887B86 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03C22DA49F7EC6C220A15BD3FDBD93B /* FlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4DDEE4D2EAC0F7075BF808964FBD2F07 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204121E44F36D824C73D778EB3F06C9A /* FlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4E97869CA0AFAD9D20C63E5F1F09F58F /* RestoreViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2E37809F97A15BC6CCA69E42485FD274 /* RestoreViewController.xib */; };
 		4EBAFD90D41B5640DB9775AC7C814A5A /* crypto_generichash_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B00BCDA3E84C7560CC43E472547AC8B /* crypto_generichash_blake2b.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4F0517C6665C24753BB4A6C8D11E749C /* crypto_secretbox.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D3AD982E44C5EA9A61878F06F299E3 /* crypto_secretbox.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		50C31F12B92E24B3E02BE791DAA1E9CE /* crypto_auth_hmacsha512.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A4BFE4F82D6DC1D51FE70D8EC1A0E0 /* crypto_auth_hmacsha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		513208F6BD8630C41631B7DE6566334B /* crypto_auth_hmacsha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 105B5BA79B2515CC9B113972183EB9A3 /* crypto_auth_hmacsha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5192B57490F4B4BF522E1405A6C3BB8B /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF80E839998AF3A15F79E731B63C4D /* Bundle+BackupRestore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		529F50CA29FF079AA84A94627CA0B896 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C0432393488A2FD4CF91D1D4A572B8 /* KeychainSwiftAccessOptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		544C813ADFE15C1640D7D3864F9A1902 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C6D1B618AEFB25A54D8DBA1C083BA /* String+Localization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		560BDB1B9C57518F20B1F068D26A3C0C /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60058F3ACBB74003C9A79424D65E02 /* ExplanationTemplateViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		56975C197C98F734E99E628FFF3B3EF3 /* crypto_generichash.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CF450A600AB4BCB02157E318A50B55 /* crypto_generichash.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		57086255F5BCED3DDB1118CE6916DC44 /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E249FF9BA02732BA480CF840BBC7F /* UIFont+PreferredFont.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		57832EB5C2128A4F3C4F695C08528130 /* ExitCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4729D2D0E9090AB44276607266B4179C /* ExitCode.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		57A631ACE796C5B0718186FB27145BEE /* crypto_shorthash_siphash24.h in Headers */ = {isa = PBXBuildFile; fileRef = 198D1A13F198F51D9460BF2537C4D974 /* crypto_shorthash_siphash24.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		57BE54EA1D750C3DC7ED06FB1DBA9BB6 /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4165F7EB593C1A8909F7477CD8FE15 /* BackupIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		58C70D452A7129BC509C59BF8B6012BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
-		59960788AC228A561774845BFE8393AC /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858F7CBD4205D1BA52157562129CC405 /* RestoreViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		59F375EB1B52DF4847D0B53571BCDDDF /* ShortHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9C7836FE9BEB24A2B8F0196D5220F /* ShortHash.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5B4A6015BE6280AE0C34D8A4658F2ABE /* TxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B751FC1EE632290120F2867E07FD627 /* TxBuilder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5D3711F1685B4DD8C42B0D33B819C905 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DFCBEA0BA47362E543F2AA2E453F6E4 /* export.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5D73567741FD4DB0C964FA819908B689 /* KinClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44B1AE8526F8A813B8D5DB933F28294 /* KinClient.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		605E056A51D76722748AC6D238F8E15D /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A3A6158A0A3BFFD179042C41BDD4D /* RestoreViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		62455964BE0B9A517DE0E3B605D30262 /* sodium_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8906264CE4D2500475FCEAD13B0B797E /* sodium_lib.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		62989D5995FE63566C8EB0E4359D8429 /* StellarErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F1611617826F369A73C6327F0B7D7 /* StellarErrors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		62BD11A962F43D078739E0BE46174E87 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF038731B8359034F24B3C92B85296 /* Errors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6494A7A2A9A35B72B2EFA950C446454D /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D2419124EF5CC42108C88E020DC179 /* KeychainSwift.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		650E02F5F8939DB965CCC05B42E1583D /* KinBackupRestoreBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743D30081D9CB5FBCF36236F4F1EA979 /* KinBackupRestoreBI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		66136258AB3830A0E57C66409B7F7508 /* KinBackupRestoreModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA197237643F2DFF5EF9618315BA66 /* KinBackupRestoreModule-dummy.m */; };
+		662950E11A9E09992644047A668188B0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F70A92CCD0B358DAB8823F121AD134 /* RoundButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		678A279D7D17EFF47556C3E29756157F /* crypto_hash_sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BCAC823752BF14FF1A8A6F190F6D47 /* crypto_hash_sha256.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		67F4E8670E7D0117C6CB60A97C5EDCA4 /* Pods-KinBackupRestoreModuleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AF2151C39E856D39610D2832FEF37F /* Pods-KinBackupRestoreModuleTests-dummy.m */; };
-		68F79200E71931CF7A5F97289FE104A3 /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCFD33DB087FE062550E64AEC70783 /* PasswordEntryLabel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		69405DB1DFCCD4D865624D98D8A74BC1 /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BF3DD7AC15DE7790BF7D14787E9B8 /* Notification+Convenience.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		69F9132E6AD2097F76372BE2F9F783AD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0711A3E6FD8122693D4A690E46130 /* Network.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6A1E2D2CCE70E1BB93A517F3E0DD05FC /* randombytes.h in Headers */ = {isa = PBXBuildFile; fileRef = DF16A71EA7DC2D801A6F41689A62371D /* randombytes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6B317FCCE14ED18176C4F5D939C73E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
 		6D6B4CA081C3C40A73354CF29B6ADB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
 		6E89549EEC45B308DAFF6DCBB51544A3 /* crypto_stream_xsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD5B0ABDA5B06CBD192F73FC6D08916 /* crypto_stream_xsalsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6EA5AE4C621C36C3C2055A082E762EFE /* WhitelistEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C02C8187C40A2ED917C291C78C9CE3 /* WhitelistEnvelope.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6F1504DEDE2FCA529862B5FC2C7C9D85 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8332DFE7F64A7848541A0AEB628B6 /* Animations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6FD8F69991C4730DF891830411258F8E /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B8E4DCECD771117F640CF163E9D7DB /* KeyDerivation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6FF2374C89A883451A4ADE42E96097E3 /* Sodium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6DFB73F735C9FD7A3D43F57D2672C /* Sodium.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		72F259401659DE21DA8A815BB327EBFA /* crypto_auth_hmacsha512256.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3EDD69C6B01C1ABCD445A32EA6A7EB /* crypto_auth_hmacsha512256.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7413D30558E90295B2605828B43BCBEA /* NonceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3106D7A86CC4538B951A266069BF44F /* NonceGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		75482781BB57493632BC5665EB8F8527 /* Pods-KinBackupRestoreModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BFE1F25CC438B8A9C5F904360F05C72 /* Pods-KinBackupRestoreModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7897D84B94547EA4A1C4C97978C17431 /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5156CDD73CEEC26021447BDBEC3423 /* UIColor+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7995F24CDC5C648250BDEA5D82F41BAC /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12510A42BFA6FD3C5DD934ACD3CC396C /* Sodium.framework */; };
 		7A5E5D9D449D15848B11E72C0F9CCE4B /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = C189A42088D3D36865FABEC6D0D1E7FD /* crypto_hash_sha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7AB902682D13694DF8EFD6951F548792 /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525484B0EA8D1DF6A1E51F2D49D2C546 /* SHA256.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7B728D741CA6EBA6BF1DC92474831549 /* Watches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC5596E45D6C1F88244BD9ED98DF49 /* Watches.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C6081B945AAC145B15CE00C8C82522B /* KinUtil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B32DD64880C094C5F2D650B2CDEF908B /* KinUtil-dummy.m */; };
 		7E4348C59ED51178380F50C4B1AFE853 /* crypto_shorthash.h in Headers */ = {isa = PBXBuildFile; fileRef = E97C2911FA878B9ECCC34B6E5935CDA4 /* crypto_shorthash.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7E58BE379468DC02B6F8A7CF06BE9C3D /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C24A4088FCF337FE4E058375AF21B85 /* BackupIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7F92F8A1A0D3C011E628CC07F0C4B70D /* crypto_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 46ADD5135642B01F2A72891DFBFB483A /* crypto_auth.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		80D5EBA762D29A1BDC1218E37D27E4CE /* QRViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1D41DF26AE93F4904E4C6F26345FF3F8 /* QRViewController.xib */; };
+		80258AE4A903C808608451D333CDCF47 /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EFFBCB7D981C74F716080E0D662D21 /* LifeCycleProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		80FE6B4317447A3BB9ADAB0E63F9C136 /* SecretStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509FDF1AD525FE8840F4EF505FDB6C /* SecretStream.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		833D28F7C00EC34DB192397A3DD84FA4 /* RestoreViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = D40657C6982693B700962EE08B968226 /* RestoreViewController.xib */; };
 		835BB6EF303946D6023F572B6FABDA93 /* crypto_core_hsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F65FC11C5C3839C380654DE1DF08ED /* crypto_core_hsalsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		83C8780CADD839D17825F27C0D6836CC /* crypto_secretbox_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = C3841848800F3EDD5B897A94AC22EC74 /* crypto_secretbox_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		843018C80387B1C18FC5D80A71296048 /* crypto_scalarmult_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B04C6AB51C34F7C1ABCC66C00F83108 /* crypto_scalarmult_curve25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8470E24B774967C80D47FEC5748C3EA6 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7927C798878572455112AB411BDB26 /* Observables.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		852E7123B6CBCC8F389463F75FDCE549 /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B802BF7C265A1CFD3F03477B7015BBB1 /* LifeCycleProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		85B83F79BA00705853A2E04F6AEA7C7D /* crypto_pwhash_argon2id.h in Headers */ = {isa = PBXBuildFile; fileRef = BA512E9F00453665C885C6FB996D0407 /* crypto_pwhash_argon2id.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8752832C9929C286F60631AED883205D /* crypto_aead_aes256gcm.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1B3BDB4532E5AB81121F806ED5C44F /* crypto_aead_aes256gcm.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		87555A5B8A9F1A636BE2BA812D1F016A /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D9E5587EC92E8EF262310CDEF98A5 /* Operation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		891A74D8B8A7FC97E45062901F6DFE57 /* KinBackupRestoreModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC6D4F3B0724720D4F205A29EAC89199 /* KinBackupRestoreModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		891A74D8B8A7FC97E45062901F6DFE57 /* KinBackupRestoreModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F43CAC1F5D01823FC6B4C516617985C /* KinBackupRestoreModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		896440C64CF77E967C7CB4263CB6ED9C /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95835FCCA477F2701A021F5D3C9E87DD /* BackupFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		89F6E79288642A96327450246DEDF85D /* Sodium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8BE451FA26D446E87AB76F6660A2C05 /* Sodium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A3BC6869021848BF06884FEFF9163A8 /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE48B9BF4E13DA91BD9E02862B548D /* UINavigationBar+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8B49E0161750933B4912CB88E41022C9 /* KinSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7971AF55D8181A48301F06EBC06FA /* KinSDK-dummy.m */; };
-		8B66BB82A2C0AF245F3A2EB53DD74C1F /* KinBackupRestoreModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAE9E649BD991F81F4ECADC787A56EC /* KinBackupRestoreModule-dummy.m */; };
 		8C07E91CA386ADD44FBA8A4080D79A76 /* crypto_stream_xchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9773F7C05C35EB2822F9D13D02600967 /* crypto_stream_xchacha20.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		90DFA52F436E5D76CE3E084E81961944 /* KinUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6445F6F3B5409DD9C8C04B06412E58 /* KinUtil.framework */; };
-		93AE694F6D526C0518A16AA889CC9577 /* ExplanationTemplateViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = FF8369AE2758A8FE79FC829A37508306 /* ExplanationTemplateViewController.xib */; };
 		9475FE01C19D427CF42BB66A4722B5B6 /* RandomBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78F8364743D84F11AA839BE8087729 /* RandomBytes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		947C47E72D6975A81B44EB49EDD39282 /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D4A82B880FAFA5E0233EC1217D2E5 /* Bytes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9638936FC271F7C249A402C89482FCDC /* XDRCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA928262D9505D43B94BD1A25ED7B3A /* XDRCodable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -125,7 +130,7 @@
 		96D36CCA7C2A3EE373DAF655C1795697 /* BCKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B02B430245FD3B03E55ED2ACC918843 /* BCKeyUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		98F3B84B5EB88E66109558B60E15A97D /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8D50C94B738AF5925E7EF437F5123 /* String+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9990AA15473A2DD018967C53D5C62D34 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0D0936DD5DEC269E50EE37DBCF93B /* Ledger.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9D057CDCAC516300F3E02550EBED549F /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9909B29E7337B862FF02D1C6881B7 /* PasswordEntryView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9BB888DE6F00FE39AF7480B158CFEBE4 /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDE49A416F526D574171ECC1A6FF234 /* PasswordEntryLabel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9D766CCAFD6B92DF526988C292573824 /* StellarEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B389A2741882637103891DC4AB066 /* StellarEventSource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9D7DE53F5EE5B4291BB0D74A5D33926B /* crypto_box.h in Headers */ = {isa = PBXBuildFile; fileRef = F1287F3AA284335626EF7FE6BB387629 /* crypto_box.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9E93104ABAC6F30B6698E8E309C317F0 /* crypto_core_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = D409B2779EA351A4329773D2D64FC367 /* crypto_core_salsa2012.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -133,25 +138,26 @@
 		A0F9C58E0EB504F34FB163E0DBA21B72 /* crypto_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E95036741F113E76AEE2DE52BD37E44 /* crypto_stream.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A32F4B2DA2FD7E410FAE9D459B165B54 /* crypto_onetimeauth_poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 5823DECA9057E912A4BB34DD3E4C57D9 /* crypto_onetimeauth_poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A4350DF5C1B20F48625BB540BB7C470C /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568C33B08994A91E08DF25E3A1EB046D /* TegKeychainConstants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A57106A8AC2BD6EA58DF6425725898EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE221B9AA218EA11BC4040D79168484 /* Assets.xcassets */; };
-		A5E226B9B2B5ED47853DA5525962E64F /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71A5BA05947373081BA72933F29222 /* KinBackupRestoreManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A57106A8AC2BD6EA58DF6425725898EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66609D07C1897C995932D9C52B41FFAA /* Assets.xcassets */; };
 		A6497A5647E48C05A4E57C64E5FF8C98 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA531D63A968BFDACAF45DB50D2B46E /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A6E4E29C00D261DDA771F696D0FC71D3 /* KinBackupRestoreBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B0B9D7E4637184FA97B560C3A3E3C /* KinBackupRestoreBI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A6F144CD446BF06AEB8E0AAF7C8614F2 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3DEA7DF71EF65B29655519147A3AB9 /* Curry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A94CE3953E8541176BAD28F0AE62E807 /* Data+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1BF23DB1B760F63D144B045612C53 /* Data+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AAA4AA7E93442C3CE7C2AD57CA1288FF /* KinAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF5747E77D336CBD7349023D33291E /* KinAccount.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ABF86F7448EC7911A6B21D416AA6328B /* QRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1B5720CCC5638EBB8CB48A2DD564 /* QRController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AC34195B864AE31D5C5593BB08F24956 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
 		AE0201DB5E77EE20B3BF8F1A2C484D26 /* crypto_hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 55402EC8DEA4780D3C633B3BB8211A8C /* crypto_hash.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AE370464292D5E8C9A16DB5A146DF18A /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B828B90DF67C0BD980C9717601EC4D /* PasswordEntryViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B257CCEAAEF34D84D0DB1C0B258DCC79 /* Stellar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1429278CD9C85C3534F6FF182AB235 /* Stellar.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B4870BB3DBC14CDE3F1D827F8E1FC46B /* KeyPairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804D5F58E0678FB77EDAEBDF7DB17E9 /* KeyPairProtocol.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B569D3D0A4CBED9AB9F2526EC3C17E83 /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = 076EA1ED52BF3B0396F8FB1A7C562B02 /* crypto_sign.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B6334ADF5437FE15F2FEDC825579FF44 /* KinUtil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4793BF9C97E9041C3862D6563B76D5 /* KinUtil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6E2CFD0B91C2A5C4006CDB5ACB4FCDB /* randombytes_salsa20_random.h in Headers */ = {isa = PBXBuildFile; fileRef = 2259FCBFFE97F7D14D017BACF446DA64 /* randombytes_salsa20_random.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B8BC8ECB4D5C56547AE126A89AF1C92E /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 110C958272055AF651FFBF1499551D1F /* Localizable.strings */; };
-		BDAAB9D761DFD016E0E64E640BBD10EE /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07DE3C2829F95448E30AF2A774B8EF /* Animations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BB4E583494472841E294B5ED499D7BFF /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 610D3C15F7127EC1F5FDACE0A2AEEBB7 /* Localizable.strings */; };
+		BD14248253C0B6861C21903092F897C7 /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5A9168360C112802756ECEFF75496 /* RestoreIntroViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BE09D39FAC037255E5A2B941C21DC22E /* Sodium.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9572D9F352DDC57908E08594C5CB8A /* Sodium.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF1B5DCC9A6D2ED22C24056A6908273A /* Aead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEA403627AFCEA2A93798A798C701D3 /* Aead.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BF67993C605FCBC92801665CF2D092FB /* Array+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1A0F976CFBB802647BEB015015A91 /* Array+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C2A1833E56459DC9662384B7EC7B0C70 /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD2CDA03CC1B7E965835FB70A81CB1 /* BackupCompletedViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C3424369A41E99A6B699F9C2022FF718 /* crypto_core_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 465C51002B9D310533AD6CF090CEC885 /* crypto_core_ed25519.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4A4BBBACB9165C324AA52DC31652CD3 /* StellarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C671F006AADCDAE588C786207B6C5B /* StellarUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C5292ADF8585350680B50FF1CB33538A /* KeyPairGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542B53C37C2D0E6940A1A5ACBB406ED /* KeyPairGenerator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -162,21 +168,14 @@
 		C7D6BB48F917B4B14BCECD8EE9C4BC7F /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61C90A727B1CAEDB3A0381C10637F06 /* KinSDK.framework */; };
 		CA5C07D7E8A013889ACB5BDD81BF975B /* KinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1E2BC7B7F545A1536579BE9229DF9 /* KinError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CD65AC5AA75363A939DE24303D76662A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F4A4F44EE9C5ABAD128E264F981EB9 /* Observable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CEFE637B53FDAED4F2DA106CA87B19A4 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416D38356D7134C2234FE2540A0E8D0 /* String+Localization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CF1FDBBDB5BF60E45D2F57625AEBB57A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE2E76365459E89BD634E9A0236D9E /* Foundation.framework */; };
 		D232A6502389CC05B1CA10578138052D /* KinSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B90B9220D14279690ADB6F6D7663A44 /* KinSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3376EFAE2E0D9EF3967F957F1CA598A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0948741E23F3CC003AACC8B5BFF213 /* Endpoint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D3F2AE4EAA04AF5D5AC6B2584257851E /* crypto_kdf.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BF86855F16C91D08618FF0F751CF79 /* crypto_kdf.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D839F09363638C8FC93508D2DE274563 /* Watchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748670FB7D212CE757594738A7EAA3B /* Watchers.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9083C00636E4BAFEAFBD4CFF20A4E8E /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC678B2A64F60E2FDDC7509E56A5991 /* utils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D98277644ED3CCEF9940DC7E407C48BD /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA630C143D1538F2E11496C2CC3A3F40 /* BackupFlowController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DA3FA09B7730957B8E009DD544CFCE14 /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2D144D038C2D246CE50D82B205539 /* ExplanationTemplateViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DB7D76958E72DC25383E0F1A07031BC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5BC30D2934B42826E8CB9AD19EF8B /* ViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DBAB7FC1B5B66382E6AFA13CE3235880 /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3FB95944540C6ADF769F4777677C3 /* UIColor+Appearance.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E1B8AFCA847ED7952A20CB781650B6F0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7894D385164267A63A0892B2329A3D /* RoundButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9561CDE198D224A8D6671851C4A5D6F /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD57E1A9A041FE57732925CD97D626 /* QRPickerController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E290D7BB427282510B7EB8173C01370F /* Pods-KinBackupRestoreSampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 885AB77A5D52C6BA2471D80CAAC8B225 /* Pods-KinBackupRestoreSampleApp-dummy.m */; };
-		E58437F769E3AE97F872DFCB78920E2F /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E23D8E4B51573A12DE127B3311BCB2 /* UIFont+PreferredFont.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EDAD7B985C1CB93F5E825028E9DDB4AC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C135FFBB4007CB6884D2045297F7616 /* QRViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EDFDB125C67DC49D3625A88BC662D744 /* crypto_secretstream_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = 8034E60B02C91A05F6292746B0AE3568 /* crypto_secretstream_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F1B65FC61F5D30D4C144303E6E81ADF3 /* Pods-KinBackupRestoreSampleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA54A8E759AC6DAC946A99E26B7805C /* Pods-KinBackupRestoreSampleApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1F73378BBBEDB8D5A668729EA35B6FC /* HorizonResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B3857A5E1B5BD1E7AED3951E870B76 /* HorizonResponses.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -185,6 +184,7 @@
 		F77262C06AE339D5DCB10A67BD687AD1 /* StellarResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2165C8F08A5ED6346CCE9AD33387B /* StellarResults.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F7A5FD4D7A9E34B5D31294A67609E8B0 /* crypto_pwhash_argon2i.h in Headers */ = {isa = PBXBuildFile; fileRef = FBD49A9373B3ABD5523A994C3DDF0F1C /* crypto_pwhash_argon2i.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F84BCC277B9CB3FBF34B713BBAC2018A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BEE0D0F6E60420FE0CDA5F9ECBFF30 /* Utility.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FA3159F899B54B43B7A89C6BC034D713 /* PasswordEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B8B4A2E8A189AB0A1F5940BCACB7E /* PasswordEntryTextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FBC8D12E738D2061403751F630F9B256 /* crypto_stream_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E3815DFB4479ADC36CD5354E0D3C449 /* crypto_stream_salsa20.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FC37810FDD76C0AA60A8BDF7D3127851 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BFC85CCEA566121A7E6550B51B7BF2 /* Operations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FD2198831259C3C9E57D76CEAE8BCC54 /* Data+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F5444C7BA8C936FD06D14521636FD /* Data+extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -286,15 +286,18 @@
 		0870E1448071EB1DC539A366A8033CD9 /* crypto_core_curve25519.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_core_curve25519.h; path = Sodium/libsodium/crypto_core_curve25519.h; sourceTree = "<group>"; };
 		09631D3338424A7C434A8078A78277FB /* KinUtil-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinUtil-prefix.pch"; sourceTree = "<group>"; };
 		0AB728DD42F9E781294FDFDE1F59A0B3 /* Pods-KinBackupRestoreModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KinBackupRestoreModule.modulemap"; sourceTree = "<group>"; };
+		0BB1199B0B4BAEF3774ACBE53C67CEEE /* QRViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		0C6445F6F3B5409DD9C8C04B06412E58 /* KinUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KinUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EA3FB95944540C6ADF769F4777677C3 /* UIColor+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
 		0F78F8364743D84F11AA839BE8087729 /* RandomBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomBytes.swift; path = Sodium/RandomBytes.swift; sourceTree = "<group>"; };
 		105B5BA79B2515CC9B113972183EB9A3 /* crypto_auth_hmacsha256.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_auth_hmacsha256.h; path = Sodium/libsodium/crypto_auth_hmacsha256.h; sourceTree = "<group>"; };
-		110C958272055AF651FFBF1499551D1F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = KinBackupRestoreModule/KinBackupRestoreModule/Localizable.strings; sourceTree = "<group>"; };
+		108ED0E05F1930263C044CAF29EBA18F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		11F19794E8CF9B4B5AB179942F15A8B6 /* crypto_verify_64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_verify_64.h; path = Sodium/libsodium/crypto_verify_64.h; sourceTree = "<group>"; };
 		120B389A2741882637103891DC4AB066 /* StellarEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarEventSource.swift; path = KinSDK/KinSDK/source/blockchain/StellarEventSource.swift; sourceTree = "<group>"; };
 		12510A42BFA6FD3C5DD934ACD3CC396C /* Sodium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sodium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DE12AA329F4E4F1E54F7602770E407 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sodium/Box.swift; sourceTree = "<group>"; };
+		138A3A6158A0A3BFFD179042C41BDD4D /* RestoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
+		13DF80E839998AF3A15F79E731B63C4D /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
+		149CE1925BAB3B1DB489B70B0791D7C9 /* KinBackupRestoreModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KinBackupRestoreModule.modulemap; sourceTree = "<group>"; };
 		14AF038731B8359034F24B3C92B85296 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = KinSDK/KinSDK/source/blockchain/Errors.swift; sourceTree = "<group>"; };
 		16BE5A8E2527DA930315AEA5BE26AC05 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KinBackupRestoreModuleTests.release.xcconfig"; sourceTree = "<group>"; };
 		17BCAC823752BF14FF1A8A6F190F6D47 /* crypto_hash_sha256.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_hash_sha256.h; path = Sodium/libsodium/crypto_hash_sha256.h; sourceTree = "<group>"; };
@@ -304,13 +307,13 @@
 		190AFF9ACC63BEDE5DA0019D43A2BC0C /* Pods-KinBackupRestoreModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KinBackupRestoreModule.debug.xcconfig"; sourceTree = "<group>"; };
 		198D1A13F198F51D9460BF2537C4D974 /* crypto_shorthash_siphash24.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_shorthash_siphash24.h; path = Sodium/libsodium/crypto_shorthash_siphash24.h; sourceTree = "<group>"; };
 		1B90B9220D14279690ADB6F6D7663A44 /* KinSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinSDK-umbrella.h"; sourceTree = "<group>"; };
-		1C135FFBB4007CB6884D2045297F7616 /* QRViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
-		1D41DF26AE93F4904E4C6F26345FF3F8 /* QRViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
 		1DCF68BEBC843A827B2DA1612BC1DFD8 /* Pods-KinBackupRestoreModuleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreModuleTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1ECCFD33DB087FE062550E64AEC70783 /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
+		1F63F7A86D278AE66D6F4EF2D423269A /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FDD9879555F5939669C817AF170B856 /* Pods-KinBackupRestoreModule-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreModule-acknowledgements.plist"; sourceTree = "<group>"; };
+		204121E44F36D824C73D778EB3F06C9A /* FlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		2259FCBFFE97F7D14D017BACF446DA64 /* randombytes_salsa20_random.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = randombytes_salsa20_random.h; path = Sodium/libsodium/randombytes_salsa20_random.h; sourceTree = "<group>"; };
 		22C6382435693625570D8969C8280836 /* SecretBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecretBox.swift; path = Sodium/SecretBox.swift; sourceTree = "<group>"; };
+		22F70A92CCD0B358DAB8823F121AD134 /* RoundButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		23509FDF1AD525FE8840F4EF505FDB6C /* SecretStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecretStream.swift; path = Sodium/SecretStream.swift; sourceTree = "<group>"; };
 		23E0205F55B8E730F0308A69925EFFD0 /* Pods-KinBackupRestoreModule-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KinBackupRestoreModule-acknowledgements.markdown"; sourceTree = "<group>"; };
 		245E0E00236D422B0ACFDB8318C6EFA0 /* Asset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = KinSDK/KinSDK/source/blockchain/types/Asset.swift; sourceTree = "<group>"; };
@@ -322,12 +325,17 @@
 		29268A30076A6CF51A73B4A0642FD175 /* crypto_verify_16.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_verify_16.h; path = Sodium/libsodium/crypto_verify_16.h; sourceTree = "<group>"; };
 		29B8E4DCECD771117F640CF163E9D7DB /* KeyDerivation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyDerivation.swift; path = Sodium/KeyDerivation.swift; sourceTree = "<group>"; };
 		2D0948741E23F3CC003AACC8B5BFF213 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = KinSDK/KinSDK/source/blockchain/Endpoint.swift; sourceTree = "<group>"; };
+		2D4165F7EB593C1A8909F7477CD8FE15 /* BackupIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
+		2D5201EB99279380B36150AC1E3D6E98 /* KinBackupRestoreModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KinBackupRestoreModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2D60058F3ACBB74003C9A79424D65E02 /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
 		2DE2165C8F08A5ED6346CCE9AD33387B /* StellarResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarResults.swift; path = KinSDK/KinSDK/source/blockchain/StellarResults.swift; sourceTree = "<group>"; };
-		3416D38356D7134C2234FE2540A0E8D0 /* String+Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		2E37809F97A15BC6CCA69E42485FD274 /* RestoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = RestoreViewController.xib; sourceTree = "<group>"; };
 		349903E4C17A98E3DDA32CA0D2599599 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Sodium/Stream.swift; sourceTree = "<group>"; };
+		35BE795D5BD88534CB9B7B9BF6AA6B61 /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
 		3BEA403627AFCEA2A93798A798C701D3 /* Aead.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Aead.swift; path = Sodium/Aead.swift; sourceTree = "<group>"; };
 		3C462420AF8B018903A0417C370EB5D3 /* SecretKeyGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecretKeyGenerator.swift; path = Sodium/Generators/SecretKeyGenerator.swift; sourceTree = "<group>"; };
 		3D02C17A3CE0F03BF826B974D76CD6E1 /* randombytes_sysrandom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = randombytes_sysrandom.h; path = Sodium/libsodium/randombytes_sysrandom.h; sourceTree = "<group>"; };
+		3D1B8B4A2E8A189AB0A1F5940BCACB7E /* PasswordEntryTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryTextField.swift; sourceTree = "<group>"; };
 		3F1429278CD9C85C3534F6FF182AB235 /* Stellar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stellar.swift; path = KinSDK/KinSDK/source/blockchain/Stellar.swift; sourceTree = "<group>"; };
 		400799685C5FB86B585AB37A97D54CBB /* crypto_pwhash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_pwhash.h; path = Sodium/libsodium/crypto_pwhash.h; sourceTree = "<group>"; };
 		42EBA67C2C7B749013B22A1A6C479B49 /* crypto_kdf_blake2b.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_kdf_blake2b.h; path = Sodium/libsodium/crypto_kdf_blake2b.h; sourceTree = "<group>"; };
@@ -336,13 +344,12 @@
 		46ADD5135642B01F2A72891DFBFB483A /* crypto_auth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_auth.h; path = Sodium/libsodium/crypto_auth.h; sourceTree = "<group>"; };
 		47290E11518D2246EF32EBE933F5E3DC /* libsodium-ios.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libsodium-ios.a"; path = "Sodium/libsodium/libsodium-ios.a"; sourceTree = "<group>"; };
 		4729D2D0E9090AB44276607266B4179C /* ExitCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExitCode.swift; path = Sodium/ExitCode.swift; sourceTree = "<group>"; };
-		481C23EE33B02BB76D91E179DEE657D8 /* RestoreFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
-		49BF19B8DB3E64E904957310F0E843C1 /* PasswordEntryViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PasswordEntryViewController.xib; sourceTree = "<group>"; };
 		4B751FC1EE632290120F2867E07FD627 /* TxBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TxBuilder.swift; path = KinSDK/KinSDK/source/blockchain/TxBuilder.swift; sourceTree = "<group>"; };
 		4BA928262D9505D43B94BD1A25ED7B3A /* XDRCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XDRCodable.swift; path = KinSDK/KinSDK/source/blockchain/XDRCodable/XDRCodable.swift; sourceTree = "<group>"; };
 		4C7927C798878572455112AB411BDB26 /* Observables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observables.swift; path = KinUtil/KinUtil/source/Observables.swift; sourceTree = "<group>"; };
+		4CAA197237643F2DFF5EF9618315BA66 /* KinBackupRestoreModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KinBackupRestoreModule-dummy.m"; sourceTree = "<group>"; };
 		4D4900C7E88D5DE3A4A63E2BE63DCA43 /* PublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublicKey.swift; path = KinSDK/KinSDK/source/blockchain/types/PublicKey.swift; sourceTree = "<group>"; };
-		4DE221B9AA218EA11BC4040D79168484 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets; sourceTree = "<group>"; };
+		4E6E249FF9BA02732BA480CF840BBC7F /* UIFont+PreferredFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFont.swift"; sourceTree = "<group>"; };
 		4E95036741F113E76AEE2DE52BD37E44 /* crypto_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream.h; path = Sodium/libsodium/crypto_stream.h; sourceTree = "<group>"; };
 		4EB93C39035708C1FDB462E9CC53968D /* Sodium-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Sodium-dummy.m"; sourceTree = "<group>"; };
 		4FAE392179508F8D905B8960CE2F15AB /* runtime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = runtime.h; path = Sodium/libsodium/runtime.h; sourceTree = "<group>"; };
@@ -352,11 +359,13 @@
 		51E1E2BC7B7F545A1536579BE9229DF9 /* KinError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinError.swift; path = KinSDK/KinSDK/source/KinError.swift; sourceTree = "<group>"; };
 		51E2F70B66410DC4E0ECE246518DC9DF /* KinUtil.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KinUtil.modulemap; sourceTree = "<group>"; };
 		525484B0EA8D1DF6A1E51F2D49D2C546 /* SHA256.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA256.swift; path = "KinSDK/KinSDK/source/third-party/SHA256.swift"; sourceTree = "<group>"; };
+		52B828B90DF67C0BD980C9717601EC4D /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
 		53F0711A3E6FD8122693D4A690E46130 /* Network.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Network.swift; path = KinSDK/KinSDK/source/Network.swift; sourceTree = "<group>"; };
 		540F1611617826F369A73C6327F0B7D7 /* StellarErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarErrors.swift; path = KinSDK/KinSDK/source/blockchain/StellarErrors.swift; sourceTree = "<group>"; };
 		55402EC8DEA4780D3C633B3BB8211A8C /* crypto_hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_hash.h; path = Sodium/libsodium/crypto_hash.h; sourceTree = "<group>"; };
 		55AF2151C39E856D39610D2832FEF37F /* Pods-KinBackupRestoreModuleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KinBackupRestoreModuleTests-dummy.m"; sourceTree = "<group>"; };
 		568C33B08994A91E08DF25E3A1EB046D /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = "KinSDK/KinSDK/source/third-party/keychain-swift/KeychainSwift/TegKeychainConstants.swift"; sourceTree = "<group>"; };
+		57F8332DFE7F64A7848541A0AEB628B6 /* Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		57FF5747E77D336CBD7349023D33291E /* KinAccount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinAccount.swift; path = KinSDK/KinSDK/source/KinAccount.swift; sourceTree = "<group>"; };
 		5823DECA9057E912A4BB34DD3E4C57D9 /* crypto_onetimeauth_poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_onetimeauth_poly1305.h; path = Sodium/libsodium/crypto_onetimeauth_poly1305.h; sourceTree = "<group>"; };
 		58F4A4F44EE9C5ABAD128E264F981EB9 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = KinUtil/KinUtil/source/Observable.swift; sourceTree = "<group>"; };
@@ -366,65 +375,64 @@
 		5B02B430245FD3B03E55ED2ACC918843 /* BCKeyUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BCKeyUtils.swift; path = KinSDK/KinSDK/source/blockchain/BCKeyUtils.swift; sourceTree = "<group>"; };
 		5EE7971AF55D8181A48301F06EBC06FA /* KinSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KinSDK-dummy.m"; sourceTree = "<group>"; };
 		60B3857A5E1B5BD1E7AED3951E870B76 /* HorizonResponses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizonResponses.swift; path = KinSDK/KinSDK/source/blockchain/HorizonResponses.swift; sourceTree = "<group>"; };
+		610D3C15F7127EC1F5FDACE0A2AEEBB7 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = KinBackupRestoreModule/KinBackupRestoreModule/Localizable.strings; sourceTree = "<group>"; };
 		6179673BF3F33C94BC99C7CA1CA8410D /* Pods_KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KinBackupRestoreModule.framework; path = "Pods-KinBackupRestoreModule.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CF450A600AB4BCB02157E318A50B55 /* crypto_generichash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_generichash.h; path = Sodium/libsodium/crypto_generichash.h; sourceTree = "<group>"; };
 		637F5444C7BA8C936FD06D14521636FD /* Data+extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+extensions.swift"; path = "KinUtil/KinUtil/source/extensions/Data+extensions.swift"; sourceTree = "<group>"; };
 		63BFC85CCEA566121A7E6550B51B7BF2 /* Operations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operations.swift; path = KinSDK/KinSDK/source/blockchain/types/Operations.swift; sourceTree = "<group>"; };
-		64B493373C2B1036CB1D895C3A121F7A /* UIStatusBarStyle+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIStatusBarStyle+Appearance.swift"; sourceTree = "<group>"; };
-		658ABA7D2FCBAC79CBA293AE68AE69A5 /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
-		689E5E2B10220776B1CBFB51F1FC7CFA /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
+		66609D07C1897C995932D9C52B41FFAA /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets; sourceTree = "<group>"; };
 		6B00BCDA3E84C7560CC43E472547AC8B /* crypto_generichash_blake2b.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_generichash_blake2b.h; path = Sodium/libsodium/crypto_generichash_blake2b.h; sourceTree = "<group>"; };
 		6B55682420DA94BB7D7CE841E65C8433 /* crypto_stream_salsa2012.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_salsa2012.h; path = Sodium/libsodium/crypto_stream_salsa2012.h; sourceTree = "<group>"; };
 		6B7120844D3F27F64B40FD4B524D9A17 /* KinTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinTypes.swift; path = KinSDK/KinSDK/source/KinTypes.swift; sourceTree = "<group>"; };
+		6B7BF3DD7AC15DE7790BF7D14787E9B8 /* Notification+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
 		6D0A88A03472DF1BAAB893E6C6FD507C /* Pods_KinBackupRestoreModuleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KinBackupRestoreModuleTests.framework; path = "Pods-KinBackupRestoreModuleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F1E78A66C86C63EA9D48346CA6CD81C /* Pods-KinBackupRestoreModuleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KinBackupRestoreModuleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7147A3D97C3528375B3A50EE05E2A4F3 /* crypto_verify_32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_verify_32.h; path = Sodium/libsodium/crypto_verify_32.h; sourceTree = "<group>"; };
 		722E9F8B7493BDDE91769333BD53AF47 /* Pods-KinBackupRestoreSampleApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreSampleApp-Info.plist"; sourceTree = "<group>"; };
-		743D30081D9CB5FBCF36236F4F1EA979 /* KinBackupRestoreBI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinBackupRestoreBI.swift; path = KinBackupRestoreModule/KinBackupRestoreModule/KinBackupRestoreBI.swift; sourceTree = "<group>"; };
+		72B6AE45775E42217AA4523D974315B2 /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinBackupRestoreManager.swift; path = KinBackupRestoreModule/KinBackupRestoreModule/KinBackupRestoreManager.swift; sourceTree = "<group>"; };
 		746D492AF43E0EBE67218B182B474B89 /* KinUtil-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KinUtil-Info.plist"; sourceTree = "<group>"; };
-		76291E8DCC8E607A31AC203B9C88C274 /* QRController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRController.swift; sourceTree = "<group>"; };
 		77B30E995A3044484C3E2D6FE2F38C01 /* KinUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KinUtil.framework; path = KinUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C9C7836FE9BEB24A2B8F0196D5220F /* ShortHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShortHash.swift; path = Sodium/ShortHash.swift; sourceTree = "<group>"; };
-		78E23D8E4B51573A12DE127B3311BCB2 /* UIFont+PreferredFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFont.swift"; sourceTree = "<group>"; };
-		7C24A4088FCF337FE4E058375AF21B85 /* BackupIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
+		7ACE48B9BF4E13DA91BD9E02862B548D /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
 		7CBD843EF965538515C30BA86727F3AC /* crypto_aead_xchacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_aead_xchacha20poly1305.h; path = Sodium/libsodium/crypto_aead_xchacha20poly1305.h; sourceTree = "<group>"; };
 		7F3DEA7DF71EF65B29655519147A3AB9 /* Curry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Curry.swift; path = KinUtil/KinUtil/source/Curry.swift; sourceTree = "<group>"; };
 		8034E60B02C91A05F6292746B0AE3568 /* crypto_secretstream_xchacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_secretstream_xchacha20poly1305.h; path = Sodium/libsodium/crypto_secretstream_xchacha20poly1305.h; sourceTree = "<group>"; };
-		809865BC2E3649CA217C7C374BCEB116 /* PasswordEntryTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryTextField.swift; sourceTree = "<group>"; };
 		8116FFE360A409A9B34594F6F3493B79 /* crypto_kx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_kx.h; path = Sodium/libsodium/crypto_kx.h; sourceTree = "<group>"; };
 		81A0DDCE5E447E7A6B5650F4466C323E /* KinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KinSDK.framework; path = KinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83687D25E677B168133F703674877700 /* Pods-KinBackupRestoreSampleApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KinBackupRestoreSampleApp.modulemap"; sourceTree = "<group>"; };
-		841E4FEA020AF146F2BAFE1F41B72F12 /* KinBackupRestoreModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinBackupRestoreModule-prefix.pch"; sourceTree = "<group>"; };
-		858F7CBD4205D1BA52157562129CC405 /* RestoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
 		86D5BCDC70EAEFFE24D5A5B2F1620DDD /* Pods-KinBackupRestoreModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreModule-Info.plist"; sourceTree = "<group>"; };
 		873A2C52C8288E5B0BCA5917E2BD6465 /* KeyUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyUtils.swift; path = KinSDK/KinSDK/source/KeyUtils.swift; sourceTree = "<group>"; };
 		880D9E5587EC92E8EF262310CDEF98A5 /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = KinSDK/KinSDK/source/blockchain/types/Operation.swift; sourceTree = "<group>"; };
 		885AB77A5D52C6BA2471D80CAAC8B225 /* Pods-KinBackupRestoreSampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KinBackupRestoreSampleApp-dummy.m"; sourceTree = "<group>"; };
 		8906264CE4D2500475FCEAD13B0B797E /* sodium_lib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sodium_lib.h; path = Sodium/libsodium/sodium_lib.h; sourceTree = "<group>"; };
+		8908341872E1B40AE6AECED11E75918F /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
+		891B0B9D7E4637184FA97B560C3A3E3C /* KinBackupRestoreBI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinBackupRestoreBI.swift; path = KinBackupRestoreModule/KinBackupRestoreModule/KinBackupRestoreBI.swift; sourceTree = "<group>"; };
 		89A4BFE4F82D6DC1D51FE70D8EC1A0E0 /* crypto_auth_hmacsha512.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_auth_hmacsha512.h; path = Sodium/libsodium/crypto_auth_hmacsha512.h; sourceTree = "<group>"; };
+		8A7C6D1B618AEFB25A54D8DBA1C083BA /* String+Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		8AF4F876D394695E769D0C53687DD745 /* Pods-KinBackupRestoreModuleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KinBackupRestoreModuleTests-umbrella.h"; sourceTree = "<group>"; };
 		8B04C6AB51C34F7C1ABCC66C00F83108 /* crypto_scalarmult_curve25519.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_scalarmult_curve25519.h; path = Sodium/libsodium/crypto_scalarmult_curve25519.h; sourceTree = "<group>"; };
 		8B4793BF9C97E9041C3862D6563B76D5 /* KinUtil-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinUtil-umbrella.h"; sourceTree = "<group>"; };
 		8B711A3A1363357E8659DA68B11797AD /* Sodium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Sodium.framework; path = Sodium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C07DE3C2829F95448E30AF2A774B8EF /* Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		8C8D4A82B880FAFA5E0233EC1217D2E5 /* Bytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bytes.swift; path = Sodium/Bytes.swift; sourceTree = "<group>"; };
 		8E9572D9F352DDC57908E08594C5CB8A /* Sodium.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sodium.h; path = Sodium/Sodium.h; sourceTree = "<group>"; };
-		8F216C5B89457984C8CE02E26921FA8A /* KinBackupRestoreModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KinBackupRestoreModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		90B9909B29E7337B862FF02D1C6881B7 /* PasswordEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
+		8F43CAC1F5D01823FC6B4C516617985C /* KinBackupRestoreModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinBackupRestoreModule-umbrella.h"; sourceTree = "<group>"; };
+		8F4DB93C1DFB8822F706085B5B5A1B03 /* KinBackupRestoreModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KinBackupRestoreModule-Info.plist"; sourceTree = "<group>"; };
+		8F5156CDD73CEEC26021447BDBEC3423 /* UIColor+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
 		92A6DFB73F735C9FD7A3D43F57D2672C /* Sodium.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sodium.swift; path = Sodium/Sodium.swift; sourceTree = "<group>"; };
 		92D2419124EF5CC42108C88E020DC179 /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = "KinSDK/KinSDK/source/third-party/keychain-swift/KeychainSwift/KeychainSwift.swift"; sourceTree = "<group>"; };
 		939FE205AA46974B5BE72A891F33C72D /* KeyStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyStore.swift; path = KinSDK/KinSDK/source/KeyStore.swift; sourceTree = "<group>"; };
 		94BEE0D0F6E60420FE0CDA5F9ECBFF30 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = KinUtil/KinUtil/source/Utility.swift; sourceTree = "<group>"; };
+		95835FCCA477F2701A021F5D3C9E87DD /* BackupFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
 		9690DC31B857F1DF50C236BAFFB29023 /* crypto_stream_salsa208.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_salsa208.h; path = Sodium/libsodium/crypto_stream_salsa208.h; sourceTree = "<group>"; };
 		9773F7C05C35EB2822F9D13D02600967 /* crypto_stream_xchacha20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_xchacha20.h; path = Sodium/libsodium/crypto_stream_xchacha20.h; sourceTree = "<group>"; };
 		984E0B699E3F021C4800FB34CDA038BB /* Pods-KinBackupRestoreModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KinBackupRestoreModule.release.xcconfig"; sourceTree = "<group>"; };
 		9A117FB977E7AB4AF1C4B1190BE040A3 /* crypto_aead_chacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_aead_chacha20poly1305.h; path = Sodium/libsodium/crypto_aead_chacha20poly1305.h; sourceTree = "<group>"; };
+		9A3187C84C37B5DDB02C0641779F050C /* UIStatusBarStyle+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIStatusBarStyle+Appearance.swift"; sourceTree = "<group>"; };
 		9AD5B0ABDA5B06CBD192F73FC6D08916 /* crypto_stream_xsalsa20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_xsalsa20.h; path = Sodium/libsodium/crypto_stream_xsalsa20.h; sourceTree = "<group>"; };
 		9BFE1F25CC438B8A9C5F904360F05C72 /* Pods-KinBackupRestoreModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KinBackupRestoreModule-umbrella.h"; sourceTree = "<group>"; };
 		9CDBAC887A82BC0CE2B5F579CDEE8EBD /* Pods-KinBackupRestoreSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KinBackupRestoreSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DB65BDB10DDFDE0B5AF0EB63DF8A3D2 /* crypto_core_salsa208.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_core_salsa208.h; path = Sodium/libsodium/crypto_core_salsa208.h; sourceTree = "<group>"; };
-		9DDD409DE12781ED9B9BAA8B80B074A6 /* KinBackupRestoreModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KinBackupRestoreModule.modulemap; sourceTree = "<group>"; };
 		9DFCBEA0BA47362E543F2AA2E453F6E4 /* export.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = export.h; path = Sodium/libsodium/export.h; sourceTree = "<group>"; };
 		9E3815DFB4479ADC36CD5354E0D3C449 /* crypto_stream_salsa20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_salsa20.h; path = Sodium/libsodium/crypto_stream_salsa20.h; sourceTree = "<group>"; };
 		A326BDB11B58F4CEDF34D23B14C251F9 /* Sodium-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Sodium-Info.plist"; sourceTree = "<group>"; };
@@ -434,14 +442,15 @@
 		AB1FC1484F52F8BBECE26976FF9E168A /* crypto_box_curve25519xsalsa20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_box_curve25519xsalsa20poly1305.h; path = Sodium/libsodium/crypto_box_curve25519xsalsa20poly1305.h; sourceTree = "<group>"; };
 		AB59D1776460ACDFD0AFBC83A790EFFA /* Transaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = KinSDK/KinSDK/source/blockchain/types/Transaction.swift; sourceTree = "<group>"; };
 		ACB89BDC7E565D3510973E732A6FBFF9 /* GenericHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericHash.swift; path = Sodium/GenericHash.swift; sourceTree = "<group>"; };
-		AD7894D385164267A63A0892B2329A3D /* RoundButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		AE407E64BA8F4A5CE7631806FFA84247 /* crypto_box_curve25519xchacha20poly1305.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_box_curve25519xchacha20poly1305.h; path = Sodium/libsodium/crypto_box_curve25519xchacha20poly1305.h; sourceTree = "<group>"; };
+		AEE5A9168360C112802756ECEFF75496 /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
+		B0BB60130732695F89B7A2085EC50822 /* PasswordEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
 		B32DD64880C094C5F2D650B2CDEF908B /* KinUtil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KinUtil-dummy.m"; sourceTree = "<group>"; };
 		B4EEC552374CD16F0C04DD6D1EE722AB /* KinAccounts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinAccounts.swift; path = KinSDK/KinSDK/source/KinAccounts.swift; sourceTree = "<group>"; };
-		B802BF7C265A1CFD3F03477B7015BBB1 /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
-		B97465FB5BDB3938BE79CA098567953F /* QRPickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
+		B5616BAC9697FDE4B815AD4FA2A61898 /* KinBackupRestoreModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinBackupRestoreModule-prefix.pch"; sourceTree = "<group>"; };
 		BA512E9F00453665C885C6FB996D0407 /* crypto_pwhash_argon2id.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_pwhash_argon2id.h; path = Sodium/libsodium/crypto_pwhash_argon2id.h; sourceTree = "<group>"; };
-		BD77312CD3694A862F3593ACA72384CE /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
+		BA658725D1822BD2C008C13C7A59A874 /* QRViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
+		C0EFFBCB7D981C74F716080E0D662D21 /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
 		C189A42088D3D36865FABEC6D0D1E7FD /* crypto_hash_sha512.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_hash_sha512.h; path = Sodium/libsodium/crypto_hash_sha512.h; sourceTree = "<group>"; };
 		C24ADACB3E6DCB55840300BC4B78C39D /* KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KinBackupRestoreModule.framework; path = KinBackupRestoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EF7822F8002C6E703C05BFF2F75C42 /* KinUtil.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KinUtil.xcconfig; sourceTree = "<group>"; };
@@ -449,15 +458,12 @@
 		C44B1AE8526F8A813B8D5DB933F28294 /* KinClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinClient.swift; path = KinSDK/KinSDK/source/KinClient.swift; sourceTree = "<group>"; };
 		C4C0FC483E87FEA8E41564EC55311A92 /* crypto_pwhash_scryptsalsa208sha256.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_pwhash_scryptsalsa208sha256.h; path = Sodium/libsodium/crypto_pwhash_scryptsalsa208sha256.h; sourceTree = "<group>"; };
 		C8BE451FA26D446E87AB76F6660A2C05 /* Sodium-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Sodium-umbrella.h"; sourceTree = "<group>"; };
+		C98F1B5720CCC5638EBB8CB48A2DD564 /* QRController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRController.swift; sourceTree = "<group>"; };
 		C99B935538B8C02A655E32FB3FC07284 /* Pods-KinBackupRestoreSampleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KinBackupRestoreSampleApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBA1BF23DB1B760F63D144B045612C53 /* Data+extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+extensions.swift"; path = "KinSDK/KinSDK/source/blockchain/Data+extensions.swift"; sourceTree = "<group>"; };
 		CBA531D63A968BFDACAF45DB50D2B46E /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = Sodium/libsodium/version.h; sourceTree = "<group>"; };
 		CBA54A8E759AC6DAC946A99E26B7805C /* Pods-KinBackupRestoreSampleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KinBackupRestoreSampleApp-umbrella.h"; sourceTree = "<group>"; };
-		CCAD2CDA03CC1B7E965835FB70A81CB1 /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
-		CFAE9E649BD991F81F4ECADC787A56EC /* KinBackupRestoreModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KinBackupRestoreModule-dummy.m"; sourceTree = "<group>"; };
-		D03C22DA49F7EC6C220A15BD3FDBD93B /* FlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
-		D0E5BC30D2934B42826E8CB9AD19EF8B /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D40657C6982693B700962EE08B968226 /* RestoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = RestoreViewController.xib; sourceTree = "<group>"; };
+		CE9F85411005D9B517AAB992257C02CA /* KinBackupRestoreModule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KinBackupRestoreModule.xcconfig; sourceTree = "<group>"; };
 		D409B2779EA351A4329773D2D64FC367 /* crypto_core_salsa2012.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_core_salsa2012.h; path = Sodium/libsodium/crypto_core_salsa2012.h; sourceTree = "<group>"; };
 		D52D831FCD362825AAFBE5D3EB34E032 /* KinSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KinSDK.modulemap; sourceTree = "<group>"; };
 		D5CA17FF09DFC3062C37B25772597587 /* Sodium.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Sodium.modulemap; sourceTree = "<group>"; };
@@ -468,36 +474,30 @@
 		E2C671F006AADCDAE588C786207B6C5B /* StellarUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarUtils.swift; path = KinSDK/KinSDK/source/blockchain/StellarUtils.swift; sourceTree = "<group>"; };
 		E3106D7A86CC4538B951A266069BF44F /* NonceGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NonceGenerator.swift; path = Sodium/Generators/NonceGenerator.swift; sourceTree = "<group>"; };
 		E3E8D50C94B738AF5925E7EF437F5123 /* String+extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+extensions.swift"; path = "KinUtil/KinUtil/source/extensions/String+extensions.swift"; sourceTree = "<group>"; };
-		E5BB094CBB468FFF9F150AF8547AFF6B /* KinBackupRestoreModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KinBackupRestoreModule-Info.plist"; sourceTree = "<group>"; };
-		E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KinBackupRestoreModule.xcconfig; sourceTree = "<group>"; };
 		E717AA7918D3E4C19E7F6E83AD328DD7 /* Pods-KinBackupRestoreModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KinBackupRestoreModule-dummy.m"; sourceTree = "<group>"; };
 		E732E95D9D49F25516B719B6ACC2322F /* Sign.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sign.swift; path = Sodium/Sign.swift; sourceTree = "<group>"; };
 		E804D5F58E0678FB77EDAEBDF7DB17E9 /* KeyPairProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyPairProtocol.swift; path = Sodium/Generators/KeyPairProtocol.swift; sourceTree = "<group>"; };
 		E97C2911FA878B9ECCC34B6E5935CDA4 /* crypto_shorthash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_shorthash.h; path = Sodium/libsodium/crypto_shorthash.h; sourceTree = "<group>"; };
 		E9DFB723E2B204D2251F9FF2ECFA88BB /* Pods-KinBackupRestoreSampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KinBackupRestoreSampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EA2731322323CF24E29C19CDD8C27BC2 /* core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = core.h; path = Sodium/libsodium/core.h; sourceTree = "<group>"; };
-		EA630C143D1538F2E11496C2CC3A3F40 /* BackupFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
+		EB7FCB5A9AC390D0C7E5E01611C3F73E /* RestoreFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
 		EC1B3BDB4532E5AB81121F806ED5C44F /* crypto_aead_aes256gcm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_aead_aes256gcm.h; path = Sodium/libsodium/crypto_aead_aes256gcm.h; sourceTree = "<group>"; };
 		EC437C4471DB5FD746167FF8C5A50948 /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Sodium/Auth.swift; sourceTree = "<group>"; };
-		EC6D4F3B0724720D4F205A29EAC89199 /* KinBackupRestoreModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinBackupRestoreModule-umbrella.h"; sourceTree = "<group>"; };
 		EF497AD21CE29EDB447EF2D08498BF2F /* StellarOps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StellarOps.swift; path = KinSDK/KinSDK/source/blockchain/StellarOps.swift; sourceTree = "<group>"; };
 		F1287F3AA284335626EF7FE6BB387629 /* crypto_box.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_box.h; path = Sodium/libsodium/crypto_box.h; sourceTree = "<group>"; };
 		F15D1B41B9DC0AD8042A8BDBC551CCE4 /* PWHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWHash.swift; path = Sodium/PWHash.swift; sourceTree = "<group>"; };
 		F181B85EE8801FA54045D388531D135B /* crypto_sign_edwards25519sha512batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_sign_edwards25519sha512batch.h; path = Sodium/libsodium/crypto_sign_edwards25519sha512batch.h; sourceTree = "<group>"; };
 		F4DA0280EF0DFF276D820EFC44FD396D /* crypto_stream_chacha20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_stream_chacha20.h; path = Sodium/libsodium/crypto_stream_chacha20.h; sourceTree = "<group>"; };
 		F542B53C37C2D0E6940A1A5ACBB406ED /* KeyPairGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyPairGenerator.swift; path = Sodium/Generators/KeyPairGenerator.swift; sourceTree = "<group>"; };
-		F5D2D144D038C2D246CE50D82B205539 /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
 		F8D3AD982E44C5EA9A61878F06F299E3 /* crypto_secretbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_secretbox.h; path = Sodium/libsodium/crypto_secretbox.h; sourceTree = "<group>"; };
 		F8ED904291547E3C3EB571C44D753148 /* crypto_core_salsa20.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_core_salsa20.h; path = Sodium/libsodium/crypto_core_salsa20.h; sourceTree = "<group>"; };
 		F9A160C77FC9AAACC45FE5F1DAC45F05 /* KinSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KinSDK-prefix.pch"; sourceTree = "<group>"; };
+		F9DD57E1A9A041FE57732925CD97D626 /* QRPickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
 		FA68378A37D616D5880D79644AC5BF04 /* crypto_scalarmult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_scalarmult.h; path = Sodium/libsodium/crypto_scalarmult.h; sourceTree = "<group>"; };
 		FBC678B2A64F60E2FDDC7509E56A5991 /* utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utils.h; path = Sodium/libsodium/utils.h; sourceTree = "<group>"; };
 		FBD49A9373B3ABD5523A994C3DDF0F1C /* crypto_pwhash_argon2i.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_pwhash_argon2i.h; path = Sodium/libsodium/crypto_pwhash_argon2i.h; sourceTree = "<group>"; };
-		FBF7324BB9B4DBC771A676EDBA0FF8FC /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
-		FC2B5B97DC9086E4659E1DCE47D6E736 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FBDE49A416F526D574171ECC1A6FF234 /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
 		FD3EDD69C6B01C1ABCD445A32EA6A7EB /* crypto_auth_hmacsha512256.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto_auth_hmacsha512256.h; path = Sodium/libsodium/crypto_auth_hmacsha512256.h; sourceTree = "<group>"; };
-		FF71A5BA05947373081BA72933F29222 /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KinBackupRestoreManager.swift; path = KinBackupRestoreModule/KinBackupRestoreModule/KinBackupRestoreManager.swift; sourceTree = "<group>"; };
-		FF8369AE2758A8FE79FC829A37508306 /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,31 +563,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0310299FFC3E5D382FC4BE929A999978 /* Extensions */ = {
+		05E1ED76A67651BAE14594E6FE05D4AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				689E5E2B10220776B1CBFB51F1FC7CFA /* Bundle+BackupRestore.swift */,
-				3416D38356D7134C2234FE2540A0E8D0 /* String+Localization.swift */,
-				0EA3FB95944540C6ADF769F4777677C3 /* UIColor+Appearance.swift */,
-				78E23D8E4B51573A12DE127B3311BCB2 /* UIFont+PreferredFont.swift */,
-				FBF7324BB9B4DBC771A676EDBA0FF8FC /* UINavigationBar+Appearance.swift */,
-				64B493373C2B1036CB1D895C3A121F7A /* UIStatusBarStyle+Appearance.swift */,
+				66609D07C1897C995932D9C52B41FFAA /* Assets.xcassets */,
 			);
-			name = Extensions;
-			path = KinBackupRestoreModule/KinBackupRestoreModule/Extensions;
-			sourceTree = "<group>";
-		};
-		03F089817B1F28CCA2CCC61304367D36 /* PasswordEntry */ = {
-			isa = PBXGroup;
-			children = (
-				1ECCFD33DB087FE062550E64AEC70783 /* PasswordEntryLabel.swift */,
-				809865BC2E3649CA217C7C374BCEB116 /* PasswordEntryTextField.swift */,
-				90B9909B29E7337B862FF02D1C6881B7 /* PasswordEntryView.swift */,
-				BD77312CD3694A862F3593ACA72384CE /* PasswordEntryViewController.swift */,
-				49BF19B8DB3E64E904957310F0E843C1 /* PasswordEntryViewController.xib */,
-			);
-			name = PasswordEntry;
-			path = PasswordEntry;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		181796A730C10A0DA777321AA7A55C10 /* KinUtil */ = {
@@ -607,31 +588,15 @@
 			path = KinUtil;
 			sourceTree = "<group>";
 		};
-		232E88F3A8CDCC72A3401A0C065DA99B /* IntroViewController */ = {
+		2F7DA3AAF37702EA3B4F0F9EAE1817F5 /* FlowController */ = {
 			isa = PBXGroup;
 			children = (
-				7C24A4088FCF337FE4E058375AF21B85 /* BackupIntroViewController.swift */,
-				658ABA7D2FCBAC79CBA293AE68AE69A5 /* RestoreIntroViewController.swift */,
+				95835FCCA477F2701A021F5D3C9E87DD /* BackupFlowController.swift */,
+				204121E44F36D824C73D778EB3F06C9A /* FlowController.swift */,
+				EB7FCB5A9AC390D0C7E5E01611C3F73E /* RestoreFlowController.swift */,
 			);
-			name = IntroViewController;
-			path = IntroViewController;
-			sourceTree = "<group>";
-		};
-		26E6F11AAFF1840D568813CFFD1E8069 /* KinBackupRestoreModule */ = {
-			isa = PBXGroup;
-			children = (
-				743D30081D9CB5FBCF36236F4F1EA979 /* KinBackupRestoreBI.swift */,
-				FF71A5BA05947373081BA72933F29222 /* KinBackupRestoreManager.swift */,
-				110C958272055AF651FFBF1499551D1F /* Localizable.strings */,
-				0310299FFC3E5D382FC4BE929A999978 /* Extensions */,
-				53C059F1C3536A27B0F5D3FCB795EF5A /* Pod */,
-				3B98F64A350EA2313273FDB6CAD33BFC /* Protocols */,
-				F3836AD99E6BBB20C624FEB8B621BBA2 /* Resources */,
-				769E3A23BB9099412E4AB2201A92616E /* Support Files */,
-				41E412EAB428DDE5DEF1A31CD551AC52 /* Views */,
-			);
-			name = KinBackupRestoreModule;
-			path = ..;
+			name = FlowController;
+			path = FlowController;
 			sourceTree = "<group>";
 		};
 		3710D26805B31E54B72621DCEFD4B282 /* Frameworks */ = {
@@ -653,15 +618,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B98F64A350EA2313273FDB6CAD33BFC /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				B802BF7C265A1CFD3F03477B7015BBB1 /* LifeCycleProtocol.swift */,
-			);
-			name = Protocols;
-			path = KinBackupRestoreModule/KinBackupRestoreModule/Protocols;
-			sourceTree = "<group>";
-		};
 		3C050228B4C9875F9B7298B8C2260B37 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,46 +630,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KinUtil";
-			sourceTree = "<group>";
-		};
-		41E412EAB428DDE5DEF1A31CD551AC52 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8C07DE3C2829F95448E30AF2A774B8EF /* Animations.swift */,
-				CCAD2CDA03CC1B7E965835FB70A81CB1 /* BackupCompletedViewController.swift */,
-				76291E8DCC8E607A31AC203B9C88C274 /* QRController.swift */,
-				B97465FB5BDB3938BE79CA098567953F /* QRPickerController.swift */,
-				AD7894D385164267A63A0892B2329A3D /* RoundButton.swift */,
-				D0E5BC30D2934B42826E8CB9AD19EF8B /* ViewController.swift */,
-				9337DEAB5F96C5D97006C9D6BEE189EF /* ExplanationTemplateViewController */,
-				564301DE49012C4DAB14E4D169138D32 /* FlowController */,
-				232E88F3A8CDCC72A3401A0C065DA99B /* IntroViewController */,
-				03F089817B1F28CCA2CCC61304367D36 /* PasswordEntry */,
-				9BA49F57A4AAD80850789681143B7BD4 /* QRViewController */,
-				67706E10E6195E76F66EA84B19DDCED7 /* RestoreViewController */,
-			);
-			name = Views;
-			path = KinBackupRestoreModule/KinBackupRestoreModule/Views;
-			sourceTree = "<group>";
-		};
-		53C059F1C3536A27B0F5D3FCB795EF5A /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8F216C5B89457984C8CE02E26921FA8A /* KinBackupRestoreModule.podspec */,
-				FC2B5B97DC9086E4659E1DCE47D6E736 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		564301DE49012C4DAB14E4D169138D32 /* FlowController */ = {
-			isa = PBXGroup;
-			children = (
-				EA630C143D1538F2E11496C2CC3A3F40 /* BackupFlowController.swift */,
-				D03C22DA49F7EC6C220A15BD3FDBD93B /* FlowController.swift */,
-				481C23EE33B02BB76D91E179DEE657D8 /* RestoreFlowController.swift */,
-			);
-			name = FlowController;
-			path = FlowController;
 			sourceTree = "<group>";
 		};
 		59698D077C3005F93BCDD59CDD2B1169 /* Support Files */ = {
@@ -746,14 +662,14 @@
 			path = "Target Support Files/Pods-KinBackupRestoreModule";
 			sourceTree = "<group>";
 		};
-		67706E10E6195E76F66EA84B19DDCED7 /* RestoreViewController */ = {
+		685A9A2E6AA57186C3ABA98DACA15220 /* QRViewController */ = {
 			isa = PBXGroup;
 			children = (
-				858F7CBD4205D1BA52157562129CC405 /* RestoreViewController.swift */,
-				D40657C6982693B700962EE08B968226 /* RestoreViewController.xib */,
+				0BB1199B0B4BAEF3774ACBE53C67CEEE /* QRViewController.swift */,
+				BA658725D1822BD2C008C13C7A59A874 /* QRViewController.xib */,
 			);
-			name = RestoreViewController;
-			path = RestoreViewController;
+			name = QRViewController;
+			path = QRViewController;
 			sourceTree = "<group>";
 		};
 		6A3FFC6C9112C0100E350B6D6A463924 /* iOS */ = {
@@ -764,18 +680,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		769E3A23BB9099412E4AB2201A92616E /* Support Files */ = {
+		7A1B0EDC614F1C7BE8B36B1B3B4AB0EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9DDD409DE12781ED9B9BAA8B80B074A6 /* KinBackupRestoreModule.modulemap */,
-				E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */,
-				CFAE9E649BD991F81F4ECADC787A56EC /* KinBackupRestoreModule-dummy.m */,
-				E5BB094CBB468FFF9F150AF8547AFF6B /* KinBackupRestoreModule-Info.plist */,
-				841E4FEA020AF146F2BAFE1F41B72F12 /* KinBackupRestoreModule-prefix.pch */,
-				EC6D4F3B0724720D4F205A29EAC89199 /* KinBackupRestoreModule-umbrella.h */,
+				57F8332DFE7F64A7848541A0AEB628B6 /* Animations.swift */,
+				35BE795D5BD88534CB9B7B9BF6AA6B61 /* BackupCompletedViewController.swift */,
+				C98F1B5720CCC5638EBB8CB48A2DD564 /* QRController.swift */,
+				F9DD57E1A9A041FE57732925CD97D626 /* QRPickerController.swift */,
+				22F70A92CCD0B358DAB8823F121AD134 /* RoundButton.swift */,
+				1F63F7A86D278AE66D6F4EF2D423269A /* ViewController.swift */,
+				B54E652B796837FF2D1BCB51B5F0A33C /* ExplanationTemplateViewController */,
+				2F7DA3AAF37702EA3B4F0F9EAE1817F5 /* FlowController */,
+				F39FA8C752851CCA52FDFE6A3D77A0E6 /* IntroViewController */,
+				A9AB6AAFE9B35FD48AB8BDA28EE61263 /* PasswordEntry */,
+				685A9A2E6AA57186C3ABA98DACA15220 /* QRViewController */,
+				EC47CB97732FE53C6D4C8E7A386F2D9F /* RestoreViewController */,
 			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/KinBackupRestoreModule";
+			name = Views;
+			path = KinBackupRestoreModule/KinBackupRestoreModule/Views;
 			sourceTree = "<group>";
 		};
 		7EB4D59D2C0BB92FA876095151738B0D /* Targets Support Files */ = {
@@ -798,24 +720,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9337DEAB5F96C5D97006C9D6BEE189EF /* ExplanationTemplateViewController */ = {
+		971665AC024E9676AFF776D2C362FEBD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				F5D2D144D038C2D246CE50D82B205539 /* ExplanationTemplateViewController.swift */,
-				FF8369AE2758A8FE79FC829A37508306 /* ExplanationTemplateViewController.xib */,
+				2D5201EB99279380B36150AC1E3D6E98 /* KinBackupRestoreModule.podspec */,
+				108ED0E05F1930263C044CAF29EBA18F /* README.md */,
 			);
-			name = ExplanationTemplateViewController;
-			path = ExplanationTemplateViewController;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		9BA49F57A4AAD80850789681143B7BD4 /* QRViewController */ = {
+		9F3FD5939F1682E83A7031CC677222CB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1C135FFBB4007CB6884D2045297F7616 /* QRViewController.swift */,
-				1D41DF26AE93F4904E4C6F26345FF3F8 /* QRViewController.xib */,
+				C0EFFBCB7D981C74F716080E0D662D21 /* LifeCycleProtocol.swift */,
 			);
-			name = QRViewController;
-			path = QRViewController;
+			name = Protocols;
+			path = KinBackupRestoreModule/KinBackupRestoreModule/Protocols;
+			sourceTree = "<group>";
+		};
+		9F56EFE6DD2B4714A2685330E638C23D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				13DF80E839998AF3A15F79E731B63C4D /* Bundle+BackupRestore.swift */,
+				6B7BF3DD7AC15DE7790BF7D14787E9B8 /* Notification+Convenience.swift */,
+				8A7C6D1B618AEFB25A54D8DBA1C083BA /* String+Localization.swift */,
+				8F5156CDD73CEEC26021447BDBEC3423 /* UIColor+Appearance.swift */,
+				4E6E249FF9BA02732BA480CF840BBC7F /* UIFont+PreferredFont.swift */,
+				7ACE48B9BF4E13DA91BD9E02862B548D /* UINavigationBar+Appearance.swift */,
+				9A3187C84C37B5DDB02C0641779F050C /* UIStatusBarStyle+Appearance.swift */,
+			);
+			name = Extensions;
+			path = KinBackupRestoreModule/KinBackupRestoreModule/Extensions;
 			sourceTree = "<group>";
 		};
 		A19F0F64D098D2EFD3AC6FFC2966AE2A /* Pods-KinBackupRestoreModuleTests */ = {
@@ -832,6 +767,18 @@
 			);
 			name = "Pods-KinBackupRestoreModuleTests";
 			path = "Target Support Files/Pods-KinBackupRestoreModuleTests";
+			sourceTree = "<group>";
+		};
+		A9AB6AAFE9B35FD48AB8BDA28EE61263 /* PasswordEntry */ = {
+			isa = PBXGroup;
+			children = (
+				FBDE49A416F526D574171ECC1A6FF234 /* PasswordEntryLabel.swift */,
+				3D1B8B4A2E8A189AB0A1F5940BCACB7E /* PasswordEntryTextField.swift */,
+				B0BB60130732695F89B7A2085EC50822 /* PasswordEntryView.swift */,
+				52B828B90DF67C0BD980C9717601EC4D /* PasswordEntryViewController.swift */,
+			);
+			name = PasswordEntry;
+			path = PasswordEntry;
 			sourceTree = "<group>";
 		};
 		AC824261ED32FD1AA1BEB35BA85DE04D /* KinSDK */ = {
@@ -892,6 +839,33 @@
 			path = "../Target Support Files/KinSDK";
 			sourceTree = "<group>";
 		};
+		B54E652B796837FF2D1BCB51B5F0A33C /* ExplanationTemplateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D60058F3ACBB74003C9A79424D65E02 /* ExplanationTemplateViewController.swift */,
+				8908341872E1B40AE6AECED11E75918F /* ExplanationTemplateViewController.xib */,
+			);
+			name = ExplanationTemplateViewController;
+			path = ExplanationTemplateViewController;
+			sourceTree = "<group>";
+		};
+		C954924B626B0BD242E8170C692EFA09 /* KinBackupRestoreModule */ = {
+			isa = PBXGroup;
+			children = (
+				891B0B9D7E4637184FA97B560C3A3E3C /* KinBackupRestoreBI.swift */,
+				72B6AE45775E42217AA4523D974315B2 /* KinBackupRestoreManager.swift */,
+				610D3C15F7127EC1F5FDACE0A2AEEBB7 /* Localizable.strings */,
+				9F56EFE6DD2B4714A2685330E638C23D /* Extensions */,
+				971665AC024E9676AFF776D2C362FEBD /* Pod */,
+				9F3FD5939F1682E83A7031CC677222CB /* Protocols */,
+				05E1ED76A67651BAE14594E6FE05D4AC /* Resources */,
+				E3B223EB69E30BBF114E0CD1D61B6077 /* Support Files */,
+				7A1B0EDC614F1C7BE8B36B1B3B4AB0EB /* Views */,
+			);
+			name = KinBackupRestoreModule;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -907,7 +881,7 @@
 		D55D9CDDE2254F9F22B8131731853390 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				26E6F11AAFF1840D568813CFFD1E8069 /* KinBackupRestoreModule */,
+				C954924B626B0BD242E8170C692EFA09 /* KinBackupRestoreModule */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -1006,6 +980,30 @@
 			path = Sodium;
 			sourceTree = "<group>";
 		};
+		E3B223EB69E30BBF114E0CD1D61B6077 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				149CE1925BAB3B1DB489B70B0791D7C9 /* KinBackupRestoreModule.modulemap */,
+				CE9F85411005D9B517AAB992257C02CA /* KinBackupRestoreModule.xcconfig */,
+				4CAA197237643F2DFF5EF9618315BA66 /* KinBackupRestoreModule-dummy.m */,
+				8F4DB93C1DFB8822F706085B5B5A1B03 /* KinBackupRestoreModule-Info.plist */,
+				B5616BAC9697FDE4B815AD4FA2A61898 /* KinBackupRestoreModule-prefix.pch */,
+				8F43CAC1F5D01823FC6B4C516617985C /* KinBackupRestoreModule-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/KinBackupRestoreModule";
+			sourceTree = "<group>";
+		};
+		EC47CB97732FE53C6D4C8E7A386F2D9F /* RestoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				138A3A6158A0A3BFFD179042C41BDD4D /* RestoreViewController.swift */,
+				2E37809F97A15BC6CCA69E42485FD274 /* RestoreViewController.xib */,
+			);
+			name = RestoreViewController;
+			path = RestoreViewController;
+			sourceTree = "<group>";
+		};
 		EE190BFD1111F6AEF1C6E14A619534C9 /* Pods-KinBackupRestoreSampleApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1037,12 +1035,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3836AD99E6BBB20C624FEB8B621BBA2 /* Resources */ = {
+		F39FA8C752851CCA52FDFE6A3D77A0E6 /* IntroViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4DE221B9AA218EA11BC4040D79168484 /* Assets.xcassets */,
+				2D4165F7EB593C1A8909F7477CD8FE15 /* BackupIntroViewController.swift */,
+				AEE5A9168360C112802756ECEFF75496 /* RestoreIntroViewController.swift */,
 			);
-			name = Resources;
+			name = IntroViewController;
+			path = IntroViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1175,7 +1175,7 @@
 			buildConfigurationList = F6033A2204DFAC54B4B01ACABDFFC375 /* Build configuration list for PBXNativeTarget "KinBackupRestoreModule" */;
 			buildPhases = (
 				C003B6DE97649CDC5CD2027263053584 /* Headers */,
-				7817F5A960BED2747E4A4F0FAAB7D24D /* Sources */,
+				E21B49F05ACF03570F5900E434790A4D /* Sources */,
 				348CDFF69A781BD24FAF2BCE692AC2DA /* Frameworks */,
 				CFB994B30B0CF4CCC337D1FDCCE44957 /* Resources */,
 			);
@@ -1468,46 +1468,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7817F5A960BED2747E4A4F0FAAB7D24D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDAAB9D761DFD016E0E64E640BBD10EE /* Animations.swift in Sources */,
-				C2A1833E56459DC9662384B7EC7B0C70 /* BackupCompletedViewController.swift in Sources */,
-				D98277644ED3CCEF9940DC7E407C48BD /* BackupFlowController.swift in Sources */,
-				7E58BE379468DC02B6F8A7CF06BE9C3D /* BackupIntroViewController.swift in Sources */,
-				31B226683449DB4DAC8A9DEB88B9B728 /* Bundle+BackupRestore.swift in Sources */,
-				DA3FA09B7730957B8E009DD544CFCE14 /* ExplanationTemplateViewController.swift in Sources */,
-				93AE694F6D526C0518A16AA889CC9577 /* ExplanationTemplateViewController.xib in Sources */,
-				4DAAD4D57CC2A5294D5EFFE8AC887B86 /* FlowController.swift in Sources */,
-				650E02F5F8939DB965CCC05B42E1583D /* KinBackupRestoreBI.swift in Sources */,
-				A5E226B9B2B5ED47853DA5525962E64F /* KinBackupRestoreManager.swift in Sources */,
-				8B66BB82A2C0AF245F3A2EB53DD74C1F /* KinBackupRestoreModule-dummy.m in Sources */,
-				852E7123B6CBCC8F389463F75FDCE549 /* LifeCycleProtocol.swift in Sources */,
-				B8BC8ECB4D5C56547AE126A89AF1C92E /* Localizable.strings in Sources */,
-				68F79200E71931CF7A5F97289FE104A3 /* PasswordEntryLabel.swift in Sources */,
-				4CDCB244457F0B63968250D546DC7918 /* PasswordEntryTextField.swift in Sources */,
-				9D057CDCAC516300F3E02550EBED549F /* PasswordEntryView.swift in Sources */,
-				24E4819F10C164276704965FD8D936C0 /* PasswordEntryViewController.swift in Sources */,
-				0D359E0746BF73F6CDB1D68692E63A4A /* PasswordEntryViewController.xib in Sources */,
-				18EF38B85CC8C177073E5DE250933D41 /* QRController.swift in Sources */,
-				4582D7AD63F27BF0AC33D8961BDDA146 /* QRPickerController.swift in Sources */,
-				EDAD7B985C1CB93F5E825028E9DDB4AC /* QRViewController.swift in Sources */,
-				80D5EBA762D29A1BDC1218E37D27E4CE /* QRViewController.xib in Sources */,
-				32FC2AE64A4811E86CCCB1A80006B6ED /* RestoreFlowController.swift in Sources */,
-				0DE59CB931BE6063D342011E8E68AA59 /* RestoreIntroViewController.swift in Sources */,
-				59960788AC228A561774845BFE8393AC /* RestoreViewController.swift in Sources */,
-				833D28F7C00EC34DB192397A3DD84FA4 /* RestoreViewController.xib in Sources */,
-				E1B8AFCA847ED7952A20CB781650B6F0 /* RoundButton.swift in Sources */,
-				CEFE637B53FDAED4F2DA106CA87B19A4 /* String+Localization.swift in Sources */,
-				DBAB7FC1B5B66382E6AFA13CE3235880 /* UIColor+Appearance.swift in Sources */,
-				E58437F769E3AE97F872DFCB78920E2F /* UIFont+PreferredFont.swift in Sources */,
-				423B5FC1B9F9128D345B9841E1221175 /* UINavigationBar+Appearance.swift in Sources */,
-				1F7A5C9E6A7FA944593E5D9435413560 /* UIStatusBarStyle+Appearance.swift in Sources */,
-				DB7D76958E72DC25383E0F1A07031BC3 /* ViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7FEB0FEDD805BBA0CA4CAF12A878DB74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1542,6 +1502,46 @@
 				6FF2374C89A883451A4ADE42E96097E3 /* Sodium.swift in Sources */,
 				FE54FDAC680295559DDD01AD5C99714E /* Stream.swift in Sources */,
 				2BDA541B31FC6A434590E574CC5222A1 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E21B49F05ACF03570F5900E434790A4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F1504DEDE2FCA529862B5FC2C7C9D85 /* Animations.swift in Sources */,
+				3AEA4B56C3391128D02DE52F80F37B40 /* BackupCompletedViewController.swift in Sources */,
+				896440C64CF77E967C7CB4263CB6ED9C /* BackupFlowController.swift in Sources */,
+				57BE54EA1D750C3DC7ED06FB1DBA9BB6 /* BackupIntroViewController.swift in Sources */,
+				5192B57490F4B4BF522E1405A6C3BB8B /* Bundle+BackupRestore.swift in Sources */,
+				560BDB1B9C57518F20B1F068D26A3C0C /* ExplanationTemplateViewController.swift in Sources */,
+				0BD7ED0D5977E81B6EEC93AEF3DF628C /* ExplanationTemplateViewController.xib in Sources */,
+				4DDEE4D2EAC0F7075BF808964FBD2F07 /* FlowController.swift in Sources */,
+				A6E4E29C00D261DDA771F696D0FC71D3 /* KinBackupRestoreBI.swift in Sources */,
+				35C23D304FA3E65151FCAE26CF86DDA9 /* KinBackupRestoreManager.swift in Sources */,
+				66136258AB3830A0E57C66409B7F7508 /* KinBackupRestoreModule-dummy.m in Sources */,
+				80258AE4A903C808608451D333CDCF47 /* LifeCycleProtocol.swift in Sources */,
+				BB4E583494472841E294B5ED499D7BFF /* Localizable.strings in Sources */,
+				69405DB1DFCCD4D865624D98D8A74BC1 /* Notification+Convenience.swift in Sources */,
+				9BB888DE6F00FE39AF7480B158CFEBE4 /* PasswordEntryLabel.swift in Sources */,
+				FA3159F899B54B43B7A89C6BC034D713 /* PasswordEntryTextField.swift in Sources */,
+				43D2AF80DCCB6EAC6F1185CD9E92F2F1 /* PasswordEntryView.swift in Sources */,
+				AE370464292D5E8C9A16DB5A146DF18A /* PasswordEntryViewController.swift in Sources */,
+				ABF86F7448EC7911A6B21D416AA6328B /* QRController.swift in Sources */,
+				D9561CDE198D224A8D6671851C4A5D6F /* QRPickerController.swift in Sources */,
+				171BA6AEA9EF7ACB12E3198D76876A59 /* QRViewController.swift in Sources */,
+				247F78597F4709D59BE01999091EE7BB /* QRViewController.xib in Sources */,
+				1E42C08D310B994DA8B43D42202D34BF /* RestoreFlowController.swift in Sources */,
+				BD14248253C0B6861C21903092F897C7 /* RestoreIntroViewController.swift in Sources */,
+				605E056A51D76722748AC6D238F8E15D /* RestoreViewController.swift in Sources */,
+				4E97869CA0AFAD9D20C63E5F1F09F58F /* RestoreViewController.xib in Sources */,
+				662950E11A9E09992644047A668188B0 /* RoundButton.swift in Sources */,
+				544C813ADFE15C1640D7D3864F9A1902 /* String+Localization.swift in Sources */,
+				7897D84B94547EA4A1C4C97978C17431 /* UIColor+Appearance.swift in Sources */,
+				57086255F5BCED3DDB1118CE6916DC44 /* UIFont+PreferredFont.swift in Sources */,
+				8A3BC6869021848BF06884FEFF9163A8 /* UINavigationBar+Appearance.swift in Sources */,
+				03C4951029D9D08F228CDD071757B6F0 /* UIStatusBarStyle+Appearance.swift in Sources */,
+				23DB1F4D3382CD3B4C3C6F03161A0CC7 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1995,7 +1995,7 @@
 		};
 		ADE4F8D8E9C8E63C425D3AE398B95840 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */;
+			baseConfigurationReference = CE9F85411005D9B517AAB992257C02CA /* KinBackupRestoreModule.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2031,7 +2031,7 @@
 		};
 		C2A07FD9E92AD8993A75745F40E2AAEC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E70CF6403FDFC1968DE435E455216D5A /* KinBackupRestoreModule.xcconfig */;
+			baseConfigurationReference = CE9F85411005D9B517AAB992257C02CA /* KinBackupRestoreModule.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
