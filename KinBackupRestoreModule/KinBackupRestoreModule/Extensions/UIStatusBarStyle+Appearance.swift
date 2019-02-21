@@ -21,7 +21,7 @@ extension UIStatusBarStyle {
 
 extension UINavigationController {
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        if let topViewController = topViewController, topViewController is BRViewController {
+        if let topViewController = topViewController, topViewController is ViewController {
             return topViewController.preferredStatusBarStyle
         }
         return super.preferredStatusBarStyle

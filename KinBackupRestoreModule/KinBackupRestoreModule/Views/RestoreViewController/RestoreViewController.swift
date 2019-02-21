@@ -8,14 +8,12 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
 protocol RestoreViewControllerDelegate: NSObjectProtocol {
-    func restoreViewControllerDidImport(_ viewController: RestoreViewController) -> RestoreViewController.ImportResult
+    func restoreViewController(_ viewController: RestoreViewController, importWith password: String) -> RestoreViewController.ImportResult
     func restoreViewControllerDidComplete(_ viewController: RestoreViewController)
 }
 
-@available(iOS 9.0, *)
-class RestoreViewController: BRViewController {
+class RestoreViewController: ViewController {
     weak var delegate: RestoreViewControllerDelegate?
     
     @IBOutlet weak var imageView: UIImageView!
@@ -28,10 +26,6 @@ class RestoreViewController: BRViewController {
     private let passwordInstructions = "kinecosystem_restore_instructions".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
     private let passwordPlaceholder = "kinecosystem_enter_password".localized().attributed(12.0, weight: .regular, color: UIColor.kinBlueGreyTwo)
     private var kbObservers = [NSObjectProtocol]()
-    
-    var password: String? {
-        return passwordInput.text
-    }
     
     init() {
         super.init(nibName: "RestoreViewController", bundle: .backupRestore)
@@ -46,6 +40,13 @@ class RestoreViewController: BRViewController {
     private func commonInit() {
         loadViewIfNeeded()
         title = "Restore Previous Wallet".localized() // TODO: 
+    }
+
+    deinit {
+        kbObservers.forEach { obs in
+            NotificationCenter.default.removeObserver(obs)
+        }
+        kbObservers.removeAll()
     }
     
     override func willMove(toParent parent: UIViewController?) {
@@ -89,18 +90,22 @@ class RestoreViewController: BRViewController {
                 }
             }
         })
+
         if #available(iOS 11, *) {
             topSpace.constant = 0.0
             view.layoutIfNeeded()
         }
+
         passwordInput.becomeFirstResponder()
     }
     
-    @IBAction func passwordInputChanges(_ textField: PasswordEntryField) {
+    @IBAction
+    func passwordInputChanges(_ textField: PasswordEntryField) {
         doneButton.isEnabled = textField.hasText
     }
     
-    @IBAction func doneButtonTapped(_ button: RoundButton) {
+    @IBAction
+    func doneButtonTapped(_ button: RoundButton) {
         guard !navigationItem.hidesBackButton else {
             // Button in mid transition
             return
@@ -115,7 +120,7 @@ class RestoreViewController: BRViewController {
         button.isEnabled = false
         navigationItem.hidesBackButton = true
         
-        let importResult = delegate.restoreViewControllerDidImport(self)
+        let importResult = delegate.restoreViewController(self, importWith: passwordInput.text ?? "")
 
         if importResult == .success {
             button.transitionToConfirmed { () -> () in
@@ -128,42 +133,41 @@ class RestoreViewController: BRViewController {
             presentErrorAlertController(result: importResult)
         }
     }
-    
-    deinit {
-        kbObservers.forEach { obs in
-            NotificationCenter.default.removeObserver(obs)
-        }
-        kbObservers.removeAll()
-    }
-    
 }
 
-@available(iOS 9.0, *)
+// MARK: -
+
 extension RestoreViewController {
     enum ImportResult {
         case success
         case wrongPassword
         case invalidImage
         case internalIssue
-        
-        var errorDescription: String? {
-            // TODO: get correct copy
-            switch self {
-            case .success:
-                return nil
-            case .wrongPassword:
-                return "The password is not correct."
-            case .invalidImage:
-                return "The QR image could not be identified."
-            case .internalIssue:
-                return "Something went wrong. Try again."
-            }
+    }
+}
+
+extension RestoreViewController.ImportResult {
+    var errorDescription: String? {
+        // TODO: get correct copy
+        switch self {
+        case .success:
+            return nil
+        case .wrongPassword:
+            return "The password is not correct."
+        case .invalidImage:
+            return "The QR image could not be identified."
+        case .internalIssue:
+            return "Something went wrong. Try again."
         }
     }
-    
-    private func presentErrorAlertController(result: ImportResult) {
+}
+
+// MARK: -
+
+extension RestoreViewController {
+    fileprivate func presentErrorAlertController(result: ImportResult) {
         // TODO: get correct copy
-        
+
         let alertController = UIAlertController(title: "Try again", message: result.errorDescription, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "kinecosystem_ok".localized(), style: .cancel))
         present(alertController, animated: true)

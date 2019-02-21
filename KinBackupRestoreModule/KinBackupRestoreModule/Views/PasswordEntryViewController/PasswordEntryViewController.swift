@@ -8,15 +8,12 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
 protocol PasswordEntryViewControllerDelegate: NSObjectProtocol {
     func passwordEntryViewController(_ viewController: PasswordEntryViewController, validate password: String) -> Bool
     func passwordEntryViewControllerDidComplete(_ viewController: PasswordEntryViewController, with password: String)
 }
 
-@available(iOS 9.0, *)
-class PasswordEntryViewController: BRViewController {
-    
+class PasswordEntryViewController: ViewController {
     @IBOutlet weak var passwordInfo: UILabel!
     @IBOutlet weak var passwordInput1: PasswordEntryField!
     @IBOutlet weak var passwordInput2: PasswordEntryField!
@@ -176,19 +173,13 @@ class PasswordEntryViewController: BRViewController {
     }
     
     func alertPasswordsConformance() {
-        passwordInfo.attributedText = passwordInvalidWarning + passwordInvalidInfo
+        let attributedString = NSMutableAttributedString()
+        attributedString.append(passwordInvalidWarning)
+        attributedString.append(passwordInvalidInfo)
+        passwordInfo.attributedText = attributedString
     }
     
     func updateDoneButton() {
         doneButton.isEnabled = passwordInput1.hasText && passwordInput2.hasText && tickMarked
     }
-}
-
-// TODO: move
-func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSMutableAttributedString
-{
-    let result = NSMutableAttributedString()
-    result.append(lhs)
-    result.append(rhs)
-    return result
 }

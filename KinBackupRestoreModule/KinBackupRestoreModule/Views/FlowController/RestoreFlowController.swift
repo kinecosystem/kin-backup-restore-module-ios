@@ -9,7 +9,6 @@
 import UIKit
 import KinSDK
 
-@available(iOS 9.0, *)
 class RestoreFlowController: FlowController {
     let kinClient: KinClient
 
@@ -32,7 +31,6 @@ class RestoreFlowController: FlowController {
     }
 }
 
-@available(iOS 9.0, *)
 extension RestoreFlowController: LifeCycleProtocol {
     func viewController(_ viewController: UIViewController, willAppear animated: Bool) {
         syncNavigationBarColor(with: viewController)
@@ -45,7 +43,6 @@ extension RestoreFlowController: LifeCycleProtocol {
 
 // MARK: - Navigation
 
-@available(iOS 9.0, *)
 extension RestoreFlowController {
     private func presentQRPickerViewController() {
         guard QRPickerController.canOpenImagePicker else {
@@ -72,14 +69,12 @@ extension RestoreFlowController {
 
 // MARK: - Flow
 
-@available(iOS 9.0, *)
 extension RestoreFlowController: RestoreIntroViewControllerDelegate {
     func restoreIntroViewControllerDidComplete(_ viewController: RestoreIntroViewController) {
         presentQRPickerViewController()
     }
 }
 
-@available(iOS 9.0, *)
 extension RestoreFlowController: QRPickerControllerDelegate {
     func qrPickerControllerDidComplete(_ controller: QRPickerController, with qrString: String?) {
         controller.imagePickerController.presentingViewController?.dismiss(animated: true)
@@ -90,14 +85,8 @@ extension RestoreFlowController: QRPickerControllerDelegate {
     }
 }
 
-@available(iOS 9.0, *)
 extension RestoreFlowController: RestoreViewControllerDelegate {
-    func restoreViewControllerDidImport(_ viewController: RestoreViewController) -> RestoreViewController.ImportResult {
-        guard let password = viewController.password else {
-            // TODO: maybe pass the password to prevent this case
-            return .wrongPassword
-        }
-
+    func restoreViewController(_ viewController: RestoreViewController, importWith password: String) -> RestoreViewController.ImportResult {
         guard let qrImage = viewController.imageView.image, let json = QRController.decode(image: qrImage) else {
             return .invalidImage
         }

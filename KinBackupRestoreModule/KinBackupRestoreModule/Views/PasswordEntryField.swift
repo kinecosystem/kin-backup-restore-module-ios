@@ -13,9 +13,7 @@ public enum PasswordEntryFieldState {
     case invalid
 }
 
-@available(iOS 9.0, *)
 class PasswordEntryField: UITextField {
-    
     public var entryState = PasswordEntryFieldState.idle {
         didSet {
             updateFieldStateStyle()
@@ -65,11 +63,13 @@ class PasswordEntryField: UITextField {
         }
     }
     
-    @objc private func revealPassword(_ sender: Any) {
+    @objc
+    private func revealPassword(_ sender: Any) {
         secureButtonHandler(false)
     }
     
-    @objc private func hidePassword(_ sender: Any) {
+    @objc
+    private func hidePassword(_ sender: Any) {
         secureButtonHandler(true)
     }
     
@@ -83,5 +83,4 @@ class PasswordEntryField: UITextField {
             becomeFirstResponder()
         }
     }
-    
 }

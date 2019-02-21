@@ -1,6 +1,6 @@
 {
   "name": "KinSDK",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "summary": "Pod for the KIN SDK.",
   "description": "Initial pod for the KIN SDK.",
   "homepage": "https://github.com/kinecosystem/kin-sdk-ios",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/kinecosystem/kin-sdk-ios.git",
-    "tag": "0.8.2",
+    "tag": "0.8.3",
     "submodules": true
   },
   "source_files": [
@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "KinUtil": [
-      "0.0.14"
+      "0.0.16"
     ],
     "Sodium": [
       "0.7.0"
