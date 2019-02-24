@@ -23,17 +23,23 @@ class RestoreView: KeyboardAdjustingScrollView {
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addArrangedSubview(imageView)
+        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
 
         instructionsLabel.translatesAutoresizingMaskIntoConstraints = false
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
         instructionsLabel.textColor = .kinBlueGreyTwo
+        instructionsLabel.textAlignment = .center
+        instructionsLabel.numberOfLines = 0
+        instructionsLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(instructionsLabel)
 
         passwordInput.translatesAutoresizingMaskIntoConstraints = false
         passwordInput.isSecureTextEntry = true
+        passwordInput.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(passwordInput)
 
         doneButton.translatesAutoresizingMaskIntoConstraints = false
+        doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(doneButton)
 
         addArrangedVerticalLayoutSubview(to: contentView)

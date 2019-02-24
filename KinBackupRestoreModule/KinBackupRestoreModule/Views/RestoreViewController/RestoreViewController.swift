@@ -15,11 +15,6 @@ protocol RestoreViewControllerDelegate: NSObjectProtocol {
 
 class RestoreViewController: ViewController {
     weak var delegate: RestoreViewControllerDelegate?
-    
-//    @IBOutlet weak var imageView: UIImageView!
-//    @IBOutlet weak var instructionsLabel: UILabel!
-//    @IBOutlet weak var passwordInput: PasswordEntryTextField!
-//    @IBOutlet weak var doneButton: RoundButton!
 
     // MARK: View
 
@@ -54,7 +49,6 @@ class RestoreViewController: ViewController {
     // MARK: Lifecycle
 
     init() {
-//        super.init(nibName: "RestoreViewController", bundle: .backupRestore)
         super.init(nibName: nil, bundle: nil)
 
         title = "restore.title".localized()
@@ -62,15 +56,7 @@ class RestoreViewController: ViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-
-//        super.init(coder: aDecoder)
-//        commonInit()
     }
-    
-//    private func commonInit() {
-//        loadViewIfNeeded()
-//
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,11 +64,14 @@ class RestoreViewController: ViewController {
         KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
 
         passwordInput.attributedPlaceholder = NSAttributedString(string: "restore.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInput.addTarget(self, action: #selector(passwordInputChanges), for: .editingChanged)
         passwordInput.becomeFirstResponder()
 
         instructionsLabel.text = "restore.description".localized()
 
+        doneButton.setTitle("generic.next".localized(), for: .normal)
         doneButton.isEnabled = false
+        doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
     }
 
     override func willMove(toParent parent: UIViewController?) {
