@@ -78,14 +78,12 @@ extension BackupFlowController {
 
 extension BackupFlowController: PasswordEntryViewControllerDelegate {
     func passwordEntryViewController(_ viewController: PasswordEntryViewController, validate password: String) -> Bool {
-        // TODO: verify with Android
         let digit = "(?=.*\\d)"
-        let lower = "(?=.*[a-z])"
         let upper = "(?=.*[A-Z])"
-        let special = "(?=.*[-+_=!@#$%^&*()\\[\\]{}.,?<>~`|])"
+        let lower = "(?=.*[a-z])"
+        let special = "(?=.*[!@#$%^&*()_+{}\\[\\]])"
         let min = 9
-        let max = 20
-        let pattern = "^\(digit)\(lower)\(upper)\(special).{\(min),\(max)}$"
+        let pattern = "^\(digit)\(upper)\(lower)\(special)(.{\(min),})$"
 
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: [])
