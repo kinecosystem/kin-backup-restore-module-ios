@@ -9,7 +9,24 @@
 import KinSDK
 
 public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
+    /**
+     Tells the delegate that the backup or restore process has completed.
+
+     The `wasCancelled` parameter will be `true` if the user cancelled the process.
+
+     - Parameter manager: The manager object providing this information.
+     - Parameter wasCancelled: A `Bool` indicating whether the operation was cancelled or not.
+     */
     func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool)
+
+    /**
+     Tells the delegate that the backup or restore encountered an error.
+
+     When an error is encountered, the backup or restore process will be stopped.
+
+     - Parameter manager: The manager object providing this information.
+     - Parameter error: The error which stopped the backup or restore process.
+     */
     func kinBackupRestoreManager(_ manager: KinBackupRestoreManager, error: Error)
 }
 
