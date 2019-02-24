@@ -93,6 +93,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             return !results.isEmpty
         }
         catch {
+            delegate?.flowController(self, error: error)
             return false
         }
     }
@@ -102,6 +103,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
         catch {
+            delegate?.flowController(self, error: error)
             viewController.presentErrorAlertController()
         }
     }

@@ -167,7 +167,7 @@ class PasswordEntryViewController: ViewController {
         KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordNextButtonTapped()
 
         guard let password = passwordTextField.text, passwordTextField.hasText && passwordConfirmTextField.hasText else {
-            return // shouldn't really happen, here for documenting
+            return // Shouldn't happen
         }
 
         guard passwordTextField.text == passwordConfirmTextField.text else {

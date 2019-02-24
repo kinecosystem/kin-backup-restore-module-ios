@@ -205,10 +205,9 @@ extension KinBackupRestoreManager {
 extension KinBackupRestoreManager: FlowControllerDelegate {
     func flowControllerDidComplete(_ controller: FlowController) {
         guard let instance = instance else {
+            delegate?.kinBackupRestoreManager(self, error: KinBackupRestoreError.internalInconsistency)
             return
         }
-
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
 
         switch instance.presentor {
         case .pushedOnto:
@@ -218,14 +217,15 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         }
         
         self.instance = nil
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
     }
     
     func flowControllerDidCancel(_ controller: FlowController) {
         guard let instance = instance else {
+            delegate?.kinBackupRestoreManager(self, error: KinBackupRestoreError.internalInconsistency)
             return
         }
-
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
 
         switch instance.presentor {
         case .pushedOnto:
@@ -237,6 +237,12 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         }
         
         self.instance = nil
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
+    }
+
+    func flowController(_ controller: FlowController, error: Error) {
+        delegate?.kinBackupRestoreManager(self, error: error)
     }
 }
 
