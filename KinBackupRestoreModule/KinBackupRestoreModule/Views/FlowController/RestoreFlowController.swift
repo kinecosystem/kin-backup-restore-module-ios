@@ -71,7 +71,12 @@ extension RestoreFlowController {
 
 extension RestoreFlowController: RestoreIntroViewControllerDelegate {
     func restoreIntroViewControllerDidComplete(_ viewController: RestoreIntroViewController) {
-        presentQRPickerViewController()
+        let str = "{\"pkey\":\"GB2FKV3UT7HC4QCCRKZWNAYLTADH32HTUL3QMWA2IX44LUGVVH7CYENZ\",\"seed\":\"9f5d9d0bf757dc7236ac06a1cd08fae59c7d96eb91d887175542cd817016657a0ae60c7ae29dfe54973c0758a9253d715ae4978cf16fb6f740aa84c4ace3ee6057f2041de94a36d0\",\"salt\":\"ffcf14d673ee3bf2375a98bf80668729\"}"
+
+        pushPasswordViewController(with: str)
+
+        // !!!: DEBUG
+//        presentQRPickerViewController()
     }
 }
 

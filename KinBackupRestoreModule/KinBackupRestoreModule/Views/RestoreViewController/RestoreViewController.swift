@@ -16,37 +16,75 @@ protocol RestoreViewControllerDelegate: NSObjectProtocol {
 class RestoreViewController: ViewController {
     weak var delegate: RestoreViewControllerDelegate?
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var instructionsLabel: UILabel!
-    @IBOutlet weak var passwordInput: PasswordEntryTextField!
-    @IBOutlet weak var doneButton: RoundButton!
-    @IBOutlet weak var bottomSpace: NSLayoutConstraint!
-    @IBOutlet weak var topSpace: NSLayoutConstraint!
+//    @IBOutlet weak var imageView: UIImageView!
+//    @IBOutlet weak var instructionsLabel: UILabel!
+//    @IBOutlet weak var passwordInput: PasswordEntryTextField!
+//    @IBOutlet weak var doneButton: RoundButton!
 
-    private var kbObservers = [NSObjectProtocol]()
-    
+    // MARK: View
+
+    var imageView: UIImageView {
+        return _view.imageView
+    }
+
+    private var instructionsLabel: UILabel {
+        return _view.instructionsLabel
+    }
+
+    private var passwordInput: PasswordEntryTextField {
+        return _view.passwordInput
+    }
+
+    private var doneButton: RoundButton {
+        return _view.doneButton
+    }
+
+    var _view: RestoreView {
+        return view as! RestoreView
+    }
+
+    var classForView: RestoreView.Type {
+        return RestoreView.self
+    }
+
+    override func loadView() {
+        view = classForView.self.init(frame: .zero)
+    }
+
+    // MARK: Lifecycle
+
     init() {
-        super.init(nibName: "RestoreViewController", bundle: .backupRestore)
-        commonInit()
+//        super.init(nibName: "RestoreViewController", bundle: .backupRestore)
+        super.init(nibName: nil, bundle: nil)
+
+        title = "restore.title".localized()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
+        fatalError("init(coder:) has not been implemented")
+
+//        super.init(coder: aDecoder)
+//        commonInit()
     }
     
-    private func commonInit() {
-        loadViewIfNeeded()
-        title = "restore.title".localized()
+//    private func commonInit() {
+//        loadViewIfNeeded()
+//
+//    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
+
+        passwordInput.attributedPlaceholder = NSAttributedString(string: "restore.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInput.becomeFirstResponder()
+
+        instructionsLabel.text = "restore.description".localized()
+
+        doneButton.isEnabled = false
     }
 
-    deinit {
-        kbObservers.forEach { obs in
-            NotificationCenter.default.removeObserver(obs)
-        }
-        kbObservers.removeAll()
-    }
-    
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
 
@@ -54,53 +92,7 @@ class RestoreViewController: ViewController {
             KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryBackButtonTapped()
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
-
-        passwordInput.attributedPlaceholder = NSAttributedString(string: "restore.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
-        passwordInput.isSecureTextEntry = true
-
-        instructionsLabel.text = "restore.description".localized()
-        instructionsLabel.font = .preferredFont(forTextStyle: .body)
-        instructionsLabel.textColor = .kinBlueGreyTwo
-
-        doneButton.setTitleColor(.white, for: .normal)
-        doneButton.isEnabled = false
-
-        kbObservers.append(NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { [weak self] note in
-            if let height = (note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size.height,
-                let duration = note.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
-                DispatchQueue.main.async {
-                    self?.bottomSpace.constant = height
-                    UIView.animate(withDuration: duration) {
-                        self?.view.layoutIfNeeded()
-                    }
-                }
-            }
-        })
-        
-        kbObservers.append(NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { [weak self] note in
-            if let duration = note.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
-                DispatchQueue.main.async {
-                    self?.bottomSpace.constant = 0.0
-                    UIView.animate(withDuration: duration) {
-                        self?.view.layoutIfNeeded()
-                    }
-                }
-            }
-        })
-
-        if #available(iOS 11, *) {
-            topSpace.constant = 0.0
-            view.layoutIfNeeded()
-        }
-
-        passwordInput.becomeFirstResponder()
-    }
-    
     @IBAction
     func passwordInputChanges(_ textField: PasswordEntryTextField) {
         doneButton.isEnabled = textField.hasText
