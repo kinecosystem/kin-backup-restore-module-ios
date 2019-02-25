@@ -30,7 +30,7 @@ class RestoreViewController: ViewController {
         return _view.passwordInput
     }
 
-    private var doneButton: RoundButton {
+    private var doneButton: ConfirmButton {
         return _view.doneButton
     }
 
@@ -88,7 +88,7 @@ class RestoreViewController: ViewController {
     }
     
     @IBAction
-    func doneButtonTapped(_ button: RoundButton) {
+    func doneButtonTapped(_ button: ConfirmButton) {
         guard !navigationItem.hidesBackButton else {
             // Button in mid transition
             return

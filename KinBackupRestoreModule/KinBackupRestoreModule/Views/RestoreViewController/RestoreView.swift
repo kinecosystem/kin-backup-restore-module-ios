@@ -12,7 +12,7 @@ class RestoreView: KeyboardAdjustingScrollView {
     let imageView = UIImageView()
     let instructionsLabel = UILabel()
     let passwordInput = PasswordEntryTextField()
-    let doneButton = RoundButton()
+    let doneButton = ConfirmButton()
 
     // MARK: Lifecycle
 
