@@ -22,7 +22,7 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
     required override init(frame: CGRect) {
         super.init(frame: frame)
 
-        addArrangedVerticalLayoutSubview(to: contentView)
+        addArrangedVerticalLayoutSubview()
 
         passwordInfoLabel.font = .preferredFont(forTextStyle: .body)
         passwordInfoLabel.numberOfLines = 0
@@ -30,7 +30,7 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
         passwordInfoLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(passwordInfoLabel)
 
-        addArrangedVerticalLayoutSubview(to: contentView)
+        addArrangedVerticalLayoutSubview()
 
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -60,13 +60,13 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
         confirmLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         confirmStackView.addArrangedSubview(confirmLabel)
 
-        addArrangedVerticalLayoutSubview(to: contentView)
+        addArrangedVerticalLayoutSubview()
 
         doneButton.isEnabled = false
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(doneButton)
 
-        addArrangedVerticalLayoutSubview(to: contentView)
+        addArrangedVerticalLayoutSubview()
     }
 
     required init?(coder aDecoder: NSCoder) {

@@ -54,6 +54,6 @@
 "restore.description" = "Great, we’re almost there!\nPlease enter your password";
 "restore.password.placeholder" = "Enter Password";
 "restore.alert_error.title" = "Try Again"; // TODO:
-"restore.error.wrong_password" = "The password is not correct."; // TODO:
+"restore.error.wrong_password" = "The password is incorrect."; // TODO:
 "restore.error.invalid_image" = "The QR image could not be identified."; // TODO:
 "restore.error.internal_issue" = "Something went wrong. Try again."; // TODO:
