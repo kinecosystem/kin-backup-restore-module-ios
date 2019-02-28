@@ -32,10 +32,6 @@ class ExplanationTemplateViewController: ViewController {
         loadViewIfNeeded()
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override public func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .kinPrimaryBlue

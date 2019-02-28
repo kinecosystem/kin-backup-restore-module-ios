@@ -18,7 +18,7 @@ class BackupCompletedViewController: ExplanationTemplateViewController {
 
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
 
-        titleLabel.text = "backup_completed.title".localized()
+        titleLabel.text = "backup_completed.header".localized()
         titleLabel.font = .preferredFont(forTextStyle: .title1)
 
         descriptionLabel.text = "backup_completed.description".localized()

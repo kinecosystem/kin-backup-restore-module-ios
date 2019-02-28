@@ -26,11 +26,12 @@
 "qr_picker.alert_error.title" = "QR Not Recognized"; // TODO
 "qr_picker.alert_error.message" = "A QR code could not be detected in the image."; // TODO
 
-"backup_intro.title" = "Keep your Kin safe";
+"backup_intro.title" = "Backup Kin";
+"backup_intro.header" = "Keep your Kin safe";
 "backup_intro.description" = "Backing up your current balance will allow you to recover it in case you switch phones, delete the app or clear your data.";
 "backup_intro.next" = "Let's Go";
 
-"backup_completed.title" = "Well done,\nyour Kin is safe!";
+"backup_completed.header" = "Well done,\nyour Kin is safe!";
 "backup_completed.description" = "In order to restore your Kin, you will need the QR code and the password you've created.";
 
 "password_entry.title" = "Create Password";
@@ -44,7 +45,8 @@
 "password_entry.alert_error.title" = "That's Strange"; // TODO:
 "password_entry.alert_error.message" = "An error occurred. Please try again."; // TODO:
 
-"restore_intro.title" = "Import your Kin";
+"restore_intro.title" = "Restore Kin";
+"restore_intro.header" = "Import your Kin";
 "restore_intro.description" = "All you need is to upload the QR code we provided you.";
 "restore_intro.next" = "Upload your QR code";
 "restore_intro.alert.title" = "Are you sure you want to restore your previous balance?";

@@ -11,8 +11,6 @@
 		68005A902206FFFB004F791A /* KinBackupRestoreModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */; };
 		68005A922206FFFB004F791A /* KinBackupRestoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 68005A842206FFFB004F791A /* KinBackupRestoreModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		68005ABE22070789004F791A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68005AB922070789004F791A /* Assets.xcassets */; };
-		68005ABF22070789004F791A /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABB22070789004F791A /* UINavigationBar+Appearance.swift */; };
-		68005AC022070789004F791A /* UIStatusBarStyle+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */; };
 		68005AC122070789004F791A /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABD22070789004F791A /* KinBackupRestoreManager.swift */; };
 		68005ADE22070793004F791A /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC322070793004F791A /* LifeCycleProtocol.swift */; };
 		68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC622070793004F791A /* BackupCompletedViewController.swift */; };
@@ -68,8 +66,6 @@
 		68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreModuleTests.swift; sourceTree = "<group>"; };
 		68005A912206FFFB004F791A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68005AB922070789004F791A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		68005ABB22070789004F791A /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
-		68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStatusBarStyle+Appearance.swift"; sourceTree = "<group>"; };
 		68005ABD22070789004F791A /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreManager.swift; sourceTree = "<group>"; };
 		68005AC322070793004F791A /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
 		68005AC622070793004F791A /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 				68005B1322094F3E004F791A /* String+Localization.swift */,
 				68005B11220945C2004F791A /* UIColor+Appearance.swift */,
 				68A430C42219930900D3B193 /* UIFont+PreferredFont.swift */,
-				68005ABB22070789004F791A /* UINavigationBar+Appearance.swift */,
-				68005ABC22070789004F791A /* UIStatusBarStyle+Appearance.swift */,
 				682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */,
 			);
 			path = Extensions;
@@ -488,14 +482,12 @@
 				68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */,
 				68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */,
 				682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */,
-				68005ABF22070789004F791A /* UINavigationBar+Appearance.swift in Sources */,
 				68005AE622070793004F791A /* PasswordEntryTextField.swift in Sources */,
 				68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */,
 				68005AE522070793004F791A /* QRPickerController.swift in Sources */,
 				682EA3662222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift in Sources */,
 				68005AF122070793004F791A /* RestoreIntroViewController.swift in Sources */,
 				68005AE222070793004F791A /* RestoreFlowController.swift in Sources */,
-				68005AC022070789004F791A /* UIStatusBarStyle+Appearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

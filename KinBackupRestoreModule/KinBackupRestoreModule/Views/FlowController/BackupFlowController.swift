@@ -31,7 +31,7 @@ class BackupFlowController: FlowController {
 
 extension BackupFlowController: LifeCycleProtocol {
     func viewController(_ viewController: UIViewController, willAppear animated: Bool) {
-        syncNavigationBarColor(with: viewController)
+        
     }
     
     func viewController(_ viewController: UIViewController, willDisappear animated: Bool) {

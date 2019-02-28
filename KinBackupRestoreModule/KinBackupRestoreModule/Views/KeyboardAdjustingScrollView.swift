@@ -99,6 +99,18 @@ class KeyboardAdjustingScrollView: UIScrollView {
         spaceView.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
 
+    // TODO: support orientation
+//    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+//        super.traitCollectionDidChange(previousTraitCollection)
+//
+//        if traitCollection.verticalSizeClass == .compact {
+//
+//        }
+//        else {
+//
+//        }
+//    }
+
     // MARK: Keyboard
 
     @objc
