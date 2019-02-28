@@ -10,6 +10,7 @@ import UIKit
 
 class PasswordEntryView: KeyboardAdjustingScrollView {
     let passwordInfoLabel = PasswordEntryLabel()
+    private let textFieldStackView = UIStackView()
     let passwordTextField = PasswordEntryTextField()
     let passwordConfirmTextField = PasswordEntryTextField()
     private let confirmStackView = UIStackView()
@@ -32,13 +33,18 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalLayoutSubview()
 
+        textFieldStackView.spacing = contentView.spacing
+        textFieldStackView.distribution = .fillEqually
+        syncTextFieldStackViewAxis()
+        contentView.addArrangedSubview(textFieldStackView)
+
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(passwordTextField)
+        textFieldStackView.addArrangedSubview(passwordTextField)
 
         passwordConfirmTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordConfirmTextField.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(passwordConfirmTextField)
+        textFieldStackView.addArrangedSubview(passwordConfirmTextField)
 
         confirmStackView.alignment = .center
         confirmStackView.spacing = contentView.spacing
@@ -62,15 +68,33 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalLayoutSubview()
 
+        let doneButtonStackView = UIStackView()
+        doneButtonStackView.axis = .vertical
+        doneButtonStackView.alignment = .center
+        contentView.addArrangedSubview(doneButtonStackView)
+
         doneButton.isEnabled = false
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(doneButton)
+        doneButtonStackView.addArrangedSubview(doneButton)
+        doneButton.widthAnchor.constraint(equalTo: passwordTextField.widthAnchor).isActive = true
 
         addArrangedVerticalLayoutSubview()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: Layout
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        syncTextFieldStackViewAxis()
+    }
+
+    private func syncTextFieldStackViewAxis() {
+        textFieldStackView.axis = traitCollection.verticalSizeClass == .compact ? .horizontal : .vertical
     }
 
     // MARK: Interaction
