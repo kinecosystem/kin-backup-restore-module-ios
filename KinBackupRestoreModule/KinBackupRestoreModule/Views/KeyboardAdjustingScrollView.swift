@@ -73,9 +73,9 @@ class KeyboardAdjustingScrollView: UIScrollView {
     /**
      Add subview with a dynamic height.
      */
-    func addArrangedVerticalLayoutSubview() {
+    func addArrangedVerticalLayoutSubview(to stackView: UIStackView? = nil) {
         let layoutView = UIView()
-        contentView.addArrangedSubview(layoutView)
+        (stackView ?? contentView).addArrangedSubview(layoutView)
 
         if let firstVerticalLayoutView = firstVerticalLayoutView {
             layoutView.heightAnchor.constraint(equalTo: firstVerticalLayoutView.heightAnchor).isActive = true
@@ -92,10 +92,10 @@ class KeyboardAdjustingScrollView: UIScrollView {
     /**
      Add subview with a static height.
      */
-    func addArrangedVerticalSpaceSubview(height: CGFloat = 0) {
+    func addArrangedVerticalSpaceSubview(to stackView: UIStackView? = nil, height: CGFloat = 0) {
         let spaceView = UIView()
         spaceView.setContentHuggingPriority(.required, for: .vertical)
-        contentView.addArrangedSubview(spaceView)
+        (stackView ?? contentView).addArrangedSubview(spaceView)
         spaceView.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
 

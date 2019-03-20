@@ -35,7 +35,6 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
 
         textFieldStackView.spacing = contentView.spacing
         textFieldStackView.distribution = .fillEqually
-        syncTextFieldStackViewAxis()
         contentView.addArrangedSubview(textFieldStackView)
 
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -90,10 +89,6 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
 
-        syncTextFieldStackViewAxis()
-    }
-
-    private func syncTextFieldStackViewAxis() {
         textFieldStackView.axis = traitCollection.verticalSizeClass == .compact ? .horizontal : .vertical
     }
 
