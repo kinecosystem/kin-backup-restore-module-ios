@@ -23,7 +23,6 @@
 		68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACF22070793004F791A /* PasswordEntryViewController.swift */; };
 		68005AE922070793004F791A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD122070793004F791A /* RoundButton.swift */; };
 		68005AEA22070793004F791A /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD322070793004F791A /* RestoreViewController.swift */; };
-		68005AEC22070793004F791A /* QRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005AD622070793004F791A /* QRViewController.xib */; };
 		68005AED22070793004F791A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD722070793004F791A /* QRViewController.swift */; };
 		68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD922070793004F791A /* ExplanationTemplateViewController.swift */; };
 		68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */; };
@@ -80,7 +79,6 @@
 		68005ACF22070793004F791A /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
 		68005AD122070793004F791A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		68005AD322070793004F791A /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
-		68005AD622070793004F791A /* QRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
 		68005AD722070793004F791A /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		68005AD922070793004F791A /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
 		68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 		68005AD522070793004F791A /* QRViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68005AD622070793004F791A /* QRViewController.xib */,
 				68005AD722070793004F791A /* QRViewController.swift */,
 				6804B1012242332100208AE0 /* QRView.swift */,
 			);
@@ -400,7 +397,6 @@
 				68005B1F220979CE004F791A /* Localizable.strings in Resources */,
 				68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */,
 				68005ABE22070789004F791A /* Assets.xcassets in Resources */,
-				68005AEC22070793004F791A /* QRViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

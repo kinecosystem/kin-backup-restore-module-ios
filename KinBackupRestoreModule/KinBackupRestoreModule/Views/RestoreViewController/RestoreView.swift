@@ -10,7 +10,6 @@ import UIKit
 
 class RestoreView: KeyboardAdjustingScrollView {
     let imageView = UIImageView()
-    let instructionsLabel = UILabel()
     let passwordInput = PasswordEntryTextField()
     let doneButton = ConfirmButton()
 
@@ -44,6 +43,8 @@ class RestoreView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalSpaceSubview(to: contentStackView)
 
+        let instructionsLabel = UILabel()
+        instructionsLabel.text = "restore.description".localized()
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
         instructionsLabel.textColor = .kinBlueGreyTwo
         instructionsLabel.textAlignment = .center
@@ -53,11 +54,13 @@ class RestoreView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalSpaceSubview(to: contentStackView)
 
+        passwordInput.attributedPlaceholder = NSAttributedString(string: "restore.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordInput.isSecureTextEntry = true
         passwordInput.setContentCompressionResistancePriority(.required, for: .vertical)
         passwordInput.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(passwordInput)
 
+        doneButton.setTitle("generic.next".localized(), for: .normal)
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         doneButton.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(doneButton)

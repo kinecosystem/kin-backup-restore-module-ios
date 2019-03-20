@@ -22,10 +22,6 @@ class RestoreViewController: ViewController {
         return _view.imageView
     }
 
-    private var instructionsLabel: UILabel {
-        return _view.instructionsLabel
-    }
-
     private var passwordInput: PasswordEntryTextField {
         return _view.passwordInput
     }
@@ -63,13 +59,9 @@ class RestoreViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
 
-        passwordInput.attributedPlaceholder = NSAttributedString(string: "restore.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
         passwordInput.addTarget(self, action: #selector(passwordInputChanges), for: .editingChanged)
         passwordInput.becomeFirstResponder()
 
-        instructionsLabel.text = "restore.description".localized()
-
-        doneButton.setTitle("generic.next".localized(), for: .normal)
         doneButton.isEnabled = false
         doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
     }

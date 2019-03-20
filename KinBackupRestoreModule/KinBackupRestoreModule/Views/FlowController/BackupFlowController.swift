@@ -113,7 +113,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
 }
 
 extension BackupFlowController: QRViewControllerDelegate {
-    func QRViewControllerDidComplete() {
+    func QRViewControllerDidComplete(_ viewController: QRViewController) {
         pushCompletedViewController()
     }
 }

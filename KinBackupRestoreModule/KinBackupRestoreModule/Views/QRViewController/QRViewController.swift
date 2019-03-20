@@ -10,27 +10,14 @@ import UIKit
 import MessageUI
 
 protocol QRViewControllerDelegate: NSObjectProtocol {
-    func QRViewControllerDidComplete()
+    func QRViewControllerDidComplete(_ viewController: QRViewController)
 }
 
 class QRViewController: ViewController {
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var qrImageView: UIImageView!
-    @IBOutlet weak var reminderImageView: UIImageView!
-    @IBOutlet weak var reminderTitleLabel: UILabel!
-    @IBOutlet weak var reminderDescriptionLabel: UILabel!
-    @IBOutlet weak var emailButton: RoundButton!
-    @IBOutlet weak var copiedQRLabel: UILabel!
-    @IBOutlet weak var tickImage: UIImageView!
-    @IBOutlet weak var tickStack: UIStackView!
-    @IBOutlet weak var confirmTick: UIView!
-    @IBOutlet weak var topSpace: NSLayoutConstraint!
-    
-    private let qrString: String
-    private var mailViewController: MFMailComposeViewController?
-    private(set) var tickMarked = false
-    
     weak var delegate: QRViewControllerDelegate!
+
+    private let qrImage: UIImage?
+    private var mailViewController: MFMailComposeViewController?
 
     // MARK: View
 
@@ -38,16 +25,16 @@ class QRViewController: ViewController {
         return _view.imageView
     }
 
-    private var instructionsLabel: UILabel {
-        return _view.instructionsLabel
-    }
-
-    private var reminderLabel: UILabel {
-        return _view.reminderLabel
+    private var confirmControl: UIControl {
+        return _view.confirmControl
     }
 
     private var doneButton: RoundButton {
         return _view.doneButton
+    }
+
+    private var isConfirmed: Bool {
+        return _view.isConfirmed
     }
 
     var _view: QRView {
@@ -65,11 +52,9 @@ class QRViewController: ViewController {
     // MARK: Lifecycle
 
     init(qrString: String) {
-        self.qrString = qrString
+        self.qrImage = QRController.generateImage(from: qrString)
 
         super.init(nibName: nil, bundle: nil)
-//        super.init(nibName: "QRViewController", bundle: .backupRestore)
-//        loadViewIfNeeded()
 
         title = "qr.title".localized()
     }
@@ -87,27 +72,12 @@ class QRViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinBackupQrCodePageViewed()
 
-        instructionsLabel.text = "qr.description".localized()
+        imageView.image = qrImage
 
-        imageView.image = QRController.generateImage(from: qrString)
+//        confirmControl.isHidden = true
+        confirmControl.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
 
-//        reminderImageView.tintColor = .kinWarning
-//        reminderImageView.tintAdjustmentMode = .normal
-
-        doneButton.setTitle("qr.save".localized(), for: .normal)
-        doneButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
-
-//        copiedQRLabel.text = "qr.saved".localized()
-//        copiedQRLabel.font = .preferredFont(forTextStyle: .body)
-//        copiedQRLabel.textColor = .kinBlueGreyTwo
-//
-//        confirmTick.layer.borderWidth = 1.0
-//        confirmTick.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
-//        confirmTick.layer.cornerRadius = 2.0
-//
-//        tickStack.isHidden = true
-//        tickImage.isHidden = true
-
+        doneButton.addTarget(self, action: #selector(doneAction), for: .touchUpInside)
     }
 
     override func willMove(toParent parent: UIViewController?) {
@@ -117,18 +87,13 @@ class QRViewController: ViewController {
             KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeBackButtonTapped()
         }
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidTakeScreenshot), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -138,62 +103,70 @@ class QRViewController: ViewController {
     @objc
     private func applicationDidTakeScreenshot() {
         if isViewLoaded && view.window != nil {
-            tickStack.isHidden = false
+            confirmControl.isHidden = false
         }
     }
-    
-    @IBAction
-    func tickSelected(_ sender: Any) {
-        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeMyqrcodeButtonTapped()
 
-        tickMarked = !tickMarked
-        tickImage.isHidden = !tickMarked
-        doneButton.setTitle((tickMarked ? "generic.next" : "qr.save").localized(), for: .normal)
-    }
-}
+    // MARK: Actions
 
-// MARK: - Email
-
-extension QRViewController {
-    private enum EmailError: Error {
-        case noClient
-        case critical
-        
-        var title: String {
-            switch self {
-            case .noClient:
-                return "qr.alert_no_client.title".localized()
-            case .critical:
-                return "qr.alert_critical.title".localized()
-            }
+    @objc
+    private func doneAction() {
+        if isConfirmed {
+            delegate.QRViewControllerDidComplete(self)
         }
-        
-        var message: String {
-            switch self {
-            case .noClient:
-                return "qr.alert_no_client.message".localized()
-            case .critical:
-                return "qr.alert_critical.message".localized()
-            }
+        else {
+            presentMailViewController()
         }
     }
     
     @objc
-    private func emailButtonTapped() {
-        guard tickMarked == false else {
-            delegate.QRViewControllerDidComplete()
-            return
+    private func confirmAction() {
+        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeMyqrcodeButtonTapped()
+
+        doneButton.isSelected = isConfirmed
+    }
+}
+
+// MARK: - Mail
+
+extension QRViewController {
+    fileprivate enum MailError: Error {
+        case noClient
+        case critical
+    }
+}
+
+extension QRViewController.MailError {
+    var title: String {
+        switch self {
+        case .noClient:
+            return "qr.alert_no_client.title".localized()
+        case .critical:
+            return "qr.alert_critical.title".localized()
         }
-        
+    }
+
+    var message: String {
+        switch self {
+        case .noClient:
+            return "qr.alert_no_client.message".localized()
+        case .critical:
+            return "qr.alert_critical.message".localized()
+        }
+    }
+}
+
+extension QRViewController {
+    fileprivate func presentMailViewController() {
         KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeSendButtonTapped()
 
         guard MFMailComposeViewController.canSendMail() else {
-            presentEmailErrorAlertController(.noClient)
+            presentMailErrorAlertController(.noClient)
             return
         }
         
-        guard let qrImage = QRController.generateImage(from: qrString), let data = qrImage.pngData() else {
-            presentEmailErrorAlertController(.critical)
+        guard let data = qrImage?.pngData() else {
+            presentMailErrorAlertController(.critical)
             return
         }
         
@@ -205,7 +178,7 @@ extension QRViewController {
         self.mailViewController = mailViewController
     }
     
-    private func presentEmailErrorAlertController(_ error: EmailError) {
+    private func presentMailErrorAlertController(_ error: MailError) {
         let alertController = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
@@ -215,7 +188,7 @@ extension QRViewController {
 extension QRViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true) { [weak self] in
-            self?.tickStack.isHidden = false
+            self?.confirmControl.isHidden = false
         }
         mailViewController = nil
     }

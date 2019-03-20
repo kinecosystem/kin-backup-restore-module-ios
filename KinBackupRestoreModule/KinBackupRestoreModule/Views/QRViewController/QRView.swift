@@ -10,9 +10,10 @@ import UIKit
 
 class QRView: KeyboardAdjustingScrollView {
     let imageView = UIImageView()
-    let instructionsLabel = UILabel()
-    let reminderLabel = UILabel()
+    private let instructionsLabel = UILabel()
     private let reminderView = ReminderView()
+    let confirmControl = UIControl()
+    private let confirmImageView = UIImageView()
     let doneButton = RoundButton()
 
     private var regularConstraints: [NSLayoutConstraint] = []
@@ -45,6 +46,7 @@ class QRView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalSpaceSubview(to: contentStackView)
 
+        instructionsLabel.text = "qr.description".localized()
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
         instructionsLabel.textColor = .kinBlueGreyTwo
         instructionsLabel.textAlignment = .center
@@ -56,9 +58,42 @@ class QRView: KeyboardAdjustingScrollView {
         reminderView.setContentCompressionResistancePriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(reminderView)
 
+        confirmControl.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
+        contentStackView.addArrangedSubview(confirmControl)
+
+        let confirmStackView = UIStackView()
+        confirmStackView.translatesAutoresizingMaskIntoConstraints = false
+        confirmStackView.axis = .horizontal
+        confirmStackView.spacing = contentView.spacing
+        confirmStackView.alignment = .center
+        confirmStackView.isUserInteractionEnabled = false
+        confirmControl.addSubview(confirmStackView)
+        confirmStackView.topAnchor.constraint(equalTo: confirmControl.topAnchor).isActive = true
+        confirmStackView.leadingAnchor.constraint(greaterThanOrEqualTo: confirmControl.leadingAnchor).isActive = true
+        confirmStackView.bottomAnchor.constraint(equalTo: confirmControl.bottomAnchor).isActive = true
+        confirmStackView.trailingAnchor.constraint(lessThanOrEqualTo: confirmControl.trailingAnchor).isActive = true
+        confirmStackView.centerXAnchor.constraint(equalTo: confirmControl.centerXAnchor).isActive = true
+
+        confirmImageView.tintColor = .kinPrimaryBlue
+        confirmImageView.highlightedImage = UIImage(named: "Checkmark", in: .backupRestore, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        confirmImageView.setContentHuggingPriority(.required, for: .horizontal)
+        confirmImageView.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
+        confirmImageView.layer.borderWidth = 1
+        confirmImageView.layer.cornerRadius = 4
+        confirmImageView.layer.masksToBounds = true
+        confirmStackView.addArrangedSubview(confirmImageView)
+
+        let confirmLabel = UILabel()
+        confirmLabel.text = "qr.saved".localized()
+        confirmLabel.font = .preferredFont(forTextStyle: .body)
+        confirmLabel.textColor = .kinBlueGreyTwo
+        confirmStackView.addArrangedSubview(confirmLabel)
+
         addArrangedVerticalSpaceSubview(to: contentStackView)
 
         doneButton.appearance = .blue
+        doneButton.setTitle("qr.save".localized(), for: .normal)
+        doneButton.setTitle("generic.next".localized(), for: .selected)
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         doneButton.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(doneButton)
@@ -87,5 +122,16 @@ class QRView: KeyboardAdjustingScrollView {
 
             NSLayoutConstraint.activate(regularConstraints)
         }
+    }
+
+    // MARK: Confirm
+
+    var isConfirmed: Bool {
+        return confirmImageView.isHighlighted
+    }
+
+    @objc
+    private func confirmAction() {
+        confirmImageView.isHighlighted = !confirmImageView.isHighlighted
     }
 }
