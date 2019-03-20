@@ -15,7 +15,7 @@ class KeyboardAdjustingScrollView: UIScrollView {
     private var bottomLayoutHeightConstraint: NSLayoutConstraint?
     var bottomLayoutHeight: CGFloat = 0 {
         didSet {
-            let bottomOffset = layoutMargins.left
+            let bottomOffset = traitCollection.verticalSizeClass == .compact ? layoutMargins.bottom : layoutMargins.left
             let bottomHeight = bottomLayoutHeight + bottomOffset
 
             contentLayoutGuideBottomConstraint?.constant = -bottomHeight

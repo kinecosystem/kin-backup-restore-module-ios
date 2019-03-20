@@ -10,7 +10,8 @@ import UIKit
 
 class RestoreView: KeyboardAdjustingScrollView {
     let imageView = UIImageView()
-    private var imageViewWidthConstraint: NSLayoutConstraint?
+
+    private var regularConstraints: [NSLayoutConstraint] = []
     let instructionsLabel = UILabel()
     let passwordInput = PasswordEntryTextField()
     let doneButton = ConfirmButton()
@@ -28,14 +29,20 @@ class RestoreView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalLayoutSubview(to: imageViewStackView)
 
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         imageViewStackView.addArrangedSubview(imageView)
-        imageViewWidthConstraint = imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7)
-        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
+        imageView.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
+        regularConstraints += [
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor)
+        ]
 
         let contentStackView = UIStackView()
         contentStackView.axis = .vertical
         contentStackView.spacing = contentView.spacing
         contentView.addArrangedSubview(contentStackView)
+
+        addArrangedVerticalSpaceSubview(to: contentStackView)
 
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
         instructionsLabel.textColor = .kinBlueGreyTwo
@@ -48,9 +55,11 @@ class RestoreView: KeyboardAdjustingScrollView {
 
         passwordInput.isSecureTextEntry = true
         passwordInput.setContentCompressionResistancePriority(.required, for: .vertical)
+        passwordInput.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(passwordInput)
 
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
+        doneButton.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(doneButton)
 
         addArrangedVerticalLayoutSubview(to: contentStackView)
@@ -68,14 +77,14 @@ class RestoreView: KeyboardAdjustingScrollView {
         if traitCollection.verticalSizeClass == .compact {
             contentView.axis = .horizontal
             contentView.distribution = .fillEqually
-            
-            imageViewWidthConstraint?.isActive = false
+
+            NSLayoutConstraint.deactivate(regularConstraints)
         }
         else {
             contentView.axis = .vertical
             contentView.distribution = .fill
 
-            imageViewWidthConstraint?.isActive = true
+            NSLayoutConstraint.activate(regularConstraints)
         }
     }
 }
