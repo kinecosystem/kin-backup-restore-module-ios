@@ -1,18 +1,19 @@
 //
-//  RestoreView.swift
+//  QRView.swift
 //  KinBackupRestoreModule
 //
-//  Created by Corey Werner on 24/02/2019.
+//  Created by Corey Werner on 20/03/2019.
 //  Copyright © 2019 Kin Foundation. All rights reserved.
 //
 
 import UIKit
 
-class RestoreView: KeyboardAdjustingScrollView {
+class QRView: KeyboardAdjustingScrollView {
     let imageView = UIImageView()
     let instructionsLabel = UILabel()
-    let passwordInput = PasswordEntryTextField()
-    let doneButton = ConfirmButton()
+    let reminderLabel = UILabel()
+    private let reminderView = ReminderView()
+    let doneButton = RoundButton()
 
     private var regularConstraints: [NSLayoutConstraint] = []
 
@@ -51,13 +52,13 @@ class RestoreView: KeyboardAdjustingScrollView {
         instructionsLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(instructionsLabel)
 
+        reminderView.tintColor = .kinWarning
+        reminderView.setContentCompressionResistancePriority(.required, for: .vertical)
+        contentStackView.addArrangedSubview(reminderView)
+
         addArrangedVerticalSpaceSubview(to: contentStackView)
 
-        passwordInput.isSecureTextEntry = true
-        passwordInput.setContentCompressionResistancePriority(.required, for: .vertical)
-        passwordInput.setContentHuggingPriority(.required, for: .vertical)
-        contentStackView.addArrangedSubview(passwordInput)
-
+        doneButton.appearance = .blue
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         doneButton.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(doneButton)

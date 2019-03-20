@@ -31,11 +31,45 @@ class QRViewController: ViewController {
     private(set) var tickMarked = false
     
     weak var delegate: QRViewControllerDelegate!
-    
+
+    // MARK: View
+
+    var imageView: UIImageView {
+        return _view.imageView
+    }
+
+    private var instructionsLabel: UILabel {
+        return _view.instructionsLabel
+    }
+
+    private var reminderLabel: UILabel {
+        return _view.reminderLabel
+    }
+
+    private var doneButton: RoundButton {
+        return _view.doneButton
+    }
+
+    var _view: QRView {
+        return view as! QRView
+    }
+
+    var classForView: QRView.Type {
+        return QRView.self
+    }
+
+    override func loadView() {
+        view = classForView.self.init(frame: .zero)
+    }
+
+    // MARK: Lifecycle
+
     init(qrString: String) {
         self.qrString = qrString
-        super.init(nibName: "QRViewController", bundle: .backupRestore)
-        loadViewIfNeeded()
+
+        super.init(nibName: nil, bundle: nil)
+//        super.init(nibName: "QRViewController", bundle: .backupRestore)
+//        loadViewIfNeeded()
 
         title = "qr.title".localized()
     }
@@ -48,56 +82,39 @@ class QRViewController: ViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-
-        if parent == nil {
-            KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeBackButtonTapped()
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         KinBackupRestoreBI.shared.delegate?.kinBackupQrCodePageViewed()
 
-        descriptionLabel.text = "qr.description".localized()
-        descriptionLabel.font = .preferredFont(forTextStyle: .body)
-        descriptionLabel.textColor = .kinBlueGreyTwo
+        instructionsLabel.text = "qr.description".localized()
 
-        qrImageView.image = QRController.generateImage(from: qrString, for: qrImageView.bounds.size)
+        imageView.image = QRController.generateImage(from: qrString)
 
-        reminderImageView.tintColor = .kinWarning
-        reminderImageView.tintAdjustmentMode = .normal
+//        reminderImageView.tintColor = .kinWarning
+//        reminderImageView.tintAdjustmentMode = .normal
 
-        reminderTitleLabel.text = "reminder.title".localized()
-        reminderTitleLabel.font = .preferredFont(forTextStyle: .callout, symbolicTraits: [.traitBold])
-        reminderTitleLabel.textColor = .kinWarning
+        doneButton.setTitle("qr.save".localized(), for: .normal)
+        doneButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
 
-        reminderDescriptionLabel.text = "reminder.description".localized()
-        reminderDescriptionLabel.font = .preferredFont(forTextStyle: .footnote)
-        reminderDescriptionLabel.textColor = .kinWarning
+//        copiedQRLabel.text = "qr.saved".localized()
+//        copiedQRLabel.font = .preferredFont(forTextStyle: .body)
+//        copiedQRLabel.textColor = .kinBlueGreyTwo
+//
+//        confirmTick.layer.borderWidth = 1.0
+//        confirmTick.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
+//        confirmTick.layer.cornerRadius = 2.0
+//
+//        tickStack.isHidden = true
+//        tickImage.isHidden = true
 
-        emailButton.setTitle("qr.save".localized(), for: .normal)
-        emailButton.setTitleColor(.white, for: .normal)
-        emailButton.backgroundColor = .kinPrimaryBlue
-        emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+    }
 
-        copiedQRLabel.text = "qr.saved".localized()
-        copiedQRLabel.font = .preferredFont(forTextStyle: .body)
-        copiedQRLabel.textColor = .kinBlueGreyTwo
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
 
-        confirmTick.layer.borderWidth = 1.0
-        confirmTick.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
-        confirmTick.layer.cornerRadius = 2.0
-
-        tickStack.isHidden = true
-        tickImage.isHidden = true
-        
-        if #available(iOS 11, *) {
-            // ???: why
-            topSpace.constant = 0.0
-            view.layoutIfNeeded()
+        if parent == nil {
+            KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeBackButtonTapped()
         }
     }
     
@@ -131,7 +148,7 @@ class QRViewController: ViewController {
 
         tickMarked = !tickMarked
         tickImage.isHidden = !tickMarked
-        emailButton.setTitle((tickMarked ? "generic.next" : "qr.save").localized(), for: .normal)
+        doneButton.setTitle((tickMarked ? "generic.next" : "qr.save").localized(), for: .normal)
     }
 }
 

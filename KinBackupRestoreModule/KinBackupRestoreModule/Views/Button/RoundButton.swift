@@ -9,6 +9,15 @@
 import UIKit
 
 class RoundButton: UIButton {
+    // TODO: make sure all buttons apply this
+    var appearance: Appearance = .regular {
+        didSet {
+            syncAppearance()
+        }
+    }
+
+    // MARK: Lifecycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -20,11 +29,14 @@ class RoundButton: UIButton {
     }
     
     private func commonInit() {
+        syncAppearance()
         setTitleColor(.white, for: .normal)
         setTitleColor(UIColor(white: 1, alpha: 0.5), for: .highlighted)
-        
+
         layer.masksToBounds = true
     }
+
+    // MARK: Layout
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -36,9 +48,29 @@ class RoundButton: UIButton {
         size.height = 44
         return size
     }
+
+    // MARK: Interaction
     
     override var isEnabled: Bool {
         didSet {
+            syncAppearance()
+        }
+    }
+}
+
+// MARK: Appearance
+
+extension RoundButton {
+    enum Appearance {
+        case regular
+        case blue
+    }
+
+    fileprivate func syncAppearance() {
+        switch appearance {
+        case .regular:
+            break
+        case .blue:
             backgroundColor = isEnabled ? .kinPrimaryBlue : .kinLightBlueGrey
         }
     }

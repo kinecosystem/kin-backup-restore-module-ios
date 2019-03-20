@@ -82,13 +82,13 @@ class RestoreViewController: ViewController {
         }
     }
 
-    @IBAction
-    func passwordInputChanges(_ textField: PasswordEntryTextField) {
+    @objc
+    private func passwordInputChanges(_ textField: PasswordEntryTextField) {
         doneButton.isEnabled = textField.hasText
     }
     
-    @IBAction
-    func doneButtonTapped(_ button: ConfirmButton) {
+    @objc
+    private func doneButtonTapped(_ button: ConfirmButton) {
         guard !navigationItem.hidesBackButton else {
             // Button in mid transition
             return
