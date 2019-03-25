@@ -52,7 +52,7 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
         confirmImageView.image = UIImage()
         confirmImageView.highlightedImage = UIImage(named: "rectangle17", in: .backupRestore, compatibleWith: nil)
         confirmImageView.layer.borderWidth = 1
-        confirmImageView.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
+        confirmImageView.layer.borderColor = UIColor.kinGray.cgColor
         confirmImageView.layer.cornerRadius = 2
         confirmImageView.setContentCompressionResistancePriority(.required, for: .vertical)
         confirmStackView.addArrangedSubview(confirmImageView)
@@ -60,7 +60,7 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
         confirmImageView.heightAnchor.constraint(equalToConstant: 18).isActive = true
 
         confirmLabel.font = .preferredFont(forTextStyle: .footnote)
-        confirmLabel.textColor = .kinBlueGreyTwo
+        confirmLabel.textColor = .kinGray
         confirmLabel.numberOfLines = 0
         confirmLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         confirmStackView.addArrangedSubview(confirmLabel)

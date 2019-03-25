@@ -67,12 +67,12 @@ class PasswordEntryViewController: ViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordPageViewed()
 
-        passwordInfoLabel.instructionsAttributedString = NSAttributedString(string: "password_entry.instructions".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInfoLabel.instructionsAttributedString = NSAttributedString(string: "password_entry.instructions".localized(), attributes: [.foregroundColor: UIColor.kinGray])
         passwordInfoLabel.mismatchAttributedString = NSAttributedString(string: "password_entry.mismatch".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
         passwordInfoLabel.invalidAttributedString = {
             let attributedString1 = NSAttributedString(string: "password_entry.invalid_warning".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
 
-            let attributedString2 = NSAttributedString(string: "password_entry.invalid_info".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+            let attributedString2 = NSAttributedString(string: "password_entry.invalid_info".localized(), attributes: [.foregroundColor: UIColor.kinGray])
 
             let attributedString = NSMutableAttributedString()
             attributedString.append(attributedString1)
@@ -81,11 +81,11 @@ class PasswordEntryViewController: ViewController {
             return attributedString
         }()
 
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinGray])
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.becomeFirstResponder()
 
-        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password_confirm.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password_confirm.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinGray])
         passwordConfirmTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
 
         confirmLabel.text = "password_entry.confirmation".localized()

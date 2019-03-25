@@ -34,8 +34,8 @@ class ExplanationTemplateViewController: ViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .kinPrimaryBlue
-        continueButton.setTitleColor(.kinPrimaryBlue, for: .normal)
+        view.backgroundColor = .kinPrimary
+        continueButton.setTitleColor(.kinPrimary, for: .normal)
         if #available(iOS 11, *) {
             topSpace.constant = 0.0
             view.layoutIfNeeded()

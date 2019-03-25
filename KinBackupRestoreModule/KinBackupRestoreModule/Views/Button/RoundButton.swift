@@ -9,8 +9,7 @@
 import UIKit
 
 class RoundButton: UIButton {
-    // TODO: make sure all buttons apply this
-    var appearance: Appearance = .regular {
+    var appearance: Appearance = .blue {
         didSet {
             syncAppearance()
         }
@@ -62,16 +61,16 @@ class RoundButton: UIButton {
 
 extension RoundButton {
     enum Appearance {
-        case regular
+        case white
         case blue
     }
 
     fileprivate func syncAppearance() {
         switch appearance {
-        case .regular:
-            break
+        case .white:
+            backgroundColor = isEnabled ? .white : UIColor.white.withAlphaComponent(0.6)
         case .blue:
-            backgroundColor = isEnabled ? .kinPrimaryBlue : .kinLightBlueGrey
+            backgroundColor = isEnabled ? .kinPrimary : .kinLightGray
         }
     }
 }

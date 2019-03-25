@@ -50,7 +50,7 @@ class QRView: KeyboardAdjustingScrollView {
 
         instructionsLabel.text = "qr.description".localized()
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
-        instructionsLabel.textColor = .kinBlueGreyTwo
+        instructionsLabel.textColor = .kinGray
         instructionsLabel.textAlignment = .center
         instructionsLabel.numberOfLines = 0
         instructionsLabel.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -82,10 +82,10 @@ class QRView: KeyboardAdjustingScrollView {
         confirmStackView.trailingAnchor.constraint(lessThanOrEqualTo: confirmControl.trailingAnchor).isActive = true
         confirmStackView.centerXAnchor.constraint(equalTo: confirmControl.centerXAnchor).isActive = true
 
-        confirmImageView.tintColor = .kinPrimaryBlue
+        confirmImageView.tintColor = .kinPrimary
         confirmImageView.highlightedImage = UIImage(named: "Checkmark", in: .backupRestore, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         confirmImageView.setContentHuggingPriority(.required, for: .horizontal)
-        confirmImageView.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
+        confirmImageView.layer.borderColor = UIColor.kinGray.cgColor
         confirmImageView.layer.borderWidth = 1
         confirmImageView.layer.cornerRadius = 4
         confirmImageView.layer.masksToBounds = true
@@ -94,7 +94,7 @@ class QRView: KeyboardAdjustingScrollView {
         let confirmLabel = UILabel()
         confirmLabel.text = "qr.saved".localized()
         confirmLabel.font = .preferredFont(forTextStyle: .body)
-        confirmLabel.textColor = .kinBlueGreyTwo
+        confirmLabel.textColor = .kinGray
         confirmStackView.addArrangedSubview(confirmLabel)
 
         addArrangedVerticalSpaceSubview(to: contentStackView)

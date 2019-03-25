@@ -24,7 +24,7 @@ class ConfirmButton: RoundButton {
     func transitionToConfirmed(completion: (()->())? = nil) {
         let shape = CAShapeLayer()
         shape.frame = bounds
-        shape.fillColor = UIColor.kinPrimaryBlue.cgColor
+        shape.fillColor = UIColor.kinPrimary.cgColor
         shape.strokeColor = UIColor.clear.cgColor
         shape.path = UIBezierPath(roundedRect: shape.bounds, cornerRadius: shape.bounds.height / 2).cgPath
         setBackgroundImage(nil, for: .normal)
