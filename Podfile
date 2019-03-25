@@ -7,7 +7,7 @@ inhibit_all_warnings!
 workspace 'KinBackupRestoreModule'
 
 def pods
-  pod 'KinSDK', :git => 'https://github.com/kinecosystem/kin-sdk-ios.git'
+  pod 'KinSDK', '0.8.5'
 end
 
 target 'KinBackupRestoreModule' do
@@ -18,7 +18,7 @@ end
 
 target 'KinBackupRestoreModuleTests' do
   project 'KinBackupRestoreModule/KinBackupRestoreModule.xcodeproj'
-  
+
   pods
 end
 
