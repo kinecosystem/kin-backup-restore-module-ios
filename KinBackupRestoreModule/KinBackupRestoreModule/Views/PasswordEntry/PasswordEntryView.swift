@@ -72,6 +72,7 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
         doneButtonStackView.alignment = .center
         contentView.addArrangedSubview(doneButtonStackView)
 
+        doneButton.appearance = .blue
         doneButton.isEnabled = false
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         doneButtonStackView.addArrangedSubview(doneButton)

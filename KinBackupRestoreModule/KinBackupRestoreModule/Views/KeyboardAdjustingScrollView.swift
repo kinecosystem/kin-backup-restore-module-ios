@@ -68,48 +68,73 @@ class KeyboardAdjustingScrollView: UIScrollView {
 
     // MARK: Layout
 
-    private var firstVerticalLayoutView: UIView?
+    private var firstVerticalLayoutViewMap: [UIUserInterfaceSizeClass: UIView] = [:]
+    private var regularVerticalViews: [UIView] = []
+    private var compactVerticalViews: [UIView] = []
+    private var regularConstraints: [NSLayoutConstraint] = []
+    private var compactConstraints: [NSLayoutConstraint] = []
 
     /**
      Add subview with a dynamic height.
      */
-    func addArrangedVerticalLayoutSubview(to stackView: UIStackView? = nil) {
+    func addArrangedVerticalLayoutSubview(to stackView: UIStackView? = nil, sizeClass: UIUserInterfaceSizeClass = .unspecified) {
         let layoutView = UIView()
         (stackView ?? contentView).addArrangedSubview(layoutView)
+        let constraint: NSLayoutConstraint
 
-        if let firstVerticalLayoutView = firstVerticalLayoutView {
-            layoutView.heightAnchor.constraint(equalTo: firstVerticalLayoutView.heightAnchor).isActive = true
+        if let firstVerticalLayoutView = firstVerticalLayoutViewMap[sizeClass] {
+            constraint = layoutView.heightAnchor.constraint(equalTo: firstVerticalLayoutView.heightAnchor)
         }
         else {
-            firstVerticalLayoutView = layoutView
+            firstVerticalLayoutViewMap[sizeClass] = layoutView
 
-            let layoutViewHeightConstraint = layoutView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1)
-            layoutViewHeightConstraint.priority = .defaultLow
-            layoutViewHeightConstraint.isActive = true
+            constraint = layoutView.heightAnchor.constraint(equalTo: layoutMarginsGuide.heightAnchor, multiplier: 0.1)
+            constraint.priority = .defaultLow
         }
+
+        applyVerticalView(layoutView, constraint: constraint, sizeClass: sizeClass)
     }
 
     /**
      Add subview with a static height.
      */
-    func addArrangedVerticalSpaceSubview(to stackView: UIStackView? = nil, height: CGFloat = 0) {
+    func addArrangedVerticalSpaceSubview(to stackView: UIStackView? = nil, height: CGFloat = 0, sizeClass: UIUserInterfaceSizeClass = .unspecified) {
         let spaceView = UIView()
         spaceView.setContentHuggingPriority(.required, for: .vertical)
         (stackView ?? contentView).addArrangedSubview(spaceView)
-        spaceView.heightAnchor.constraint(equalToConstant: height).isActive = true
+        let constraint = spaceView.heightAnchor.constraint(equalToConstant: height)
+        applyVerticalView(spaceView, constraint: constraint, sizeClass: sizeClass)
     }
 
-    // TODO: support orientation
-//    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-//        super.traitCollectionDidChange(previousTraitCollection)
-//
-//        if traitCollection.verticalSizeClass == .compact {
-//
-//        }
-//        else {
-//
-//        }
-//    }
+    private func applyVerticalView(_ verticalView: UIView, constraint: NSLayoutConstraint, sizeClass: UIUserInterfaceSizeClass) {
+        switch sizeClass {
+        case .regular:
+            regularVerticalViews.append(verticalView)
+            regularConstraints.append(constraint)
+        case .compact:
+            compactVerticalViews.append(verticalView)
+            compactConstraints.append(constraint)
+        case .unspecified:
+            constraint.isActive = true
+        }
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if traitCollection.verticalSizeClass == .compact {
+            NSLayoutConstraint.deactivate(regularConstraints)
+            NSLayoutConstraint.activate(compactConstraints)
+            regularVerticalViews.forEach({ $0.isHidden = true })
+            compactVerticalViews.forEach({ $0.isHidden = false })
+        }
+        else {
+            NSLayoutConstraint.deactivate(compactConstraints)
+            NSLayoutConstraint.activate(regularConstraints)
+            compactVerticalViews.forEach({ $0.isHidden = true })
+            regularVerticalViews.forEach({ $0.isHidden = false })
+        }
+    }
 
     // MARK: Keyboard
 

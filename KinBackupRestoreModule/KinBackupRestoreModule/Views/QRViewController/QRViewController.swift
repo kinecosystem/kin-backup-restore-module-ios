@@ -74,7 +74,7 @@ class QRViewController: ViewController {
 
         imageView.image = qrImage
 
-//        confirmControl.isHidden = true
+        confirmControl.isHidden = true
         confirmControl.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
 
         doneButton.addTarget(self, action: #selector(doneAction), for: .touchUpInside)

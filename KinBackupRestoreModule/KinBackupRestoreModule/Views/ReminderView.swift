@@ -23,31 +23,41 @@ class ReminderView: UIView {
         stackView.axis = .vertical
         stackView.spacing = 5
         stackView.alignment = .center
+        stackView.setContentHuggingPriority(.required, for: .vertical)
         addSubview(stackView)
         stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
-        let topStackView = UIStackView()
-        topStackView.axis = .horizontal
-        topStackView.spacing = 8
-        topStackView.alignment = .center
-        stackView.addArrangedSubview(topStackView)
+        let topContainerView = UIView()
+        topContainerView.setContentHuggingPriority(.required, for: .vertical)
+        stackView.addArrangedSubview(topContainerView)
 
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintAdjustmentMode = .normal
         imageView.image = UIImage(named: "whiteFlagIcon", in: .backupRestore, compatibleWith: nil)
         imageView.contentMode = .scaleAspectFit
-        topStackView.addArrangedSubview(imageView)
+        topContainerView.addSubview(imageView)
+        imageView.topAnchor.constraint(equalTo: topContainerView.topAnchor).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: topContainerView.leadingAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: topContainerView.bottomAnchor).isActive = true
 
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = "reminder.title".localized()
         titleLabel.font = .preferredFont(forTextStyle: .callout, symbolicTraits: [.traitBold])
-        topStackView.addArrangedSubview(titleLabel)
+        titleLabel.setContentHuggingPriority(.required, for: .vertical)
+        topContainerView.addSubview(titleLabel)
+        titleLabel.topAnchor.constraint(equalTo: topContainerView.topAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 7).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: topContainerView.bottomAnchor).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: topContainerView.trailingAnchor).isActive = true
 
         detailLabel.text = "reminder.description".localized()
         detailLabel.font = .preferredFont(forTextStyle: .footnote)
         detailLabel.numberOfLines = 0
         detailLabel.textAlignment = .center
+        detailLabel.setContentHuggingPriority(.required, for: .vertical)
         stackView.addArrangedSubview(detailLabel)
     }
 

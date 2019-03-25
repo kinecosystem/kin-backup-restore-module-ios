@@ -20,7 +20,7 @@ class BackupFlowController: FlowController {
     private lazy var _entryViewController: UIViewController = {
         let viewController = BackupIntroViewController()
         viewController.lifeCycleDelegate = self
-        viewController.continueButton.addTarget(self, action: #selector(push), for: .touchUpInside)
+        viewController.continueButton.addTarget(self, action: #selector(pushPasswordViewController), for: .touchUpInside)
         return viewController
     }()
     
@@ -50,13 +50,6 @@ extension BackupFlowController {
         viewController.delegate = self
         viewController.lifeCycleDelegate = self
         navigationController.pushViewController(viewController, animated: true)
-    }
-
-    // !!!: DEBUG
-    @objc
-    func push() {
-        let str = "{\"pkey\":\"GB2FKV3UT7HC4QCCRKZWNAYLTADH32HTUL3QMWA2IX44LUGVVH7CYENZ\",\"seed\":\"c123df51eaae55d05e4c01d6642cab1c300101e2396d2ec0f1523887eca078362abe4e32d2d2cada278375e85a294b5b1cdb104b505205a0932908a686c8c6915d14ebfb922ceb95\",\"salt\":\"d3ab5f31e46b446ad753a2130fd52173\"}"
-        pushQRViewController(with: str)
     }
 
     @objc

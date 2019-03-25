@@ -29,7 +29,7 @@ class QRView: KeyboardAdjustingScrollView {
         imageViewStackView.spacing = contentView.spacing
         contentView.addArrangedSubview(imageViewStackView)
 
-        addArrangedVerticalLayoutSubview(to: imageViewStackView)
+        addArrangedVerticalLayoutSubview(to: imageViewStackView, sizeClass: .regular)
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
@@ -39,12 +39,14 @@ class QRView: KeyboardAdjustingScrollView {
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor)
         ]
 
+        addArrangedVerticalSpaceSubview(to: imageViewStackView, height: 10, sizeClass: .regular)
+
         let contentStackView = UIStackView()
         contentStackView.axis = .vertical
         contentStackView.spacing = contentView.spacing
         contentView.addArrangedSubview(contentStackView)
 
-        addArrangedVerticalSpaceSubview(to: contentStackView)
+        addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .compact)
 
         instructionsLabel.text = "qr.description".localized()
         instructionsLabel.font = .preferredFont(forTextStyle: .body)
@@ -52,11 +54,17 @@ class QRView: KeyboardAdjustingScrollView {
         instructionsLabel.textAlignment = .center
         instructionsLabel.numberOfLines = 0
         instructionsLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        instructionsLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
         contentStackView.addArrangedSubview(instructionsLabel)
+
+        addArrangedVerticalSpaceSubview(to: contentStackView, height: 10)
 
         reminderView.tintColor = .kinWarning
         reminderView.setContentCompressionResistancePriority(.required, for: .vertical)
+        reminderView.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(reminderView)
+
+        addArrangedVerticalSpaceSubview(to: contentStackView, height: 10)
 
         confirmControl.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
         contentStackView.addArrangedSubview(confirmControl)
@@ -98,7 +106,8 @@ class QRView: KeyboardAdjustingScrollView {
         doneButton.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(doneButton)
 
-        addArrangedVerticalLayoutSubview(to: contentStackView)
+        addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .compact)
+        addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .regular)
     }
 
     required init?(coder aDecoder: NSCoder) {
