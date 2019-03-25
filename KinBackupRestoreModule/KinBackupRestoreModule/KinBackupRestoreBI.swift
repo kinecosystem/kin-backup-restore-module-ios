@@ -14,24 +14,5 @@ final class KinBackupRestoreBI {
 }
 
 public protocol KinBackupRestoreBIDelegate: NSObjectProtocol {
-    func kinBackupStartButtonTapped()
-    func kinBackupCompletedPageViewed()
-    func kinBackupCreatePasswordPageViewed()
-    func kinBackupCreatePasswordBackButtonTapped()
-    func kinBackupCreatePasswordNextButtonTapped()
-    func kinBackupQrCodeBackButtonTapped()
-    func kinBackupQrCodePageViewed()
-    func kinBackupQrCodeMyqrcodeButtonTapped()
-    func kinBackupQrCodeSendButtonTapped()
-    func kinBackupWelcomePageViewed()
-    func kinBackupWelcomePageBackButtonTapped()
-
-    func kinRestorePasswordEntryBackButtonTapped()
-    func kinRestorePasswordEntryPageViewed()
-    func kinRestorePasswordDoneButtonTapped()
-    func kinRestoreUploadQrCodePageViewed()
-    func kinRestoreUploadQrCodeBackButtonTapped()
-    func kinRestoreUploadQrCodeButtonTapped()
-    func kinRestoreAreYouSureOkButtonTapped()
-    func kinRestoreAreYouSureCancelButtonTapped()
+    
 }

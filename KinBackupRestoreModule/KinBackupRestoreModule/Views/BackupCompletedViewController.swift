@@ -11,8 +11,6 @@ import UIKit
 class BackupCompletedViewController: ExplanationTemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        KinBackupRestoreBI.shared.delegate?.kinBackupCompletedPageViewed()
         
         navigationItem.hidesBackButton = true
         

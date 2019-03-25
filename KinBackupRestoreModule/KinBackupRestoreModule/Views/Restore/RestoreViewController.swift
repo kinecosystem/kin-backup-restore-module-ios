@@ -57,21 +57,11 @@ class RestoreViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryPageViewed()
-
         passwordInput.addTarget(self, action: #selector(passwordInputChanges), for: .editingChanged)
         passwordInput.becomeFirstResponder()
 
         doneButton.isEnabled = false
         doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
-    }
-
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-
-        if parent == nil {
-            KinBackupRestoreBI.shared.delegate?.kinRestorePasswordEntryBackButtonTapped()
-        }
     }
 
     @objc
@@ -85,8 +75,6 @@ class RestoreViewController: ViewController {
             // Button in mid transition
             return
         }
-
-        KinBackupRestoreBI.shared.delegate?.kinRestorePasswordDoneButtonTapped()
 
         guard let delegate = delegate else {
             return

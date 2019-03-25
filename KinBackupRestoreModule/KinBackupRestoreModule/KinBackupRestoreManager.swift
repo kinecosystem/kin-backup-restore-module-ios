@@ -15,11 +15,11 @@ public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
 
 public class KinBackupRestoreManager: NSObject {
     public weak var delegate: KinBackupRestoreManagerDelegate?
-    public weak var biDelegate: KinBackupRestoreBIDelegate? {
-        didSet {
-            KinBackupRestoreBI.shared.delegate = biDelegate
-        }
-    }
+//    public weak var biDelegate: KinBackupRestoreBIDelegate? {
+//        didSet {
+//            KinBackupRestoreBI.shared.delegate = biDelegate
+//        }
+//    }
 
     private var instance: Instance?
 

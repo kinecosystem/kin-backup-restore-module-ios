@@ -65,8 +65,6 @@ class PasswordEntryViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordPageViewed()
-
         passwordInfoLabel.instructionsAttributedString = NSAttributedString(string: "password_entry.instructions".localized(), attributes: [.foregroundColor: UIColor.kinGray])
         passwordInfoLabel.mismatchAttributedString = NSAttributedString(string: "password_entry.mismatch".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
         passwordInfoLabel.invalidAttributedString = {
@@ -120,15 +118,6 @@ class PasswordEntryViewController: ViewController {
         }
     }
 
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-
-        if parent == nil {
-            // ???: this seems wrong
-            KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordBackButtonTapped()
-        }
-    }
-
     // MARK: Text Field
     
     @IBAction
@@ -158,8 +147,6 @@ class PasswordEntryViewController: ViewController {
     
     @IBAction
     func doneButtonTapped(_ button: UIButton) {
-        KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordNextButtonTapped()
-
         guard let password = passwordTextField.text, passwordTextField.hasText && passwordConfirmTextField.hasText else {
             return // Shouldn't happen
         }

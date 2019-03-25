@@ -44,8 +44,6 @@ extension BackupFlowController: LifeCycleProtocol {
 extension BackupFlowController {
     @objc
     private func pushPasswordViewController() {
-        KinBackupRestoreBI.shared.delegate?.kinBackupStartButtonTapped()
-
         let viewController = PasswordEntryViewController()
         viewController.delegate = self
         viewController.lifeCycleDelegate = self
