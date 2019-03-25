@@ -20,7 +20,7 @@ class BackupFlowController: FlowController {
     private lazy var _entryViewController: UIViewController = {
         let viewController = BackupIntroViewController()
         viewController.lifeCycleDelegate = self
-        viewController.continueButton.addTarget(self, action: #selector(pushPasswordViewController), for: .touchUpInside)
+        viewController.doneButton.addTarget(self, action: #selector(pushCompletedViewController), for: .touchUpInside)
         return viewController
     }()
     
@@ -31,7 +31,7 @@ class BackupFlowController: FlowController {
 
 extension BackupFlowController: LifeCycleProtocol {
     func viewController(_ viewController: UIViewController, willAppear animated: Bool) {
-        syncNavigationBarColor(with: viewController)
+        
     }
     
     func viewController(_ viewController: UIViewController, willDisappear animated: Bool) {
@@ -78,14 +78,12 @@ extension BackupFlowController {
 
 extension BackupFlowController: PasswordEntryViewControllerDelegate {
     func passwordEntryViewController(_ viewController: PasswordEntryViewController, validate password: String) -> Bool {
-        // TODO: verify with Android
         let digit = "(?=.*\\d)"
-        let lower = "(?=.*[a-z])"
         let upper = "(?=.*[A-Z])"
-        let special = "(?=.*[-+_=!@#$%^&*()\\[\\]{}.,?<>~`|])"
+        let lower = "(?=.*[a-z])"
+        let special = "(?=.*[!@#$%^&*()_+{}\\[\\]])"
         let min = 9
-        let max = 20
-        let pattern = "^\(digit)\(lower)\(upper)\(special).{\(min),\(max)}$"
+        let pattern = "^\(digit)\(upper)\(lower)\(special)(.{\(min),})$"
 
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: [])
@@ -110,7 +108,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
 }
 
 extension BackupFlowController: QRViewControllerDelegate {
-    func QRViewControllerDidComplete() {
+    func QRViewControllerDidComplete(_ viewController: QRViewController) {
         pushCompletedViewController()
     }
 }

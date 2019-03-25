@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PasswordEntryView: UIScrollView {
+class PasswordEntryView: KeyboardAdjustingScrollView {
     let passwordInfoLabel = PasswordEntryLabel()
+    private let textFieldStackView = UIStackView()
     let passwordTextField = PasswordEntryTextField()
     let passwordConfirmTextField = PasswordEntryTextField()
     private let confirmStackView = UIStackView()
@@ -17,44 +18,12 @@ class PasswordEntryView: UIScrollView {
     private let confirmImageView = UIImageView()
     let doneButton = RoundButton()
 
-    private var contentLayoutGuideBottomConstraint: NSLayoutConstraint?
-    private var bottomLayoutHeightConstraint: NSLayoutConstraint?
-    var bottomLayoutHeight: CGFloat = 0 {
-        didSet {
-            let bottomOffset = layoutMargins.left
-            let bottomHeight = bottomLayoutHeight + bottomOffset
-
-            contentLayoutGuideBottomConstraint?.constant = -bottomHeight
-            bottomLayoutHeightConstraint?.constant = bottomHeight
-        }
-    }
-
     // MARK: Lifecycle
 
     required override init(frame: CGRect) {
         super.init(frame: frame)
 
-        backgroundColor = .white
-
-        let contentLayoutGuide = UILayoutGuide()
-        addLayoutGuide(contentLayoutGuide)
-        contentLayoutGuide.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor).isActive = true
-        contentLayoutGuideBottomConstraint = contentLayoutGuide.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor)
-        contentLayoutGuideBottomConstraint?.isActive = true
-
-        let contentView = UIStackView()
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.axis = .vertical
-        contentView.spacing = 10
-        addSubview(contentView)
-        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
-        let contentViewHeightConstraint = contentView.heightAnchor.constraint(lessThanOrEqualTo: contentLayoutGuide.heightAnchor)
-        contentViewHeightConstraint.priority = .defaultHigh
-        contentViewHeightConstraint.isActive = true
-
-        addArrangedVerticalLayoutSubview(to: contentView)
+        addArrangedVerticalLayoutSubview()
 
         passwordInfoLabel.font = .preferredFont(forTextStyle: .body)
         passwordInfoLabel.numberOfLines = 0
@@ -62,15 +31,19 @@ class PasswordEntryView: UIScrollView {
         passwordInfoLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         contentView.addArrangedSubview(passwordInfoLabel)
 
-        addArrangedVerticalLayoutSubview(to: contentView)
+        addArrangedVerticalLayoutSubview()
+
+        textFieldStackView.spacing = contentView.spacing
+        textFieldStackView.distribution = .fillEqually
+        contentView.addArrangedSubview(textFieldStackView)
 
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(passwordTextField)
+        textFieldStackView.addArrangedSubview(passwordTextField)
 
         passwordConfirmTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordConfirmTextField.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(passwordConfirmTextField)
+        textFieldStackView.addArrangedSubview(passwordConfirmTextField)
 
         confirmStackView.alignment = .center
         confirmStackView.spacing = contentView.spacing
@@ -79,7 +52,7 @@ class PasswordEntryView: UIScrollView {
         confirmImageView.image = UIImage()
         confirmImageView.highlightedImage = UIImage(named: "rectangle17", in: .backupRestore, compatibleWith: nil)
         confirmImageView.layer.borderWidth = 1
-        confirmImageView.layer.borderColor = UIColor.kinBlueGreyTwo.cgColor
+        confirmImageView.layer.borderColor = UIColor.kinGray.cgColor
         confirmImageView.layer.cornerRadius = 2
         confirmImageView.setContentCompressionResistancePriority(.required, for: .vertical)
         confirmStackView.addArrangedSubview(confirmImageView)
@@ -87,26 +60,25 @@ class PasswordEntryView: UIScrollView {
         confirmImageView.heightAnchor.constraint(equalToConstant: 18).isActive = true
 
         confirmLabel.font = .preferredFont(forTextStyle: .footnote)
-        confirmLabel.textColor = .kinBlueGreyTwo
+        confirmLabel.textColor = .kinGray
         confirmLabel.numberOfLines = 0
         confirmLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         confirmStackView.addArrangedSubview(confirmLabel)
 
-        addArrangedVerticalLayoutSubview(to: contentView)
+        addArrangedVerticalLayoutSubview()
 
+        let doneButtonStackView = UIStackView()
+        doneButtonStackView.axis = .vertical
+        doneButtonStackView.alignment = .center
+        contentView.addArrangedSubview(doneButtonStackView)
+
+        doneButton.appearance = .blue
         doneButton.isEnabled = false
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
-        contentView.addArrangedSubview(doneButton)
+        doneButtonStackView.addArrangedSubview(doneButton)
+        doneButton.widthAnchor.constraint(equalTo: passwordTextField.widthAnchor).isActive = true
 
-        addArrangedVerticalLayoutSubview(to: contentView)
-
-        let bottomLayoutView = UIView()
-        bottomLayoutView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(bottomLayoutView)
-        bottomLayoutView.topAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        bottomLayoutView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        bottomLayoutHeightConstraint = bottomLayoutView.heightAnchor.constraint(equalToConstant: 0)
-        bottomLayoutHeightConstraint?.isActive = true
+        addArrangedVerticalLayoutSubview()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -115,22 +87,10 @@ class PasswordEntryView: UIScrollView {
 
     // MARK: Layout
 
-    private var firstVerticalLayoutView: UIView?
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
 
-    private func addArrangedVerticalLayoutSubview(to stackView: UIStackView) {
-        let layoutView = UIView()
-        stackView.addArrangedSubview(layoutView)
-
-        if let firstVerticalLayoutView = firstVerticalLayoutView {
-            layoutView.heightAnchor.constraint(equalTo: firstVerticalLayoutView.heightAnchor).isActive = true
-        }
-        else {
-            firstVerticalLayoutView = layoutView
-
-            let layoutViewHeightConstraint = layoutView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1)
-            layoutViewHeightConstraint.priority = .defaultLow
-            layoutViewHeightConstraint.isActive = true
-        }
+        textFieldStackView.axis = traitCollection.verticalSizeClass == .compact ? .horizontal : .vertical
     }
 
     // MARK: Interaction
