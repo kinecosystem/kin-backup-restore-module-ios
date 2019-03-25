@@ -194,8 +194,8 @@ class PasswordEntryViewController: ViewController {
 
 extension PasswordEntryViewController {
     func presentErrorAlertController() {
-        let title = "password_entry.alert_error.title".localized()
-        let message = "password_entry.alert_error.message".localized()
+        let title = "generic.alert_error.title".localized()
+        let message = "generic.alert_error.message".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)

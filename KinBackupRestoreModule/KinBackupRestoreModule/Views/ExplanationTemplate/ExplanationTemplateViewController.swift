@@ -17,7 +17,23 @@ class ExplanationTemplateViewController: ViewController {
     @IBOutlet weak var reminderDescriptionLabel: UILabel!
     @IBOutlet weak var continueButton: RoundButton!
     @IBOutlet weak var topSpace: NSLayoutConstraint!
-    
+
+    // MARK: View
+
+//    var _view: ExplanationTemplateView {
+//        return view as! ExplanationTemplateView
+//    }
+//
+//    var classForView: ExplanationTemplateView.Type {
+//        return ExplanationTemplateView.self
+//    }
+//
+//    override func loadView() {
+//        view = classForView.self.init(frame: .zero)
+//    }
+
+    // MARK: Lifecycle
+
     init() {
         super.init(nibName: "ExplanationTemplateViewController", bundle: .backupRestore)
         commonInit()

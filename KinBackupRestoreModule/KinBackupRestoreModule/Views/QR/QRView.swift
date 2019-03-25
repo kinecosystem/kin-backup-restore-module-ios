@@ -11,7 +11,6 @@ import UIKit
 class QRView: KeyboardAdjustingScrollView {
     let imageView = UIImageView()
     private let instructionsLabel = UILabel()
-    private let reminderView = ReminderView()
     let confirmControl = UIControl()
     private let confirmImageView = UIImageView()
     let doneButton = RoundButton()
@@ -59,6 +58,7 @@ class QRView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalSpaceSubview(to: contentStackView, height: 10)
 
+        let reminderView = ReminderView()
         reminderView.tintColor = .kinWarning
         reminderView.setContentCompressionResistancePriority(.required, for: .vertical)
         reminderView.setContentHuggingPriority(.required, for: .vertical)

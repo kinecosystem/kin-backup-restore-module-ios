@@ -267,9 +267,9 @@
 		68005AD822070793004F791A /* ExplanationTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */,
 				68005AD922070793004F791A /* ExplanationTemplateViewController.swift */,
 				68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */,
-				6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */,
 			);
 			path = ExplanationTemplate;
 			sourceTree = "<group>";

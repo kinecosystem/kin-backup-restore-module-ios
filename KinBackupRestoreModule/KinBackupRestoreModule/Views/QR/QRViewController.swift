@@ -142,7 +142,7 @@ extension QRViewController.MailError {
         case .noClient:
             return "qr.alert_no_client.title".localized()
         case .critical:
-            return "qr.alert_critical.title".localized()
+            return "generic.alert_error.title".localized()
         }
     }
 
@@ -151,7 +151,7 @@ extension QRViewController.MailError {
         case .noClient:
             return "qr.alert_no_client.message".localized()
         case .critical:
-            return "qr.alert_critical.message".localized()
+            return "generic.alert_error.message".localized()
         }
     }
 }
