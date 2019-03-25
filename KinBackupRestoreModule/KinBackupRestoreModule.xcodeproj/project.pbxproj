@@ -36,6 +36,7 @@
 		68005B23220AA4B9004F791A /* KinBackupRestoreBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B22220AA4B9004F791A /* KinBackupRestoreBI.swift */; };
 		6804B1022242332100208AE0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1012242332100208AE0 /* QRView.swift */; };
 		6804B1042242440E00208AE0 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1032242440E00208AE0 /* ReminderView.swift */; };
+		6804B1062248C10200208AE0 /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */; };
 		682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */; };
 		682EA3642222CEA200D4ADEC /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3632222CEA200D4ADEC /* RestoreView.swift */; };
 		682EA3662222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */; };
@@ -92,6 +93,7 @@
 		68005B22220AA4B9004F791A /* KinBackupRestoreBI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreBI.swift; sourceTree = "<group>"; };
 		6804B1012242332100208AE0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		6804B1032242440E00208AE0 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
 		682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
 		682EA3632222CEA200D4ADEC /* RestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
 		682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjustingScrollView.swift; sourceTree = "<group>"; };
@@ -208,16 +210,14 @@
 				68A430C22219669000D3B193 /* Animations.swift */,
 				68005AC622070793004F791A /* BackupCompletedViewController.swift */,
 				682EA3672223B5D400D4ADEC /* Button */,
-				68005AD822070793004F791A /* ExplanationTemplateViewController */,
+				68005AD822070793004F791A /* ExplanationTemplate */,
 				68005AC722070793004F791A /* FlowController */,
 				68005ADB22070793004F791A /* IntroViewController */,
 				682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */,
 				68005ACE22070793004F791A /* PasswordEntry */,
 				6804B1032242440E00208AE0 /* ReminderView.swift */,
-				68005AD222070793004F791A /* RestoreViewController */,
-				68005B182209538C004F791A /* QRController.swift */,
-				68005ACC22070793004F791A /* QRPickerController.swift */,
-				68005AD522070793004F791A /* QRViewController */,
+				68005AD222070793004F791A /* Restore */,
+				68005AD522070793004F791A /* QR */,
 				68005ACB22070793004F791A /* ViewController.swift */,
 			);
 			path = Views;
@@ -244,31 +244,34 @@
 			path = PasswordEntry;
 			sourceTree = "<group>";
 		};
-		68005AD222070793004F791A /* RestoreViewController */ = {
+		68005AD222070793004F791A /* Restore */ = {
 			isa = PBXGroup;
 			children = (
-				68005AD322070793004F791A /* RestoreViewController.swift */,
 				682EA3632222CEA200D4ADEC /* RestoreView.swift */,
+				68005AD322070793004F791A /* RestoreViewController.swift */,
 			);
-			path = RestoreViewController;
+			path = Restore;
 			sourceTree = "<group>";
 		};
-		68005AD522070793004F791A /* QRViewController */ = {
+		68005AD522070793004F791A /* QR */ = {
 			isa = PBXGroup;
 			children = (
-				68005AD722070793004F791A /* QRViewController.swift */,
+				68005B182209538C004F791A /* QRController.swift */,
+				68005ACC22070793004F791A /* QRPickerController.swift */,
 				6804B1012242332100208AE0 /* QRView.swift */,
+				68005AD722070793004F791A /* QRViewController.swift */,
 			);
-			path = QRViewController;
+			path = QR;
 			sourceTree = "<group>";
 		};
-		68005AD822070793004F791A /* ExplanationTemplateViewController */ = {
+		68005AD822070793004F791A /* ExplanationTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				68005AD922070793004F791A /* ExplanationTemplateViewController.swift */,
 				68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */,
+				6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */,
 			);
-			path = ExplanationTemplateViewController;
+			path = ExplanationTemplate;
 			sourceTree = "<group>";
 		};
 		68005ADB22070793004F791A /* IntroViewController */ = {
@@ -479,6 +482,7 @@
 				682EA3642222CEA200D4ADEC /* RestoreView.swift in Sources */,
 				6804B1042242440E00208AE0 /* ReminderView.swift in Sources */,
 				68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */,
+				6804B1062248C10200208AE0 /* ExplanationTemplateView.swift in Sources */,
 				68005AEA22070793004F791A /* RestoreViewController.swift in Sources */,
 				68005AE122070793004F791A /* BackupFlowController.swift in Sources */,
 				68005B23220AA4B9004F791A /* KinBackupRestoreBI.swift in Sources */,
