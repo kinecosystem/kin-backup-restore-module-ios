@@ -50,7 +50,8 @@ class MainNavigationController: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // TODO: move location
+    // MARK: Actions
+
     @objc
     fileprivate func restoreAction() {
         brManager.restore(kinClient, presentedOnto: self)
