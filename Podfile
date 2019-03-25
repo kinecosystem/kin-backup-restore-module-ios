@@ -6,15 +6,20 @@ inhibit_all_warnings!
 
 workspace 'KinBackupRestoreModule'
 
+def pods
+  pod 'KinSDK', :git => 'https://github.com/kinecosystem/kin-sdk-ios.git'
+end
+
 target 'KinBackupRestoreModule' do
   project 'KinBackupRestoreModule/KinBackupRestoreModule.xcodeproj'
 
-  pod 'KinSDK', :git => 'https://github.com/kinecosystem/kin-sdk-ios.git'
+  pods
+end
 
-  # Fixes the framework tests failing to build
-  target 'KinBackupRestoreModuleTests' do
-    inherit! :search_paths
-  end
+target 'KinBackupRestoreModuleTests' do
+  project 'KinBackupRestoreModule/KinBackupRestoreModule.xcodeproj'
+  
+  pods
 end
 
 target 'KinBackupRestoreSampleApp' do

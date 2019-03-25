@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21811AC779F0508C17AF992B /* Pods_KinBackupRestoreModuleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA5579FDFAD508F6F37BB2 /* Pods_KinBackupRestoreModuleTests.framework */; };
 		68005A8B2206FFFB004F791A /* KinBackupRestoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68005A812206FFFB004F791A /* KinBackupRestoreModule.framework */; };
 		68005A902206FFFB004F791A /* KinBackupRestoreModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */; };
 		68005A922206FFFB004F791A /* KinBackupRestoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 68005A842206FFFB004F791A /* KinBackupRestoreModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +46,6 @@
 		68A430C52219930900D3B193 /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A430C42219930900D3B193 /* UIFont+PreferredFont.swift */; };
 		68A430C72219A03F00D3B193 /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A430C62219A03F00D3B193 /* PasswordEntryLabel.swift */; };
 		68A430D0221C325600D3B193 /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A430CF221C325600D3B193 /* PasswordEntryView.swift */; };
-		8D4BEAB6AD9DB099246074CB /* Pods_KinBackupRestoreModuleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA5579FDFAD508F6F37BB2 /* Pods_KinBackupRestoreModuleTests.framework */; };
 		BA884B6F3A47E6FE5D47841F /* Pods_KinBackupRestoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E022A76B1DD4F948915AF2C2 /* Pods_KinBackupRestoreModule.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4EA22E481AFC7B2D47374069 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModuleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		516BB4089A5730E6158639C7 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModuleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5409B517CB3CF52572D3098A /* Pods-KinBackupRestoreModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModuleTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests.release.xcconfig"; sourceTree = "<group>"; };
 		68005A812206FFFB004F791A /* KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KinBackupRestoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68005A842206FFFB004F791A /* KinBackupRestoreModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KinBackupRestoreModule.h; sourceTree = "<group>"; };
 		68005A852206FFFB004F791A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		68A430C62219A03F00D3B193 /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
 		68A430CF221C325600D3B193 /* PasswordEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
 		6930B6AE5D9BF6E83FAE65D8 /* Pods-KinBackupRestoreModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModule.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModule/Pods-KinBackupRestoreModule.release.xcconfig"; sourceTree = "<group>"; };
-		7E55F055C3396FC67FC8D1E2 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModuleTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests.release.xcconfig"; sourceTree = "<group>"; };
 		804F09987432C25F46737269 /* Pods-KinBackupRestoreModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreModule.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreModule/Pods-KinBackupRestoreModule.debug.xcconfig"; sourceTree = "<group>"; };
 		B5DA5579FDFAD508F6F37BB2 /* Pods_KinBackupRestoreModuleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KinBackupRestoreModuleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E022A76B1DD4F948915AF2C2 /* Pods_KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KinBackupRestoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68005A8B2206FFFB004F791A /* KinBackupRestoreModule.framework in Frameworks */,
-				8D4BEAB6AD9DB099246074CB /* Pods_KinBackupRestoreModuleTests.framework in Frameworks */,
+				21811AC779F0508C17AF992B /* Pods_KinBackupRestoreModuleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +297,8 @@
 			children = (
 				804F09987432C25F46737269 /* Pods-KinBackupRestoreModule.debug.xcconfig */,
 				6930B6AE5D9BF6E83FAE65D8 /* Pods-KinBackupRestoreModule.release.xcconfig */,
-				4EA22E481AFC7B2D47374069 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */,
-				7E55F055C3396FC67FC8D1E2 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */,
+				516BB4089A5730E6158639C7 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */,
+				5409B517CB3CF52572D3098A /* Pods-KinBackupRestoreModuleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -340,10 +340,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68005A982206FFFB004F791A /* Build configuration list for PBXNativeTarget "KinBackupRestoreModuleTests" */;
 			buildPhases = (
-				036D309D8E5438C2AABD87D2 /* [CP] Check Pods Manifest.lock */,
+				7D5FDAF395D35D82CED5D91F /* [CP] Check Pods Manifest.lock */,
 				68005A862206FFFB004F791A /* Sources */,
 				68005A872206FFFB004F791A /* Frameworks */,
 				68005A882206FFFB004F791A /* Resources */,
+				711AD00C3A256C8895621402 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,7 +413,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		036D309D8E5438C2AABD87D2 /* [CP] Check Pods Manifest.lock */ = {
+		711AD00C3A256C8895621402 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KinSDK/KinSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/KinUtil/KinUtil.framework",
+				"${BUILT_PRODUCTS_DIR}/Sodium/Sodium.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinUtil.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sodium.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D5FDAF395D35D82CED5D91F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -695,9 +722,8 @@
 		};
 		68005A992206FFFB004F791A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EA22E481AFC7B2D47374069 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */;
+			baseConfigurationReference = 516BB4089A5730E6158639C7 /* Pods-KinBackupRestoreModuleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -714,9 +740,8 @@
 		};
 		68005A9A2206FFFB004F791A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E55F055C3396FC67FC8D1E2 /* Pods-KinBackupRestoreModuleTests.release.xcconfig */;
+			baseConfigurationReference = 5409B517CB3CF52572D3098A /* Pods-KinBackupRestoreModuleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
