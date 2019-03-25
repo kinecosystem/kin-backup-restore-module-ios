@@ -11,6 +11,16 @@ import UIKit
 class ConfirmButton: RoundButton {
     fileprivate var transitionToConfirmedCompletion: (()->())?
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        appearance = .blue
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func transitionToConfirmed(completion: (()->())? = nil) {
         let shape = CAShapeLayer()
         shape.frame = bounds
