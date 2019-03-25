@@ -29,9 +29,6 @@ class RoundButton: UIButton {
     
     private func commonInit() {
         syncAppearance()
-        setTitleColor(.white, for: .normal)
-        setTitleColor(UIColor(white: 1, alpha: 0.5), for: .highlighted)
-
         layer.masksToBounds = true
     }
 
@@ -69,8 +66,12 @@ extension RoundButton {
         switch appearance {
         case .white:
             backgroundColor = isEnabled ? .white : UIColor.white.withAlphaComponent(0.6)
+            setTitleColor(.kinPrimary, for: .normal)
+            setTitleColor(UIColor.kinPrimary.withAlphaComponent(0.5), for: .highlighted)
         case .blue:
             backgroundColor = isEnabled ? .kinPrimary : .kinLightGray
+            setTitleColor(.white, for: .normal)
+            setTitleColor(UIColor(white: 1, alpha: 0.5), for: .highlighted)
         }
     }
 }

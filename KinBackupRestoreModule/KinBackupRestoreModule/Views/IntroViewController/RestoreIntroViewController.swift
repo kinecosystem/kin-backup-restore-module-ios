@@ -31,12 +31,16 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodePageViewed()
 
+        view.backgroundColor = .kinPrimary
+
         imageView.image = UIImage(named: "whiteQrCode", in: .backupRestore, compatibleWith: nil)
+
         titleLabel.text = "restore_intro.header".localized()
+
         descriptionLabel.text = "restore_intro.description".localized()
-        reminderContainerView.isHidden = true
-        continueButton.setTitle("restore_intro.next".localized(), for: .normal)
-        continueButton.addTarget(self, action: #selector(continueAction), for: .touchUpInside)
+
+        doneButton.setTitle("restore_intro.next".localized(), for: .normal)
+        doneButton.addTarget(self, action: #selector(continueAction), for: .touchUpInside)
     }
     
     override func willMove(toParent parent: UIViewController?) {

@@ -15,21 +15,24 @@ class BackupCompletedViewController: ExplanationTemplateViewController {
         KinBackupRestoreBI.shared.delegate?.kinBackupCompletedPageViewed()
         
         navigationItem.hidesBackButton = true
-
+        
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
 
         titleLabel.text = "backup_completed.header".localized()
-        titleLabel.font = .preferredFont(forTextStyle: .title1)
 
         descriptionLabel.text = "backup_completed.description".localized()
-        descriptionLabel.font = .preferredFont(forTextStyle: .body)
 
-        reminderTitleLabel.text = "reminder.title".localized()
-        reminderTitleLabel.font = .preferredFont(forTextStyle: .callout, symbolicTraits: [.traitBold])
+        // TODO: insert the reminder into a blank view which already exists in the template
+        if let contentStackView = doneButton.superview as? UIStackView,
+            let index = contentStackView.arrangedSubviews.firstIndex(of: doneButton)
+        {
+            let reminderView = ReminderView()
+            reminderView.tintColor = .white
+            reminderView.setContentCompressionResistancePriority(.required, for: .vertical)
+            reminderView.setContentHuggingPriority(.required, for: .vertical)
+            contentStackView.insertArrangedSubview(reminderView, at: index)
+        }
 
-        reminderDescriptionLabel.text = "reminder.description".localized()
-        reminderDescriptionLabel.font = .preferredFont(forTextStyle: .footnote)
-
-        continueButton.isHidden = true
+        doneButton.isHidden = true
     }
 }

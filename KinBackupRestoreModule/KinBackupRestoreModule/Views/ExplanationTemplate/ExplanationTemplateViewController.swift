@@ -9,52 +9,43 @@
 import UIKit
 
 class ExplanationTemplateViewController: ViewController {
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var reminderContainerView: UIView!
-    @IBOutlet weak var reminderTitleLabel: UILabel!
-    @IBOutlet weak var reminderDescriptionLabel: UILabel!
-    @IBOutlet weak var continueButton: RoundButton!
-    @IBOutlet weak var topSpace: NSLayoutConstraint!
-
     // MARK: View
 
-//    var _view: ExplanationTemplateView {
-//        return view as! ExplanationTemplateView
-//    }
-//
-//    var classForView: ExplanationTemplateView.Type {
-//        return ExplanationTemplateView.self
-//    }
-//
-//    override func loadView() {
-//        view = classForView.self.init(frame: .zero)
-//    }
+    var imageView: UIImageView {
+        return _view.imageView
+    }
+
+    var titleLabel: UILabel {
+        return _view.titleLabel
+    }
+
+    var descriptionLabel: UILabel {
+        return _view.descriptionLabel
+    }
+
+    var doneButton: RoundButton {
+        return _view.doneButton
+    }
+
+    var _view: ExplanationTemplateView {
+        return view as! ExplanationTemplateView
+    }
+
+    var classForView: ExplanationTemplateView.Type {
+        return ExplanationTemplateView.self
+    }
+
+    override func loadView() {
+        view = classForView.self.init(frame: .zero)
+    }
 
     // MARK: Lifecycle
 
     init() {
-        super.init(nibName: "ExplanationTemplateViewController", bundle: .backupRestore)
-        commonInit()
+        super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        loadViewIfNeeded()
-    }
-    
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .kinPrimary
-        continueButton.setTitleColor(.kinPrimary, for: .normal)
-        if #available(iOS 11, *) {
-            topSpace.constant = 0.0
-            view.layoutIfNeeded()
-        }
+        fatalError("init(coder:) has not been implemented")
     }
 }

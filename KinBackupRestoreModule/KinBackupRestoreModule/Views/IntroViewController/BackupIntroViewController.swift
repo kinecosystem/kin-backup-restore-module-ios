@@ -24,11 +24,15 @@ class BackupIntroViewController: ExplanationTemplateViewController {
 
         KinBackupRestoreBI.shared.delegate?.kinBackupWelcomePageViewed()
 
+        view.backgroundColor = .kinPrimary
+        
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
+
         titleLabel.text = "backup_intro.header".localized()
+
         descriptionLabel.text = "backup_intro.description".localized()
-        continueButton.setTitle("backup_intro.next".localized(), for: .normal)
-        reminderContainerView.isHidden = true
+
+        doneButton.setTitle("backup_intro.next".localized(), for: .normal)
     }
     
     override func willMove(toParent parent: UIViewController?) {

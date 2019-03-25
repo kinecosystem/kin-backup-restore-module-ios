@@ -25,7 +25,6 @@
 		68005AEA22070793004F791A /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD322070793004F791A /* RestoreViewController.swift */; };
 		68005AED22070793004F791A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD722070793004F791A /* QRViewController.swift */; };
 		68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD922070793004F791A /* ExplanationTemplateViewController.swift */; };
-		68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */; };
 		68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADC22070793004F791A /* BackupIntroViewController.swift */; };
 		68005AF122070793004F791A /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADD22070793004F791A /* RestoreIntroViewController.swift */; };
 		68005B0C2208625F004F791A /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */; };
@@ -82,7 +81,6 @@
 		68005AD322070793004F791A /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
 		68005AD722070793004F791A /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		68005AD922070793004F791A /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
-		68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExplanationTemplateViewController.xib; sourceTree = "<group>"; };
 		68005ADC22070793004F791A /* BackupIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
 		68005ADD22070793004F791A /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
 		68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
@@ -269,7 +267,6 @@
 			children = (
 				6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */,
 				68005AD922070793004F791A /* ExplanationTemplateViewController.swift */,
-				68005ADA22070793004F791A /* ExplanationTemplateViewController.xib */,
 			);
 			path = ExplanationTemplate;
 			sourceTree = "<group>";
@@ -398,7 +395,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				68005B1F220979CE004F791A /* Localizable.strings in Resources */,
-				68005AEF22070793004F791A /* ExplanationTemplateViewController.xib in Resources */,
 				68005ABE22070789004F791A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
