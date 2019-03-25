@@ -57,7 +57,7 @@ public class KinBackupRestoreManager: NSObject {
     }
 
     /**
-     Backup an account by pushing the view controllers onto a navigation controller.
+     Backup an account by presenting the navigation controller onto a view controller.
 
      - Parameter kinAccount: The `KinAccount` to backup.
      - Parameter viewController: The view controller being presented onto.
@@ -70,7 +70,7 @@ public class KinBackupRestoreManager: NSObject {
     }
 
     /**
-     Restore an account by presenting the navigation controller onto a view controller.
+     Restore an account by pushing the view controllers onto a navigation controller.
 
      If the navigation controller has a `topViewController`, then the stack will be popped to that
      view controller upon completion. Otherwise it's up to the user to perform the final navigation.
