@@ -39,10 +39,6 @@ public class KinBackupRestoreManager: NSObject {
     }
 
     private var instance: Instance?
-    
-    private var navigationBarBackgroundImages: [UIBarMetrics: UIImage?]?
-    private var navigationBarShadowImage: UIImage?
-    private var navigationBarTintColor: UIColor?
 
     /**
      Backup an account by pushing the view controllers onto a navigation controller.
@@ -142,14 +138,10 @@ public class KinBackupRestoreManager: NSObject {
     private func push(_ flowController: FlowController, onto navigationController: UINavigationController) {
         let isStackEmpty = navigationController.viewControllers.isEmpty
 
-        removeNavigationBarBackground(navigationController.navigationBar, shouldSave: !isStackEmpty)
-
         navigationController.pushViewController(flowController.entryViewController, animated: !isStackEmpty)
     }
 
     private func present(_ flowController: FlowController, onto viewController: UIViewController) {
-        removeNavigationBarBackground(flowController.navigationController.navigationBar)
-
         let dismissItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: flowController, action: #selector(flowController.cancelFlow))
         flowController.entryViewController.navigationItem.leftBarButtonItem = dismissItem
         flowController.navigationController.viewControllers = [flowController.entryViewController]
@@ -209,8 +201,6 @@ extension KinBackupRestoreManager {
         }
         
         if index > 0 {
-            restoreNavigationBarBackground(navigationController.navigationBar)
-            
             let externalViewController = navigationController.viewControllers[index - 1]
             navigationController.popToViewController(externalViewController, animated: true)
         }
@@ -246,46 +236,11 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
 
         switch instance.presentor {
         case .pushedOnto:
-            if let navigationController = navigationController {
-                restoreNavigationBarBackground(navigationController.navigationBar)
-            }
+            break
         case .presentedOnto:
             dismissFlow()
         }
         
         self.instance = nil
-    }
-}
-
-// MARK: - Navigation Bar Appearance
-
-extension KinBackupRestoreManager {
-    private func removeNavigationBarBackground(_ navigationBar: UINavigationBar, shouldSave: Bool = false) {
-        if shouldSave {
-            let barMetrics: [UIBarMetrics] = [.default, .defaultPrompt, .compact, .compactPrompt]
-            var navigationBarBackgroundImages = [UIBarMetrics: UIImage?]()
-            
-            for barMetric in barMetrics {
-                navigationBarBackgroundImages[barMetric] = navigationBar.backgroundImage(for: barMetric)
-            }
-            
-            if !navigationBarBackgroundImages.isEmpty {
-                self.navigationBarBackgroundImages = navigationBarBackgroundImages
-            }
-            
-            navigationBarShadowImage = navigationBar.shadowImage
-            navigationBarTintColor = navigationBar.tintColor
-        }
-        
-        navigationBar.removeBackground()
-    }
-    
-    private func restoreNavigationBarBackground(_ navigationBar: UINavigationBar) {
-        navigationBar.restoreBackground(backgroundImages: navigationBarBackgroundImages, shadowImage: navigationBarShadowImage)
-        navigationBar.tintColor = navigationBarTintColor
-        
-        navigationBarBackgroundImages = nil
-        navigationBarShadowImage = nil
-        navigationBarTintColor = nil
     }
 }

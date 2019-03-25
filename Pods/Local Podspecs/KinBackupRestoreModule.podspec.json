@@ -20,7 +20,7 @@
   "resources": "KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets",
   "dependencies": {
     "KinSDK": [
-
+      "0.8.5"
     ]
   },
   "platforms": {

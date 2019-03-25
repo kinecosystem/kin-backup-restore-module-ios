@@ -55,8 +55,6 @@ class PasswordEntryViewController: ViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrameNotification(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-
         title = "password_entry.title".localized()
     }
 
@@ -64,21 +62,17 @@ class PasswordEntryViewController: ViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         KinBackupRestoreBI.shared.delegate?.kinBackupCreatePasswordPageViewed()
 
-        passwordInfoLabel.instructionsAttributedString = NSAttributedString(string: "password_entry.instructions".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordInfoLabel.instructionsAttributedString = NSAttributedString(string: "password_entry.instructions".localized(), attributes: [.foregroundColor: UIColor.kinGray])
         passwordInfoLabel.mismatchAttributedString = NSAttributedString(string: "password_entry.mismatch".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
         passwordInfoLabel.invalidAttributedString = {
             let attributedString1 = NSAttributedString(string: "password_entry.invalid_warning".localized(), attributes: [.foregroundColor: UIColor.kinWarning])
 
-            let attributedString2 = NSAttributedString(string: "password_entry.invalid_info".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+            let attributedString2 = NSAttributedString(string: "password_entry.invalid_info".localized(), attributes: [.foregroundColor: UIColor.kinGray])
 
             let attributedString = NSMutableAttributedString()
             attributedString.append(attributedString1)
@@ -87,11 +81,11 @@ class PasswordEntryViewController: ViewController {
             return attributedString
         }()
 
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinGray])
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.becomeFirstResponder()
 
-        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password_confirm.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinBlueGreyTwo])
+        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "password_entry.password_confirm.placeholder".localized(), attributes: [.foregroundColor: UIColor.kinGray])
         passwordConfirmTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
 
         confirmLabel.text = "password_entry.confirmation".localized()
@@ -200,8 +194,8 @@ class PasswordEntryViewController: ViewController {
 
 extension PasswordEntryViewController {
     func presentErrorAlertController() {
-        let title = "password_entry.alert_error.title".localized()
-        let message = "password_entry.alert_error.message".localized()
+        let title = "generic.alert_error.title".localized()
+        let message = "generic.alert_error.message".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "generic.ok".localized(), style: .cancel))
         present(alertController, animated: true)
