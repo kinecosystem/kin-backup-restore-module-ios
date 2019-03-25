@@ -49,10 +49,7 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
             }
         }
         else {
-            // ???: are we already on the main thread?
-            DispatchQueue.main.async {
-                self.presentImageErrorAlertController()
-            }
+            self.presentImageErrorAlertController()
         }
     }
     
