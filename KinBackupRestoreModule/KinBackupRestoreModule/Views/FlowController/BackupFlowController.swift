@@ -20,7 +20,7 @@ class BackupFlowController: FlowController {
     private lazy var _entryViewController: UIViewController = {
         let viewController = BackupIntroViewController()
         viewController.lifeCycleDelegate = self
-        viewController.doneButton.addTarget(self, action: #selector(pushCompletedViewController), for: .touchUpInside)
+        viewController.doneButton.addTarget(self, action: #selector(pushPasswordViewController), for: .touchUpInside)
         return viewController
     }()
     
