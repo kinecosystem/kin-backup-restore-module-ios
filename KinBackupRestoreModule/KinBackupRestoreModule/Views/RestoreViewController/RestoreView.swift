@@ -60,6 +60,7 @@ class RestoreView: KeyboardAdjustingScrollView {
         passwordInput.setContentHuggingPriority(.required, for: .vertical)
         contentStackView.addArrangedSubview(passwordInput)
 
+        doneButton.appearance = .blue
         doneButton.setTitle("generic.next".localized(), for: .normal)
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
         doneButton.setContentHuggingPriority(.required, for: .vertical)
