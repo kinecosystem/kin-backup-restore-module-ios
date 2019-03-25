@@ -32,11 +32,11 @@ public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
 
 public class KinBackupRestoreManager: NSObject {
     public weak var delegate: KinBackupRestoreManagerDelegate?
-    public weak var biDelegate: KinBackupRestoreBIDelegate? {
-        didSet {
-            KinBackupRestoreBI.shared.delegate = biDelegate
-        }
-    }
+//    public weak var biDelegate: KinBackupRestoreBIDelegate? {
+//        didSet {
+//            KinBackupRestoreBI.shared.delegate = biDelegate
+//        }
+//    }
 
     private var instance: Instance?
 
@@ -212,10 +212,9 @@ extension KinBackupRestoreManager {
 extension KinBackupRestoreManager: FlowControllerDelegate {
     func flowControllerDidComplete(_ controller: FlowController) {
         guard let instance = instance else {
+            delegate?.kinBackupRestoreManager(self, error: KinBackupRestoreError.internalInconsistency)
             return
         }
-
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
 
         switch instance.presentor {
         case .pushedOnto:
@@ -225,14 +224,15 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         }
         
         self.instance = nil
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
     }
     
     func flowControllerDidCancel(_ controller: FlowController) {
         guard let instance = instance else {
+            delegate?.kinBackupRestoreManager(self, error: KinBackupRestoreError.internalInconsistency)
             return
         }
-
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
 
         switch instance.presentor {
         case .pushedOnto:
@@ -242,5 +242,11 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         }
         
         self.instance = nil
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
+    }
+
+    func flowController(_ controller: FlowController, error: Error) {
+        delegate?.kinBackupRestoreManager(self, error: error)
     }
 }

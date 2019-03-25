@@ -46,9 +46,7 @@ extension RestoreFlowController: LifeCycleProtocol {
 extension RestoreFlowController {
     private func presentQRPickerViewController() {
         guard QRPickerController.canOpenImagePicker else {
-            // TODO: how to deal with this case?
-            // why would the users device not allow for image picker presentation and
-            // is there a way to circumvent this path?
+            delegate?.flowController(self, error: KinBackupRestoreError.cantOpenImagePicker)
             return
         }
         
@@ -100,6 +98,7 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
                 return .wrongPassword
             }
             else {
+                delegate?.flowController(self, error: error)
                 return .internalIssue
             }
         }

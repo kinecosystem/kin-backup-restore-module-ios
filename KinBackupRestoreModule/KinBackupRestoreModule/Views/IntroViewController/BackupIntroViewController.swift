@@ -22,8 +22,6 @@ class BackupIntroViewController: ExplanationTemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        KinBackupRestoreBI.shared.delegate?.kinBackupWelcomePageViewed()
-
         view.backgroundColor = .kinPrimary
         
         imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
@@ -33,13 +31,5 @@ class BackupIntroViewController: ExplanationTemplateViewController {
         descriptionLabel.text = "backup_intro.description".localized()
 
         doneButton.setTitle("backup_intro.next".localized(), for: .normal)
-    }
-    
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-
-        if parent == nil {
-            KinBackupRestoreBI.shared.delegate?.kinBackupWelcomePageBackButtonTapped()
-        }
     }
 }

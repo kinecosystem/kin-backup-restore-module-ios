@@ -37,7 +37,6 @@ class MainNavigationController: UINavigationController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
         brManager.delegate = self
-        brManager.biDelegate = self
 
         let accountListViewController = AccountListViewController(with: kinClient)
         accountListViewController.title = "Accounts"
@@ -88,84 +87,6 @@ extension MainNavigationController: KinBackupRestoreManagerDelegate {
     }
 
     func kinBackupRestoreManager(_ manager: KinBackupRestoreManager, error: Error) {
-
-    }
-}
-
-extension MainNavigationController: KinBackupRestoreBIDelegate {
-    func kinBackupStartButtonTapped() {
-
-    }
-
-    func kinBackupCompletedPageViewed() {
-        
-    }
-
-    func kinBackupCreatePasswordPageViewed() {
-
-    }
-
-    func kinBackupCreatePasswordBackButtonTapped() {
-
-    }
-
-    func kinBackupCreatePasswordNextButtonTapped() {
-
-    }
-
-    func kinBackupQrCodeBackButtonTapped() {
-
-    }
-
-    func kinBackupQrCodePageViewed() {
-
-    }
-
-    func kinBackupQrCodeMyqrcodeButtonTapped() {
-
-    }
-
-    func kinBackupQrCodeSendButtonTapped() {
-
-    }
-
-    func kinBackupWelcomePageViewed() {
-
-    }
-
-    func kinBackupWelcomePageBackButtonTapped() {
-
-    }
-
-    func kinRestorePasswordEntryBackButtonTapped() {
-
-    }
-
-    func kinRestorePasswordEntryPageViewed() {
-
-    }
-
-    func kinRestorePasswordDoneButtonTapped() {
-
-    }
-
-    func kinRestoreUploadQrCodePageViewed() {
-
-    }
-
-    func kinRestoreUploadQrCodeBackButtonTapped() {
-
-    }
-
-    func kinRestoreUploadQrCodeButtonTapped() {
-
-    }
-
-    func kinRestoreAreYouSureOkButtonTapped() {
-
-    }
-
-    func kinRestoreAreYouSureCancelButtonTapped() {
 
     }
 }

@@ -20,7 +20,7 @@ class BackupFlowController: FlowController {
     private lazy var _entryViewController: UIViewController = {
         let viewController = BackupIntroViewController()
         viewController.lifeCycleDelegate = self
-        viewController.doneButton.addTarget(self, action: #selector(pushCompletedViewController), for: .touchUpInside)
+        viewController.doneButton.addTarget(self, action: #selector(pushPasswordViewController), for: .touchUpInside)
         return viewController
     }()
     
@@ -44,8 +44,6 @@ extension BackupFlowController: LifeCycleProtocol {
 extension BackupFlowController {
     @objc
     private func pushPasswordViewController() {
-        KinBackupRestoreBI.shared.delegate?.kinBackupStartButtonTapped()
-
         let viewController = PasswordEntryViewController()
         viewController.delegate = self
         viewController.lifeCycleDelegate = self
@@ -91,6 +89,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             return !results.isEmpty
         }
         catch {
+            delegate?.flowController(self, error: error)
             return false
         }
     }
@@ -100,6 +99,7 @@ extension BackupFlowController: PasswordEntryViewControllerDelegate {
             pushQRViewController(with: try kinAccount.export(passphrase: password))
         }
         catch {
+            delegate?.flowController(self, error: error)
             viewController.presentErrorAlertController()
         }
     }

@@ -29,8 +29,6 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodePageViewed()
-
         view.backgroundColor = .kinPrimary
 
         imageView.image = UIImage(named: "whiteQrCode", in: .backupRestore, compatibleWith: nil)
@@ -43,18 +41,8 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
         doneButton.addTarget(self, action: #selector(continueAction), for: .touchUpInside)
     }
     
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-
-        if parent == nil {
-            KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodeBackButtonTapped()
-        }
-    }
-    
     @objc
     private func continueAction() {
-        KinBackupRestoreBI.shared.delegate?.kinRestoreUploadQrCodeButtonTapped()
-
         if canContinue {
             delegate?.restoreIntroViewControllerDidComplete(self)
         }
@@ -69,14 +57,10 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
         let message = "restore_intro.alert.message".localized()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "generic.ok".localized(), style: .default) { _ in
-            KinBackupRestoreBI.shared.delegate?.kinRestoreAreYouSureOkButtonTapped()
-
             self.canContinue = true
             self.delegate?.restoreIntroViewControllerDidComplete(self)
         }
-        alertController.addAction(UIAlertAction(title: "generic.cancel".localized(), style: .cancel) { _ in
-            KinBackupRestoreBI.shared.delegate?.kinRestoreAreYouSureCancelButtonTapped()
-        })
+        alertController.addAction(UIAlertAction(title: "generic.cancel".localized(), style: .cancel))
         alertController.addAction(continueAction)
         alertController.preferredAction = continueAction
         present(alertController, animated: true)

@@ -70,22 +70,12 @@ class QRViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodePageViewed()
-
         imageView.image = qrImage
 
         confirmControl.isHidden = true
         confirmControl.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
 
         doneButton.addTarget(self, action: #selector(doneAction), for: .touchUpInside)
-    }
-
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-
-        if parent == nil {
-            KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeBackButtonTapped()
-        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -121,8 +111,6 @@ class QRViewController: ViewController {
     
     @objc
     private func confirmAction() {
-        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeMyqrcodeButtonTapped()
-
         doneButton.isSelected = isConfirmed
     }
 }
@@ -158,8 +146,6 @@ extension QRViewController.MailError {
 
 extension QRViewController {
     fileprivate func presentMailViewController() {
-        KinBackupRestoreBI.shared.delegate?.kinBackupQrCodeSendButtonTapped()
-
         guard MFMailComposeViewController.canSendMail() else {
             presentMailErrorAlertController(.noClient)
             return

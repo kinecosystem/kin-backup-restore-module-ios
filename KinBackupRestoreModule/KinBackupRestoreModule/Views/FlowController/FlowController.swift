@@ -11,6 +11,7 @@ import UIKit
 protocol FlowControllerDelegate: NSObjectProtocol {
     func flowControllerDidComplete(_ controller: FlowController)
     func flowControllerDidCancel(_ controller: FlowController)
+    func flowController(_ controller: FlowController, error: Error)
 }
 
 class FlowController: NSObject {

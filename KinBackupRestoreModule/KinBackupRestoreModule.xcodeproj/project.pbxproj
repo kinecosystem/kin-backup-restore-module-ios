@@ -37,6 +37,7 @@
 		6804B1042242440E00208AE0 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1032242440E00208AE0 /* ReminderView.swift */; };
 		6804B1062248C10200208AE0 /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */; };
 		682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */; };
+		682EA36222229EAB00D4ADEC /* KinBackupRestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */; };
 		682EA3642222CEA200D4ADEC /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3632222CEA200D4ADEC /* RestoreView.swift */; };
 		682EA3662222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */; };
 		682EA3692223B5FD00D4ADEC /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3682223B5FD00D4ADEC /* ConfirmButton.swift */; };
@@ -93,6 +94,7 @@
 		6804B1032242440E00208AE0 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
 		682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
+		682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreError.swift; sourceTree = "<group>"; };
 		682EA3632222CEA200D4ADEC /* RestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
 		682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjustingScrollView.swift; sourceTree = "<group>"; };
 		682EA3682223B5FD00D4ADEC /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				68005ABA22070789004F791A /* Extensions */,
 				68005A852206FFFB004F791A /* Info.plist */,
 				68005B22220AA4B9004F791A /* KinBackupRestoreBI.swift */,
+				682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */,
 				68005ABD22070789004F791A /* KinBackupRestoreManager.swift */,
 				68005A842206FFFB004F791A /* KinBackupRestoreModule.h */,
 				68005B1E220979CE004F791A /* Localizable.strings */,
@@ -483,6 +486,7 @@
 				68005AE122070793004F791A /* BackupFlowController.swift in Sources */,
 				68005B23220AA4B9004F791A /* KinBackupRestoreBI.swift in Sources */,
 				68005AE422070793004F791A /* ViewController.swift in Sources */,
+				682EA36222229EAB00D4ADEC /* KinBackupRestoreError.swift in Sources */,
 				68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */,
 				68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */,
 				682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */,
