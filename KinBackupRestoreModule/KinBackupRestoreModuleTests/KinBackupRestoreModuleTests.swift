@@ -14,34 +14,32 @@ class KinBackupRestoreModuleTests: XCTestCase {
     var client: KinClient?
 
     override func setUp() {
-        let url = URL(string: "https://horizon-testnet.kininfrastructure.com")!
-        let appId = try! AppId("test")
-        client = KinClient(with: url, network: .testNet, appId: appId)
+//        let url = URL(string: "https://horizon-testnet.kininfrastructure.com")!
+//        let appId = try! AppId("test")
+//        client = KinClient(with: url, network: .testNet, appId: appId)
     }
 
     override func tearDown() {
-        client?.deleteKeystore()
+//        client?.deleteKeystore()
     }
 
-    func testBackup() {
-        guard let client = client else {
-            XCTAssertTrue(false, "Client doesn't exist")
-            return
-        }
-
-        let account: KinAccount
-
-        do {
-            account = try client.addAccount()
-        }
-        catch {
-            XCTAssertTrue(false, error.localizedDescription)
-        }
-
-        let brManager = KinBackupRestoreManager()
-//        brManager.backup(account, presentedOnto: <#T##UIViewController#>)
-
-    }
+//    func testBackup() {
+//        guard let client = client else {
+//            XCTAssertTrue(false, "Client doesn't exist")
+//            return
+//        }
+//
+//        let account: KinAccount
+//
+//        do {
+//            account = try client.addAccount()
+//        }
+//        catch {
+//            XCTAssertTrue(false, error.localizedDescription)
+//        }
+//
+//        let brManager = KinBackupRestoreManager()
+//    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

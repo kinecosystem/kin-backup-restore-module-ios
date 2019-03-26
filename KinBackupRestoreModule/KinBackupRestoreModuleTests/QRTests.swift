@@ -1,5 +1,5 @@
 //
-//  KinBackupRestoreModuleQRTests.swift
+//  QRTests.swift
 //  KinBackupRestoreModuleTests
 //
 //  Created by Corey Werner on 26/03/2019.
@@ -9,16 +9,16 @@
 import XCTest
 @testable import KinBackupRestoreModule
 
-class KinBackupRestoreModuleQRTests: XCTestCase {
-    func testQR() {
+class QRTests: XCTestCase {
+    func testQREncodeAndDecode() {
         let string = "A random string to test"
 
-        guard let qrImage = QRController.encode(string: string) else {
+        guard let qrImage = QR.encode(string: string) else {
             XCTAssertTrue(false, "Could not encode QR string")
             return
         }
 
-        guard let qrString = QRController.decode(image: qrImage) else {
+        guard let qrString = QR.decode(image: qrImage) else {
             XCTAssertTrue(false, "Could not decode QR image")
             return
         }

@@ -36,7 +36,7 @@ extension QRPickerController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             DispatchQueue.global().async {
-                if let qrString = QRController.decode(image: image) {
+                if let qrString = QR.decode(image: image) {
                     DispatchQueue.main.async {
                         self.delegate?.qrPickerControllerDidComplete(self, with: qrString)
                     }

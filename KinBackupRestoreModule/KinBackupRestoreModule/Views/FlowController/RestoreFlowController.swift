@@ -60,7 +60,7 @@ extension RestoreFlowController {
         let restoreViewController = RestoreViewController()
         restoreViewController.delegate = self
         restoreViewController.lifeCycleDelegate = self
-        restoreViewController.imageView.image = QRController.encode(string: qrString)
+        restoreViewController.imageView.image = QR.encode(string: qrString)
         navigationController.pushViewController(restoreViewController, animated: true)
     }
 }
@@ -85,7 +85,7 @@ extension RestoreFlowController: QRPickerControllerDelegate {
 
 extension RestoreFlowController: RestoreViewControllerDelegate {
     func restoreViewController(_ viewController: RestoreViewController, importWith password: String) -> RestoreViewController.ImportResult {
-        guard let qrImage = viewController.imageView.image, let json = QRController.decode(image: qrImage) else {
+        guard let qrImage = viewController.imageView.image, let json = QR.decode(image: qrImage) else {
             return .invalidImage
         }
 

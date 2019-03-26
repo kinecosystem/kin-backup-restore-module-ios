@@ -1,5 +1,5 @@
 //
-//  QRController.swift
+//  QR.swift
 //  KinEcosystem
 //
 //  Created by Corey Werner on 28/10/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QRController {
+class QR {
     /**
      Create a QR image from a string.
      
