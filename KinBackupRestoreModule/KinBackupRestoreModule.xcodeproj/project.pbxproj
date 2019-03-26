@@ -37,6 +37,11 @@
 		6804B1022242332100208AE0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1012242332100208AE0 /* QRView.swift */; };
 		6804B1042242440E00208AE0 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1032242440E00208AE0 /* ReminderView.swift */; };
 		6804B1062248C10200208AE0 /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */; };
+		6804B129224A08C900208AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B128224A08C900208AE0 /* AppDelegate.swift */; };
+		6804B12B224A08C900208AE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B12A224A08C900208AE0 /* ViewController.swift */; };
+		6804B12E224A08C900208AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6804B12C224A08C900208AE0 /* Main.storyboard */; };
+		6804B130224A08CA00208AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6804B12F224A08CA00208AE0 /* Assets.xcassets */; };
+		6804B133224A08CA00208AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6804B131224A08CA00208AE0 /* LaunchScreen.storyboard */; };
 		682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */; };
 		682EA36222229EAB00D4ADEC /* KinBackupRestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */; };
 		682EA3642222CEA200D4ADEC /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3632222CEA200D4ADEC /* RestoreView.swift */; };
@@ -56,6 +61,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 68005A802206FFFB004F791A;
 			remoteInfo = KinBackupRestoreModule;
+		};
+		6804B138224A08D200208AE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68005A782206FFFB004F791A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6804B125224A08C900208AE0;
+			remoteInfo = KinBackupRestoreModuleTestsHost;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -94,6 +106,13 @@
 		6804B1012242332100208AE0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		6804B1032242440E00208AE0 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
+		6804B126224A08C900208AE0 /* KinBackupRestoreModuleTestsHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinBackupRestoreModuleTestsHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6804B128224A08C900208AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6804B12A224A08C900208AE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6804B12D224A08C900208AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6804B12F224A08CA00208AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6804B132224A08CA00208AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6804B134224A08CA00208AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
 		682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreError.swift; sourceTree = "<group>"; };
 		682EA3632222CEA200D4ADEC /* RestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
@@ -127,6 +146,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6804B123224A08C900208AE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -144,6 +170,7 @@
 			children = (
 				68005A832206FFFB004F791A /* KinBackupRestoreModule */,
 				68005A8E2206FFFB004F791A /* KinBackupRestoreModuleTests */,
+				6804B127224A08C900208AE0 /* KinBackupRestoreModuleTestsHost */,
 				68005A822206FFFB004F791A /* Products */,
 				7B38FBE6DDB54E844ACE6732 /* Pods */,
 				3BA09020C8C3976223931D4C /* Frameworks */,
@@ -155,6 +182,7 @@
 			children = (
 				68005A812206FFFB004F791A /* KinBackupRestoreModule.framework */,
 				68005A8A2206FFFB004F791A /* KinBackupRestoreModuleTests.xctest */,
+				6804B126224A08C900208AE0 /* KinBackupRestoreModuleTestsHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,6 +311,19 @@
 			path = IntroViewController;
 			sourceTree = "<group>";
 		};
+		6804B127224A08C900208AE0 /* KinBackupRestoreModuleTestsHost */ = {
+			isa = PBXGroup;
+			children = (
+				6804B128224A08C900208AE0 /* AppDelegate.swift */,
+				6804B12A224A08C900208AE0 /* ViewController.swift */,
+				6804B12C224A08C900208AE0 /* Main.storyboard */,
+				6804B12F224A08CA00208AE0 /* Assets.xcassets */,
+				6804B131224A08CA00208AE0 /* LaunchScreen.storyboard */,
+				6804B134224A08CA00208AE0 /* Info.plist */,
+			);
+			path = KinBackupRestoreModuleTestsHost;
+			sourceTree = "<group>";
+		};
 		682EA3672223B5D400D4ADEC /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,11 +391,29 @@
 			);
 			dependencies = (
 				68005A8D2206FFFB004F791A /* PBXTargetDependency */,
+				6804B139224A08D200208AE0 /* PBXTargetDependency */,
 			);
 			name = KinBackupRestoreModuleTests;
 			productName = KinBackupRestoreModuleTests;
 			productReference = 68005A8A2206FFFB004F791A /* KinBackupRestoreModuleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6804B125224A08C900208AE0 /* KinBackupRestoreModuleTestsHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6804B135224A08CA00208AE0 /* Build configuration list for PBXNativeTarget "KinBackupRestoreModuleTestsHost" */;
+			buildPhases = (
+				6804B122224A08C900208AE0 /* Sources */,
+				6804B123224A08C900208AE0 /* Frameworks */,
+				6804B124224A08C900208AE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KinBackupRestoreModuleTestsHost;
+			productName = KinBackupRestoreModuleTestsHost;
+			productReference = 6804B126224A08C900208AE0 /* KinBackupRestoreModuleTestsHost.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -372,6 +431,10 @@
 					};
 					68005A892206FFFB004F791A = {
 						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6804B125224A08C900208AE0;
+					};
+					6804B125224A08C900208AE0 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -381,6 +444,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 68005A772206FFFB004F791A;
 			productRefGroup = 68005A822206FFFB004F791A /* Products */;
@@ -389,6 +453,7 @@
 			targets = (
 				68005A802206FFFB004F791A /* KinBackupRestoreModule */,
 				68005A892206FFFB004F791A /* KinBackupRestoreModuleTests */,
+				6804B125224A08C900208AE0 /* KinBackupRestoreModuleTestsHost */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +472,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6804B124224A08C900208AE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6804B133224A08CA00208AE0 /* LaunchScreen.storyboard in Resources */,
+				6804B130224A08CA00208AE0 /* Assets.xcassets in Resources */,
+				6804B12E224A08C900208AE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +609,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6804B122224A08C900208AE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6804B12B224A08C900208AE0 /* ViewController.swift in Sources */,
+				6804B129224A08C900208AE0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -542,7 +626,31 @@
 			target = 68005A802206FFFB004F791A /* KinBackupRestoreModule */;
 			targetProxy = 68005A8C2206FFFB004F791A /* PBXContainerItemProxy */;
 		};
+		6804B139224A08D200208AE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6804B125224A08C900208AE0 /* KinBackupRestoreModuleTestsHost */;
+			targetProxy = 6804B138224A08D200208AE0 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6804B12C224A08C900208AE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6804B12D224A08C900208AE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6804B131224A08CA00208AE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6804B132224A08CA00208AE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		68005A932206FFFB004F791A /* Debug */ = {
@@ -735,6 +843,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinBackupRestoreModuleTestsHost.app/KinBackupRestoreModuleTestsHost";
 			};
 			name = Debug;
 		};
@@ -750,6 +859,41 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinBackupRestoreModuleTestsHost.app/KinBackupRestoreModuleTestsHost";
+			};
+			name = Release;
+		};
+		6804B136224A08CA00208AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KinBackupRestoreModuleTestsHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModuleTestsHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6804B137224A08CA00208AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KinBackupRestoreModuleTestsHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModuleTestsHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -782,6 +926,15 @@
 			buildConfigurations = (
 				68005A992206FFFB004F791A /* Debug */,
 				68005A9A2206FFFB004F791A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6804B135224A08CA00208AE0 /* Build configuration list for PBXNativeTarget "KinBackupRestoreModuleTestsHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6804B136224A08CA00208AE0 /* Debug */,
+				6804B137224A08CA00208AE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

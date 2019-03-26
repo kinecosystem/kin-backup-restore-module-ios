@@ -8,20 +8,39 @@
 
 import XCTest
 @testable import KinBackupRestoreModule
+@testable import KinSDK
 
 class KinBackupRestoreModuleTests: XCTestCase {
+    var client: KinClient?
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let url = URL(string: "https://horizon-testnet.kininfrastructure.com")!
+        let appId = try! AppId("test")
+        client = KinClient(with: url, network: .testNet, appId: appId)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        client?.deleteKeystore()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBackup() {
+        guard let client = client else {
+            XCTAssertTrue(false, "Client doesn't exist")
+            return
+        }
+
+        let account: KinAccount
+
+        do {
+            account = try client.addAccount()
+        }
+        catch {
+            XCTAssertTrue(false, error.localizedDescription)
+        }
+
+        let brManager = KinBackupRestoreManager()
+//        brManager.backup(account, presentedOnto: <#T##UIViewController#>)
+
     }
 
     func testPerformanceExample() {
