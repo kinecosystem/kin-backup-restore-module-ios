@@ -11,11 +11,22 @@ import XCTest
 
 class PasswordTests: XCTestCase {
     func testValidPassword() {
-        XCTAssertNoThrow(try Password.matches(""))
+        XCTAssertTrue(try Password.matches("aaaaaaA1!"))
     }
 
     func testInvalidPassword() {
-        XCTAssertThrowsError(try Password.matches(""))
-        XCTAssertThrowsError(try Password.matches("aaaaaaaa"))
+        XCTAssertFalse(try Password.matches(""))
+        XCTAssertFalse(try Password.matches("aaaaaaA1"))
+        XCTAssertFalse(try Password.matches("aaaaaaA1 "))
+        XCTAssertFalse(try Password.matches("aaaaaaA1a"))
+        XCTAssertFalse(try Password.matches("aaaaaaAa!"))
+        XCTAssertFalse(try Password.matches("aaaaaaa1!"))
+        XCTAssertFalse(try Password.matches("aaaaaaa1a"))
+        XCTAssertFalse(try Password.matches("aaaaaaAaa"))
+        XCTAssertFalse(try Password.matches("aaaaaaaa!"))
+        XCTAssertFalse(try Password.matches("aaaaaaaaa"))
+        XCTAssertFalse(try Password.matches("AAAAAAAAA"))
+        XCTAssertFalse(try Password.matches("111111111"))
+        XCTAssertFalse(try Password.matches("!!!!!!!!!"))
     }
 }
