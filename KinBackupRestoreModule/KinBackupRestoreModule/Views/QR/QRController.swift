@@ -16,7 +16,7 @@ class QRController {
      - Parameter size: The size of the `UIImageView` that will display the image.
      - Returns: A QR image.
      */
-    class func generateImage(from string: String, for size: CGSize? = nil) -> UIImage? {
+    class func encode(string: String, for size: CGSize? = nil) -> UIImage? {
         let data = string.data(using: .isoLatin1)
         
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else {

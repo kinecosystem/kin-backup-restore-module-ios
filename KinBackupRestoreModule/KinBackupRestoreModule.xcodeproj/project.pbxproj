@@ -42,6 +42,7 @@
 		6804B12E224A08C900208AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6804B12C224A08C900208AE0 /* Main.storyboard */; };
 		6804B130224A08CA00208AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6804B12F224A08CA00208AE0 /* Assets.xcassets */; };
 		6804B133224A08CA00208AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6804B131224A08CA00208AE0 /* LaunchScreen.storyboard */; };
+		6804B13B224A145200208AE0 /* KinBackupRestoreModuleQRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B13A224A145200208AE0 /* KinBackupRestoreModuleQRTests.swift */; };
 		682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */; };
 		682EA36222229EAB00D4ADEC /* KinBackupRestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */; };
 		682EA3642222CEA200D4ADEC /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3632222CEA200D4ADEC /* RestoreView.swift */; };
@@ -113,6 +114,7 @@
 		6804B12F224A08CA00208AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6804B132224A08CA00208AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6804B134224A08CA00208AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6804B13A224A145200208AE0 /* KinBackupRestoreModuleQRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreModuleQRTests.swift; sourceTree = "<group>"; };
 		682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
 		682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreError.swift; sourceTree = "<group>"; };
 		682EA3632222CEA200D4ADEC /* RestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */,
+				6804B13A224A145200208AE0 /* KinBackupRestoreModuleQRTests.swift */,
 				68005A912206FFFB004F791A /* Info.plist */,
 			);
 			path = KinBackupRestoreModuleTests;
@@ -605,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6804B13B224A145200208AE0 /* KinBackupRestoreModuleQRTests.swift in Sources */,
 				68005A902206FFFB004F791A /* KinBackupRestoreModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -60,7 +60,7 @@ extension RestoreFlowController {
         let restoreViewController = RestoreViewController()
         restoreViewController.delegate = self
         restoreViewController.lifeCycleDelegate = self
-        restoreViewController.imageView.image = QRController.generateImage(from: qrString)
+        restoreViewController.imageView.image = QRController.encode(string: qrString)
         navigationController.pushViewController(restoreViewController, animated: true)
     }
 }
