@@ -90,7 +90,7 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
         }
 
         do {
-            try kinClient.importAccount(json, passphrase: password)
+            _ = try kinClient.importAccount(json, passphrase: password)
             return .success
         }
         catch {

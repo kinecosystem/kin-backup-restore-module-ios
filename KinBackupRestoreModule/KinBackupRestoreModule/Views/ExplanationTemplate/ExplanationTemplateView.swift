@@ -28,8 +28,6 @@ class ExplanationTemplateView: KeyboardAdjustingScrollView {
         contentView.addArrangedSubview(imageViewStackView)
 
         addArrangedVerticalLayoutSubview(to: imageViewStackView, sizeClass: .regular)
-        addArrangedVerticalLayoutSubview(to: imageViewStackView, sizeClass: .regular)
-        addArrangedVerticalLayoutSubview(to: imageViewStackView, sizeClass: .compact)
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
@@ -41,7 +39,7 @@ class ExplanationTemplateView: KeyboardAdjustingScrollView {
         contentStackView.spacing = contentView.spacing
         contentView.addArrangedSubview(contentStackView)
 
-        addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .regular)
+        addArrangedVerticalSpaceSubview(to: contentStackView, height: 20, sizeClass: .regular)
         addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .compact)
 
         titleLabel.font = .preferredFont(forTextStyle: .title1)
@@ -62,7 +60,7 @@ class ExplanationTemplateView: KeyboardAdjustingScrollView {
         descriptionLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
         contentStackView.addArrangedSubview(descriptionLabel)
 
-        addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .regular)
+        addArrangedVerticalSpaceSubview(to: contentStackView, height: 10)
 
         doneButton.appearance = .white
         doneButton.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -71,6 +69,8 @@ class ExplanationTemplateView: KeyboardAdjustingScrollView {
 
         addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .regular)
         addArrangedVerticalLayoutSubview(to: contentStackView, sizeClass: .compact)
+
+        contentView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor).isActive = true
     }
 
     required init?(coder aDecoder: NSCoder) {
