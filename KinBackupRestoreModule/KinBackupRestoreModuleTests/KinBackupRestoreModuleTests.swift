@@ -22,16 +22,6 @@ class KinBackupRestoreModuleTests: XCTestCase {
         return client
     }
 
-    func createAccount() -> KinAccount {
-        do {
-            return try client.addAccount()
-        }
-        catch {
-            XCTAssertTrue(false, error.localizedDescription)
-            fatalError()
-        }
-    }
-
     // MARK: Lifecycle
 
     override func setUp() {
@@ -48,10 +38,19 @@ class KinBackupRestoreModuleTests: XCTestCase {
 
     func testBackupAndRestoreAccount() {
         let passphrase = "A random passphrase"
-        let account = createAccount()
+        let account: KinAccount
+
+        do {
+            account = try client.addAccount()
+        }
+        catch {
+            XCTAssertTrue(false, error.localizedDescription)
+            return
+        }
+
         let address = account.publicAddress
         let string: String
-
+        
         do {
             string = try account.export(passphrase: passphrase)
         }
