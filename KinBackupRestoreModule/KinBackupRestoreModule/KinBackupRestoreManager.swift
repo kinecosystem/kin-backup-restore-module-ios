@@ -17,7 +17,9 @@ public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
      - Parameter manager: The manager object providing this information.
      - Parameter wasCancelled: A `Bool` indicating whether the operation was cancelled or not.
      */
-    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool)
+    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, kinAccount: KinAccount?)
+
+    func kinBackupRestoreManagerDidCancel(_ manager: KinBackupRestoreManager)
 
     /**
      Tells the delegate that the backup or restore encountered an error.
@@ -225,7 +227,13 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         
         self.instance = nil
 
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
+        var kinAccount: KinAccount? = nil
+
+        if let restoreFlowController = instance.flowController as? RestoreFlowController {
+            kinAccount = restoreFlowController.importedKinAccount
+        }
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, kinAccount: kinAccount)
     }
     
     func flowControllerDidCancel(_ controller: FlowController) {
@@ -243,7 +251,7 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         
         self.instance = nil
 
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
+        delegate?.kinBackupRestoreManagerDidCancel(self)
     }
 
     func flowController(_ controller: FlowController, error: Error) {

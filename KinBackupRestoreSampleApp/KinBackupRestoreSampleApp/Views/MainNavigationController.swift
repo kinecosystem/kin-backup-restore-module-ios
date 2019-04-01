@@ -81,9 +81,11 @@ extension MainNavigationController: AccountViewControllerDelegate {
 // MARK: - Backup and Restore
 
 extension MainNavigationController: KinBackupRestoreManagerDelegate {
-    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool) {
-        print("||| completed")
+    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, kinAccount: KinAccount?) {
+        self.brAccount = nil
+    }
 
+    func kinBackupRestoreManagerDidCancel(_ manager: KinBackupRestoreManager) {
         self.brAccount = nil
     }
 

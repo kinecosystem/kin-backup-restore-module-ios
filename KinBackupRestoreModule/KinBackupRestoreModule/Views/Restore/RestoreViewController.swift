@@ -16,9 +16,11 @@ protocol RestoreViewControllerDelegate: NSObjectProtocol {
 class RestoreViewController: ViewController {
     weak var delegate: RestoreViewControllerDelegate?
 
+    let qrImage: UIImage?
+
     // MARK: View
 
-    var imageView: UIImageView {
+    private var imageView: UIImageView {
         return _view.imageView
     }
 
@@ -44,7 +46,9 @@ class RestoreViewController: ViewController {
 
     // MARK: Lifecycle
 
-    init() {
+    init(qrString: String) {
+        self.qrImage = QR.encode(string: qrString)
+
         super.init(nibName: nil, bundle: nil)
 
         title = "restore.title".localized()
@@ -56,6 +60,8 @@ class RestoreViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        imageView.image = qrImage
 
         passwordInput.addTarget(self, action: #selector(passwordInputChanges), for: .editingChanged)
         passwordInput.becomeFirstResponder()
