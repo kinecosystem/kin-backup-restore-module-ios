@@ -50,11 +50,14 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
         contentView.addArrangedSubview(confirmStackView)
 
         confirmImageView.image = UIImage()
-        confirmImageView.highlightedImage = UIImage(named: "rectangle17", in: .backupRestore, compatibleWith: nil)
-        confirmImageView.layer.borderWidth = 1
-        confirmImageView.layer.borderColor = UIColor.kinGray.cgColor
-        confirmImageView.layer.cornerRadius = 2
+        confirmImageView.tintColor = .kinPrimary
+        confirmImageView.highlightedImage = UIImage(named: "Checkmark", in: .backupRestore, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        confirmImageView.setContentHuggingPriority(.required, for: .horizontal)
         confirmImageView.setContentCompressionResistancePriority(.required, for: .vertical)
+        confirmImageView.layer.borderColor = UIColor.kinGray.cgColor
+        confirmImageView.layer.borderWidth = 1
+        confirmImageView.layer.cornerRadius = 4
+        confirmImageView.layer.masksToBounds = true
         confirmStackView.addArrangedSubview(confirmImageView)
         confirmImageView.widthAnchor.constraint(equalToConstant: 18).isActive = true
         confirmImageView.heightAnchor.constraint(equalToConstant: 18).isActive = true

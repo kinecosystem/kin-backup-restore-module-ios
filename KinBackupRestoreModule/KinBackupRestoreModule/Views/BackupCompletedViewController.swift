@@ -14,7 +14,7 @@ class BackupCompletedViewController: ExplanationTemplateViewController {
         
         navigationItem.hidesBackButton = true
         
-        imageView.image = UIImage(named: "safeIcon", in: .backupRestore, compatibleWith: nil)
+        imageView.image = UIImage(named: "Safe", in: .backupRestore, compatibleWith: nil)
 
         titleLabel.text = "backup_completed.header".localized()
 

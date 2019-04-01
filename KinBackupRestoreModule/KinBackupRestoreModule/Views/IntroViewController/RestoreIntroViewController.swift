@@ -31,7 +31,7 @@ class RestoreIntroViewController: ExplanationTemplateViewController {
 
         view.backgroundColor = .kinPrimary
 
-        imageView.image = UIImage(named: "whiteQrCode", in: .backupRestore, compatibleWith: nil)
+        imageView.image = UIImage(named: "QRCode", in: .backupRestore, compatibleWith: nil)
 
         titleLabel.text = "restore_intro.header".localized()
 

@@ -36,7 +36,7 @@ class ReminderView: UIView {
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintAdjustmentMode = .normal
-        imageView.image = UIImage(named: "whiteFlagIcon", in: .backupRestore, compatibleWith: nil)
+        imageView.image = UIImage(named: "Flag", in: .backupRestore, compatibleWith: nil)
         imageView.contentMode = .scaleAspectFit
         topContainerView.addSubview(imageView)
         imageView.topAnchor.constraint(equalTo: topContainerView.topAnchor).isActive = true
