@@ -9,47 +9,41 @@
 import UIKit
 
 class PasswordEntryTextField: UITextField {
-    public var entryState: PasswordState = .default {
-        didSet {
-            updateFieldStateStyle()
-        }
-    }
-
-    private let revealIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 37, height: 15))
-
+    private let paddingView = UIView()
 
     // MARK: Lifecycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        revealIcon.addTarget(self, action: #selector(revealPassword), for: .touchDown)
-        revealIcon.addTarget(self, action: #selector(hidePassword), for: [.touchUpInside, .touchUpOutside, .touchCancel])
-        revealIcon.contentMode = .topLeft
-        revealIcon.setImage(UIImage(named: "Eye", in: .backupRestore, compatibleWith: nil), for: .normal)
-        revealIcon.imageEdgeInsets = UIEdgeInsets(top: 0.0, left: -15.0, bottom: 0.0, right: 0.0)
 
-        let paddingView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 22.0, height: frame.height))
-        UIView.performWithoutAnimation {
-            rightView = revealIcon
-            rightViewMode = .whileEditing
-            rightView?.frame = rightViewRect(forBounds: bounds)
-        }
-        layer.borderWidth = 1.0
-        leftView = paddingView
-        leftViewMode = .always
         isSecureTextEntry = true
         autocapitalizationType = .none
         autocorrectionType = .no
-        updateFieldStateStyle()
+        spellCheckingType = .no
+        backgroundColor = .white
+
+        layer.borderWidth = 1
+        layer.masksToBounds = true
+
+        leftView = paddingView
+        leftViewMode = .always
+
+        let revealButton = UIButton()
+        revealButton.setImage(UIImage(named: "Eye", in: .backupRestore, compatibleWith: nil), for: .normal)
+        revealButton.addTarget(self, action: #selector(showPassword), for: .touchDown)
+        revealButton.addTarget(self, action: #selector(hidePassword), for: [.touchUpInside, .touchUpOutside, .touchCancel])
+        revealButton.sizeToFit()
+        var revealButtonFrame = revealButton.frame
+        revealButtonFrame.size.width += 10
+        revealButton.frame = revealButtonFrame
+        rightView = revealButton
+        rightViewMode = .whileEditing
+
+        updateState()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: Layout
@@ -57,7 +51,13 @@ class PasswordEntryTextField: UITextField {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        layer.cornerRadius = bounds.height / 2
+        let halfHeight = bounds.height / 2
+
+        layer.cornerRadius = halfHeight
+
+        var paddingViewFrame = paddingView.frame
+        paddingViewFrame.size.width = halfHeight
+        paddingView.frame = paddingViewFrame
     }
 
     override var intrinsicContentSize: CGSize {
@@ -66,9 +66,15 @@ class PasswordEntryTextField: UITextField {
         return size
     }
 
-    // MARK:
+    // MARK: State
+
+    public var entryState: PasswordState = .default {
+        didSet {
+            updateState()
+        }
+    }
     
-    private func updateFieldStateStyle() {
+    private func updateState() {
         switch entryState {
         case .default:
             layer.borderColor = UIColor.kinGray.cgColor
@@ -78,23 +84,28 @@ class PasswordEntryTextField: UITextField {
             layer.borderColor = UIColor.kinWarning.cgColor
         }
     }
+
+    // MARK: Password
     
     @objc
-    private func revealPassword(_ sender: Any) {
-        secureButtonHandler(false)
+    private func showPassword() {
+        updateText(isSecure: false)
     }
     
     @objc
-    private func hidePassword(_ sender: Any) {
-        secureButtonHandler(true)
+    private func hidePassword() {
+        updateText(isSecure: true)
     }
     
-    private func secureButtonHandler(_ secure: Bool) {
+    private func updateText(isSecure: Bool) {
         let isFirst = isFirstResponder
+
         if isFirst {
             resignFirstResponder()
         }
-        isSecureTextEntry = secure
+
+        isSecureTextEntry = isSecure
+
         if isFirst {
             becomeFirstResponder()
         }

@@ -19,17 +19,13 @@ class RoundButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+
+        syncAppearance()
+        layer.masksToBounds = true
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        syncAppearance()
-        layer.masksToBounds = true
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: Layout
