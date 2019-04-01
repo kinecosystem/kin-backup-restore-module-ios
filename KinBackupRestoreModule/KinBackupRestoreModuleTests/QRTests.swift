@@ -25,4 +25,8 @@ class QRTests: XCTestCase {
 
         XCTAssertTrue(string == qrString, "Strings do not match")
     }
+
+    func testQREmptyDecode() {
+        XCTAssertNil(QR.decode(image: UIImage()))
+    }
 }
