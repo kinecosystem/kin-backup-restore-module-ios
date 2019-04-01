@@ -12,7 +12,7 @@ class QRView: KeyboardAdjustingScrollView {
     let imageView = UIImageView()
     private let instructionsLabel = UILabel()
     let confirmControl = UIControl()
-    private let confirmImageView = UIImageView()
+    private let confirmImageView = CheckboxImageView()
     let doneButton = RoundButton()
 
     private var regularConstraints: [NSLayoutConstraint] = []
@@ -82,13 +82,6 @@ class QRView: KeyboardAdjustingScrollView {
         confirmStackView.trailingAnchor.constraint(lessThanOrEqualTo: confirmControl.trailingAnchor).isActive = true
         confirmStackView.centerXAnchor.constraint(equalTo: confirmControl.centerXAnchor).isActive = true
 
-        confirmImageView.tintColor = .kinPrimary
-        confirmImageView.highlightedImage = UIImage(named: "Checkmark", in: .backupRestore, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
-        confirmImageView.setContentHuggingPriority(.required, for: .horizontal)
-        confirmImageView.layer.borderColor = UIColor.kinGray.cgColor
-        confirmImageView.layer.borderWidth = 1
-        confirmImageView.layer.cornerRadius = 4
-        confirmImageView.layer.masksToBounds = true
         confirmStackView.addArrangedSubview(confirmImageView)
 
         let confirmLabel = UILabel()

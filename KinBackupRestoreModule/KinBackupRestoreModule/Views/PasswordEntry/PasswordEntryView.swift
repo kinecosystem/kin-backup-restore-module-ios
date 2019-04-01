@@ -15,7 +15,7 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
     let passwordConfirmTextField = PasswordEntryTextField()
     private let confirmStackView = UIStackView()
     let confirmLabel = UILabel()
-    private let confirmImageView = UIImageView()
+    private let confirmImageView = CheckboxImageView()
     let doneButton = RoundButton()
 
     // MARK: Lifecycle
@@ -49,18 +49,7 @@ class PasswordEntryView: KeyboardAdjustingScrollView {
         confirmStackView.spacing = contentView.spacing
         contentView.addArrangedSubview(confirmStackView)
 
-        confirmImageView.image = UIImage()
-        confirmImageView.tintColor = .kinPrimary
-        confirmImageView.highlightedImage = UIImage(named: "Checkmark", in: .backupRestore, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
-        confirmImageView.setContentHuggingPriority(.required, for: .horizontal)
-        confirmImageView.setContentCompressionResistancePriority(.required, for: .vertical)
-        confirmImageView.layer.borderColor = UIColor.kinGray.cgColor
-        confirmImageView.layer.borderWidth = 1
-        confirmImageView.layer.cornerRadius = 4
-        confirmImageView.layer.masksToBounds = true
         confirmStackView.addArrangedSubview(confirmImageView)
-        confirmImageView.widthAnchor.constraint(equalToConstant: 18).isActive = true
-        confirmImageView.heightAnchor.constraint(equalToConstant: 18).isActive = true
 
         confirmLabel.font = .preferredFont(forTextStyle: .footnote)
         confirmLabel.textColor = .kinGray
