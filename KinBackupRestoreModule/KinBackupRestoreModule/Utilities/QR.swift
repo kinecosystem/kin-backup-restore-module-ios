@@ -1,5 +1,5 @@
 //
-//  QRController.swift
+//  QR.swift
 //  KinEcosystem
 //
 //  Created by Corey Werner on 28/10/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QRController {
+class QR {
     /**
      Create a QR image from a string.
      
@@ -16,7 +16,7 @@ class QRController {
      - Parameter size: The size of the `UIImageView` that will display the image.
      - Returns: A QR image.
      */
-    class func generateImage(from string: String, for size: CGSize? = nil) -> UIImage? {
+    class func encode(string: String, for size: CGSize? = nil) -> UIImage? {
         let data = string.data(using: .isoLatin1)
         
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else {

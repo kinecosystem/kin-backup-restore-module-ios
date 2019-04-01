@@ -52,7 +52,7 @@ class QRViewController: ViewController {
     // MARK: Lifecycle
 
     init(qrString: String) {
-        self.qrImage = QRController.generateImage(from: qrString)
+        self.qrImage = QR.encode(string: qrString)
 
         super.init(nibName: nil, bundle: nil)
 

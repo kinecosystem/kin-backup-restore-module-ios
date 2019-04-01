@@ -76,17 +76,8 @@ extension BackupFlowController {
 
 extension BackupFlowController: PasswordEntryViewControllerDelegate {
     func passwordEntryViewController(_ viewController: PasswordEntryViewController, validate password: String) -> Bool {
-        let digit = "(?=.*\\d)"
-        let upper = "(?=.*[A-Z])"
-        let lower = "(?=.*[a-z])"
-        let special = "(?=.*[!@#$%^&*()_+{}\\[\\]])"
-        let min = 9
-        let pattern = "^\(digit)\(upper)\(lower)\(special)(.{\(min),})$"
-
         do {
-            let regex = try NSRegularExpression(pattern: pattern, options: [])
-            let results = regex.matches(in: password, range: NSRange(password.startIndex..., in: password))
-            return !results.isEmpty
+            return try Password.matches(password)
         }
         catch {
             delegate?.flowController(self, error: error)
