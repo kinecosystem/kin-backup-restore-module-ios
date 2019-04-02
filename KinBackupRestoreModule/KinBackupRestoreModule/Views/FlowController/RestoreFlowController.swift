@@ -45,7 +45,7 @@ extension RestoreFlowController: LifeCycleProtocol {
 // MARK: - Navigation
 
 extension RestoreFlowController {
-    private func presentQRPickerViewController() {
+    fileprivate func presentQRPickerViewController() {
         guard QRPickerController.canOpenImagePicker else {
             delegate?.flowController(self, error: KinBackupRestoreError.cantOpenImagePicker)
             return
@@ -57,7 +57,7 @@ extension RestoreFlowController {
         self.qrPickerController = qrPickerController
     }
     
-    private func pushPasswordViewController(with qrString: String) {
+    fileprivate func pushPasswordViewController(with qrString: String) {
         let restoreViewController = RestoreViewController(qrString: qrString)
         restoreViewController.delegate = self
         restoreViewController.lifeCycleDelegate = self
@@ -106,14 +106,10 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
     }
     
     func restoreViewControllerDidComplete(_ viewController: RestoreViewController) {
-        // Delay to prevent a jarring jump after the checkmark animation.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-            guard let strongSelf = self else {
-                return
-            }
-
-            strongSelf.delegate?.flowControllerDidComplete(strongSelf)
-            strongSelf.importedKinAccount = nil
+        // Delay to give the UX some time after the button animation.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.delegate?.flowControllerDidComplete(self)
+            self.importedKinAccount = nil
         }
     }
 }
