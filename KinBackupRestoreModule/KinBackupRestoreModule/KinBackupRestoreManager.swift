@@ -10,14 +10,23 @@ import KinSDK
 
 public protocol KinBackupRestoreManagerDelegate: NSObjectProtocol {
     /**
-     Tells the delegate that the backup or restore process has completed.
+     Tells the delegate that the backup or restore process was completed.
 
-     The `wasCancelled` parameter will be `true` if the user cancelled the process.
+     The `kinAccount` parameter will have an object only when successfully restoring.
 
      - Parameter manager: The manager object providing this information.
-     - Parameter wasCancelled: A `Bool` indicating whether the operation was cancelled or not.
+     - Parameter kinAccount: The restored `kinAccount` or `nil`.
      */
-    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool)
+    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, kinAccount: KinAccount?)
+
+    /**
+     Tells the delegate that the backup or restore process was cancelled.
+
+     The process can be cancelled only through user interaction.
+
+     - Parameter manager: The manager object providing this information.
+     */
+    func kinBackupRestoreManagerDidCancel(_ manager: KinBackupRestoreManager)
 
     /**
      Tells the delegate that the backup or restore encountered an error.
@@ -225,7 +234,13 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         
         self.instance = nil
 
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: false)
+        var kinAccount: KinAccount? = nil
+
+        if let restoreFlowController = instance.flowController as? RestoreFlowController {
+            kinAccount = restoreFlowController.importedKinAccount
+        }
+
+        delegate?.kinBackupRestoreManagerDidComplete(self, kinAccount: kinAccount)
     }
     
     func flowControllerDidCancel(_ controller: FlowController) {
@@ -243,7 +258,7 @@ extension KinBackupRestoreManager: FlowControllerDelegate {
         
         self.instance = nil
 
-        delegate?.kinBackupRestoreManagerDidComplete(self, wasCancelled: true)
+        delegate?.kinBackupRestoreManagerDidCancel(self)
     }
 
     func flowController(_ controller: FlowController, error: Error) {

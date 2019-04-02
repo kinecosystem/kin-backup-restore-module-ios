@@ -10,18 +10,18 @@ import UIKit
 import MessageUI
 
 protocol QRViewControllerDelegate: NSObjectProtocol {
-    func QRViewControllerDidComplete(_ viewController: QRViewController)
+    func qrViewControllerDidComplete(_ viewController: QRViewController)
 }
 
 class QRViewController: ViewController {
     weak var delegate: QRViewControllerDelegate!
 
-    private let qrImage: UIImage?
-    private var mailViewController: MFMailComposeViewController?
+    let qrImage: UIImage?
+    fileprivate var mailViewController: MFMailComposeViewController?
 
     // MARK: View
 
-    var imageView: UIImageView {
+    private var imageView: UIImageView {
         return _view.imageView
     }
 
@@ -102,7 +102,7 @@ class QRViewController: ViewController {
     @objc
     private func doneAction() {
         if isConfirmed {
-            delegate.QRViewControllerDidComplete(self)
+            delegate.qrViewControllerDidComplete(self)
         }
         else {
             presentMailViewController()

@@ -11,6 +11,7 @@ import KinSDK
 
 class RestoreFlowController: FlowController {
     let kinClient: KinClient
+    var importedKinAccount: KinAccount?
 
     init(kinClient: KinClient, navigationController: UINavigationController) {
         self.kinClient = kinClient
@@ -44,7 +45,7 @@ extension RestoreFlowController: LifeCycleProtocol {
 // MARK: - Navigation
 
 extension RestoreFlowController {
-    private func presentQRPickerViewController() {
+    fileprivate func presentQRPickerViewController() {
         guard QRPickerController.canOpenImagePicker else {
             delegate?.flowController(self, error: KinBackupRestoreError.cantOpenImagePicker)
             return
@@ -56,11 +57,10 @@ extension RestoreFlowController {
         self.qrPickerController = qrPickerController
     }
     
-    private func pushPasswordViewController(with qrString: String) {
-        let restoreViewController = RestoreViewController()
+    fileprivate func pushPasswordViewController(with qrString: String) {
+        let restoreViewController = RestoreViewController(qrString: qrString)
         restoreViewController.delegate = self
         restoreViewController.lifeCycleDelegate = self
-        restoreViewController.imageView.image = QR.encode(string: qrString)
         navigationController.pushViewController(restoreViewController, animated: true)
     }
 }
@@ -76,7 +76,8 @@ extension RestoreFlowController: RestoreIntroViewControllerDelegate {
 extension RestoreFlowController: QRPickerControllerDelegate {
     func qrPickerControllerDidComplete(_ controller: QRPickerController, with qrString: String?) {
         controller.imagePickerController.presentingViewController?.dismiss(animated: true)
-        
+        importedKinAccount = nil
+
         if let qrString = qrString {
             pushPasswordViewController(with: qrString)
         }
@@ -85,12 +86,12 @@ extension RestoreFlowController: QRPickerControllerDelegate {
 
 extension RestoreFlowController: RestoreViewControllerDelegate {
     func restoreViewController(_ viewController: RestoreViewController, importWith password: String) -> RestoreViewController.ImportResult {
-        guard let qrImage = viewController.imageView.image, let json = QR.decode(image: qrImage) else {
+        guard let qrImage = viewController.qrImage, let json = QR.decode(image: qrImage) else {
             return .invalidImage
         }
 
         do {
-            _ = try kinClient.importAccount(json, passphrase: password)
+            importedKinAccount = try kinClient.importAccount(json, passphrase: password)
             return .success
         }
         catch {
@@ -105,12 +106,10 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
     }
     
     func restoreViewControllerDidComplete(_ viewController: RestoreViewController) {
-        // Delay to prevent a jarring jump after the checkmark animation.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-            guard let strongSelf = self else {
-                return
-            }
-            strongSelf.delegate?.flowControllerDidComplete(strongSelf)
+        // Delay to give the UX some time after the button animation.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.delegate?.flowControllerDidComplete(self)
+            self.importedKinAccount = nil
         }
     }
 }

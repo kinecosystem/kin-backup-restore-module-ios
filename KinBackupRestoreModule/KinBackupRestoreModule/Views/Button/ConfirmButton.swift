@@ -22,15 +22,16 @@ class ConfirmButton: RoundButton {
     }
     
     func transitionToConfirmed(completion: (()->())? = nil) {
+        backgroundColor = .clear
+        setBackgroundImage(nil, for: .normal)
+        setTitleColor(.clear, for: .normal)
+        isEnabled = false
+
         let shape = CAShapeLayer()
         shape.frame = bounds
         shape.fillColor = UIColor.kinPrimary.cgColor
         shape.strokeColor = UIColor.clear.cgColor
         shape.path = UIBezierPath(roundedRect: shape.bounds, cornerRadius: shape.bounds.height / 2).cgPath
-        setBackgroundImage(nil, for: .normal)
-        setTitleColor(.clear, for: .normal)
-        isEnabled = false
-        backgroundColor = .clear
         layer.addSublayer(shape)
 
         let vShape = CAShapeLayer()
@@ -41,8 +42,8 @@ class ConfirmButton: RoundButton {
 
         let vPath = UIBezierPath()
         vPath.move(to: CGPoint(x: 0, y: 7))
-        vPath.addLine(to: CGPoint(x: 7, y: 15))
-        vPath.addLine(to: CGPoint(x: 19, y: 0))
+        vPath.addLine(to: CGPoint(x: 7, y: vShape.bounds.height))
+        vPath.addLine(to: CGPoint(x: vShape.bounds.width, y: 0))
         vShape.path = vPath.cgPath
         vShape.fillColor = UIColor.clear.cgColor
         vShape.strokeStart = 0
@@ -50,7 +51,6 @@ class ConfirmButton: RoundButton {
         layer.addSublayer(vShape)
 
         let duration = 0.64
-
         let pathAnimation = Animations.animation(with: "path", duration: duration * 0.25, beginTime: 0, from: shape.path!, to: UIBezierPath(roundedRect: shape.bounds.insetBy(dx: (shape.bounds.width / 2) - 25, dy: 0), cornerRadius: shape.bounds.height / 2).cgPath)
         let vPathAnimation = Animations.animation(with: "strokeEnd", duration: duration * 0.45, beginTime: duration * 0.55, from: 0, to: 1)
         let shapeGroup = Animations.animationGroup(animations: [pathAnimation], duration: duration)

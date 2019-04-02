@@ -179,6 +179,8 @@ class PasswordEntryViewController: ViewController {
     }
 }
 
+// MARK: - Error
+
 extension PasswordEntryViewController {
     func presentErrorAlertController() {
         let title = "generic.alert_error.title".localized()
