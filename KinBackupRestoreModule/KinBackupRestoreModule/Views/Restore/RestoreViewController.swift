@@ -104,7 +104,7 @@ class RestoreViewController: ViewController {
     }
 }
 
-// MARK: -
+// MARK: - Import Result
 
 extension RestoreViewController {
     enum ImportResult {
@@ -130,7 +130,7 @@ extension RestoreViewController.ImportResult {
     }
 }
 
-// MARK: -
+// MARK: - Error
 
 extension RestoreViewController {
     fileprivate func presentErrorAlertController(result: ImportResult) {
