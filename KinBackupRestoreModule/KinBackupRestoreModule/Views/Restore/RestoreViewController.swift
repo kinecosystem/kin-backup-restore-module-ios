@@ -85,7 +85,7 @@ class RestoreViewController: ViewController {
         guard let delegate = delegate else {
             return
         }
-        
+
         button.isEnabled = false
         navigationItem.hidesBackButton = true
         
