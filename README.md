@@ -10,7 +10,7 @@ For more details on Kin SDK, go to [kin-sdk on github](https://github.com/kineco
 
 ## Installation
 
-The kin-backup-and-restore module for iOS is implemented as an iOS framework.
+The `KinBackupRestoreModule` for iOS is implemented as an iOS framework.
 It can be included in your project with CocoaPods.
 
 ### CocoaPods
@@ -30,10 +30,9 @@ See the main repository at [github.com/kinecosystem/kin-sdk-ios](https://github.
 
 Launching the Backup and Restore flows requires the following steps:
 
-1. Creating the Backup and Restore manager
+1. Creating the Backup and Restore Manager
 2. Adding protocol stubs
-<!--3. Passing the result to the Backup and Restore module-->
-<!--4. Backup or Restore-->
+3. Backup or Restore
 
 ### Step 1 - Creating the Backup and Restore Manager
 
@@ -46,18 +45,20 @@ let backupRestoreManager = KinBackupRestoreManager()
 backupRestoreManager.delegate = self
 ```
 
-### Step 2 - Adding Backup and Restore protocol stubs
+### Step 2 - Adding protocol stubs
 
-- The did complete function is called when the operation has completed successfully. In the Restore callback, it has a `KinAccount` object, which is the restored account.  
-- `onCancel` is called when the user leaves the backup or restore activity and returns to the previous activity.  
-- `onFailure()` is called if there is an error in the backup or restore process.
-
-###### Creating Backup callbacks
+- `didComplete` is called when the operation has completed successfully. When completing the restore operation, the `kinAccount` param will contain the restored account.  
+- `didCancel` is called when the user cancels the backup or restore operation.  
+- `error` is called if there is an error in the backup or restore operation.
 
 ```swift
 extension ViewController: KinBackupRestoreManagerDelegate {
-    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, wasCancelled: Bool) {
-    
+    func kinBackupRestoreManagerDidComplete(_ manager: KinBackupRestoreManager, kinAccount: KinAccount?) {
+
+    }
+
+    func kinBackupRestoreManagerDidCancel(_ manager: KinBackupRestoreManager) {
+
     }
 
     func kinBackupRestoreManager(_ manager: KinBackupRestoreManager, error: Error) {
@@ -66,114 +67,76 @@ extension ViewController: KinBackupRestoreManagerDelegate {
 }
 ```
 
-###### Creating Restore callbacks
+#### Step 3 - Backup or Restore
 
-```java  
-backupAndRestoreManager.registerRestoreCallback(new RestoreCallback() {
-@Override
-public void onSuccess(KinAccount kinAccount) {
-// here you can handle the success.
-}
+Before you start using the Backup and Restore operations, you need to create a `KinClient` object.
 
-@Override
-public void onCancel() {
-// here you can handle the cancellation.
-}
+###### Example of how to create a `KinClient` object:
 
-@Override
-public void onFailure(BackupException throwable) {
-// here you can handle the failure.
-}
-});
+```swift
+let url = URL(string: "https://horizon-testnet.kininfrastructure.com")!
+let appId = try! AppId("test")
+let kinClient = KinClient(with: url, network: .testNet, appId: appId)
 ```
 
-NOTE:
-Be sure to unregister from the module when it is no longer needed.
-To unregister from the module and release all its resources, use this code:
+If you want to backup, you need the `KinAccount` object, which represents the account that you want to back up.
 
+###### Example of how to get a `KinAccount` object:
 
-```java 
-backupAndRestoreManager.release();
-``` 
-You should register/unregister the callbacks in a way that will “survive” an activity restart or similar situations.
-In order to achieve that you should register in `Activity.onCreate` and release in `Activity.onDestroy`.
-
-#### Step 3 - Passing the Result to the Backup and Restore module
-
-Since the module internally uses `startActivityForResult`, for it to work properly, you have to implement `onActivityResult` in your activity. In that method, you need to call
-`backupAndRestoreManager.onActivityResult(...);`
-
-For example:
-```java 
-@Override
-protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-super.onActivityResult(requestCode, resultCode, data);
-if (requestCode == REQ_CODE_BACKUP || requestCode == REQ_CODE_RESTORE) {
-backupAndRestore.onActivityResult(requestCode, resultCode, data);
-}
-}
+```swift
+let kinAccount = kinClient.accounts.first
 ```
 
-#### Step 4 - Backup or Restore
-Before you start using the Backup and Restore flows, you need to create a kinClient object.
-If you want to back up, you need the KinAccount object, which represents the account that you want to back up.
-###### Example of how to create a kinClient object:
+For more details on `KinClient` and `KinAccount`, see [KinClient](https://kinecosystem.github.io/kin-website-docs/docs/documentation/ios-sdk#kinclient)
+and [KinAccount](https://kinecosystem.github.io/kin-website-docs/docs/documentation/ios-sdk#kinaccount)
 
-```java
-kinClient = new KinClient(context, Environment.TEST, "1acd")
-...
-backupAndRestoreManager = new BackupAndRestoreManager(context);
+Now you can use the Backup and Restore operations. For each operation you can choose for it to be presented or pushed onto a navigation stack.
+
+###### Example of how to backup with the UI being presented:
+
+```swift
+backupRestoreManager.backup(kinAccount, presentedOnto: viewController)
 ```
-For more details on KinClient and KinAccount, see [KinClient](https://kinecosystem.github.io/kin-website-docs/docs/documentation/android-sdk#accessing-the-kin-blockchain)
-and [KinAccount](https://kinecosystem.github.io/kin-website-docs/docs/documentation/android-sdk#creating-and-retrieving-a-kin-account)
 
-Now you can use the Backup and Restore flows by calling these functions:
+###### Example of how to backup with the UI being pushed:
 
-- For backup:
-```java 
-
-backupAndRestoreManager.backup(kinClient, kinAccount);
-
+```swift
+backupRestoreManager.backup(kinAccount, pushedOnto: navigationController)
 ```
-- For restore:
-```java 
 
-backupAndRestoreManager.restore(kinClient)
+###### Example of how to restore with the UI being presented:
+
+```swift
+backupRestoreManager.restore(kinClient, presentedOnto: viewController)
 ```
+
+###### Example of how to restore with the UI being pushed:
+
+```swift
+backupRestoreManager.restore(kinClient, pushedOnto: navigationController)
+```
+
 ### Error Handling
 
-`onFailure(BackupAndRestoreException e)` can be called if an error has occured while trying to back up or restore.
+`kinBackupRestoreManager(_:, error:)` can be called if an error has occured while trying to backup or restore.
 
 ### Testing
 
-Both unit tests and instrumented tests are provided.
-For a full list of tests, see
+For a full list of tests, see:
 
-- https://github.com/kinecosystem/kin-sdk-android/tree/master/kin-backup-and-restore/kin-backup-and-restore/src/test
-- https://github.com/kinecosystem/kin-sdk-android/tree/master/kin-backup-and-restore/kin-backup-and-restore/src/androidTest
-
-
-#### Running Tests
-
-For running both unit tests and instrumented tests and generating a code coverage report using Jacoco, use this script:
-```bash
-$ ./gradlew :kin-backup-and-restore:kin-backup-and-restore jacocoTestReport
-```
-
-Generated report can be found at:
-kin-backup-and-restore/kin-backup-and-restore/build/reports/jacoco/jacocoTestReport/html/index.html.
+- https://github.com/kinecosystem/kin-backup-restore-module-ios/tree/master/KinBackupRestoreModule/KinBackupRestoreModuleTests
 
 ### Building from Source
 
 To build from source, clone the repo:
 
 ```bash
-$ git clone https://github.com/kinecosystem/kin-sdk-android.git
+$ git clone https://github.com/kinecosystem/kin-backup-restore-module-ios.git
 ```
+
 Now you can build the library using gradle or open the project using Android Studio.
 
 ## Sample App Code
 
-The `kin-backup-and-restore-sample` app covers the entire functionality of `kin-backup-and-restore` and serves as a detailed example of how to use the library.
-
-The sample app source code can be found [here](https://github.com/kinecosystem/kin-sdk-android/tree/master/kin-backup-and-restore/kin-backup-and-restore-sample/).
+The `KinBackupRestoreSampleApp` covers the entire functionality of the `KinBackupRestoreModule` and serves as a detailed example of how to use the library.
+The sample app source code can be found [here](https://github.com/kinecosystem/kin-backup-restore-module-ios/tree/master/KinBackupRestoreSampleApp).
