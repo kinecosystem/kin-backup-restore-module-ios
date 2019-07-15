@@ -10,50 +10,51 @@
 		68005A8B2206FFFB004F791A /* KinBackupRestoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68005A812206FFFB004F791A /* KinBackupRestoreModule.framework */; };
 		68005A902206FFFB004F791A /* KinBackupRestoreModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */; };
 		68005A922206FFFB004F791A /* KinBackupRestoreModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 68005A842206FFFB004F791A /* KinBackupRestoreModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68005ABE22070789004F791A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68005AB922070789004F791A /* Assets.xcassets */; };
-		68005AC122070789004F791A /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ABD22070789004F791A /* KinBackupRestoreManager.swift */; };
-		68005ADE22070793004F791A /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC322070793004F791A /* LifeCycleProtocol.swift */; };
-		68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC622070793004F791A /* BackupCompletedViewController.swift */; };
-		68005AE122070793004F791A /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC822070793004F791A /* BackupFlowController.swift */; };
-		68005AE222070793004F791A /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AC922070793004F791A /* RestoreFlowController.swift */; };
-		68005AE322070793004F791A /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACA22070793004F791A /* FlowController.swift */; };
-		68005AE422070793004F791A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACB22070793004F791A /* ViewController.swift */; };
-		68005AE522070793004F791A /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACC22070793004F791A /* QRPickerController.swift */; };
-		68005AE622070793004F791A /* PasswordEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACD22070793004F791A /* PasswordEntryTextField.swift */; };
-		68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ACF22070793004F791A /* PasswordEntryViewController.swift */; };
-		68005AE922070793004F791A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD122070793004F791A /* RoundButton.swift */; };
-		68005AEA22070793004F791A /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD322070793004F791A /* RestoreViewController.swift */; };
-		68005AED22070793004F791A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD722070793004F791A /* QRViewController.swift */; };
-		68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AD922070793004F791A /* ExplanationTemplateViewController.swift */; };
-		68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADC22070793004F791A /* BackupIntroViewController.swift */; };
-		68005AF122070793004F791A /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005ADD22070793004F791A /* RestoreIntroViewController.swift */; };
-		68005B0C2208625F004F791A /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */; };
-		68005B12220945C2004F791A /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B11220945C2004F791A /* UIColor+Appearance.swift */; };
-		68005B1422094F3E004F791A /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B1322094F3E004F791A /* String+Localization.swift */; };
-		68005B192209538C004F791A /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B182209538C004F791A /* QR.swift */; };
-		68005B1F220979CE004F791A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68005B1E220979CE004F791A /* Localizable.strings */; };
-		68005B23220AA4B9004F791A /* KinBackupRestoreBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B22220AA4B9004F791A /* KinBackupRestoreBI.swift */; };
-		6804B1022242332100208AE0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1012242332100208AE0 /* QRView.swift */; };
-		6804B1042242440E00208AE0 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1032242440E00208AE0 /* ReminderView.swift */; };
-		6804B1062248C10200208AE0 /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */; };
 		6804B129224A08C900208AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B128224A08C900208AE0 /* AppDelegate.swift */; };
 		6804B12B224A08C900208AE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B12A224A08C900208AE0 /* ViewController.swift */; };
 		6804B12E224A08C900208AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6804B12C224A08C900208AE0 /* Main.storyboard */; };
 		6804B130224A08CA00208AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6804B12F224A08CA00208AE0 /* Assets.xcassets */; };
 		6804B133224A08CA00208AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6804B131224A08CA00208AE0 /* LaunchScreen.storyboard */; };
 		6804B13B224A145200208AE0 /* QRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B13A224A145200208AE0 /* QRTests.swift */; };
-		6804B13E224A1AC800208AE0 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B13D224A1AC800208AE0 /* Password.swift */; };
 		6804B140224A1D9E00208AE0 /* PasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804B13F224A1D9E00208AE0 /* PasswordTests.swift */; };
-		682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */; };
-		682EA36222229EAB00D4ADEC /* KinBackupRestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */; };
-		682EA3642222CEA200D4ADEC /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3632222CEA200D4ADEC /* RestoreView.swift */; };
-		682EA3662222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */; };
-		682EA3692223B5FD00D4ADEC /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EA3682223B5FD00D4ADEC /* ConfirmButton.swift */; };
-		6897C6E32252072200502C1C /* CheckboxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897C6E22252072200502C1C /* CheckboxImageView.swift */; };
-		68A430C32219669000D3B193 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A430C22219669000D3B193 /* Animations.swift */; };
-		68A430C52219930900D3B193 /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A430C42219930900D3B193 /* UIFont+PreferredFont.swift */; };
-		68A430C72219A03F00D3B193 /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A430C62219A03F00D3B193 /* PasswordEntryLabel.swift */; };
-		68A430D0221C325600D3B193 /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A430CF221C325600D3B193 /* PasswordEntryView.swift */; };
+		6831A13722DCA04E00EC2DDF /* KinBackupRestoreBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10722DCA04E00EC2DDF /* KinBackupRestoreBI.swift */; };
+		6831A13822DCA04E00EC2DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6831A10822DCA04E00EC2DDF /* Assets.xcassets */; };
+		6831A13922DCA04E00EC2DDF /* KinBackupRestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10922DCA04E00EC2DDF /* KinBackupRestoreError.swift */; };
+		6831A13A22DCA04E00EC2DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6831A10A22DCA04E00EC2DDF /* Localizable.strings */; };
+		6831A13B22DCA04E00EC2DDF /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10C22DCA04E00EC2DDF /* Notification+Convenience.swift */; };
+		6831A13C22DCA04E00EC2DDF /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10D22DCA04E00EC2DDF /* UIFont+PreferredFont.swift */; };
+		6831A13D22DCA04E00EC2DDF /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10E22DCA04E00EC2DDF /* Bundle+BackupRestore.swift */; };
+		6831A13E22DCA04E00EC2DDF /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10F22DCA04E00EC2DDF /* UIColor+Appearance.swift */; };
+		6831A13F22DCA04E00EC2DDF /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11022DCA04E00EC2DDF /* String+Localization.swift */; };
+		6831A14022DCA04E00EC2DDF /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11222DCA04E00EC2DDF /* Password.swift */; };
+		6831A14122DCA04E00EC2DDF /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11322DCA04E00EC2DDF /* QR.swift */; };
+		6831A14222DCA04E00EC2DDF /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11522DCA04E00EC2DDF /* BackupCompletedViewController.swift */; };
+		6831A14322DCA04E00EC2DDF /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11722DCA04E00EC2DDF /* BackupFlowController.swift */; };
+		6831A14422DCA04E00EC2DDF /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11822DCA04E00EC2DDF /* RestoreFlowController.swift */; };
+		6831A14522DCA04E00EC2DDF /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11922DCA04E00EC2DDF /* FlowController.swift */; };
+		6831A14622DCA04E00EC2DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11A22DCA04E00EC2DDF /* ViewController.swift */; };
+		6831A14722DCA04E00EC2DDF /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11B22DCA04E00EC2DDF /* ReminderView.swift */; };
+		6831A14822DCA04E00EC2DDF /* CheckboxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11C22DCA04E00EC2DDF /* CheckboxImageView.swift */; };
+		6831A14922DCA04E00EC2DDF /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11D22DCA04E00EC2DDF /* Animations.swift */; };
+		6831A14A22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11E22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift */; };
+		6831A14B22DCA04E00EC2DDF /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12022DCA04E00EC2DDF /* QRPickerController.swift */; };
+		6831A14C22DCA04E00EC2DDF /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12122DCA04E00EC2DDF /* QRView.swift */; };
+		6831A14D22DCA04E00EC2DDF /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12222DCA04E00EC2DDF /* QRViewController.swift */; };
+		6831A14E22DCA04E00EC2DDF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12422DCA04E00EC2DDF /* RoundButton.swift */; };
+		6831A14F22DCA04E00EC2DDF /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12522DCA04E00EC2DDF /* ConfirmButton.swift */; };
+		6831A15022DCA04E00EC2DDF /* PasswordEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12722DCA04E00EC2DDF /* PasswordEntryTextField.swift */; };
+		6831A15122DCA04E00EC2DDF /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12822DCA04E00EC2DDF /* PasswordEntryView.swift */; };
+		6831A15222DCA04E00EC2DDF /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12922DCA04E00EC2DDF /* PasswordEntryLabel.swift */; };
+		6831A15322DCA04E00EC2DDF /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12A22DCA04E00EC2DDF /* PasswordEntryViewController.swift */; };
+		6831A15422DCA04E00EC2DDF /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12C22DCA04E00EC2DDF /* RestoreView.swift */; };
+		6831A15522DCA04E00EC2DDF /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12D22DCA04E00EC2DDF /* RestoreViewController.swift */; };
+		6831A15622DCA04E00EC2DDF /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12F22DCA04E00EC2DDF /* BackupIntroViewController.swift */; };
+		6831A15722DCA04E00EC2DDF /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13022DCA04E00EC2DDF /* RestoreIntroViewController.swift */; };
+		6831A15822DCA04E00EC2DDF /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13222DCA04E00EC2DDF /* ExplanationTemplateViewController.swift */; };
+		6831A15922DCA04E00EC2DDF /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */; };
+		6831A15A22DCA04E00EC2DDF /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13522DCA04E00EC2DDF /* LifeCycleProtocol.swift */; };
+		6831A15B22DCA04E00EC2DDF /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13622DCA04E00EC2DDF /* KinBackupRestoreManager.swift */; };
+		6831A2B822DCA1DA00EC2DDF /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6831A2B322DCA1BC00EC2DDF /* KinSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,27 @@
 			remoteGlobalIDString = 6804B125224A08C900208AE0;
 			remoteInfo = KinBackupRestoreModuleTestsHost;
 		};
+		6831A2B222DCA1BC00EC2DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68AF916322A90C6A008C01EC;
+			remoteInfo = KinSDK;
+		};
+		6831A2B422DCA1BC00EC2DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68AF916C22A90C6A008C01EC;
+			remoteInfo = KinSDKTests;
+		};
+		6831A2B622DCA1BC00EC2DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68AF930D22A92DCF008C01EC;
+			remoteInfo = KinSDKTestsHost;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -80,32 +102,6 @@
 		68005A8A2206FFFB004F791A /* KinBackupRestoreModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinBackupRestoreModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68005A8F2206FFFB004F791A /* KinBackupRestoreModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreModuleTests.swift; sourceTree = "<group>"; };
 		68005A912206FFFB004F791A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68005AB922070789004F791A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		68005ABD22070789004F791A /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreManager.swift; sourceTree = "<group>"; };
-		68005AC322070793004F791A /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
-		68005AC622070793004F791A /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
-		68005AC822070793004F791A /* BackupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
-		68005AC922070793004F791A /* RestoreFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
-		68005ACA22070793004F791A /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
-		68005ACB22070793004F791A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68005ACC22070793004F791A /* QRPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
-		68005ACD22070793004F791A /* PasswordEntryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryTextField.swift; sourceTree = "<group>"; };
-		68005ACF22070793004F791A /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
-		68005AD122070793004F791A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		68005AD322070793004F791A /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
-		68005AD722070793004F791A /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
-		68005AD922070793004F791A /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
-		68005ADC22070793004F791A /* BackupIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
-		68005ADD22070793004F791A /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
-		68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
-		68005B11220945C2004F791A /* UIColor+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
-		68005B1322094F3E004F791A /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
-		68005B182209538C004F791A /* QR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
-		68005B1E220979CE004F791A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		68005B22220AA4B9004F791A /* KinBackupRestoreBI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreBI.swift; sourceTree = "<group>"; };
-		6804B1012242332100208AE0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
-		6804B1032242440E00208AE0 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
-		6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
 		6804B126224A08C900208AE0 /* KinBackupRestoreModuleTestsHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinBackupRestoreModuleTestsHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6804B128224A08C900208AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6804B12A224A08C900208AE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,18 +110,46 @@
 		6804B132224A08CA00208AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6804B134224A08CA00208AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6804B13A224A145200208AE0 /* QRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRTests.swift; sourceTree = "<group>"; };
-		6804B13D224A1AC800208AE0 /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		6804B13F224A1D9E00208AE0 /* PasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTests.swift; sourceTree = "<group>"; };
-		682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
-		682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreError.swift; sourceTree = "<group>"; };
-		682EA3632222CEA200D4ADEC /* RestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
-		682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjustingScrollView.swift; sourceTree = "<group>"; };
-		682EA3682223B5FD00D4ADEC /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
-		6897C6E22252072200502C1C /* CheckboxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxImageView.swift; sourceTree = "<group>"; };
-		68A430C22219669000D3B193 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
-		68A430C42219930900D3B193 /* UIFont+PreferredFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFont.swift"; sourceTree = "<group>"; };
-		68A430C62219A03F00D3B193 /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
-		68A430CF221C325600D3B193 /* PasswordEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
+		68319EE622DC978500EC2DDF /* KinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6831A10722DCA04E00EC2DDF /* KinBackupRestoreBI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreBI.swift; sourceTree = "<group>"; };
+		6831A10822DCA04E00EC2DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6831A10922DCA04E00EC2DDF /* KinBackupRestoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreError.swift; sourceTree = "<group>"; };
+		6831A10A22DCA04E00EC2DDF /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		6831A10C22DCA04E00EC2DDF /* Notification+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
+		6831A10D22DCA04E00EC2DDF /* UIFont+PreferredFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFont.swift"; sourceTree = "<group>"; };
+		6831A10E22DCA04E00EC2DDF /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
+		6831A10F22DCA04E00EC2DDF /* UIColor+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
+		6831A11022DCA04E00EC2DDF /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		6831A11222DCA04E00EC2DDF /* Password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		6831A11322DCA04E00EC2DDF /* QR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
+		6831A11522DCA04E00EC2DDF /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
+		6831A11722DCA04E00EC2DDF /* BackupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
+		6831A11822DCA04E00EC2DDF /* RestoreFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
+		6831A11922DCA04E00EC2DDF /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		6831A11A22DCA04E00EC2DDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6831A11B22DCA04E00EC2DDF /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		6831A11C22DCA04E00EC2DDF /* CheckboxImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxImageView.swift; sourceTree = "<group>"; };
+		6831A11D22DCA04E00EC2DDF /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		6831A11E22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdjustingScrollView.swift; sourceTree = "<group>"; };
+		6831A12022DCA04E00EC2DDF /* QRPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
+		6831A12122DCA04E00EC2DDF /* QRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		6831A12222DCA04E00EC2DDF /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		6831A12422DCA04E00EC2DDF /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		6831A12522DCA04E00EC2DDF /* ConfirmButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		6831A12722DCA04E00EC2DDF /* PasswordEntryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryTextField.swift; sourceTree = "<group>"; };
+		6831A12822DCA04E00EC2DDF /* PasswordEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
+		6831A12922DCA04E00EC2DDF /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
+		6831A12A22DCA04E00EC2DDF /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
+		6831A12C22DCA04E00EC2DDF /* RestoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
+		6831A12D22DCA04E00EC2DDF /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
+		6831A12F22DCA04E00EC2DDF /* BackupIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
+		6831A13022DCA04E00EC2DDF /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
+		6831A13222DCA04E00EC2DDF /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
+		6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
+		6831A13522DCA04E00EC2DDF /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
+		6831A13622DCA04E00EC2DDF /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreManager.swift; sourceTree = "<group>"; };
+		6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KinSDK.xcodeproj; path = "kin-sdk-ios/KinSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6831A2B822DCA1DA00EC2DDF /* KinSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +182,7 @@
 		3BA09020C8C3976223931D4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68319EE622DC978500EC2DDF /* KinSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,17 +211,10 @@
 		68005A832206FFFB004F791A /* KinBackupRestoreModule */ = {
 			isa = PBXGroup;
 			children = (
-				68005AB922070789004F791A /* Assets.xcassets */,
-				68005ABA22070789004F791A /* Extensions */,
+				6831A15C22DCA05500EC2DDF /* Dependencies */,
 				68005A852206FFFB004F791A /* Info.plist */,
-				68005B22220AA4B9004F791A /* KinBackupRestoreBI.swift */,
-				682EA36122229EAB00D4ADEC /* KinBackupRestoreError.swift */,
-				68005ABD22070789004F791A /* KinBackupRestoreManager.swift */,
+				6831A10622DCA04E00EC2DDF /* KinBackupRestoreModule */,
 				68005A842206FFFB004F791A /* KinBackupRestoreModule.h */,
-				68005B1E220979CE004F791A /* Localizable.strings */,
-				68005AC222070793004F791A /* Protocols */,
-				6804B13C224A1A1200208AE0 /* Utilities */,
-				68005AC522070793004F791A /* Views */,
 			);
 			path = KinBackupRestoreModule;
 			sourceTree = "<group>";
@@ -211,104 +230,6 @@
 			path = KinBackupRestoreModuleTests;
 			sourceTree = "<group>";
 		};
-		68005ABA22070789004F791A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				68005B0B2208625F004F791A /* Bundle+BackupRestore.swift */,
-				68005B1322094F3E004F791A /* String+Localization.swift */,
-				68005B11220945C2004F791A /* UIColor+Appearance.swift */,
-				68A430C42219930900D3B193 /* UIFont+PreferredFont.swift */,
-				682EA35A221E928E00D4ADEC /* Notification+Convenience.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		68005AC222070793004F791A /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				68005AC322070793004F791A /* LifeCycleProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		68005AC522070793004F791A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				68A430C22219669000D3B193 /* Animations.swift */,
-				68005AC622070793004F791A /* BackupCompletedViewController.swift */,
-				682EA3672223B5D400D4ADEC /* Button */,
-				6897C6E22252072200502C1C /* CheckboxImageView.swift */,
-				68005AD822070793004F791A /* ExplanationTemplate */,
-				68005AC722070793004F791A /* FlowController */,
-				68005ADB22070793004F791A /* IntroViewController */,
-				682EA3652222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift */,
-				68005ACE22070793004F791A /* PasswordEntry */,
-				6804B1032242440E00208AE0 /* ReminderView.swift */,
-				68005AD222070793004F791A /* Restore */,
-				68005AD522070793004F791A /* QR */,
-				68005ACB22070793004F791A /* ViewController.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		68005AC722070793004F791A /* FlowController */ = {
-			isa = PBXGroup;
-			children = (
-				68005AC822070793004F791A /* BackupFlowController.swift */,
-				68005AC922070793004F791A /* RestoreFlowController.swift */,
-				68005ACA22070793004F791A /* FlowController.swift */,
-			);
-			path = FlowController;
-			sourceTree = "<group>";
-		};
-		68005ACE22070793004F791A /* PasswordEntry */ = {
-			isa = PBXGroup;
-			children = (
-				68005ACD22070793004F791A /* PasswordEntryTextField.swift */,
-				68005ACF22070793004F791A /* PasswordEntryViewController.swift */,
-				68A430C62219A03F00D3B193 /* PasswordEntryLabel.swift */,
-				68A430CF221C325600D3B193 /* PasswordEntryView.swift */,
-			);
-			path = PasswordEntry;
-			sourceTree = "<group>";
-		};
-		68005AD222070793004F791A /* Restore */ = {
-			isa = PBXGroup;
-			children = (
-				682EA3632222CEA200D4ADEC /* RestoreView.swift */,
-				68005AD322070793004F791A /* RestoreViewController.swift */,
-			);
-			path = Restore;
-			sourceTree = "<group>";
-		};
-		68005AD522070793004F791A /* QR */ = {
-			isa = PBXGroup;
-			children = (
-				68005ACC22070793004F791A /* QRPickerController.swift */,
-				6804B1012242332100208AE0 /* QRView.swift */,
-				68005AD722070793004F791A /* QRViewController.swift */,
-			);
-			path = QR;
-			sourceTree = "<group>";
-		};
-		68005AD822070793004F791A /* ExplanationTemplate */ = {
-			isa = PBXGroup;
-			children = (
-				6804B1052248C10200208AE0 /* ExplanationTemplateView.swift */,
-				68005AD922070793004F791A /* ExplanationTemplateViewController.swift */,
-			);
-			path = ExplanationTemplate;
-			sourceTree = "<group>";
-		};
-		68005ADB22070793004F791A /* IntroViewController */ = {
-			isa = PBXGroup;
-			children = (
-				68005ADC22070793004F791A /* BackupIntroViewController.swift */,
-				68005ADD22070793004F791A /* RestoreIntroViewController.swift */,
-			);
-			path = IntroViewController;
-			sourceTree = "<group>";
-		};
 		6804B127224A08C900208AE0 /* KinBackupRestoreModuleTestsHost */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,22 +243,154 @@
 			path = KinBackupRestoreModuleTestsHost;
 			sourceTree = "<group>";
 		};
-		6804B13C224A1A1200208AE0 /* Utilities */ = {
+		6831A10622DCA04E00EC2DDF /* KinBackupRestoreModule */ = {
 			isa = PBXGroup;
 			children = (
-				6804B13D224A1AC800208AE0 /* Password.swift */,
-				68005B182209538C004F791A /* QR.swift */,
+				6831A10722DCA04E00EC2DDF /* KinBackupRestoreBI.swift */,
+				6831A10822DCA04E00EC2DDF /* Assets.xcassets */,
+				6831A10922DCA04E00EC2DDF /* KinBackupRestoreError.swift */,
+				6831A10A22DCA04E00EC2DDF /* Localizable.strings */,
+				6831A10B22DCA04E00EC2DDF /* Extensions */,
+				6831A11122DCA04E00EC2DDF /* Utilities */,
+				6831A11422DCA04E00EC2DDF /* Views */,
+				6831A13422DCA04E00EC2DDF /* Protocols */,
+				6831A13622DCA04E00EC2DDF /* KinBackupRestoreManager.swift */,
+			);
+			path = KinBackupRestoreModule;
+			sourceTree = "<group>";
+		};
+		6831A10B22DCA04E00EC2DDF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6831A10C22DCA04E00EC2DDF /* Notification+Convenience.swift */,
+				6831A10D22DCA04E00EC2DDF /* UIFont+PreferredFont.swift */,
+				6831A10E22DCA04E00EC2DDF /* Bundle+BackupRestore.swift */,
+				6831A10F22DCA04E00EC2DDF /* UIColor+Appearance.swift */,
+				6831A11022DCA04E00EC2DDF /* String+Localization.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6831A11122DCA04E00EC2DDF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6831A11222DCA04E00EC2DDF /* Password.swift */,
+				6831A11322DCA04E00EC2DDF /* QR.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		682EA3672223B5D400D4ADEC /* Button */ = {
+		6831A11422DCA04E00EC2DDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				68005AD122070793004F791A /* RoundButton.swift */,
-				682EA3682223B5FD00D4ADEC /* ConfirmButton.swift */,
+				6831A11522DCA04E00EC2DDF /* BackupCompletedViewController.swift */,
+				6831A11622DCA04E00EC2DDF /* FlowController */,
+				6831A11A22DCA04E00EC2DDF /* ViewController.swift */,
+				6831A11B22DCA04E00EC2DDF /* ReminderView.swift */,
+				6831A11C22DCA04E00EC2DDF /* CheckboxImageView.swift */,
+				6831A11D22DCA04E00EC2DDF /* Animations.swift */,
+				6831A11E22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift */,
+				6831A11F22DCA04E00EC2DDF /* QR */,
+				6831A12322DCA04E00EC2DDF /* Button */,
+				6831A12622DCA04E00EC2DDF /* PasswordEntry */,
+				6831A12B22DCA04E00EC2DDF /* Restore */,
+				6831A12E22DCA04E00EC2DDF /* IntroViewController */,
+				6831A13122DCA04E00EC2DDF /* ExplanationTemplate */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6831A11622DCA04E00EC2DDF /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				6831A11722DCA04E00EC2DDF /* BackupFlowController.swift */,
+				6831A11822DCA04E00EC2DDF /* RestoreFlowController.swift */,
+				6831A11922DCA04E00EC2DDF /* FlowController.swift */,
+			);
+			path = FlowController;
+			sourceTree = "<group>";
+		};
+		6831A11F22DCA04E00EC2DDF /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				6831A12022DCA04E00EC2DDF /* QRPickerController.swift */,
+				6831A12122DCA04E00EC2DDF /* QRView.swift */,
+				6831A12222DCA04E00EC2DDF /* QRViewController.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		6831A12322DCA04E00EC2DDF /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				6831A12422DCA04E00EC2DDF /* RoundButton.swift */,
+				6831A12522DCA04E00EC2DDF /* ConfirmButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		6831A12622DCA04E00EC2DDF /* PasswordEntry */ = {
+			isa = PBXGroup;
+			children = (
+				6831A12722DCA04E00EC2DDF /* PasswordEntryTextField.swift */,
+				6831A12822DCA04E00EC2DDF /* PasswordEntryView.swift */,
+				6831A12922DCA04E00EC2DDF /* PasswordEntryLabel.swift */,
+				6831A12A22DCA04E00EC2DDF /* PasswordEntryViewController.swift */,
+			);
+			path = PasswordEntry;
+			sourceTree = "<group>";
+		};
+		6831A12B22DCA04E00EC2DDF /* Restore */ = {
+			isa = PBXGroup;
+			children = (
+				6831A12C22DCA04E00EC2DDF /* RestoreView.swift */,
+				6831A12D22DCA04E00EC2DDF /* RestoreViewController.swift */,
+			);
+			path = Restore;
+			sourceTree = "<group>";
+		};
+		6831A12E22DCA04E00EC2DDF /* IntroViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6831A12F22DCA04E00EC2DDF /* BackupIntroViewController.swift */,
+				6831A13022DCA04E00EC2DDF /* RestoreIntroViewController.swift */,
+			);
+			path = IntroViewController;
+			sourceTree = "<group>";
+		};
+		6831A13122DCA04E00EC2DDF /* ExplanationTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				6831A13222DCA04E00EC2DDF /* ExplanationTemplateViewController.swift */,
+				6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */,
+			);
+			path = ExplanationTemplate;
+			sourceTree = "<group>";
+		};
+		6831A13422DCA04E00EC2DDF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6831A13522DCA04E00EC2DDF /* LifeCycleProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6831A15C22DCA05500EC2DDF /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		6831A2AB22DCA1BC00EC2DDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6831A2B322DCA1BC00EC2DDF /* KinSDK.framework */,
+				6831A2B522DCA1BC00EC2DDF /* KinSDKTests.xctest */,
+				6831A2B722DCA1BC00EC2DDF /* KinSDKTestsHost.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +497,12 @@
 			mainGroup = 68005A772206FFFB004F791A;
 			productRefGroup = 68005A822206FFFB004F791A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6831A2AB22DCA1BC00EC2DDF /* Products */;
+					ProjectRef = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				68005A802206FFFB004F791A /* KinBackupRestoreModule */,
@@ -453,13 +512,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		6831A2B322DCA1BC00EC2DDF /* KinSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KinSDK.framework;
+			remoteRef = 6831A2B222DCA1BC00EC2DDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6831A2B522DCA1BC00EC2DDF /* KinSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KinSDKTests.xctest;
+			remoteRef = 6831A2B422DCA1BC00EC2DDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6831A2B722DCA1BC00EC2DDF /* KinSDKTestsHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = KinSDKTestsHost.app;
+			remoteRef = 6831A2B622DCA1BC00EC2DDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		68005A7F2206FFFB004F791A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68005B1F220979CE004F791A /* Localizable.strings in Resources */,
-				68005ABE22070789004F791A /* Assets.xcassets in Resources */,
+				6831A13822DCA04E00EC2DDF /* Assets.xcassets in Resources */,
+				6831A13A22DCA04E00EC2DDF /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,41 +621,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6897C6E32252072200502C1C /* CheckboxImageView.swift in Sources */,
-				68005ADE22070793004F791A /* LifeCycleProtocol.swift in Sources */,
-				68005B1422094F3E004F791A /* String+Localization.swift in Sources */,
-				68A430D0221C325600D3B193 /* PasswordEntryView.swift in Sources */,
-				68005AC122070789004F791A /* KinBackupRestoreManager.swift in Sources */,
-				68005AE922070793004F791A /* RoundButton.swift in Sources */,
-				68A430C72219A03F00D3B193 /* PasswordEntryLabel.swift in Sources */,
-				68005AED22070793004F791A /* QRViewController.swift in Sources */,
-				68005B12220945C2004F791A /* UIColor+Appearance.swift in Sources */,
-				682EA3692223B5FD00D4ADEC /* ConfirmButton.swift in Sources */,
-				68A430C52219930900D3B193 /* UIFont+PreferredFont.swift in Sources */,
-				68A430C32219669000D3B193 /* Animations.swift in Sources */,
-				68005B0C2208625F004F791A /* Bundle+BackupRestore.swift in Sources */,
-				68005B192209538C004F791A /* QR.swift in Sources */,
-				6804B1022242332100208AE0 /* QRView.swift in Sources */,
-				68005AE322070793004F791A /* FlowController.swift in Sources */,
-				682EA3642222CEA200D4ADEC /* RestoreView.swift in Sources */,
-				6804B1042242440E00208AE0 /* ReminderView.swift in Sources */,
-				68005AF022070793004F791A /* BackupIntroViewController.swift in Sources */,
-				6804B1062248C10200208AE0 /* ExplanationTemplateView.swift in Sources */,
-				68005AEA22070793004F791A /* RestoreViewController.swift in Sources */,
-				68005AE122070793004F791A /* BackupFlowController.swift in Sources */,
-				68005B23220AA4B9004F791A /* KinBackupRestoreBI.swift in Sources */,
-				68005AE422070793004F791A /* ViewController.swift in Sources */,
-				682EA36222229EAB00D4ADEC /* KinBackupRestoreError.swift in Sources */,
-				68005AE722070793004F791A /* PasswordEntryViewController.swift in Sources */,
-				68005AE022070793004F791A /* BackupCompletedViewController.swift in Sources */,
-				6804B13E224A1AC800208AE0 /* Password.swift in Sources */,
-				682EA35B221E928E00D4ADEC /* Notification+Convenience.swift in Sources */,
-				68005AE622070793004F791A /* PasswordEntryTextField.swift in Sources */,
-				68005AEE22070793004F791A /* ExplanationTemplateViewController.swift in Sources */,
-				68005AE522070793004F791A /* QRPickerController.swift in Sources */,
-				682EA3662222D4AA00D4ADEC /* KeyboardAdjustingScrollView.swift in Sources */,
-				68005AF122070793004F791A /* RestoreIntroViewController.swift in Sources */,
-				68005AE222070793004F791A /* RestoreFlowController.swift in Sources */,
+				6831A15822DCA04E00EC2DDF /* ExplanationTemplateViewController.swift in Sources */,
+				6831A15B22DCA04E00EC2DDF /* KinBackupRestoreManager.swift in Sources */,
+				6831A14322DCA04E00EC2DDF /* BackupFlowController.swift in Sources */,
+				6831A14F22DCA04E00EC2DDF /* ConfirmButton.swift in Sources */,
+				6831A13922DCA04E00EC2DDF /* KinBackupRestoreError.swift in Sources */,
+				6831A14922DCA04E00EC2DDF /* Animations.swift in Sources */,
+				6831A15522DCA04E00EC2DDF /* RestoreViewController.swift in Sources */,
+				6831A15322DCA04E00EC2DDF /* PasswordEntryViewController.swift in Sources */,
+				6831A15222DCA04E00EC2DDF /* PasswordEntryLabel.swift in Sources */,
+				6831A13E22DCA04E00EC2DDF /* UIColor+Appearance.swift in Sources */,
+				6831A15022DCA04E00EC2DDF /* PasswordEntryTextField.swift in Sources */,
+				6831A15A22DCA04E00EC2DDF /* LifeCycleProtocol.swift in Sources */,
+				6831A14E22DCA04E00EC2DDF /* RoundButton.swift in Sources */,
+				6831A15122DCA04E00EC2DDF /* PasswordEntryView.swift in Sources */,
+				6831A15622DCA04E00EC2DDF /* BackupIntroViewController.swift in Sources */,
+				6831A14B22DCA04E00EC2DDF /* QRPickerController.swift in Sources */,
+				6831A15422DCA04E00EC2DDF /* RestoreView.swift in Sources */,
+				6831A14122DCA04E00EC2DDF /* QR.swift in Sources */,
+				6831A14622DCA04E00EC2DDF /* ViewController.swift in Sources */,
+				6831A13722DCA04E00EC2DDF /* KinBackupRestoreBI.swift in Sources */,
+				6831A15922DCA04E00EC2DDF /* ExplanationTemplateView.swift in Sources */,
+				6831A14222DCA04E00EC2DDF /* BackupCompletedViewController.swift in Sources */,
+				6831A14822DCA04E00EC2DDF /* CheckboxImageView.swift in Sources */,
+				6831A13B22DCA04E00EC2DDF /* Notification+Convenience.swift in Sources */,
+				6831A14022DCA04E00EC2DDF /* Password.swift in Sources */,
+				6831A14522DCA04E00EC2DDF /* FlowController.swift in Sources */,
+				6831A14C22DCA04E00EC2DDF /* QRView.swift in Sources */,
+				6831A15722DCA04E00EC2DDF /* RestoreIntroViewController.swift in Sources */,
+				6831A13C22DCA04E00EC2DDF /* UIFont+PreferredFont.swift in Sources */,
+				6831A14722DCA04E00EC2DDF /* ReminderView.swift in Sources */,
+				6831A14A22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift in Sources */,
+				6831A14D22DCA04E00EC2DDF /* QRViewController.swift in Sources */,
+				6831A13F22DCA04E00EC2DDF /* String+Localization.swift in Sources */,
+				6831A14422DCA04E00EC2DDF /* RestoreFlowController.swift in Sources */,
+				6831A13D22DCA04E00EC2DDF /* Bundle+BackupRestore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +889,7 @@
 		68005A992206FFFB004F791A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -824,6 +908,7 @@
 		68005A9A2206FFFB004F791A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

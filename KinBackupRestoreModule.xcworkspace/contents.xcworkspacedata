@@ -7,7 +7,4 @@
    <FileRef
       location = "group:KinBackupRestoreSampleApp/KinBackupRestoreSampleApp.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Dependencies/kin-sdk-ios/KinSDK/KinSDK.xcodeproj">
-   </FileRef>
 </Workspace>
