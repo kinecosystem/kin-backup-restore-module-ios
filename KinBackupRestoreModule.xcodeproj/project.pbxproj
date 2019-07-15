@@ -54,7 +54,7 @@
 		6831A15922DCA04E00EC2DDF /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */; };
 		6831A15A22DCA04E00EC2DDF /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13522DCA04E00EC2DDF /* LifeCycleProtocol.swift */; };
 		6831A15B22DCA04E00EC2DDF /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13622DCA04E00EC2DDF /* KinBackupRestoreManager.swift */; };
-		6831A2B822DCA1DA00EC2DDF /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6831A2B322DCA1BC00EC2DDF /* KinSDK.framework */; };
+		6831A2E822DCAC0F00EC2DDF /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6831A2E322DCAC0600EC2DDF /* KinSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,23 +72,23 @@
 			remoteGlobalIDString = 6804B125224A08C900208AE0;
 			remoteInfo = KinBackupRestoreModuleTestsHost;
 		};
-		6831A2B222DCA1BC00EC2DDF /* PBXContainerItemProxy */ = {
+		6831A2E222DCAC0600EC2DDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+			containerPortal = 6831A2DA22DCAC0600EC2DDF /* KinSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68AF916322A90C6A008C01EC;
 			remoteInfo = KinSDK;
 		};
-		6831A2B422DCA1BC00EC2DDF /* PBXContainerItemProxy */ = {
+		6831A2E422DCAC0600EC2DDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+			containerPortal = 6831A2DA22DCAC0600EC2DDF /* KinSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68AF916C22A90C6A008C01EC;
 			remoteInfo = KinSDKTests;
 		};
-		6831A2B622DCA1BC00EC2DDF /* PBXContainerItemProxy */ = {
+		6831A2E622DCAC0600EC2DDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+			containerPortal = 6831A2DA22DCAC0600EC2DDF /* KinSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68AF930D22A92DCF008C01EC;
 			remoteInfo = KinSDKTestsHost;
@@ -149,7 +149,7 @@
 		6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
 		6831A13522DCA04E00EC2DDF /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
 		6831A13622DCA04E00EC2DDF /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreManager.swift; sourceTree = "<group>"; };
-		6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KinSDK.xcodeproj; path = "kin-sdk-ios/KinSDK.xcodeproj"; sourceTree = "<group>"; };
+		6831A2DA22DCAC0600EC2DDF /* KinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KinSDK.xcodeproj; path = "kin-sdk-ios/KinSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6831A2B822DCA1DA00EC2DDF /* KinSDK.framework in Frameworks */,
+				6831A2E822DCAC0F00EC2DDF /* KinSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,17 +378,17 @@
 		6831A15C22DCA05500EC2DDF /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */,
+				6831A2DA22DCAC0600EC2DDF /* KinSDK.xcodeproj */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
-		6831A2AB22DCA1BC00EC2DDF /* Products */ = {
+		6831A2DB22DCAC0600EC2DDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6831A2B322DCA1BC00EC2DDF /* KinSDK.framework */,
-				6831A2B522DCA1BC00EC2DDF /* KinSDKTests.xctest */,
-				6831A2B722DCA1BC00EC2DDF /* KinSDKTestsHost.app */,
+				6831A2E322DCAC0600EC2DDF /* KinSDK.framework */,
+				6831A2E522DCAC0600EC2DDF /* KinSDKTests.xctest */,
+				6831A2E722DCAC0600EC2DDF /* KinSDKTestsHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -499,8 +499,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6831A2AB22DCA1BC00EC2DDF /* Products */;
-					ProjectRef = 6831A2AA22DCA1BC00EC2DDF /* KinSDK.xcodeproj */;
+					ProductGroup = 6831A2DB22DCAC0600EC2DDF /* Products */;
+					ProjectRef = 6831A2DA22DCAC0600EC2DDF /* KinSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -513,25 +513,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6831A2B322DCA1BC00EC2DDF /* KinSDK.framework */ = {
+		6831A2E322DCAC0600EC2DDF /* KinSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KinSDK.framework;
-			remoteRef = 6831A2B222DCA1BC00EC2DDF /* PBXContainerItemProxy */;
+			remoteRef = 6831A2E222DCAC0600EC2DDF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6831A2B522DCA1BC00EC2DDF /* KinSDKTests.xctest */ = {
+		6831A2E522DCAC0600EC2DDF /* KinSDKTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = KinSDKTests.xctest;
-			remoteRef = 6831A2B422DCA1BC00EC2DDF /* PBXContainerItemProxy */;
+			remoteRef = 6831A2E422DCAC0600EC2DDF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6831A2B722DCA1BC00EC2DDF /* KinSDKTestsHost.app */ = {
+		6831A2E722DCAC0600EC2DDF /* KinSDKTestsHost.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = KinSDKTestsHost.app;
-			remoteRef = 6831A2B622DCA1BC00EC2DDF /* PBXContainerItemProxy */;
+			remoteRef = 6831A2E622DCAC0600EC2DDF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
