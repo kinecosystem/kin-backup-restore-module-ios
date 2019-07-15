@@ -34,8 +34,6 @@
 		68005AFD22082D47004F791A /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		68005AFE22082D47004F791A /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		68005B0222082EC2004F791A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B1CE52AD3397ABA27A776969 /* Pods-KinBackupRestoreSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreSampleApp.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		BC292A28362231EFD518193F /* Pods-KinBackupRestoreSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreSampleApp.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,21 +56,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		562A28AEB7886CD7A8584B0B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BC292A28362231EFD518193F /* Pods-KinBackupRestoreSampleApp.debug.xcconfig */,
-				B1CE52AD3397ABA27A776969 /* Pods-KinBackupRestoreSampleApp.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		68005A9B22070083004F791A = {
 			isa = PBXGroup;
 			children = (
 				68005AA622070083004F791A /* KinBackupRestoreSampleApp */,
 				68005AA522070083004F791A /* Products */,
-				562A28AEB7886CD7A8584B0B /* Pods */,
 				3F1A1B0B621B6AEBAD3AC018 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -387,7 +375,6 @@
 		};
 		68005AB722070084004F791A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC292A28362231EFD518193F /* Pods-KinBackupRestoreSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -405,7 +392,6 @@
 		};
 		68005AB822070084004F791A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1CE52AD3397ABA27A776969 /* Pods-KinBackupRestoreSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
