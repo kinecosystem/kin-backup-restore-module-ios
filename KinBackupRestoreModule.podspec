@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
     :tag => s.version.to_s,
     :submodules => true
   }
-  s.source_files = 'KinBackupRestoreModule/**/*.{strings,swift}'
-  s.resources    = 'KinBackupRestoreModule/Assets.xcassets'
+  s.source_files = 'KinBackupRestoreModule/KinBackupRestoreModule/**/*.{strings,swift}'
+  s.resources    = 'KinBackupRestoreModule/KinBackupRestoreModule/Assets.xcassets'
 
   s.dependency 'KinSDK', '~> 1.0.0'  
 end
