@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125693DB307F2D65C012E98D /* Pods_KinBackupRestoreSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425F0E089BD55BED94D9580B /* Pods_KinBackupRestoreSampleApp.framework */; };
 		68005AA822070083004F791A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AA722070083004F791A /* AppDelegate.swift */; };
 		68005AAF22070084004F791A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68005AAE22070084004F791A /* Assets.xcassets */; };
 		68005AB222070084004F791A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68005AB022070084004F791A /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		425F0E089BD55BED94D9580B /* Pods_KinBackupRestoreSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KinBackupRestoreSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68005AA422070083004F791A /* KinBackupRestoreSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinBackupRestoreSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68005AA722070083004F791A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68005AAE22070084004F791A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,8 +32,6 @@
 		68005AFD22082D47004F791A /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		68005AFE22082D47004F791A /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		68005B0222082EC2004F791A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B1CE52AD3397ABA27A776969 /* Pods-KinBackupRestoreSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreSampleApp.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		BC292A28362231EFD518193F /* Pods-KinBackupRestoreSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinBackupRestoreSampleApp.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				125693DB307F2D65C012E98D /* Pods_KinBackupRestoreSampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,18 +48,8 @@
 		3F1A1B0B621B6AEBAD3AC018 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				425F0E089BD55BED94D9580B /* Pods_KinBackupRestoreSampleApp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		562A28AEB7886CD7A8584B0B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BC292A28362231EFD518193F /* Pods-KinBackupRestoreSampleApp.debug.xcconfig */,
-				B1CE52AD3397ABA27A776969 /* Pods-KinBackupRestoreSampleApp.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		68005A9B22070083004F791A = {
@@ -72,7 +57,6 @@
 			children = (
 				68005AA622070083004F791A /* KinBackupRestoreSampleApp */,
 				68005AA522070083004F791A /* Products */,
-				562A28AEB7886CD7A8584B0B /* Pods */,
 				3F1A1B0B621B6AEBAD3AC018 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -126,11 +110,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68005AB622070084004F791A /* Build configuration list for PBXNativeTarget "KinBackupRestoreSampleApp" */;
 			buildPhases = (
-				CE6BAC8C5BC4D6A25089F950 /* [CP] Check Pods Manifest.lock */,
 				68005AA022070083004F791A /* Sources */,
 				68005AA122070083004F791A /* Frameworks */,
 				68005AA222070083004F791A /* Resources */,
-				BD4D5E842F498CE6D60AD4BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,59 +167,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BD4D5E842F498CE6D60AD4BE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KinSDK/KinSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/KinUtil/KinUtil.framework",
-				"${BUILT_PRODUCTS_DIR}/Sodium/Sodium.framework",
-				"${BUILT_PRODUCTS_DIR}/KinBackupRestoreModule/KinBackupRestoreModule.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinUtil.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sodium.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinBackupRestoreModule.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreSampleApp/Pods-KinBackupRestoreSampleApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE6BAC8C5BC4D6A25089F950 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KinBackupRestoreSampleApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68005AA022070083004F791A /* Sources */ = {
@@ -387,11 +316,11 @@
 		};
 		68005AB722070084004F791A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC292A28362231EFD518193F /* Pods-KinBackupRestoreSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,11 +334,11 @@
 		};
 		68005AB822070084004F791A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1CE52AD3397ABA27A776969 /* Pods-KinBackupRestoreSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KinBackupRestoreSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

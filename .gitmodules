@@ -1,0 +1,3 @@
+[submodule "KinBackupRestoreModule/Dependencies/kin-sdk-ios"]
+	path = KinBackupRestoreModule/Dependencies/kin-sdk-ios
+	url = https://github.com/kinecosystem/kin-sdk-ios
