@@ -90,7 +90,10 @@ extension RestoreFlowController: RestoreViewControllerDelegate {
             return .invalidImage
         }
 
-        if let result = isAccountInClient(json: json, password: password) {
+        let (result, kinAccount) = isAccountInClient(json: json, password: password)
+
+        if let result = result {
+            importedKinAccount = kinAccount
             return result
         }
 
@@ -138,33 +141,33 @@ extension RestoreFlowController {
         return try JSONDecoder().decode(AccountData.self, from: data)
     }
 
-    fileprivate func isAccountInClient(json: String, password: String) -> RestoreViewController.ImportResult? {
+    fileprivate func isAccountInClient(json: String, password: String) -> (RestoreViewController.ImportResult?, kinAccount: KinAccount?) {
         var data: AccountData?
 
         do {
             data = try accountData(in: json)
         }
         catch {
-            return .internalIssue
+            return (.internalIssue, nil)
         }
 
         guard let d = data else {
-            return .internalIssue
+            return (.internalIssue, nil)
         }
 
         do {
             _ = try KeyUtils.seed(from: password, encryptedSeed: d.seed, salt: d.salt)
         }
         catch {
-            return .wrongPassword
+            return (.wrongPassword, nil)
         }
 
         let foundAccount = kinClient.accounts.makeIterator().first { $0?.publicAddress == d.pkey }
 
-        if foundAccount != nil {
-            return .success
+        if let kinAccount = foundAccount {
+            return (.success, kinAccount)
         }
 
-        return nil
+        return (nil, nil)
     }
 }
