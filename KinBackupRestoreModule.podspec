@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name              = 'KinBackupRestoreModule'
-  s.version           = '1.0.0'
+  s.version           = '1.0.1'
   s.license           = { :type => 'Kin Ecosystem SDK License', :file => 'LICENSE.md' }
   s.author            = { 'Kin Foundation' => 'info@kin.org' }
   s.summary           = 'Pod for the Kin Backup and Restore Module.'
