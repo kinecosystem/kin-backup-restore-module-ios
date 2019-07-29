@@ -6,14 +6,13 @@
 //  Copyright © 2019 Kin Foundation. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIColor {
-    static let kinPrimary = UIColor(red: 0, green: 0, blue: 1, alpha: 1)
+    static let kinPrimary = UIColor(red: 111/255, green: 65/255, blue: 232/255, alpha: 1)
+    static let kinWarning = UIColor(red: 219/255, green: 73/255, blue: 123/255, alpha: 1)
 
-    static let kinGray = UIColor(red: 120 / 255, green: 132 / 255, blue: 165 / 255, alpha: 1)
-
-    static let kinLightGray = UIColor(red: 215 / 255, green: 220 / 255, blue: 233 / 255, alpha: 1)
-
-    static let kinWarning = UIColor(red: 255 / 255, green: 2 / 255, blue: 50 / 255, alpha: 1)
+    static let kinLightGray = UIColor(white: 231/255, alpha: 1)
+    static let kinGray = UIColor(white: 166/255, alpha: 1)
+    static let kinDarkGray = UIColor(white: 31/255, alpha: 1)
 }

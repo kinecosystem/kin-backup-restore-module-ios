@@ -21,40 +21,42 @@
 		6831A13822DCA04E00EC2DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6831A10822DCA04E00EC2DDF /* Assets.xcassets */; };
 		6831A13922DCA04E00EC2DDF /* KinBackupRestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10922DCA04E00EC2DDF /* KinBackupRestoreError.swift */; };
 		6831A13A22DCA04E00EC2DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6831A10A22DCA04E00EC2DDF /* Localizable.strings */; };
-		6831A13B22DCA04E00EC2DDF /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10C22DCA04E00EC2DDF /* Notification+Convenience.swift */; };
-		6831A13C22DCA04E00EC2DDF /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10D22DCA04E00EC2DDF /* UIFont+PreferredFont.swift */; };
-		6831A13D22DCA04E00EC2DDF /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10E22DCA04E00EC2DDF /* Bundle+BackupRestore.swift */; };
-		6831A13E22DCA04E00EC2DDF /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A10F22DCA04E00EC2DDF /* UIColor+Appearance.swift */; };
-		6831A13F22DCA04E00EC2DDF /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11022DCA04E00EC2DDF /* String+Localization.swift */; };
 		6831A14022DCA04E00EC2DDF /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11222DCA04E00EC2DDF /* Password.swift */; };
 		6831A14122DCA04E00EC2DDF /* QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11322DCA04E00EC2DDF /* QR.swift */; };
-		6831A14222DCA04E00EC2DDF /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11522DCA04E00EC2DDF /* BackupCompletedViewController.swift */; };
-		6831A14322DCA04E00EC2DDF /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11722DCA04E00EC2DDF /* BackupFlowController.swift */; };
-		6831A14422DCA04E00EC2DDF /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11822DCA04E00EC2DDF /* RestoreFlowController.swift */; };
-		6831A14522DCA04E00EC2DDF /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11922DCA04E00EC2DDF /* FlowController.swift */; };
-		6831A14622DCA04E00EC2DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11A22DCA04E00EC2DDF /* ViewController.swift */; };
-		6831A14722DCA04E00EC2DDF /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11B22DCA04E00EC2DDF /* ReminderView.swift */; };
-		6831A14822DCA04E00EC2DDF /* CheckboxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11C22DCA04E00EC2DDF /* CheckboxImageView.swift */; };
-		6831A14922DCA04E00EC2DDF /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11D22DCA04E00EC2DDF /* Animations.swift */; };
-		6831A14A22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A11E22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift */; };
-		6831A14B22DCA04E00EC2DDF /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12022DCA04E00EC2DDF /* QRPickerController.swift */; };
-		6831A14C22DCA04E00EC2DDF /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12122DCA04E00EC2DDF /* QRView.swift */; };
-		6831A14D22DCA04E00EC2DDF /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12222DCA04E00EC2DDF /* QRViewController.swift */; };
-		6831A14E22DCA04E00EC2DDF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12422DCA04E00EC2DDF /* RoundButton.swift */; };
-		6831A14F22DCA04E00EC2DDF /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12522DCA04E00EC2DDF /* ConfirmButton.swift */; };
-		6831A15022DCA04E00EC2DDF /* PasswordEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12722DCA04E00EC2DDF /* PasswordEntryTextField.swift */; };
-		6831A15122DCA04E00EC2DDF /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12822DCA04E00EC2DDF /* PasswordEntryView.swift */; };
-		6831A15222DCA04E00EC2DDF /* PasswordEntryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12922DCA04E00EC2DDF /* PasswordEntryLabel.swift */; };
-		6831A15322DCA04E00EC2DDF /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12A22DCA04E00EC2DDF /* PasswordEntryViewController.swift */; };
-		6831A15422DCA04E00EC2DDF /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12C22DCA04E00EC2DDF /* RestoreView.swift */; };
-		6831A15522DCA04E00EC2DDF /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12D22DCA04E00EC2DDF /* RestoreViewController.swift */; };
-		6831A15622DCA04E00EC2DDF /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A12F22DCA04E00EC2DDF /* BackupIntroViewController.swift */; };
-		6831A15722DCA04E00EC2DDF /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13022DCA04E00EC2DDF /* RestoreIntroViewController.swift */; };
-		6831A15822DCA04E00EC2DDF /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13222DCA04E00EC2DDF /* ExplanationTemplateViewController.swift */; };
-		6831A15922DCA04E00EC2DDF /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */; };
 		6831A15A22DCA04E00EC2DDF /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13522DCA04E00EC2DDF /* LifeCycleProtocol.swift */; };
 		6831A15B22DCA04E00EC2DDF /* KinBackupRestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6831A13622DCA04E00EC2DDF /* KinBackupRestoreManager.swift */; };
 		6831A2E822DCAC0F00EC2DDF /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6831A2E322DCAC0600EC2DDF /* KinSDK.framework */; };
+		6863162122EF0AAD00C71132 /* QRPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160422EF0AAC00C71132 /* QRPickerController.swift */; };
+		6863162222EF0AAD00C71132 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160522EF0AAC00C71132 /* QRView.swift */; };
+		6863162322EF0AAD00C71132 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160622EF0AAC00C71132 /* QRViewController.swift */; };
+		6863162422EF0AAD00C71132 /* PasswordLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160722EF0AAC00C71132 /* PasswordLabel.swift */; };
+		6863162522EF0AAD00C71132 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160922EF0AAD00C71132 /* RoundButton.swift */; };
+		6863162622EF0AAD00C71132 /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160A22EF0AAD00C71132 /* ConfirmButton.swift */; };
+		6863162722EF0AAD00C71132 /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160C22EF0AAD00C71132 /* RestoreView.swift */; };
+		6863162822EF0AAD00C71132 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160D22EF0AAD00C71132 /* RestoreViewController.swift */; };
+		6863162922EF0AAD00C71132 /* BackupCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863160E22EF0AAD00C71132 /* BackupCompletedViewController.swift */; };
+		6863162A22EF0AAD00C71132 /* BackupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161022EF0AAD00C71132 /* BackupFlowController.swift */; };
+		6863162B22EF0AAD00C71132 /* RestoreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161122EF0AAD00C71132 /* RestoreFlowController.swift */; };
+		6863162C22EF0AAD00C71132 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161222EF0AAD00C71132 /* FlowController.swift */; };
+		6863162D22EF0AAD00C71132 /* KeyboardAdjustingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161322EF0AAD00C71132 /* KeyboardAdjustingScrollView.swift */; };
+		6863162E22EF0AAD00C71132 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161422EF0AAD00C71132 /* PasswordTextField.swift */; };
+		6863162F22EF0AAD00C71132 /* PasswordEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161622EF0AAD00C71132 /* PasswordEntryView.swift */; };
+		6863163022EF0AAD00C71132 /* PasswordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161722EF0AAD00C71132 /* PasswordEntryViewController.swift */; };
+		6863163122EF0AAD00C71132 /* CheckboxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161822EF0AAD00C71132 /* CheckboxImageView.swift */; };
+		6863163222EF0AAD00C71132 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161922EF0AAD00C71132 /* Animations.swift */; };
+		6863163322EF0AAD00C71132 /* KinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161A22EF0AAD00C71132 /* KinViewController.swift */; };
+		6863163422EF0AAD00C71132 /* ExplanationTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161C22EF0AAD00C71132 /* ExplanationTemplateViewController.swift */; };
+		6863163522EF0AAD00C71132 /* ExplanationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161D22EF0AAD00C71132 /* ExplanationTemplateView.swift */; };
+		6863163622EF0AAD00C71132 /* BackupIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863161F22EF0AAD00C71132 /* BackupIntroViewController.swift */; };
+		6863163722EF0AAD00C71132 /* RestoreIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863162022EF0AAD00C71132 /* RestoreIntroViewController.swift */; };
+		6863163922EF0AC900C71132 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863163822EF0AC900C71132 /* Appearance.swift */; };
+		6863164122EF0AE100C71132 /* Notification+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863163A22EF0AE100C71132 /* Notification+Convenience.swift */; };
+		6863164222EF0AE100C71132 /* Bundle+BackupRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863163B22EF0AE100C71132 /* Bundle+BackupRestore.swift */; };
+		6863164322EF0AE100C71132 /* CGGeometry+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863163C22EF0AE100C71132 /* CGGeometry+Appearance.swift */; };
+		6863164422EF0AE100C71132 /* NSAttributedString+AttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863163D22EF0AE100C71132 /* NSAttributedString+AttributedStrings.swift */; };
+		6863164522EF0AE100C71132 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863163E22EF0AE100C71132 /* String+Localization.swift */; };
+		6863164622EF0AE100C71132 /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863163F22EF0AE100C71132 /* UIColor+Appearance.swift */; };
+		6863164722EF0AE100C71132 /* UIFont+PreferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863164022EF0AE100C71132 /* UIFont+PreferredFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,40 +118,42 @@
 		6831A10822DCA04E00EC2DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6831A10922DCA04E00EC2DDF /* KinBackupRestoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreError.swift; sourceTree = "<group>"; };
 		6831A10A22DCA04E00EC2DDF /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		6831A10C22DCA04E00EC2DDF /* Notification+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
-		6831A10D22DCA04E00EC2DDF /* UIFont+PreferredFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFont.swift"; sourceTree = "<group>"; };
-		6831A10E22DCA04E00EC2DDF /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
-		6831A10F22DCA04E00EC2DDF /* UIColor+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
-		6831A11022DCA04E00EC2DDF /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		6831A11222DCA04E00EC2DDF /* Password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		6831A11322DCA04E00EC2DDF /* QR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QR.swift; sourceTree = "<group>"; };
-		6831A11522DCA04E00EC2DDF /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
-		6831A11722DCA04E00EC2DDF /* BackupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
-		6831A11822DCA04E00EC2DDF /* RestoreFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
-		6831A11922DCA04E00EC2DDF /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
-		6831A11A22DCA04E00EC2DDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6831A11B22DCA04E00EC2DDF /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
-		6831A11C22DCA04E00EC2DDF /* CheckboxImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxImageView.swift; sourceTree = "<group>"; };
-		6831A11D22DCA04E00EC2DDF /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
-		6831A11E22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdjustingScrollView.swift; sourceTree = "<group>"; };
-		6831A12022DCA04E00EC2DDF /* QRPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
-		6831A12122DCA04E00EC2DDF /* QRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
-		6831A12222DCA04E00EC2DDF /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
-		6831A12422DCA04E00EC2DDF /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		6831A12522DCA04E00EC2DDF /* ConfirmButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
-		6831A12722DCA04E00EC2DDF /* PasswordEntryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryTextField.swift; sourceTree = "<group>"; };
-		6831A12822DCA04E00EC2DDF /* PasswordEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
-		6831A12922DCA04E00EC2DDF /* PasswordEntryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryLabel.swift; sourceTree = "<group>"; };
-		6831A12A22DCA04E00EC2DDF /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
-		6831A12C22DCA04E00EC2DDF /* RestoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
-		6831A12D22DCA04E00EC2DDF /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
-		6831A12F22DCA04E00EC2DDF /* BackupIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
-		6831A13022DCA04E00EC2DDF /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
-		6831A13222DCA04E00EC2DDF /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
-		6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
 		6831A13522DCA04E00EC2DDF /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
 		6831A13622DCA04E00EC2DDF /* KinBackupRestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinBackupRestoreManager.swift; sourceTree = "<group>"; };
 		6831A2DA22DCAC0600EC2DDF /* KinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KinSDK.xcodeproj; path = "kin-sdk-ios/KinSDK.xcodeproj"; sourceTree = "<group>"; };
+		6863160422EF0AAC00C71132 /* QRPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPickerController.swift; sourceTree = "<group>"; };
+		6863160522EF0AAC00C71132 /* QRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		6863160622EF0AAC00C71132 /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		6863160722EF0AAC00C71132 /* PasswordLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLabel.swift; sourceTree = "<group>"; };
+		6863160922EF0AAD00C71132 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		6863160A22EF0AAD00C71132 /* ConfirmButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		6863160C22EF0AAD00C71132 /* RestoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
+		6863160D22EF0AAD00C71132 /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
+		6863160E22EF0AAD00C71132 /* BackupCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCompletedViewController.swift; sourceTree = "<group>"; };
+		6863161022EF0AAD00C71132 /* BackupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupFlowController.swift; sourceTree = "<group>"; };
+		6863161122EF0AAD00C71132 /* RestoreFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreFlowController.swift; sourceTree = "<group>"; };
+		6863161222EF0AAD00C71132 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		6863161322EF0AAD00C71132 /* KeyboardAdjustingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAdjustingScrollView.swift; sourceTree = "<group>"; };
+		6863161422EF0AAD00C71132 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		6863161622EF0AAD00C71132 /* PasswordEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryView.swift; sourceTree = "<group>"; };
+		6863161722EF0AAD00C71132 /* PasswordEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEntryViewController.swift; sourceTree = "<group>"; };
+		6863161822EF0AAD00C71132 /* CheckboxImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxImageView.swift; sourceTree = "<group>"; };
+		6863161922EF0AAD00C71132 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		6863161A22EF0AAD00C71132 /* KinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinViewController.swift; sourceTree = "<group>"; };
+		6863161C22EF0AAD00C71132 /* ExplanationTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateViewController.swift; sourceTree = "<group>"; };
+		6863161D22EF0AAD00C71132 /* ExplanationTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationTemplateView.swift; sourceTree = "<group>"; };
+		6863161F22EF0AAD00C71132 /* BackupIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupIntroViewController.swift; sourceTree = "<group>"; };
+		6863162022EF0AAD00C71132 /* RestoreIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreIntroViewController.swift; sourceTree = "<group>"; };
+		6863163822EF0AC900C71132 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		6863163A22EF0AE100C71132 /* Notification+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+Convenience.swift"; sourceTree = "<group>"; };
+		6863163B22EF0AE100C71132 /* Bundle+BackupRestore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+BackupRestore.swift"; sourceTree = "<group>"; };
+		6863163C22EF0AE100C71132 /* CGGeometry+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+Appearance.swift"; sourceTree = "<group>"; };
+		6863163D22EF0AE100C71132 /* NSAttributedString+AttributedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+AttributedStrings.swift"; sourceTree = "<group>"; };
+		6863163E22EF0AE100C71132 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		6863163F22EF0AE100C71132 /* UIColor+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
+		6863164022EF0AE100C71132 /* UIFont+PreferredFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,11 +266,13 @@
 		6831A10B22DCA04E00EC2DDF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6831A10C22DCA04E00EC2DDF /* Notification+Convenience.swift */,
-				6831A10D22DCA04E00EC2DDF /* UIFont+PreferredFont.swift */,
-				6831A10E22DCA04E00EC2DDF /* Bundle+BackupRestore.swift */,
-				6831A10F22DCA04E00EC2DDF /* UIColor+Appearance.swift */,
-				6831A11022DCA04E00EC2DDF /* String+Localization.swift */,
+				6863163B22EF0AE100C71132 /* Bundle+BackupRestore.swift */,
+				6863163C22EF0AE100C71132 /* CGGeometry+Appearance.swift */,
+				6863163A22EF0AE100C71132 /* Notification+Convenience.swift */,
+				6863163D22EF0AE100C71132 /* NSAttributedString+AttributedStrings.swift */,
+				6863163E22EF0AE100C71132 /* String+Localization.swift */,
+				6863163F22EF0AE100C71132 /* UIColor+Appearance.swift */,
+				6863164022EF0AE100C71132 /* UIFont+PreferredFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 		6831A11122DCA04E00EC2DDF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6863163822EF0AC900C71132 /* Appearance.swift */,
 				6831A11222DCA04E00EC2DDF /* Password.swift */,
 				6831A11322DCA04E00EC2DDF /* QR.swift */,
 			);
@@ -283,88 +290,22 @@
 		6831A11422DCA04E00EC2DDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6831A11522DCA04E00EC2DDF /* BackupCompletedViewController.swift */,
-				6831A11622DCA04E00EC2DDF /* FlowController */,
-				6831A11A22DCA04E00EC2DDF /* ViewController.swift */,
-				6831A11B22DCA04E00EC2DDF /* ReminderView.swift */,
-				6831A11C22DCA04E00EC2DDF /* CheckboxImageView.swift */,
-				6831A11D22DCA04E00EC2DDF /* Animations.swift */,
-				6831A11E22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift */,
-				6831A11F22DCA04E00EC2DDF /* QR */,
-				6831A12322DCA04E00EC2DDF /* Button */,
-				6831A12622DCA04E00EC2DDF /* PasswordEntry */,
-				6831A12B22DCA04E00EC2DDF /* Restore */,
-				6831A12E22DCA04E00EC2DDF /* IntroViewController */,
-				6831A13122DCA04E00EC2DDF /* ExplanationTemplate */,
+				6863161922EF0AAD00C71132 /* Animations.swift */,
+				6863160E22EF0AAD00C71132 /* BackupCompletedViewController.swift */,
+				6863160822EF0AAD00C71132 /* Button */,
+				6863161822EF0AAD00C71132 /* CheckboxImageView.swift */,
+				6863161B22EF0AAD00C71132 /* ExplanationTemplate */,
+				6863160F22EF0AAD00C71132 /* FlowController */,
+				6863161E22EF0AAD00C71132 /* IntroViewController */,
+				6863161322EF0AAD00C71132 /* KeyboardAdjustingScrollView.swift */,
+				6863161A22EF0AAD00C71132 /* KinViewController.swift */,
+				6863161522EF0AAD00C71132 /* PasswordEntry */,
+				6863160722EF0AAC00C71132 /* PasswordLabel.swift */,
+				6863161422EF0AAD00C71132 /* PasswordTextField.swift */,
+				6863160322EF0AAC00C71132 /* QR */,
+				6863160B22EF0AAD00C71132 /* Restore */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		6831A11622DCA04E00EC2DDF /* FlowController */ = {
-			isa = PBXGroup;
-			children = (
-				6831A11722DCA04E00EC2DDF /* BackupFlowController.swift */,
-				6831A11822DCA04E00EC2DDF /* RestoreFlowController.swift */,
-				6831A11922DCA04E00EC2DDF /* FlowController.swift */,
-			);
-			path = FlowController;
-			sourceTree = "<group>";
-		};
-		6831A11F22DCA04E00EC2DDF /* QR */ = {
-			isa = PBXGroup;
-			children = (
-				6831A12022DCA04E00EC2DDF /* QRPickerController.swift */,
-				6831A12122DCA04E00EC2DDF /* QRView.swift */,
-				6831A12222DCA04E00EC2DDF /* QRViewController.swift */,
-			);
-			path = QR;
-			sourceTree = "<group>";
-		};
-		6831A12322DCA04E00EC2DDF /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				6831A12422DCA04E00EC2DDF /* RoundButton.swift */,
-				6831A12522DCA04E00EC2DDF /* ConfirmButton.swift */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		6831A12622DCA04E00EC2DDF /* PasswordEntry */ = {
-			isa = PBXGroup;
-			children = (
-				6831A12722DCA04E00EC2DDF /* PasswordEntryTextField.swift */,
-				6831A12822DCA04E00EC2DDF /* PasswordEntryView.swift */,
-				6831A12922DCA04E00EC2DDF /* PasswordEntryLabel.swift */,
-				6831A12A22DCA04E00EC2DDF /* PasswordEntryViewController.swift */,
-			);
-			path = PasswordEntry;
-			sourceTree = "<group>";
-		};
-		6831A12B22DCA04E00EC2DDF /* Restore */ = {
-			isa = PBXGroup;
-			children = (
-				6831A12C22DCA04E00EC2DDF /* RestoreView.swift */,
-				6831A12D22DCA04E00EC2DDF /* RestoreViewController.swift */,
-			);
-			path = Restore;
-			sourceTree = "<group>";
-		};
-		6831A12E22DCA04E00EC2DDF /* IntroViewController */ = {
-			isa = PBXGroup;
-			children = (
-				6831A12F22DCA04E00EC2DDF /* BackupIntroViewController.swift */,
-				6831A13022DCA04E00EC2DDF /* RestoreIntroViewController.swift */,
-			);
-			path = IntroViewController;
-			sourceTree = "<group>";
-		};
-		6831A13122DCA04E00EC2DDF /* ExplanationTemplate */ = {
-			isa = PBXGroup;
-			children = (
-				6831A13222DCA04E00EC2DDF /* ExplanationTemplateViewController.swift */,
-				6831A13322DCA04E00EC2DDF /* ExplanationTemplateView.swift */,
-			);
-			path = ExplanationTemplate;
 			sourceTree = "<group>";
 		};
 		6831A13422DCA04E00EC2DDF /* Protocols */ = {
@@ -391,6 +332,71 @@
 				6831A2E722DCAC0600EC2DDF /* KinSDKTestsHost.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6863160322EF0AAC00C71132 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				6863160422EF0AAC00C71132 /* QRPickerController.swift */,
+				6863160522EF0AAC00C71132 /* QRView.swift */,
+				6863160622EF0AAC00C71132 /* QRViewController.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		6863160822EF0AAD00C71132 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				6863160922EF0AAD00C71132 /* RoundButton.swift */,
+				6863160A22EF0AAD00C71132 /* ConfirmButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		6863160B22EF0AAD00C71132 /* Restore */ = {
+			isa = PBXGroup;
+			children = (
+				6863160C22EF0AAD00C71132 /* RestoreView.swift */,
+				6863160D22EF0AAD00C71132 /* RestoreViewController.swift */,
+			);
+			path = Restore;
+			sourceTree = "<group>";
+		};
+		6863160F22EF0AAD00C71132 /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				6863161022EF0AAD00C71132 /* BackupFlowController.swift */,
+				6863161122EF0AAD00C71132 /* RestoreFlowController.swift */,
+				6863161222EF0AAD00C71132 /* FlowController.swift */,
+			);
+			path = FlowController;
+			sourceTree = "<group>";
+		};
+		6863161522EF0AAD00C71132 /* PasswordEntry */ = {
+			isa = PBXGroup;
+			children = (
+				6863161622EF0AAD00C71132 /* PasswordEntryView.swift */,
+				6863161722EF0AAD00C71132 /* PasswordEntryViewController.swift */,
+			);
+			path = PasswordEntry;
+			sourceTree = "<group>";
+		};
+		6863161B22EF0AAD00C71132 /* ExplanationTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				6863161C22EF0AAD00C71132 /* ExplanationTemplateViewController.swift */,
+				6863161D22EF0AAD00C71132 /* ExplanationTemplateView.swift */,
+			);
+			path = ExplanationTemplate;
+			sourceTree = "<group>";
+		};
+		6863161E22EF0AAD00C71132 /* IntroViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6863161F22EF0AAD00C71132 /* BackupIntroViewController.swift */,
+				6863162022EF0AAD00C71132 /* RestoreIntroViewController.swift */,
+			);
+			path = IntroViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,41 +627,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6831A15822DCA04E00EC2DDF /* ExplanationTemplateViewController.swift in Sources */,
+				6863164322EF0AE100C71132 /* CGGeometry+Appearance.swift in Sources */,
+				6863164722EF0AE100C71132 /* UIFont+PreferredFont.swift in Sources */,
+				6863162B22EF0AAD00C71132 /* RestoreFlowController.swift in Sources */,
+				6863162522EF0AAD00C71132 /* RoundButton.swift in Sources */,
 				6831A15B22DCA04E00EC2DDF /* KinBackupRestoreManager.swift in Sources */,
-				6831A14322DCA04E00EC2DDF /* BackupFlowController.swift in Sources */,
-				6831A14F22DCA04E00EC2DDF /* ConfirmButton.swift in Sources */,
+				6863162A22EF0AAD00C71132 /* BackupFlowController.swift in Sources */,
+				6863164122EF0AE100C71132 /* Notification+Convenience.swift in Sources */,
+				6863163022EF0AAD00C71132 /* PasswordEntryViewController.swift in Sources */,
+				6863162C22EF0AAD00C71132 /* FlowController.swift in Sources */,
+				6863163722EF0AAD00C71132 /* RestoreIntroViewController.swift in Sources */,
+				6863162E22EF0AAD00C71132 /* PasswordTextField.swift in Sources */,
+				6863163322EF0AAD00C71132 /* KinViewController.swift in Sources */,
+				6863163122EF0AAD00C71132 /* CheckboxImageView.swift in Sources */,
+				6863162222EF0AAD00C71132 /* QRView.swift in Sources */,
+				6863162822EF0AAD00C71132 /* RestoreViewController.swift in Sources */,
+				6863162922EF0AAD00C71132 /* BackupCompletedViewController.swift in Sources */,
+				6863162D22EF0AAD00C71132 /* KeyboardAdjustingScrollView.swift in Sources */,
+				6863162422EF0AAD00C71132 /* PasswordLabel.swift in Sources */,
 				6831A13922DCA04E00EC2DDF /* KinBackupRestoreError.swift in Sources */,
-				6831A14922DCA04E00EC2DDF /* Animations.swift in Sources */,
-				6831A15522DCA04E00EC2DDF /* RestoreViewController.swift in Sources */,
-				6831A15322DCA04E00EC2DDF /* PasswordEntryViewController.swift in Sources */,
-				6831A15222DCA04E00EC2DDF /* PasswordEntryLabel.swift in Sources */,
-				6831A13E22DCA04E00EC2DDF /* UIColor+Appearance.swift in Sources */,
-				6831A15022DCA04E00EC2DDF /* PasswordEntryTextField.swift in Sources */,
+				6863162622EF0AAD00C71132 /* ConfirmButton.swift in Sources */,
+				6863164622EF0AE100C71132 /* UIColor+Appearance.swift in Sources */,
+				6863164522EF0AE100C71132 /* String+Localization.swift in Sources */,
+				6863162322EF0AAD00C71132 /* QRViewController.swift in Sources */,
+				6863163222EF0AAD00C71132 /* Animations.swift in Sources */,
+				6863164222EF0AE100C71132 /* Bundle+BackupRestore.swift in Sources */,
+				6863163522EF0AAD00C71132 /* ExplanationTemplateView.swift in Sources */,
 				6831A15A22DCA04E00EC2DDF /* LifeCycleProtocol.swift in Sources */,
-				6831A14E22DCA04E00EC2DDF /* RoundButton.swift in Sources */,
-				6831A15122DCA04E00EC2DDF /* PasswordEntryView.swift in Sources */,
-				6831A15622DCA04E00EC2DDF /* BackupIntroViewController.swift in Sources */,
-				6831A14B22DCA04E00EC2DDF /* QRPickerController.swift in Sources */,
-				6831A15422DCA04E00EC2DDF /* RestoreView.swift in Sources */,
+				6863162F22EF0AAD00C71132 /* PasswordEntryView.swift in Sources */,
 				6831A14122DCA04E00EC2DDF /* QR.swift in Sources */,
-				6831A14622DCA04E00EC2DDF /* ViewController.swift in Sources */,
+				6863164422EF0AE100C71132 /* NSAttributedString+AttributedStrings.swift in Sources */,
+				6863163622EF0AAD00C71132 /* BackupIntroViewController.swift in Sources */,
+				6863163922EF0AC900C71132 /* Appearance.swift in Sources */,
 				6831A13722DCA04E00EC2DDF /* KinBackupRestoreBI.swift in Sources */,
-				6831A15922DCA04E00EC2DDF /* ExplanationTemplateView.swift in Sources */,
-				6831A14222DCA04E00EC2DDF /* BackupCompletedViewController.swift in Sources */,
-				6831A14822DCA04E00EC2DDF /* CheckboxImageView.swift in Sources */,
-				6831A13B22DCA04E00EC2DDF /* Notification+Convenience.swift in Sources */,
 				6831A14022DCA04E00EC2DDF /* Password.swift in Sources */,
-				6831A14522DCA04E00EC2DDF /* FlowController.swift in Sources */,
-				6831A14C22DCA04E00EC2DDF /* QRView.swift in Sources */,
-				6831A15722DCA04E00EC2DDF /* RestoreIntroViewController.swift in Sources */,
-				6831A13C22DCA04E00EC2DDF /* UIFont+PreferredFont.swift in Sources */,
-				6831A14722DCA04E00EC2DDF /* ReminderView.swift in Sources */,
-				6831A14A22DCA04E00EC2DDF /* KeyboardAdjustingScrollView.swift in Sources */,
-				6831A14D22DCA04E00EC2DDF /* QRViewController.swift in Sources */,
-				6831A13F22DCA04E00EC2DDF /* String+Localization.swift in Sources */,
-				6831A14422DCA04E00EC2DDF /* RestoreFlowController.swift in Sources */,
-				6831A13D22DCA04E00EC2DDF /* Bundle+BackupRestore.swift in Sources */,
+				6863162722EF0AAD00C71132 /* RestoreView.swift in Sources */,
+				6863162122EF0AAD00C71132 /* QRPickerController.swift in Sources */,
+				6863163422EF0AAD00C71132 /* ExplanationTemplateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

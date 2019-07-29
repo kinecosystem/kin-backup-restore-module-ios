@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ExplanationTemplateViewController: ViewController {
+class ExplanationTemplateViewController: KinViewController {
     // MARK: View
+
+    var contentView: UIStackView {
+        return _view.contentView
+    }
 
     var imageView: UIImageView {
         return _view.imageView
