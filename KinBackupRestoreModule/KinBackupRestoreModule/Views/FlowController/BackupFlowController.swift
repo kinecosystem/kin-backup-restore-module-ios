@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KinSDK
 
 class BackupFlowController: FlowController {
     let kinAccount: KinAccount
