@@ -435,11 +435,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68005A982206FFFB004F791A /* Build configuration list for PBXNativeTarget "KinBackupRestoreModuleTests" */;
 			buildPhases = (
-				7D5FDAF395D35D82CED5D91F /* [CP] Check Pods Manifest.lock */,
 				68005A862206FFFB004F791A /* Sources */,
 				68005A872206FFFB004F791A /* Frameworks */,
 				68005A882206FFFB004F791A /* Resources */,
-				711AD00C3A256C8895621402 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -481,14 +479,16 @@
 				TargetAttributes = {
 					68005A802206FFFB004F791A = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1030;
 					};
 					68005A892206FFFB004F791A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = 6804B125224A08C900208AE0;
 					};
 					6804B125224A08C900208AE0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -570,57 +570,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		711AD00C3A256C8895621402 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KinSDK/KinSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/KinUtil/KinUtil.framework",
-				"${BUILT_PRODUCTS_DIR}/Sodium/Sodium.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KinUtil.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sodium.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KinBackupRestoreModuleTests/Pods-KinBackupRestoreModuleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D5FDAF395D35D82CED5D91F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KinBackupRestoreModuleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68005A7D2206FFFB004F791A /* Sources */ = {
@@ -865,7 +814,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -891,7 +840,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -909,7 +858,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinBackupRestoreModuleTestsHost.app/KinBackupRestoreModuleTestsHost";
 			};
@@ -928,7 +877,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinBackupRestoreModuleTestsHost.app/KinBackupRestoreModuleTestsHost";
 			};
@@ -946,7 +895,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModuleTestsHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -963,7 +912,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinBackupRestoreModuleTestsHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
