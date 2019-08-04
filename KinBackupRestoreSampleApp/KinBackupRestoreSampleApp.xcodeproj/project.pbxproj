@@ -17,7 +17,29 @@
 		68005B0022082D47004F791A /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AFD22082D47004F791A /* TransactionTableViewCell.swift */; };
 		68005B0122082D47004F791A /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005AFE22082D47004F791A /* SubtitleTableViewCell.swift */; };
 		68005B0322082EC3004F791A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68005B0222082EC2004F791A /* Constants.swift */; };
+		6863166522F6FF4700C71132 /* KinBackupRestoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6863166422F6FF4700C71132 /* KinBackupRestoreModule.framework */; };
+		6863166622F6FF4700C71132 /* KinBackupRestoreModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6863166422F6FF4700C71132 /* KinBackupRestoreModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6863166922F6FF8600C71132 /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6863166822F6FF8600C71132 /* KinSDK.framework */; };
+		6863166A22F6FF8600C71132 /* KinSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6863166822F6FF8600C71132 /* KinSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6863166C22F6FF9D00C71132 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6863166B22F6FF9D00C71132 /* Sodium.framework */; };
+		6863166D22F6FF9D00C71132 /* Sodium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6863166B22F6FF9D00C71132 /* Sodium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6863166722F6FF4800C71132 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6863166A22F6FF8600C71132 /* KinSDK.framework in Embed Frameworks */,
+				6863166D22F6FF9D00C71132 /* Sodium.framework in Embed Frameworks */,
+				6863166622F6FF4700C71132 /* KinBackupRestoreModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		68005AA422070083004F791A /* KinBackupRestoreSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinBackupRestoreSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +54,9 @@
 		68005AFD22082D47004F791A /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		68005AFE22082D47004F791A /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		68005B0222082EC2004F791A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6863166422F6FF4700C71132 /* KinBackupRestoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KinBackupRestoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6863166822F6FF8600C71132 /* KinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6863166B22F6FF9D00C71132 /* Sodium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sodium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6863166922F6FF8600C71132 /* KinSDK.framework in Frameworks */,
+				6863166C22F6FF9D00C71132 /* Sodium.framework in Frameworks */,
+				6863166522F6FF4700C71132 /* KinBackupRestoreModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +83,9 @@
 		68005A9B22070083004F791A = {
 			isa = PBXGroup;
 			children = (
+				6863166B22F6FF9D00C71132 /* Sodium.framework */,
+				6863166822F6FF8600C71132 /* KinSDK.framework */,
+				6863166422F6FF4700C71132 /* KinBackupRestoreModule.framework */,
 				68005AA622070083004F791A /* KinBackupRestoreSampleApp */,
 				68005AA522070083004F791A /* Products */,
 				3F1A1B0B621B6AEBAD3AC018 /* Frameworks */,
@@ -113,6 +144,7 @@
 				68005AA022070083004F791A /* Sources */,
 				68005AA122070083004F791A /* Frameworks */,
 				68005AA222070083004F791A /* Resources */,
+				6863166722F6FF4800C71132 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F879J8YSJ9;
 				INFOPLIST_FILE = KinBackupRestoreSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F879J8YSJ9;
 				INFOPLIST_FILE = KinBackupRestoreSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
